@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ChevronDown, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon } from 'lucide-react';
 
 function App() {
@@ -1059,13 +1059,13 @@ function App() {
               selectedProgram === '6-month' ? 'bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent' :
               'bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent'
             }`}>
-              {selectedProgram ? `${currentProgram.title} - Detailed Syllabus` : `${programs && programs['2-month']?.title || '2-Month IoT Bootcamp'} - Detailed Syllabus`}
+              {selectedProgram ? `${currentProgram.title} - Detailed Syllabus` : `${(programs && programs['2-month']?.title) || '2-Month IoT Bootcamp'} - Detailed Syllabus`}
             </h3>
 
-            {!isLoading && ((selectedProgram && currentProgram) || (!selectedProgram && programs && programs['2-month'])) ? (
+            {!isLoading && (((selectedProgram && currentProgram) || (!selectedProgram && programs && programs['2-month']))) ? (
               <div className="overflow-x-auto">
                 <div className="flex gap-4 sm:gap-6 pb-4 min-w-max">
-                  {(selectedProgram && currentProgram?.weeks ? currentProgram.weeks : (programs && programs['2-month']?.weeks || [])).map((week, index) => (
+                  {((selectedProgram && currentProgram?.weeks) ? currentProgram.weeks : ((programs && programs['2-month']?.weeks) || [])).map((week, index) => (
                     <div 
                       key={index} 
                       className={`bg-white/90 rounded-2xl p-4 sm:p-6 border transition-all duration-300 hover:shadow-lg cursor-pointer shadow-md w-80 flex-shrink-0 ${
