@@ -1458,119 +1458,243 @@ function App() {
 
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
+        <style jsx>{`
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+          .animate-scroll-left {
+            animation: scroll-left 60s linear infinite;
+          }
+          .animate-scroll-left:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
             Prerequisites & Requirements
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
-            {prerequisites.map((req, index) => (
-              <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0">
-                    <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+          <div className="overflow-hidden mb-12 sm:mb-16">
+            <div className="flex animate-scroll-left">
+              {/* Basic Programming Knowledge */}
+              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Code className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{req.title}</h3>
-                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${
-                      req.level === 'Required' ? 'bg-red-500/20 text-red-600' :
-                      req.level === 'Must-Have' ? 'bg-orange-500/20 text-orange-600' :
-                      'bg-green-500/20 text-green-600'
-                    }`}>
-                      {req.level}
-                    </div>
-                    <p className="text-gray-800 text-xs sm:text-sm font-medium">{req.description}</p>
-                    
-                    {/* Add video for Basic Programming Knowledge */}
-                    {req.title === 'Basic Programming Knowledge' && (
-                      <div className="mt-4">
-                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
-                            className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                          >
-                            <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                        <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
-                      </div>
-                    )}
-                    
-                    {/* Add video for Basic Electronics Knowledge */}
-                    {req.title === 'Basic Electronics Knowledge' && (
-                      <div className="mt-4">
-                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
-                            className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                          >
-                            <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                        <p className="text-xs text-gray-600 text-center mt-2">Advanced IoT - Electronics Fundamentals</p>
-                      </div>
-                    )}
-                    
-                    {/* Add video for Basic Computer Literacy */}
-                    {req.title === 'Basic Computer Literacy' && (
-                      <div className="mt-4">
-                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
-                            className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                          >
-                            <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                        <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Computer Skills</p>
-                      </div>
-                    )}
-                    
-                    {/* Add video for Internet & Mobile Apps */}
-                    {req.title === 'Internet & Mobile Apps' && (
-                      <div className="mt-4">
-                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
-                            className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                          >
-                            <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                        <p className="text-xs text-gray-600 text-center mt-2">IoT Applications - Mobile & Web</p>
-                      </div>
-                    )}
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Basic Programming Knowledge</h3>
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-green-500/20 text-green-600">
+                    Recommended
                   </div>
+                  <p className="text-gray-800 text-sm font-medium mb-4">Structure of Basic Programming, Arduino C/C++ and later MicroPython</p>
+                  
+                  {/* Video */}
+                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
+                    <video
+                      className="w-full h-full object-cover"
+                      preload="auto"
+                      poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-xs text-gray-600 text-center">IoT Fundamentals - Basic Programming</p>
                 </div>
               </div>
-            ))}
+
+              {/* Basic Electronics Knowledge */}
+              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Basic Electronics Knowledge</h3>
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-orange-500/20 text-orange-600">
+                    Recommended
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium mb-4">Understanding of Ohms Law, Current/Voltage/Resistance, Breadboarding basics</p>
+                  
+                  {/* Video */}
+                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
+                    <video
+                      className="w-full h-full object-cover"
+                      preload="auto"
+                      poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-xs text-gray-600 text-center">Advanced IoT - Electronics Fundamentals</p>
+                </div>
+              </div>
+
+              {/* Basic Computer Literacy */}
+              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Monitor className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Basic Computer Literacy</h3>
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-red-500/20 text-red-600">
+                    Required
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium mb-4">Install software, use serial monitor, navigate folders, connect USB devices</p>
+                  
+                  {/* Video */}
+                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
+                    <video
+                      className="w-full h-full object-cover"
+                      preload="auto"
+                      poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-xs text-gray-600 text-center">IoT Projects - Computer Skills</p>
+                </div>
+              </div>
+
+              {/* Internet & Mobile Apps */}
+              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Globe className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Internet & Mobile Apps</h3>
+                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-green-500/20 text-green-600">
+                    Recommended
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium mb-4">Wi-Fi configuration, mobile apps (Blynk), basic HTTP concepts</p>
+                  
+                  {/* Video */}
+                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
+                    <video
+                      className="w-full h-full object-cover"
+                      preload="auto"
+                      poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-xs text-gray-600 text-center">IoT Applications - Mobile & Web</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Hardware Requirements */}
+          {/* What We Offer Section */}
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
+            WHAT WE OFFER
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            {/* Hands-On IoT Training Programs */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
+                  <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Hands-On IoT Training Programs</h4>
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+                Learn by doing, not just by listening. Our workshops and courses immerse you in real-world IoT projects-covering sensors, embedded systems, connectivity, and cloud integration.
+              </p>
+            </div>
+
+            {/* Industry-Relevant Curriculum */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
+                  <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Industry-Relevant Curriculum</h4>
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+                We focus on practical skills that matter today. From device communication protocols to data security and edge computing, our curriculum is designed to keep you ahead in a connected world.
+              </p>
+            </div>
+
+            {/* Customized Learning for Teams & Individuals */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
+                  <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Customized Learning for Teams & Individuals</h4>
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+                Whether you're a student, startup team, or enterprise workforce, our training adapts to your needs. We offer tailored modules to fit different learning goals and business objectives.
+              </p>
+            </div>
+          </div>
+
+          {/* What We Offer Section */}
+          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
+            WHAT WE OFFER
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            {/* Hands-On IoT Training Programs */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
+                  <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Hands-On IoT Training Programs</h4>
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+                Learn by doing, not just by listening. Our workshops and courses immerse you in real-world IoT projects-covering sensors, embedded systems, connectivity, and cloud integration.
+              </p>
+            </div>
+
+            {/* Industry-Relevant Curriculum */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
+                  <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Industry-Relevant Curriculum</h4>
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+                We focus on practical skills that matter today. From device communication protocols to data security and edge computing, our curriculum is designed to keep you ahead in a connected world.
+              </p>
+            </div>
+
+            {/* Customized Learning for Teams & Individuals */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
+                  <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                </div>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Customized Learning for Teams & Individuals</h4>
+              </div>
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+                Whether you're a student, startup team, or enterprise workforce, our training adapts to your needs. We offer tailored modules to fit different learning goals and business objectives.
+              </p>
+            </div>
+          </div>
+
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
             Hardware Requirements
           </h3>
