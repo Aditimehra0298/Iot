@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon } from 'lucide-react';
+import { ChevronDown, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -1410,6 +1410,176 @@ function App() {
               </p>
               <div className="mt-6 flex justify-center">
                 <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full group-hover:w-24 transition-all duration-500"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* ITC India Testing Laboratory Section */}
+          <div className="mt-16 sm:mt-20">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
+              ITC India - Premier Testing & Calibration Laboratory
+            </h3>
+            
+            {/* Header Section */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center mb-6">
+                  <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
+                  <span className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300 cursor-default">
+                    NABL Accredited • BIS Approved
+                  </span>
+                </div>
+                
+                <h4 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 hover:text-[#4A90E2] transition-colors duration-300">
+                  Your Trusted Partner for 
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3]"> Quality Assurance</span>
+                </h4>
+                
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed hover:text-gray-800 transition-colors duration-300 max-w-4xl mx-auto">
+                  Based in Mohali, Punjab, we're a premier testing and calibration laboratory 
+                  delivering end-to-end solutions for electrical, electronic, photometric, and 
+                  solar equipment. Internationally recognized and locally trusted.
+                </p>
+
+                <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                  <div className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                    <Award className="w-6 h-6 mx-auto mb-2 group-hover:animate-bounce" />
+                    <div className="text-sm font-semibold">ISO/IEC 17025</div>
+                    <div className="text-xs opacity-90">Certified</div>
+                  </div>
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                    <Globe className="w-6 h-6 mx-auto mb-2 group-hover:animate-spin" />
+                    <div className="text-sm font-semibold">European</div>
+                    <div className="text-xs opacity-90">Recognized</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Services Grid */}
+            <div className="mb-8">
+              <h4 className="text-2xl font-bold text-gray-800 mb-6 text-center">What We Do</h4>
+              <p className="text-gray-600 text-center mb-8 text-lg">
+                Comprehensive testing and calibration services across multiple domains
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+                  <div className="relative">
+                    <Zap className="w-10 h-10 text-yellow-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                  </div>
+                  <h5 className="text-lg font-bold text-gray-800 mb-2">Electrical Safety</h5>
+                  <p className="text-gray-600 text-sm">IEC 60335, IEC 60601, IS 13252 compliance testing</p>
+                </div>
+
+                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+                  <div className="relative">
+                    <Eye className="w-10 h-10 text-indigo-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-indigo-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                  </div>
+                  <h5 className="text-lg font-bold text-gray-800 mb-2">Photometric</h5>
+                  <p className="text-gray-600 text-sm">LM-79 LED testing with goniophotometer analysis</p>
+                </div>
+
+                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+                  <div className="relative">
+                    <Sun className="w-10 h-10 text-orange-600 mb-4 group-hover:scale-125 group-hover:animate-spin transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                  </div>
+                  <h5 className="text-lg font-bold text-gray-800 mb-2">Solar Testing</h5>
+                  <p className="text-gray-600 text-sm">PV modules, inverters, and UV disinfection systems</p>
+                </div>
+
+                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+                  <div className="relative">
+                    <Battery className="w-10 h-10 text-green-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                  </div>
+                  <h5 className="text-lg font-bold text-gray-800 mb-2">Battery Testing</h5>
+                  <p className="text-gray-600 text-sm">UN 38.3, IS 16046, IEC 62133 compliance</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Calibration Services */}
+            <div className="mb-8">
+              <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-2xl p-8 sm:p-12 relative overflow-hidden hover:scale-[1.02] transition-all duration-500 cursor-pointer group">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400"></div>
+                
+                <div className="text-center mb-8 relative z-10">
+                  <div className="relative inline-block">
+                    <Microscope className="w-16 h-16 mx-auto mb-4 text-indigo-200 group-hover:animate-bounce transition-all duration-300" />
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping"></div>
+                    <Star className="absolute -top-1 -right-1 w-4 h-4 text-yellow-300 animate-spin" />
+                  </div>
+                  <h4 className="text-3xl font-bold mb-4 group-hover:scale-105 transition-transform duration-300">NABL-Accredited Calibration</h4>
+                  <p className="text-xl text-indigo-100 group-hover:text-white transition-colors duration-300">Precision calibration services traceable to international standards</p>
+                </div>
+                
+                <div className="grid md:grid-cols-3 gap-8 relative z-10">
+                  <div className="text-center">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group/card">
+                      <Zap className="w-8 h-8 mx-auto mb-3 text-yellow-300 group-hover/card:animate-bounce" />
+                      <h5 className="font-bold mb-2">Electrical</h5>
+                      <p className="text-sm text-indigo-100">Multimeters, oscilloscopes, power analyzers</p>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group/card">
+                      <Sun className="w-8 h-8 mx-auto mb-3 text-orange-300 group-hover/card:animate-spin" />
+                      <h5 className="font-bold mb-2">Thermal</h5>
+                      <p className="text-sm text-indigo-100">Temperature sensors, thermometers, calibrators</p>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group/card">
+                      <Eye className="w-8 h-8 mx-auto mb-3 text-purple-300 group-hover/card:animate-pulse" />
+                      <h5 className="font-bold mb-2">Photometric</h5>
+                      <p className="text-sm text-indigo-100">Pyranometers, UV sources, standard lamps</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Why Choose Us */}
+            <div className="text-center">
+              <h4 className="text-2xl font-bold text-gray-800 mb-8 hover:scale-105 transition-transform duration-300">
+                Why Choose 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3]"> ITC India</span>?
+              </h4>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
+                    <Shield className="w-8 h-8 text-[#4A90E2] group-hover:animate-pulse" />
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                  </div>
+                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Trusted Expertise</h5>
+                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">NABL accredited with BIS approval and European recognition</p>
+                </div>
+                
+                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
+                    <Microscope className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                  </div>
+                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors duration-300">Advanced Facilities</h5>
+                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">State-of-the-art laboratories with cutting-edge equipment</p>
+                </div>
+                
+                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
+                    <Award className="w-8 h-8 text-purple-600 group-hover:animate-pulse" />
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-purple-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                  </div>
+                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">Complete Solutions</h5>
+                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">End-to-end support from testing to market compliance</p>
+                </div>
               </div>
             </div>
           </div>
