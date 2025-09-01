@@ -1196,6 +1196,55 @@ function App() {
         
       </section>
 
+      {/* Video Section */}
+      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <img
+            src="/Untitled design (20).png"
+            alt="Background Pattern"
+            className="w-full h-full object-cover opacity-20"
+            onLoad={() => console.log('Video section background image loaded successfully')}
+            onError={(e) => console.error('Video section background image failed to load:', e)}
+          />
+          <div className="absolute inset-0 bg-white/60"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Watch Our IoT Academy in Action
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              See how our comprehensive IoT training programs transform beginners into skilled professionals
+            </p>
+          </div>
+          
+          <div className="w-full">
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-2xl">
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://player.vimeo.com/video/1114779425?h=your_hash&title=0&byline=0&portrait=0"
+                  title="IoT Academy Introduction Video"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="mt-6 text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Experience Our IoT Training
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Discover the hands-on approach that makes our IoT Academy the preferred choice for professionals
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="max-w-6xl mx-auto">
