@@ -1269,6 +1269,24 @@ function App() {
                       {req.level}
                     </div>
                     <p className="text-gray-800 text-xs sm:text-sm font-medium">{req.description}</p>
+                    
+                    {/* Add video for Basic Programming Knowledge */}
+                    {req.title === 'Basic Programming Knowledge' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            controls
+                            preload="metadata"
+                            poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
+                          >
+                            <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -1330,7 +1348,7 @@ function App() {
               </div>
               <h4 className="text-sm font-bold text-gray-900 mb-2 text-center">IoT Projects</h4>
               <p className="text-xs text-gray-600 text-center">Build real-world IoT projects</p>
-                </div>
+            </div>
 
             {/* Video 4 */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
