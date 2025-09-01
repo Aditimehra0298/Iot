@@ -1277,11 +1277,12 @@ function App() {
                           <video
                             className="w-full h-full object-cover"
                             controls
-                            preload="metadata"
+                            preload="auto"
                             poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
                             autoPlay
                             loop
                             muted
+                            playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
@@ -1298,11 +1299,12 @@ function App() {
                           <video
                             className="w-full h-full object-cover"
                             controls
-                            preload="metadata"
+                            preload="auto"
                             poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
                             autoPlay
                             loop
                             muted
+                            playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
@@ -1319,11 +1321,12 @@ function App() {
                           <video
                             className="w-full h-full object-cover"
                             controls
-                            preload="metadata"
+                            preload="auto"
                             poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
                             autoPlay
                             loop
                             muted
+                            playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
@@ -1340,11 +1343,12 @@ function App() {
                           <video
                             className="w-full h-full object-cover"
                             controls
-                            preload="metadata"
+                            preload="auto"
                             poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
                             autoPlay
                             loop
                             muted
+                            playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
