@@ -1287,6 +1287,24 @@ function App() {
                         <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
                       </div>
                     )}
+                    
+                    {/* Add video for Basic Electronics Knowledge */}
+                    {req.title === 'Basic Electronics Knowledge' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            controls
+                            preload="metadata"
+                            poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
+                          >
+                            <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">Advanced IoT - Electronics Fundamentals</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
