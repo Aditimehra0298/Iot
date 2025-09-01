@@ -11,56 +11,11 @@ function App() {
     '4-month': 'offline',
     '6-month': 'offline'
   });
-  
-  // Form state
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    location: '',
-    coursePlan: '',
-    message: '',
-    learningMode: 'online'
-  });
 
   // Set loading to false after component mounts
   React.useEffect(() => {
     setIsLoading(false);
   }, []);
-  
-  // Form handling functions
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  
-  const handleLearningModeChange = (mode) => {
-    setFormData(prev => ({
-      ...prev,
-      learningMode: mode
-    }));
-  };
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you can add API call to submit the form
-    alert('Thank you! We will contact you soon.');
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      location: '',
-      coursePlan: '',
-      message: '',
-      learningMode: 'online'
-    });
-    setShowForm(false);
-  };
 
   const programs = {
     '2-month': {
@@ -582,11 +537,8 @@ function App() {
                 >
                   Explore Programs
                 </button>
-                <button 
-                  onClick={() => setShowForm(true)}
-                  className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 px-6 rounded-full text-base transition-all duration-300 hover:scale-105"
-                >
-                  Get Brochure
+                <button className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 px-6 rounded-full text-base transition-all duration-300 hover:scale-105">
+                  brochure
                 </button>
               </div>
             </div>
@@ -708,169 +660,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Brochure Form Modal */}
-      {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
-            {/* Modal Header */}
-            <div className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white p-6 rounded-t-3xl">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold">Get Your IoT Academy Brochure</h3>
-                <button
-                  onClick={() => setShowForm(false)}
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <p className="text-white/90 text-sm mt-2">Fill out the form below to receive detailed information about our programs</p>
-            </div>
-
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="p-6 space-y-4">
-              {/* Learning Mode Switch */}
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-gray-700 mb-3">Learning Mode</label>
-                <div className="bg-gray-100 rounded-xl p-1 shadow-inner">
-                  <div className="flex items-center space-x-1">
-                    <button
-                      type="button"
-                      onClick={() => handleLearningModeChange('online')}
-                      className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
-                        formData.learningMode === 'online'
-                          ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md'
-                          : 'bg-white text-gray-600 hover:bg-gray-50'
-                      }`}
-                    >
-                      <Globe className="w-4 h-4" />
-                      <span>Online</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleLearningModeChange('offline')}
-                      className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
-                        formData.learningMode === 'offline'
-                          ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md'
-                          : 'bg-white text-gray-600 hover:bg-gray-50'
-                      }`}
-                    >
-                      <div className="w-4 h-4">
-                        <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span>Offline</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Name */}
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
-                  placeholder="Enter your full name"
-                />
-              </div>
-
-              {/* Phone */}
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
-                  placeholder="Enter your email address"
-                />
-              </div>
-
-              {/* Location */}
-              <div>
-                <label htmlFor="location" className="block text-sm font-semibold text-gray-700 mb-2">Location *</label>
-                <input
-                  type="text"
-                  id="location"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
-                  placeholder="Enter your city/location"
-                />
-              </div>
-
-              {/* Course Plan Dropdown */}
-              <div>
-                <label htmlFor="coursePlan" className="block text-sm font-semibold text-gray-700 mb-2">Course Plan *</label>
-                <select
-                  id="coursePlan"
-                  name="coursePlan"
-                  value={formData.coursePlan}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300 bg-white"
-                >
-                  <option value="">Select your preferred course plan</option>
-                  <option value="silver">🥈 Silver (8 weeks) - $299</option>
-                  <option value="medal">🥉 Medal (16 weeks) - $599</option>
-                  <option value="diamond">💎 Diamond (24 weeks) - $899</option>
-                </select>
-              </div>
-
-              {/* Message */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">Any Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows="3"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300 resize-none"
-                  placeholder="Tell us about your goals or any questions..."
-                />
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-xl text-base transition-all duration-300 hover:scale-105 hover:shadow-xl"
-              >
-                Get Brochure & Contact Me
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
 
       {/* Program Selection */}
       <section id="programs" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
@@ -1435,7 +1224,7 @@ function App() {
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-2xl">
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
                 <iframe
-                  src="https://player.vimeo.com/video/1114816733?title=0&byline=0&portrait=0"
+                  src="https://player.vimeo.com/video/1114785542?title=0&byline=0&portrait=0"
                   title="IoT Academy Introduction Video"
                   className="w-full h-full"
                   frameBorder="0"
@@ -1458,149 +1247,116 @@ function App() {
 
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
-        <style jsx>{`
-          @keyframes scroll-left {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-          }
-          .animate-scroll-left {
-            animation: scroll-left 60s linear infinite;
-          }
-          .animate-scroll-left:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
             Prerequisites & Requirements
           </h2>
 
-          <div className="overflow-hidden mb-12 sm:mb-16">
-            <div className="flex animate-scroll-left">
-              {/* Basic Programming Knowledge */}
-              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Code className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
+            {prerequisites.map((req, index) => (
+              <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0">
+                    <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Basic Programming Knowledge</h3>
-                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-green-500/20 text-green-600">
-                    Recommended
+                  <div className="flex-1">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{req.title}</h3>
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${
+                      req.level === 'Required' ? 'bg-red-500/20 text-red-600' :
+                      req.level === 'Must-Have' ? 'bg-orange-500/20 text-orange-600' :
+                      'bg-green-500/20 text-green-600'
+                    }`}>
+                      {req.level}
+                    </div>
+                    <p className="text-gray-800 text-xs sm:text-sm font-medium">{req.description}</p>
+                    
+                    {/* Add video for Basic Programming Knowledge */}
+                    {req.title === 'Basic Programming Knowledge' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            preload="auto"
+                            poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          >
+                            <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
+                      </div>
+                    )}
+                    
+                    {/* Add video for Basic Electronics Knowledge */}
+                    {req.title === 'Basic Electronics Knowledge' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            preload="auto"
+                            poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          >
+                            <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">Advanced IoT - Electronics Fundamentals</p>
+                      </div>
+                    )}
+                    
+                    {/* Add video for Basic Computer Literacy */}
+                    {req.title === 'Basic Computer Literacy' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            preload="auto"
+                            poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          >
+                            <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Computer Skills</p>
+                      </div>
+                    )}
+                    
+                    {/* Add video for Internet & Mobile Apps */}
+                    {req.title === 'Internet & Mobile Apps' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            preload="auto"
+                            poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                          >
+                            <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">IoT Applications - Mobile & Web</p>
+                      </div>
+                    )}
                   </div>
-                  <p className="text-gray-800 text-sm font-medium mb-4">Structure of Basic Programming, Arduino C/C++ and later MicroPython</p>
-                  
-                  {/* Video */}
-                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
-                    <video
-                      className="w-full h-full object-cover"
-                      preload="auto"
-                      poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
-                      <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <p className="text-xs text-gray-600 text-center">IoT Fundamentals - Basic Programming</p>
                 </div>
               </div>
-
-              {/* Basic Electronics Knowledge */}
-              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Basic Electronics Knowledge</h3>
-                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-orange-500/20 text-orange-600">
-                    Recommended
-                  </div>
-                  <p className="text-gray-800 text-sm font-medium mb-4">Understanding of Ohms Law, Current/Voltage/Resistance, Breadboarding basics</p>
-                  
-                  {/* Video */}
-                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
-                    <video
-                      className="w-full h-full object-cover"
-                      preload="auto"
-                      poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
-                      <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <p className="text-xs text-gray-600 text-center">Advanced IoT - Electronics Fundamentals</p>
-                </div>
-              </div>
-
-              {/* Basic Computer Literacy */}
-              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Monitor className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Basic Computer Literacy</h3>
-                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-red-500/20 text-red-600">
-                    Required
-                  </div>
-                  <p className="text-gray-800 text-sm font-medium mb-4">Install software, use serial monitor, navigate folders, connect USB devices</p>
-                  
-                  {/* Video */}
-                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
-                    <video
-                      className="w-full h-full object-cover"
-                      preload="auto"
-                      poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
-                      <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <p className="text-xs text-gray-600 text-center">IoT Projects - Computer Skills</p>
-                </div>
-              </div>
-
-              {/* Internet & Mobile Apps */}
-              <div className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg mx-4 min-w-[400px]">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Globe className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Internet & Mobile Apps</h3>
-                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 bg-green-500/20 text-green-600">
-                    Recommended
-                  </div>
-                  <p className="text-gray-800 text-sm font-medium mb-4">Wi-Fi configuration, mobile apps (Blynk), basic HTTP concepts</p>
-                  
-                  {/* Video */}
-                  <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg mb-4">
-                    <video
-                      className="w-full h-full object-cover"
-                      preload="auto"
-                      poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
-                      <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <p className="text-xs text-gray-600 text-center">IoT Applications - Mobile & Web</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* What We Offer Section */}
@@ -1610,91 +1366,55 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {/* Hands-On IoT Training Programs */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
-                  <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
+                  <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
                 </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Hands-On IoT Training Programs</h4>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Hands-On IoT Training Programs</h4>
               </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
                 Learn by doing, not just by listening. Our workshops and courses immerse you in real-world IoT projects-covering sensors, embedded systems, connectivity, and cloud integration.
               </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full group-hover:w-24 transition-all duration-500"></div>
+              </div>
             </div>
 
             {/* Industry-Relevant Curriculum */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
-                  <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
+                  <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
                 </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Industry-Relevant Curriculum</h4>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Industry-Relevant Curriculum</h4>
               </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
                 We focus on practical skills that matter today. From device communication protocols to data security and edge computing, our curriculum is designed to keep you ahead in a connected world.
               </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full group-hover:w-24 transition-all duration-500"></div>
+              </div>
             </div>
 
             {/* Customized Learning for Teams & Individuals */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
-                  <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
+                  <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
                 </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Customized Learning for Teams & Individuals</h4>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Customized Learning for Teams & Individuals</h4>
               </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
                 Whether you're a student, startup team, or enterprise workforce, our training adapts to your needs. We offer tailored modules to fit different learning goals and business objectives.
               </p>
+              <div className="mt-6 flex justify-center">
+                <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full group-hover:w-24 transition-all duration-500"></div>
+              </div>
             </div>
           </div>
 
-          {/* What We Offer Section */}
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
-            WHAT WE OFFER
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-            {/* Hands-On IoT Training Programs */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
-                  <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Hands-On IoT Training Programs</h4>
-              </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
-                Learn by doing, not just by listening. Our workshops and courses immerse you in real-world IoT projects-covering sensors, embedded systems, connectivity, and cloud integration.
-              </p>
-            </div>
-
-            {/* Industry-Relevant Curriculum */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
-                  <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Industry-Relevant Curriculum</h4>
-              </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
-                We focus on practical skills that matter today. From device communication protocols to data security and edge computing, our curriculum is designed to keep you ahead in a connected world.
-              </p>
-            </div>
-
-            {/* Customized Learning for Teams & Individuals */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg hover:shadow-xl">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
-                  <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Customized Learning for Teams & Individuals</h4>
-              </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center">
-                Whether you're a student, startup team, or enterprise workforce, our training adapts to your needs. We offer tailored modules to fit different learning goals and business objectives.
-              </p>
-            </div>
-          </div>
-
+          {/* Hardware Requirements */}
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
             Hardware Requirements
           </h3>
