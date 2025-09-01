@@ -1414,31 +1414,7 @@ function App() {
             </div>
           </div>
 
-          {/* Hardware Requirements */}
-          <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
-            Hardware Requirements
-          </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {hardwareRequirements.map((category, index) => (
-              <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center">
-                    <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                  </div>
-                  <h4 className="text-base sm:text-lg font-bold text-gray-900">{category.category}</h4>
-                </div>
-                <ul className="space-y-2">
-                  {category.items.map((item, i) => (
-                    <li key={i} className="flex items-start text-xs sm:text-sm text-gray-800 font-medium">
-                      <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
