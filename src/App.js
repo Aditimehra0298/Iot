@@ -1435,7 +1435,7 @@ function App() {
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-2xl">
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
                 <iframe
-                  src="https://player.vimeo.com/video/1114785542?title=0&byline=0&portrait=0"
+                  src="https://player.vimeo.com/video/1114816733?title=0&byline=0&portrait=0"
                   title="IoT Academy Introduction Video"
                   className="w-full h-full"
                   frameBorder="0"
