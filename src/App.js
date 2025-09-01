@@ -1414,6 +1414,77 @@ function App() {
             </div>
           </div>
 
+          {/* About ITC India Pvt. Ltd. Section */}
+          <div className="mt-16 sm:mt-20">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
+              About ITC India Pvt. Ltd.
+            </h3>
+            
+            <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12">
+              {/* Left Side - Company Image */}
+              <div className="lg:w-1/2 flex justify-center lg:justify-start">
+                <div className="relative group">
+                  <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+                    <img 
+                      src="/l5.png" 
+                      alt="ITC India Pvt. Ltd. Logo" 
+                      className="w-full h-full object-contain bg-white/90 backdrop-blur-sm"
+                    />
+                  </div>
+                  <div className="absolute inset-0 rounded-2xl border-2 border-[#4A90E2]/30 group-hover:border-[#4A90E2] transition-colors duration-500"></div>
+                </div>
+              </div>
+
+              {/* Right Side - Company Information */}
+              <div className="lg:w-1/2 space-y-6">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] shadow-lg">
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-800 text-sm sm:text-base font-medium">
+                        <span className="font-bold text-[#4A90E2]">Established in 2011</span> - ITC India Pvt. Ltd is a leading NABL-accredited product testing laboratory
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-800 text-sm sm:text-base font-medium">
+                        Located in the <span className="font-bold text-[#4A90E2]">Mohali Industrial Area, JLPL</span>
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-800 text-sm sm:text-base font-medium">
+                        <span className="font-bold text-[#4A90E2]">Core expertise</span> in product testing and validation
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-800 text-sm sm:text-base font-medium">
+                        <span className="font-bold text-[#4A90E2]">Expanded services</span> include IoT and Robotics training
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-800 text-sm sm:text-base font-medium">
+                        Offering <span className="font-bold text-[#4A90E2]">cutting-edge technology, hardware, and software solutions</span>
+                      </p>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-2 flex-shrink-0"></div>
+                      <p className="text-gray-800 text-sm sm:text-base font-medium">
+                        Serving <span className="font-bold text-[#4A90E2]">academic institutions and industry partners</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </section>
