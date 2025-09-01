@@ -1509,6 +1509,15 @@ function App() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400"></div>
                 
                 <div className="text-center mb-8 relative z-10">
+                  {/* NABL Badge */}
+                  <div className="flex justify-center mb-6">
+                    <img 
+                      src="https://nablwp.qci.org.in/assets/2.5X3.5.png" 
+                      alt="NABL Accredited Badge" 
+                      className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-lg hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  
                   <div className="relative inline-block">
                     <Microscope className="w-16 h-16 mx-auto mb-4 text-indigo-200 group-hover:animate-bounce transition-all duration-300" />
                     <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping"></div>
