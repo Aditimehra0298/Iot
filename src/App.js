@@ -1416,9 +1416,9 @@ function App() {
 
           {/* ITC India Testing Laboratory Section */}
           <div className="mt-16 sm:mt-20">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
-              ITC India - Premier Testing & Calibration Laboratory
-            </h3>
+                          <h3 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+                About ITC India - Premier Testing & Calibration Laboratory
+              </h3>
             
             {/* Header Section */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
