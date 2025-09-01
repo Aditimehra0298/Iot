@@ -1305,6 +1305,42 @@ function App() {
                         <p className="text-xs text-gray-600 text-center mt-2">Advanced IoT - Electronics Fundamentals</p>
                       </div>
                     )}
+                    
+                    {/* Add video for Basic Computer Literacy */}
+                    {req.title === 'Basic Computer Literacy' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            controls
+                            preload="metadata"
+                            poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
+                          >
+                            <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Computer Skills</p>
+                      </div>
+                    )}
+                    
+                    {/* Add video for Internet & Mobile Apps */}
+                    {req.title === 'Internet & Mobile Apps' && (
+                      <div className="mt-4">
+                        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                          <video
+                            className="w-full h-full object-cover"
+                            controls
+                            preload="metadata"
+                            poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
+                          >
+                            <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <p className="text-xs text-gray-600 text-center mt-2">IoT Applications - Mobile & Web</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
