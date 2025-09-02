@@ -648,13 +648,24 @@ function App() {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                 <button
-                  onClick={() => document.getElementById('programs').scrollIntoView({ behavior: 'smooth' })}
+                  onClick={openCtaForm}
                   className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
                 >
                   Explore Programs
                 </button>
-                <button className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 px-6 rounded-full text-base transition-all duration-300 hover:scale-105">
-                  brochure
+                <button 
+                  onClick={() => {
+                    // Download the existing PDF file
+                    const link = document.createElement('a');
+                    link.href = '/Who We Are.pdf';
+                    link.download = 'Who We Are.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 px-6 rounded-full text-base transition-all duration-300 hover:scale-105"
+                >
+                  Download Brochure
                 </button>
               </div>
             </div>
