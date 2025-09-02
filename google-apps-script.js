@@ -20,6 +20,7 @@ function doPost(e) {
       data.message || '',
       data.formType || '',
       data.program || '',
+      data.source || '',
       data.timestamp || ''
     ];
     
@@ -59,6 +60,7 @@ Location: ${data.location || 'Not provided'}
 Course: ${data.course || 'Not provided'}
 Form Type: ${data.formType || 'Not provided'}
 Program: ${data.program || 'Not provided'}
+Source: ${data.source || 'Not provided'}
 Message: ${data.message || 'No message'}
 
 Timestamp: ${new Date().toLocaleString()}
@@ -95,6 +97,7 @@ function setupSheet() {
     'Message',
     'Form Type',
     'Program',
+    'Source',
     'Submission Time'
   ];
   
@@ -120,6 +123,7 @@ function testIntegration() {
     message: 'Test message',
     formType: 'offline',
     program: '2-month',
+    source: 'program-card',
     timestamp: new Date().toISOString()
   };
   

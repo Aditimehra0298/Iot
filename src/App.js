@@ -71,6 +71,7 @@ function App() {
           ...formData,
           program: selectedProgramForForm,
           formType: 'offline',
+          source: 'program-card',
           timestamp: new Date().toISOString()
         })
       });
@@ -137,6 +138,7 @@ function App() {
         body: JSON.stringify({
           ...ctaFormData,
           formType: ctaLearningMode,
+          source: 'cta-section',
           timestamp: new Date().toISOString()
         })
       });
@@ -190,6 +192,7 @@ function App() {
           ...onlineFormData,
           program: selectedProgramForOnlineForm,
           formType: 'online',
+          source: 'program-card',
           timestamp: new Date().toISOString()
         })
       });

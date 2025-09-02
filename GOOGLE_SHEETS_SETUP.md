@@ -49,6 +49,7 @@ Your Google Sheet will have these columns:
 - Message
 - Form Type (offline/online)
 - Program (2-month/4-month/6-month)
+- Source (program-card/cta-section/hero-section/header)
 - Submission Time
 
 ## Troubleshooting
