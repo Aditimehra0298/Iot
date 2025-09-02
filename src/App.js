@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -43,6 +43,7 @@ function App() {
   });
   const [showThankYou, setShowThankYou] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState('');
+  const [openItems, setOpenItems] = useState([]);
 
   // Testimonials data
   const testimonials = [
@@ -78,11 +79,64 @@ function App() {
     }
   ];
 
+  // FAQ data
+  const faqData = [
+    {
+      question: "What makes your IoT training program different from others?",
+      answer: "Our IoT training combines hands-on project work with real-world industry scenarios. Students work with actual hardware, sensors, and cloud platforms used by leading companies. We focus on practical implementation rather than just theory, ensuring you can immediately apply what you learn in professional environments.",
+      icon: <Zap className="h-5 w-5" />
+    },
+    {
+      question: "Do I need programming experience to start IoT and robotics training?",
+      answer: "While basic programming knowledge helps, we welcome complete beginners! Our curriculum starts with fundamentals and gradually builds complexity. We cover essential programming concepts in Python and C++ specifically for IoT and robotics applications, ensuring everyone can follow along regardless of their starting point.",
+      icon: <Brain className="h-5 w-5" />
+    },
+    {
+      question: "What kind of projects will I work on during the training?",
+      answer: "You'll build real-world projects like smart home automation systems, industrial monitoring dashboards, autonomous robot navigation, sensor data analytics platforms, and connected device networks. Each project is designed to showcase different aspects of IoT and robotics, from hardware integration to cloud deployment.",
+      icon: <Settings className="h-5 w-5" />
+    },
+    {
+      question: "How long does it take to become job-ready in IoT and robotics?",
+      answer: "Our intensive 6-month program is designed to make you industry-ready. This includes 3 months of core IoT concepts, 2 months of robotics specialization, and 1 month of capstone project work. We also provide career support including portfolio development and interview preparation.",
+      icon: <Rocket className="h-5 w-5" />
+    },
+    {
+      question: "What hardware and software tools will I learn to use?",
+      answer: "You'll master Arduino, Raspberry Pi, ESP32, various sensors (temperature, humidity, motion, cameras), actuators, and communication protocols (WiFi, Bluetooth, LoRa). On the software side, we cover Python, C++, Node.js, MQTT, cloud platforms (AWS IoT, Google Cloud), and mobile app development for device control.",
+      icon: <Settings className="h-5 w-5" />
+    },
+    {
+      question: "Is there ongoing support after completing the training?",
+      answer: "Absolutely! We provide 1 year of post-training support including access to our alumni network, monthly tech talks, project mentorship, career guidance, and priority access to advanced workshops. Our community stays connected through our private Discord server where you can share projects and get help.",
+      icon: <Brain className="h-5 w-5" />
+    },
+    {
+      question: "Can I specialize in specific IoT domains like smart cities or healthcare?",
+      answer: "Yes! After completing the core curriculum, you can choose specialization tracks in smart cities, healthcare IoT, industrial automation, agriculture tech, or consumer electronics. Each track includes domain-specific projects, industry case studies, and connections with relevant employers.",
+      icon: <Zap className="h-5 w-5" />
+    },
+    {
+      question: "What are the career opportunities after IoT and robotics training?",
+      answer: "Graduates find roles as IoT Engineers, Robotics Developers, Embedded Systems Engineers, Solutions Architects, Product Managers for tech companies, and many start their own IoT consulting businesses. The demand is growing rapidly with average starting salaries ranging from ₹6-12 LPA depending on skills and location.",
+      icon: <Rocket className="h-5 w-5" />
+    }
+  ];
+
 
   // Set loading to false after component mounts
   React.useEffect(() => {
     setIsLoading(false);
   }, []);
+
+  // FAQ toggle function
+  const toggleItem = (index) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(item => item !== index)
+        : [...prev, index]
+    );
+  };
 
   // Form handling functions
   const handleInputChange = (e) => {
@@ -2025,6 +2079,78 @@ function App() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our IoT and Robotics training programs
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-xl border border-blue-100 overflow-hidden transition-all duration-300 hover:shadow-md"
+              >
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg text-blue-600">
+                      {faq.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                      {faq.question}
+                    </h3>
+                  </div>
+                  <div className="flex-shrink-0 ml-4">
+                    {openItems.includes(index) ? (
+                      <ChevronUp className="h-5 w-5 text-blue-600 transition-transform duration-200" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-blue-600 transition-transform duration-200" />
+                    )}
+                  </div>
+                </button>
+                
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openItems.includes(index) 
+                      ? 'max-h-96 opacity-100' 
+                      : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 pb-5">
+                    <div className="pl-14">
+                      <p className="text-gray-700 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-3">Still have questions?</h3>
+              <p className="text-blue-100 mb-6">
+                Our experts are here to help you choose the right training path for your career goals.
+              </p>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 transform hover:scale-105">
+                Contact Our Training Team
+              </button>
             </div>
           </div>
         </div>
