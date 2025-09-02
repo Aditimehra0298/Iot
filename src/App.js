@@ -1948,17 +1948,13 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative z-50 py-16 bg-white overflow-hidden border-t-4 border-blue-500">
-        {/* Test Banner - Remove this after confirming visibility */}
-        <div className="bg-red-500 text-white text-center py-4 font-bold text-2xl">
-          TESTIMONIALS SECTION IS HERE - IF YOU CAN SEE THIS, THE SECTION IS WORKING
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-black mb-4 bg-white/90 backdrop-blur-sm rounded-lg py-4 px-6 shadow-lg">
+      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-black max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg py-3 px-4 shadow-md">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Discover how our IoT training and project support have transformed businesses across India
             </p>
           </div>
@@ -1969,7 +1965,7 @@ function App() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 w-96 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+                  className="flex-shrink-0 w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-6"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
@@ -1984,11 +1980,11 @@ function App() {
                           />
                         ))}
                       </div>
-                      <p className="text-black text-sm leading-relaxed mb-4">
+                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-sm leading-relaxed mb-4">
                         {testimonial.text}
                       </p>
                       <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-black">{testimonial.author}</p>
+                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300">{testimonial.author}</p>
                         <p className="text-blue-600 text-sm font-semibold">{testimonial.location}</p>
                       </div>
                     </div>
@@ -1999,7 +1995,7 @@ function App() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 w-96 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+                  className="flex-shrink-0 w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-6"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
@@ -2014,11 +2010,11 @@ function App() {
                           />
                         ))}
                       </div>
-                      <p className="text-black text-sm leading-relaxed mb-4">
+                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-sm leading-relaxed mb-4">
                         {testimonial.text}
                       </p>
                       <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-black">{testimonial.author}</p>
+                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300">{testimonial.author}</p>
                         <p className="text-blue-600 text-sm font-semibold">{testimonial.location}</p>
                       </div>
                     </div>
@@ -2031,17 +2027,13 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative z-50 py-16 bg-white border-t-4 border-green-500">
-        {/* Test Banner - Remove this after confirming visibility */}
-        <div className="bg-green-500 text-white text-center py-4 font-bold text-2xl">
-          FAQ SECTION IS HERE - IF YOU CAN SEE THIS, THE SECTION IS WORKING
-        </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-black mb-4 bg-white/90 backdrop-blur-sm rounded-lg py-4 px-6 shadow-lg">
+      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-black max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg py-3 px-4 shadow-md">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to know about our IoT and Robotics training programs
             </p>
           </div>
@@ -2050,7 +2042,7 @@ function App() {
             {faqData.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-xl border border-blue-100 overflow-hidden transition-all duration-300 hover:shadow-md"
+                className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] overflow-hidden"
               >
                 <button
                   onClick={() => toggleItem(index)}
@@ -2060,7 +2052,7 @@ function App() {
                     <div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg text-blue-600">
                       {faq.icon}
                     </div>
-                    <h3 className="text-lg font-semibold text-black pr-4">
+                    <h3 className="text-lg font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 pr-4">
                       {faq.question}
                     </h3>
                   </div>
@@ -2082,7 +2074,7 @@ function App() {
                 >
                   <div className="px-6 pb-5">
                     <div className="pl-14">
-                      <p className="text-black leading-relaxed">
+                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
