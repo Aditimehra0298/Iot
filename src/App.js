@@ -1248,9 +1248,9 @@ function App() {
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
+        <h3 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
             Prerequisites & Requirements
-          </h2>
+          </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
             {prerequisites.map((req, index) => (
@@ -1557,9 +1557,8 @@ function App() {
 
             {/* Why Choose Us */}
             <div className="text-center">
-              <h4 className="text-2xl font-bold text-gray-800 mb-8 hover:scale-105 transition-transform duration-300">
-                Why Choose 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3]"> ITC India</span>?
+              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+                Why Choose ITC India?
               </h4>
               
               <div className="grid md:grid-cols-3 gap-8">
