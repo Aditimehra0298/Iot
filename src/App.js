@@ -61,7 +61,7 @@ function App() {
     
     try {
       // Submit to Google Sheets
-      const response = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -129,7 +129,7 @@ function App() {
     
     try {
       // Submit to Google Sheets
-      const response = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -182,7 +182,7 @@ function App() {
     
     try {
       // Submit to Google Sheets
-      const response = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
