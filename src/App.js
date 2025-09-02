@@ -996,9 +996,9 @@ function App() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-[#1A365D] via-[#2D3748] to-[#1A365D] bg-clip-text text-transparent">
-            Choose Your Learning Path
-          </h2>
+                     <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 text-gray-900">
+              Choose Your Learning Path
+           </h3>
 
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 justify-center">
             {/* 2-Month Program */}
