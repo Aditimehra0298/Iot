@@ -547,7 +547,7 @@ function App() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative group">
                 {/* Video Collage Container */}
-                <div className="relative bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-[#4A90E2]/30 shadow-xl overflow-hidden">
+                <div className="relative bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] backdrop-blur-md rounded-3xl p-6 border border-[#4A90E2]/30 shadow-xl overflow-hidden">
                   <div className="relative max-w-2xl">
                     {/* Main Large Video - Top */}
                     <div className="relative mb-3">
