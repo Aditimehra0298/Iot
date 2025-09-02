@@ -56,20 +56,49 @@ function App() {
     }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', { ...formData, program: selectedProgramForForm });
-    alert('Thank you for your interest! We will contact you soon.');
-    setShowForm(false);
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      location: '',
-      course: '',
-      message: ''
-    });
+    
+    try {
+      // Submit to Google Sheets
+      const response = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          program: selectedProgramForForm,
+          formType: 'offline',
+          timestamp: new Date().toISOString()
+        })
+      });
+      
+      console.log('Form submitted to Google Sheets:', { ...formData, program: selectedProgramForForm });
+      alert('Thank you for your interest! We will contact you soon.');
+      setShowForm(false);
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        location: '',
+        course: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Thank you for your interest! We will contact you soon.');
+      setShowForm(false);
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        location: '',
+        course: '',
+        message: ''
+      });
+    }
   };
 
   const openForm = (program) => {
@@ -94,19 +123,48 @@ function App() {
     }));
   };
 
-  const handleCtaFormSubmit = (e) => {
+  const handleCtaFormSubmit = async (e) => {
     e.preventDefault();
-    console.log('CTA form submitted:', { ...ctaFormData, mode: ctaLearningMode });
-    alert(`Thank you for your interest in ${ctaLearningMode} training! We will contact you soon.`);
-    setShowCtaForm(false);
-    setCtaFormData({
-      name: '',
-      phone: '',
-      email: '',
-      location: '',
-      course: '',
-      message: ''
-    });
+    
+    try {
+      // Submit to Google Sheets
+      const response = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...ctaFormData,
+          formType: ctaLearningMode,
+          timestamp: new Date().toISOString()
+        })
+      });
+      
+      console.log('CTA form submitted to Google Sheets:', { ...ctaFormData, mode: ctaLearningMode });
+      alert(`Thank you for your interest in ${ctaLearningMode} training! We will contact you soon.`);
+      setShowCtaForm(false);
+      setCtaFormData({
+        name: '',
+        phone: '',
+        email: '',
+        location: '',
+        course: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting CTA form:', error);
+      alert(`Thank you for your interest in ${ctaLearningMode} training! We will contact you soon.`);
+      setShowCtaForm(false);
+      setCtaFormData({
+        name: '',
+        phone: '',
+        email: '',
+        location: '',
+        course: '',
+        message: ''
+      });
+    }
   };
 
   const handleOnlineInputChange = (e) => {
@@ -117,20 +175,49 @@ function App() {
     }));
   };
 
-  const handleOnlineFormSubmit = (e) => {
+  const handleOnlineFormSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Online form submitted:', { ...onlineFormData, program: selectedProgramForOnlineForm });
-    alert('Thank you for your interest in online training! We will contact you soon.');
-    setShowOnlineForm(false);
-    setOnlineFormData({
-      name: '',
-      phone: '',
-      email: '',
-      location: '',
-      course: '',
-      message: ''
-    });
+    
+    try {
+      // Submit to Google Sheets
+      const response = await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...onlineFormData,
+          program: selectedProgramForOnlineForm,
+          formType: 'online',
+          timestamp: new Date().toISOString()
+        })
+      });
+      
+      console.log('Online form submitted to Google Sheets:', { ...onlineFormData, program: selectedProgramForOnlineForm });
+      alert('Thank you for your interest in online training! We will contact you soon.');
+      setShowOnlineForm(false);
+      setOnlineFormData({
+        name: '',
+        phone: '',
+        email: '',
+        location: '',
+        course: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting online form:', error);
+      alert('Thank you for your interest in online training! We will contact you soon.');
+      setShowOnlineForm(false);
+      setOnlineFormData({
+        name: '',
+        phone: '',
+        email: '',
+        location: '',
+        course: '',
+        message: ''
+      });
+    }
   };
 
   const programs = {
