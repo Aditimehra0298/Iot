@@ -1901,7 +1901,16 @@ function App() {
         </div>
       </section>
 
-            {/* Testimonials Section */}
+      {/* What Our Client Says Heading Section */}
+      <section className="py-8 sm:py-12 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+            What Our Client Says
+          </h2>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
       <section id="testimonials" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
