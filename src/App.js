@@ -1867,6 +1867,69 @@ function App() {
         </div>
       </section>
 
+      {/* Client Testimonials Marquee Section */}
+      <section className="py-8 bg-gray-100">
+        <div className="overflow-hidden">
+          <div className="flex gap-6 animate-marquee">
+            {/* Testimonial 1 */}
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Krishworks Technology provided excellent IoT training and project support for our compliance courses in Bengaluru. Their expertise helped us implement customized IoT solutions seamlessly."</p>
+              <p className="text-blue-600 font-semibold text-right">Dr. Ishani Roy, Bengaluru</p>
+            </div>
+            {/* Testimonial 2 */}
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"The team at Krishworks guided us through IoT project phases and training, ensuring smooth integration with our existing systems. Their proactive support in Bengaluru was invaluable."</p>
+              <p className="text-blue-600 font-semibold text-right">Chryslynn D'Costa, Bengaluru</p>
+            </div>
+            {/* Testimonial 3 */}
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Krishworks delivered hands-on IoT training sessions that empowered our staff in Kolkata to operate real-time monitoring systems effectively during the project roll-out."</p>
+              <p className="text-blue-600 font-semibold text-right">Diptesh Mukherjee, Kolkata</p>
+            </div>
+            {/* Testimonial 4 */}
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"BrandStory conducted detailed IoT workshops and helped implement our business automation project in Mumbai successfully, enabling us to optimize operations."</p>
+              <p className="text-blue-600 font-semibold text-right">Rahul Gupta, Mumbai</p>
+            </div>
+            {/* Testimonial 5 */}
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Sieora's IoT training and project management services in Chennai elevated our team's technical capabilities, leading to successful deployment of smart home automation systems."</p>
+              <p className="text-blue-600 font-semibold text-right">Priya Menon, Chennai</p>
+            </div>
+            {/* Testimonial 6 */}
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Yalantis provided comprehensive IoT training coupled with project execution support in Delhi, which enhanced our logistics platform's efficiency and real-time data handling."</p>
+              <p className="text-blue-600 font-semibold text-right">Anil Sharma, Delhi</p>
+            </div>
+            {/* Duplicated testimonials for seamless looping */}
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Krishworks Technology provided excellent IoT training and project support for our compliance courses in Bengaluru. Their expertise helped us implement customized IoT solutions seamlessly."</p>
+              <p className="text-blue-600 font-semibold text-right">Dr. Ishani Roy, Bengaluru</p>
+            </div>
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"The team at Krishworks guided us through IoT project phases and training, ensuring smooth integration with our existing systems. Their proactive support in Bengaluru was invaluable."</p>
+              <p className="text-blue-600 font-semibold text-right">Chryslynn D'Costa, Bengaluru</p>
+            </div>
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Krishworks delivered hands-on IoT training sessions that empowered our staff in Kolkata to operate real-time monitoring systems effectively during the project roll-out."</p>
+              <p className="text-blue-600 font-semibold text-right">Diptesh Mukherjee, Kolkata</p>
+            </div>
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"BrandStory conducted detailed IoT workshops and helped implement our business automation project in Mumbai successfully, enabling us to optimize operations."</p>
+              <p className="text-blue-600 font-semibold text-right">Rahul Gupta, Mumbai</p>
+            </div>
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Sieora's IoT training and project management services in Chennai elevated our team's technical capabilities, leading to successful deployment of smart home automation systems."</p>
+              <p className="text-blue-600 font-semibold text-right">Priya Menon, Chennai</p>
+            </div>
+            <div className="flex-shrink-0 w-80 bg-white p-6 rounded-2xl shadow-xl">
+              <p className="text-gray-600 text-lg italic mb-4">"Yalantis provided comprehensive IoT training coupled with project execution support in Delhi, which enhanced our logistics platform's efficiency and real-time data handling."</p>
+              <p className="text-blue-600 font-semibold text-right">Anil Sharma, Delhi</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
 
       {/* Stats Section */}

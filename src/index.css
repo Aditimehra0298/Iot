@@ -160,6 +160,20 @@ html {
   animation: scroll-right-to-left 30s linear infinite;
 }
 
+/* Marquee animation for testimonials */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
 /* Glassmorphism effects */
 .glass {
   background: rgba(17, 25, 40, 0.75);
