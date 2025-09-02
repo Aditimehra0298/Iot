@@ -1948,7 +1948,11 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative z-20 py-16 bg-white overflow-hidden">
+      <section className="relative z-50 py-16 bg-white overflow-hidden border-t-4 border-blue-500">
+        {/* Test Banner - Remove this after confirming visibility */}
+        <div className="bg-red-500 text-white text-center py-4 font-bold text-2xl">
+          TESTIMONIALS SECTION IS HERE - IF YOU CAN SEE THIS, THE SECTION IS WORKING
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-black mb-4 bg-white/90 backdrop-blur-sm rounded-lg py-4 px-6 shadow-lg">
@@ -2027,7 +2031,11 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative z-20 py-16 bg-white">
+      <section className="relative z-50 py-16 bg-white border-t-4 border-green-500">
+        {/* Test Banner - Remove this after confirming visibility */}
+        <div className="bg-green-500 text-white text-center py-4 font-bold text-2xl">
+          FAQ SECTION IS HERE - IF YOU CAN SEE THIS, THE SECTION IS WORKING
+        </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-black mb-4 bg-white/90 backdrop-blur-sm rounded-lg py-4 px-6 shadow-lg">
