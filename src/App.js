@@ -625,8 +625,8 @@ function App() {
               </div>
               
                              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in leading-tight drop-shadow-2xl bg-gradient-to-r from-blue-300/20 to-blue-400/20 px-6 py-4 rounded-2xl inline-block border border-blue-300/30">
-                 Master Class in IoT & Robotics
-               </h1>
+                Master Class in IoT & Robotics
+              </h1>
               
               <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg">
                 Transform your career with hands-on IoT and Electronics training. Build real-world projects and master industry-standard technologies.
@@ -800,12 +800,12 @@ function App() {
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 justify-center">
             {/* 2-Month Program */}
             <div className="flex-1 max-w-sm">
-              <div 
-                onClick={() => setSelectedProgram('2-month')}
-                className={`relative cursor-pointer group transition-all duration-500 ${
-                  selectedProgram === '2-month' ? 'scale-105' : 'hover:scale-102'
-                }`}
-              >
+                  <div 
+                    onClick={() => setSelectedProgram('2-month')}
+                    className={`relative cursor-pointer group transition-all duration-500 ${
+                      selectedProgram === '2-month' ? 'scale-105' : 'hover:scale-102'
+                    }`}
+                  >
                 {/* Silver Badge */}
                 <div className="absolute -top-4 -left-4 z-20">
                   <div className="relative">
@@ -827,26 +827,26 @@ function App() {
                 </div>
 
                 {/* Program Container */}
-                <div className="relative bg-gradient-to-br from-blue-500 to-cyan-500 p-1 rounded-2xl shadow-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20 animate-pulse"></div>
-                  
-                  <div className="relative bg-white rounded-2xl p-6 m-1 min-h-[280px] flex flex-col justify-between shadow-xl">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" />
-                        <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
-                          {programs['2-month'].duration}
-                        </div>
-                      </div>
+                    <div className="relative bg-gradient-to-br from-blue-500 to-cyan-500 p-1 rounded-2xl shadow-2xl overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20 animate-pulse"></div>
                       
-                      <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['2-month'].title}</h3>
-                      <p className="text-gray-800 mb-2 text-sm sm:text-base">
-                        <span className="text-blue-500 font-semibold">Ideal for:</span> {programs['2-month'].ideal}
-                      </p>
-                      <p className="text-gray-800 mb-4 text-sm sm:text-base">
-                        <span className="text-cyan-500 font-semibold">Focus:</span> {programs['2-month'].focus}
-                      </p>
-                                              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['2-month'].price}</div>
+                      <div className="relative bg-white rounded-2xl p-6 m-1 min-h-[280px] flex flex-col justify-between shadow-xl">
+                        <div>
+                          <div className="flex items-center justify-between mb-4">
+                            <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-blue-500" />
+                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+                              {programs['2-month'].duration}
+                            </div>
+                          </div>
+                          
+                          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['2-month'].title}</h3>
+                          <p className="text-gray-800 mb-2 text-sm sm:text-base">
+                            <span className="text-blue-500 font-semibold">Ideal for:</span> {programs['2-month'].ideal}
+                          </p>
+                          <p className="text-gray-800 mb-4 text-sm sm:text-base">
+                            <span className="text-cyan-500 font-semibold">Focus:</span> {programs['2-month'].focus}
+                          </p>
+                          <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['2-month'].price}</div>
                         
                         {/* Learning Mode Switch */}
                         <div className="mb-4">
@@ -868,7 +868,7 @@ function App() {
                                   <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                   </svg>
-                                </div>
+                        </div>
                                 <span>Offline</span>
                               </button>
 
@@ -888,7 +888,7 @@ function App() {
                                   <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                                   </svg>
-                                </div>
+                        </div>
                                 <span>Online</span>
                               </button>
                             </div>
@@ -909,26 +909,26 @@ function App() {
                       >
                         {selectedProgram === '2-month' ? 'Selected' : 'Choose Program'}
                       </button>
+                      </div>
+                    </div>
+
+                    {/* Selection Indicator */}
+                    {selectedProgram === '2-month' && (
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Selection Indicator */}
-                {selectedProgram === '2-month' && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                )}
-              </div>
-            </div>
-
             {/* 4-Month Program */}
             <div className="flex-1 max-w-sm">
-              <div 
-                onClick={() => setSelectedProgram('4-month')}
-                className={`relative cursor-pointer group transition-all duration-500 ${
-                  selectedProgram === '4-month' ? 'scale-105' : 'hover:scale-102'
-                }`}
-              >
+                  <div 
+                    onClick={() => setSelectedProgram('4-month')}
+                    className={`relative cursor-pointer group transition-all duration-500 ${
+                      selectedProgram === '4-month' ? 'scale-105' : 'hover:scale-102'
+                    }`}
+                  >
                 {/* Gold Badge */}
                 <div className="absolute -top-4 -left-4 z-20">
                   <div className="relative">
@@ -952,26 +952,26 @@ function App() {
                 </div>
 
                 {/* Program Container */}
-                <div className="relative bg-gradient-to-br from-green-500 to-emerald-500 p-1 rounded-2xl shadow-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-20 animate-pulse"></div>
-                  
-                  <div className="relative bg-white rounded-2xl p-6 m-1 min-h-[280px] flex flex-col justify-between shadow-xl">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
-                        <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white">
-                          {programs['4-month'].duration}
-                        </div>
-                      </div>
+                    <div className="relative bg-gradient-to-br from-green-500 to-emerald-500 p-1 rounded-2xl shadow-2xl overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-20 animate-pulse"></div>
                       
-                      <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['4-month'].title}</h3>
-                      <p className="text-gray-800 mb-2 text-sm sm:text-base">
-                        <span className="text-green-500 font-semibold">Ideal for:</span> {programs['4-month'].ideal}
-                      </p>
-                      <p className="text-gray-800 mb-4 text-sm sm:text-base">
-                        <span className="text-emerald-500 font-semibold">Focus:</span> {programs['4-month'].focus}
-                      </p>
-                                              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['4-month'].price}</div>
+                      <div className="relative bg-white rounded-2xl p-6 m-1 min-h-[280px] flex flex-col justify-between shadow-xl">
+                        <div>
+                          <div className="flex items-center justify-between mb-4">
+                            <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
+                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white">
+                              {programs['4-month'].duration}
+                            </div>
+                          </div>
+                          
+                          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['4-month'].title}</h3>
+                          <p className="text-gray-800 mb-2 text-sm sm:text-base">
+                            <span className="text-green-500 font-semibold">Ideal for:</span> {programs['4-month'].ideal}
+                          </p>
+                          <p className="text-gray-800 mb-4 text-sm sm:text-base">
+                            <span className="text-emerald-500 font-semibold">Focus:</span> {programs['4-month'].focus}
+                          </p>
+                          <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['4-month'].price}</div>
                         
                         {/* Learning Mode Switch */}
                         <div className="mb-4">
@@ -993,7 +993,7 @@ function App() {
                                   <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                   </svg>
-                                </div>
+                        </div>
                                 <span>Offline</span>
                               </button>
 
@@ -1013,7 +1013,7 @@ function App() {
                                   <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                                   </svg>
-                                </div>
+                        </div>
                                 <span>Online</span>
                               </button>
                             </div>
@@ -1034,26 +1034,26 @@ function App() {
                       >
                         {selectedProgram === '4-month' ? 'Selected' : 'Choose Program'}
                       </button>
+                      </div>
+                    </div>
+
+                    {/* Selection Indicator */}
+                    {selectedProgram === '4-month' && (
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Selection Indicator */}
-                {selectedProgram === '4-month' && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                )}
-              </div>
-            </div>
-
             {/* 6-Month Program */}
             <div className="flex-1 max-w-sm">
-              <div 
-                onClick={() => setSelectedProgram('6-month')}
-                className={`relative cursor-pointer group transition-all duration-500 ${
-                  selectedProgram === '6-month' ? 'scale-105' : 'hover:scale-102'
-                }`}
-              >
+                  <div 
+                    onClick={() => setSelectedProgram('6-month')}
+                    className={`relative cursor-pointer group transition-all duration-500 ${
+                      selectedProgram === '6-month' ? 'scale-105' : 'hover:scale-102'
+                    }`}
+                  >
                 {/* Diamond Badge */}
                 <div className="absolute -top-4 -left-4 z-20">
                   <div className="relative">
@@ -1079,26 +1079,26 @@ function App() {
                 </div>
 
                 {/* Program Container */}
-                <div className="relative bg-gradient-to-br from-orange-500 to-red-500 p-1 rounded-2xl shadow-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-20 animate-pulse"></div>
-                  
-                  <div className="relative bg-white rounded-2xl p-6 m-1 min-h-[280px] flex flex-col justify-between shadow-xl">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />
-                        <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-orange-500 to-red-500 text-white">
-                          {programs['6-month'].duration}
-                        </div>
-                      </div>
+                    <div className="relative bg-gradient-to-br from-orange-500 to-red-500 p-1 rounded-2xl shadow-2xl overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 opacity-20 animate-pulse"></div>
                       
-                      <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['6-month'].title}</h3>
-                      <p className="text-gray-800 mb-2 text-sm sm:text-base">
-                        <span className="text-orange-500 font-semibold">Ideal for:</span> {programs['6-month'].ideal}
-                      </p>
-                      <p className="text-gray-800 mb-4 text-sm sm:text-base">
-                        <span className="text-red-500 font-semibold">Focus:</span> {programs['6-month'].focus}
-                      </p>
-                                              <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['6-month'].price}</div>
+                      <div className="relative bg-white rounded-2xl p-6 m-1 min-h-[280px] flex flex-col justify-between shadow-xl">
+                        <div>
+                          <div className="flex items-center justify-between mb-4">
+                            <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />
+                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-orange-500 to-red-500 text-white">
+                              {programs['6-month'].duration}
+                            </div>
+                          </div>
+                          
+                          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['6-month'].title}</h3>
+                          <p className="text-gray-800 mb-2 text-sm sm:text-base">
+                            <span className="text-orange-500 font-semibold">Ideal for:</span> {programs['6-month'].ideal}
+                          </p>
+                          <p className="text-gray-800 mb-4 text-sm sm:text-base">
+                            <span className="text-red-500 font-semibold">Focus:</span> {programs['6-month'].focus}
+                          </p>
+                          <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['6-month'].price}</div>
                         
                         {/* Learning Mode Switch */}
                         <div className="mb-4">
@@ -1120,7 +1120,7 @@ function App() {
                                   <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                                   </svg>
-                                </div>
+                        </div>
                                 <span>Offline</span>
                               </button>
 
@@ -1140,7 +1140,7 @@ function App() {
                                   <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                                   </svg>
-                                </div>
+                        </div>
                                 <span>Online</span>
                               </button>
                             </div>
@@ -1161,20 +1161,20 @@ function App() {
                       >
                         {selectedProgram === '6-month' ? 'Selected' : 'Choose Program'}
                       </button>
+                      </div>
+                    </div>
+
+                    {/* Selection Indicator */}
+                    {selectedProgram === '6-month' && (
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                    )}
                   </div>
                 </div>
-
-                {/* Selection Indicator */}
-                {selectedProgram === '6-month' && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                )}
               </div>
             </div>
-          </div>
-        </div>
-        
+
         {/* Syllabus Details Section */}
         <div className="relative z-10 py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1206,14 +1206,14 @@ function App() {
               'bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent'
             }`}>
               {selectedProgram ? `${currentProgram.title} - Detailed Syllabus` : `${(programs && programs['2-month']?.title) || '2-Month IoT Bootcamp'} - Detailed Syllabus`}
-            </h3>
+                </h3>
 
             {!isLoading && (((selectedProgram && currentProgram) || (!selectedProgram && programs && programs['2-month']))) ? (
               <div className="overflow-x-auto">
                 <div className="flex gap-4 sm:gap-6 pb-4 min-w-max">
                   {((selectedProgram && currentProgram?.weeks) ? currentProgram.weeks : ((programs && programs['2-month']?.weeks) || [])).map((week, index) => (
-                    <div 
-                      key={index} 
+                      <div 
+                        key={index} 
                       className={`bg-white/90 rounded-2xl p-4 sm:p-6 border transition-all duration-300 hover:shadow-lg cursor-pointer shadow-md w-80 flex-shrink-0 ${
                         selectedProgram === '2-month' ? 'border-blue-500 hover:border-cyan-500 hover:shadow-cyan-500/20' :
                         selectedProgram === '4-month' ? 'border-green-500 hover:border-emerald-500 hover:shadow-green-500/20' :
@@ -1225,9 +1225,9 @@ function App() {
                            selectedProgram === '4-month' ? 'border-emerald-500 shadow-lg shadow-green-500/20' :
                            selectedProgram === '6-month' ? 'border-red-500 shadow-lg shadow-orange-500/20' :
                            'border-cyan-500 shadow-lg shadow-cyan-500/20') : ''
-                      }`}
-                      onClick={() => setActiveWeek(activeWeek === index ? null : index)}
-                    >
+                        }`}
+                        onClick={() => setActiveWeek(activeWeek === index ? null : index)}
+                      >
                       {/* Week Header */}
                       <div className="text-center mb-4">
                         <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center font-bold text-2xl text-white mb-3 transition-all duration-300 ${
@@ -1236,8 +1236,8 @@ function App() {
                           selectedProgram === '6-month' ? 'bg-gradient-to-r from-orange-500 to-red-500' :
                           'bg-gradient-to-r from-blue-500 to-cyan-500'
                         }`}>
-                          {week.week}
-                        </div>
+                                {week.week}
+                              </div>
                         <h4 className={`text-lg font-bold mb-2 transition-all duration-300 ${
                           selectedProgram === '2-month' ? 'text-blue-500' :
                           selectedProgram === '4-month' ? 'text-green-500' :
@@ -1245,8 +1245,8 @@ function App() {
                           'text-blue-500'
                         }`}>{week.module}</h4>
                         <div className="text-gray-600 text-sm font-medium">Week {week.week}</div>
-                      </div>
-                      
+                          </div>
+                          
                       {/* Topics Section - Hidden by default, shown on click */}
                       <div className={`transition-all duration-300 overflow-hidden ${
                         activeWeek === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
@@ -1259,8 +1259,8 @@ function App() {
                             'text-cyan-500 border-cyan-500/30'
                           }`}>Topics Covered:</h5>
                           <ul className="text-gray-800 text-sm space-y-2">
-                            {week.topics.map((topic, i) => (
-                              <li key={i} className="flex items-start">
+                              {week.topics.map((topic, i) => (
+                                <li key={i} className="flex items-start">
                                 <div className={`w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0 transition-all duration-300 ${
                                   selectedProgram === '2-month' ? 'bg-cyan-500' :
                                   selectedProgram === '4-month' ? 'bg-emerald-500' :
@@ -1268,11 +1268,11 @@ function App() {
                                   'bg-cyan-500'
                                 }`}></div>
                                 <span className="leading-relaxed">{topic}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          
                         {/* Projects Section */}
                         <div>
                           <h5 className={`font-semibold mb-3 text-sm font-bold border-b pb-2 transition-all duration-300 ${
@@ -1282,8 +1282,8 @@ function App() {
                             'text-blue-500 border-blue-500/30'
                           }`}>Projects:</h5>
                           <ul className="text-gray-800 text-sm space-y-2">
-                            {week.projects.map((project, i) => (
-                              <li key={i} className="flex items-start">
+                              {week.projects.map((project, i) => (
+                                <li key={i} className="flex items-start">
                                 <div className={`w-4 h-4 mt-1 mr-3 flex-shrink-0 transition-all duration-300 ${
                                   selectedProgram === '2-month' ? 'text-blue-500' :
                                   selectedProgram === '4-month' ? 'text-green-500' :
@@ -1293,11 +1293,11 @@ function App() {
                                   <Zap className="w-full h-full" />
                                 </div>
                                 <span className="leading-relaxed">{project}</span>
-                              </li>
-                            ))}
-                          </ul>
+                                </li>
+                              ))}
+                            </ul>
                         </div>
-                      </div>
+                          </div>
 
                       {/* Expandable Content Indicator */}
                       <div className="mt-4 pt-4 border-t border-gray-200">
@@ -1313,10 +1313,10 @@ function App() {
                               'text-blue-500'
                             }`} />
                           </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               </div>
             ) : isLoading ? (
@@ -1325,16 +1325,16 @@ function App() {
                   <div className="w-16 h-16 mx-auto mb-4 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
                   <p className="text-lg font-medium">Loading Syllabus...</p>
                 </div>
-              </div>
-            ) : (
-              <div className="flex items-center justify-center h-64">
-                <div className="text-center text-gray-500">
-                  <Cpu className="w-16 h-16 mx-auto mb-4 text-[#7FB3D3]" />
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center h-64">
+                    <div className="text-center text-gray-500">
+                      <Cpu className="w-16 h-16 mx-auto mb-4 text-[#7FB3D3]" />
                   <p className="text-lg font-medium">Choose a program from above to view the detailed curriculum</p>
-                  <p className="text-sm text-gray-400 mt-2">Touch/Click on any program card to see the syllabus</p>
-                </div>
-              </div>
-            )}
+                      <p className="text-sm text-gray-400 mt-2">Touch/Click on any program card to see the syllabus</p>
+                    </div>
+                  </div>
+                )}
             </div>
           </div>
         </div>
@@ -1432,7 +1432,7 @@ function App() {
                             <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
-                        </div>
+                  </div>
                         <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
                       </div>
                     )}
@@ -1516,16 +1516,16 @@ function App() {
               <div className="text-center mb-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
-                </div>
+                  </div>
                 <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Hands-On IoT Training Programs</h4>
-              </div>
+                </div>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
                 Learn by doing, not just by listening. Our workshops and courses immerse you in real-world IoT projects-covering sensors, embedded systems, connectivity, and cloud integration.
               </p>
               <div className="mt-6 flex justify-center">
                 <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full group-hover:w-24 transition-all duration-500"></div>
               </div>
-            </div>
+          </div>
 
             {/* Industry-Relevant Curriculum */}
             <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
@@ -1785,15 +1785,226 @@ function App() {
             </button>
             <button 
               onClick={() => {
-                // Open brochure in new window for PDF download
-                const brochureWindow = window.open('/brochure.html', '_blank');
-                if (brochureWindow) {
-                  brochureWindow.onload = () => {
+                // Create a comprehensive PDF brochure with both images
+                const createPDFBrochure = () => {
+                  const htmlContent = `
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>ITC India IoT Academy Brochure</title>
+                        <style>
+                            @page { margin: 0.5in; }
+                            body { 
+                                font-family: Arial, sans-serif; 
+                                margin: 0; 
+                                padding: 20px; 
+                                color: #333;
+                                line-height: 1.6;
+                            }
+                            .header {
+                                background: linear-gradient(135deg, #4A90E2 0%, #7FB3D3 100%);
+                                color: white;
+                                padding: 30px;
+                                text-align: center;
+                                border-radius: 15px;
+                                margin-bottom: 30px;
+                            }
+                            .header h1 {
+                                font-size: 2.2em;
+                                margin: 0 0 10px 0;
+                                font-weight: bold;
+                            }
+                            .header p {
+                                font-size: 1.1em;
+                                margin: 0;
+                                opacity: 0.9;
+                            }
+                            .section {
+                                margin-bottom: 25px;
+                            }
+                            .section h2 {
+                                color: #4A90E2;
+                                font-size: 1.5em;
+                                margin-bottom: 15px;
+                                border-bottom: 2px solid #4A90E2;
+                                padding-bottom: 5px;
+                            }
+                            .programs {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 15px;
+                                margin: 20px 0;
+                            }
+                            .program {
+                                background: #f8f9fa;
+                                padding: 15px;
+                                border-radius: 10px;
+                                border-left: 4px solid #4A90E2;
+                            }
+                            .program h3 {
+                                color: #4A90E2;
+                                margin: 0 0 8px 0;
+                                font-size: 1.1em;
+                            }
+                            .program .duration {
+                                color: #7FB3D3;
+                                font-weight: bold;
+                                margin-bottom: 8px;
+                                font-size: 0.9em;
+                            }
+                            .program .price {
+                                font-size: 1.3em;
+                                font-weight: bold;
+                                color: #333;
+                            }
+                            .images {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 20px;
+                                margin: 25px 0;
+                            }
+                            .image-container {
+                                text-align: center;
+                            }
+                            .image-container img {
+                                max-width: 100%;
+                                height: auto;
+                                border-radius: 8px;
+                                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                            }
+                            .contact {
+                                background: #f8f9fa;
+                                padding: 20px;
+                                border-radius: 10px;
+                                margin-top: 25px;
+                            }
+                            .contact h3 {
+                                color: #4A90E2;
+                                margin-bottom: 10px;
+                            }
+                            .contact p {
+                                margin: 3px 0;
+                                font-size: 0.9em;
+                            }
+                            .footer {
+                                background: #333;
+                                color: white;
+                                padding: 15px;
+                                text-align: center;
+                                border-radius: 8px;
+                                margin-top: 20px;
+                            }
+                            .footer p {
+                                margin: 0;
+                                font-size: 0.8em;
+                            }
+                            ul {
+                                padding-left: 20px;
+                            }
+                            li {
+                                margin-bottom: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <h1>Master Class in IoT & Robotics</h1>
+                            <p>Institute of Testing & Certification India Pvt. Ltd.</p>
+                        </div>
+                        
+                        <div class="section">
+                            <h2>Transform Your Career with IoT</h2>
+                            <p>Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs. Our comprehensive curriculum covers everything from basic electronics to advanced IoT applications.</p>
+                        </div>
+
+                        <div class="section">
+                            <h2>Our Programs</h2>
+                            <div class="programs">
+                                <div class="program">
+                                    <h3>🥈 Silver Program</h3>
+                                    <div class="duration">8 Weeks</div>
+                                    <p>Perfect for beginners and engineering students. Learn IoT fundamentals, Arduino programming, and basic cloud integration.</p>
+                                    <div class="price">$299</div>
+                                </div>
+                                <div class="program">
+                                    <h3>🥇 Gold Program</h3>
+                                    <div class="duration">16 Weeks</div>
+                                    <p>Ideal for intermediate learners and career switchers. Advanced IoT systems, industrial protocols, and comprehensive project development.</p>
+                                    <div class="price">$599</div>
+                                </div>
+                                <div class="program">
+                                    <h3>💎 Diamond Program</h3>
+                                    <div class="duration">24 Weeks</div>
+                                    <p>Complete IoT mastery with AI integration. Perfect for industry professionals seeking comprehensive IoT and Industry 4.0 expertise.</p>
+                                    <div class="price">$999</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h2>Training Highlights</h2>
+                            <div class="images">
+                                <div class="image-container">
+                                    <img src="${window.location.origin}/1.png" alt="IoT Training Image 1" />
+                                </div>
+                                <div class="image-container">
+                                    <img src="${window.location.origin}/2.png" alt="IoT Training Image 2" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <h2>What We Offer</h2>
+                            <ul>
+                                <li><strong>Hands-On Training:</strong> Learn by doing with real-world IoT projects</li>
+                                <li><strong>Industry-Relevant Curriculum:</strong> Stay ahead with practical skills that matter today</li>
+                                <li><strong>Expert Mentors:</strong> Learn from industry professionals</li>
+                                <li><strong>Flexible Learning:</strong> Choose between offline and online modes</li>
+                                <li><strong>Placement Assistance:</strong> 100% placement support</li>
+                            </ul>
+                        </div>
+
+                        <div class="section">
+                            <h2>Why Choose ITC India?</h2>
+                            <ul>
+                                <li><strong>NABL Accredited:</strong> Premier testing and calibration laboratory</li>
+                                <li><strong>BIS Approved:</strong> Government recognized certification</li>
+                                <li><strong>European Recognition:</strong> Internationally accepted standards</li>
+                                <li><strong>State-of-the-art Facilities:</strong> Advanced laboratories and equipment</li>
+                                <li><strong>Complete Solutions:</strong> End-to-end support from training to placement</li>
+                            </ul>
+                        </div>
+
+                        <div class="contact">
+                            <h3>Contact Information</h3>
+                            <p><strong>Address:</strong> Plot No. 146, JLPL Industrial Area, Sector 82, Mohali, Punjab, 160062</p>
+                            <p><strong>Phone:</strong> 09316473033</p>
+                            <p><strong>Email:</strong> info@itcindia.org</p>
+                            <p><strong>Website:</strong> www.itcindia.org</p>
+                        </div>
+
+                        <div class="footer">
+                            <p>Copyright © 2015 - 2025 ITC India.org All Rights Reserved.</p>
+                        </div>
+                    </body>
+                    </html>
+                  `;
+
+                  // Create a new window with the brochure content
+                  const printWindow = window.open('', '_blank');
+                  printWindow.document.write(htmlContent);
+                  printWindow.document.close();
+                  
+                  // Wait for images to load, then trigger print
+                  printWindow.onload = () => {
                     setTimeout(() => {
-                      brochureWindow.print();
-                    }, 1000);
+                      printWindow.print();
+                    }, 2000);
                   };
-                }
+                };
+
+                createPDFBrochure();
               }}
               className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105"
             >
