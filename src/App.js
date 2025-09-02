@@ -1600,12 +1600,13 @@ function App() {
       {/* Stats Section */}
       <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8">
             {[
               { number: '500+', label: 'Students Trained', icon: Users },
               { number: '50+', label: 'Projects Built', icon: Wrench },
               { number: '95%', label: 'Success Rate', icon: Award },
-              { number: '24/7', label: 'Support', icon: Clock }
+              { number: '24/7', label: 'Support', icon: Clock },
+              { number: '100%', label: 'Placement Assistant', icon: Award }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
