@@ -1948,13 +1948,13 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-white overflow-hidden">
+      <section className="relative z-20 py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-black mb-4 bg-white/90 backdrop-blur-sm rounded-lg py-4 px-6 shadow-lg">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg py-3 px-4 shadow-md">
               Discover how our IoT training and project support have transformed businesses across India
             </p>
           </div>
@@ -1980,12 +1980,12 @@ function App() {
                           />
                         ))}
                       </div>
-                      <p className="text-gray-800 text-sm leading-relaxed mb-4">
+                      <p className="text-black text-sm leading-relaxed mb-4">
                         {testimonial.text}
                       </p>
                       <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                        <p className="text-blue-600 text-sm">{testimonial.location}</p>
+                        <p className="font-semibold text-black">{testimonial.author}</p>
+                        <p className="text-blue-600 text-sm font-semibold">{testimonial.location}</p>
                       </div>
                     </div>
                   </div>
@@ -2010,12 +2010,12 @@ function App() {
                           />
                         ))}
                       </div>
-                      <p className="text-gray-800 text-sm leading-relaxed mb-4">
+                      <p className="text-black text-sm leading-relaxed mb-4">
                         {testimonial.text}
                       </p>
                       <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                        <p className="text-blue-600 text-sm">{testimonial.location}</p>
+                        <p className="font-semibold text-black">{testimonial.author}</p>
+                        <p className="text-blue-600 text-sm font-semibold">{testimonial.location}</p>
                       </div>
                     </div>
                   </div>
@@ -2027,13 +2027,13 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="relative z-20 py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-black mb-4 bg-white/90 backdrop-blur-sm rounded-lg py-4 px-6 shadow-lg">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-black max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg py-3 px-4 shadow-md">
               Everything you need to know about our IoT and Robotics training programs
             </p>
           </div>
@@ -2052,7 +2052,7 @@ function App() {
                     <div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg text-blue-600">
                       {faq.icon}
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                    <h3 className="text-lg font-semibold text-black pr-4">
                       {faq.question}
                     </h3>
                   </div>
@@ -2074,7 +2074,7 @@ function App() {
                 >
                   <div className="px-6 pb-5">
                     <div className="pl-14">
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-black leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
