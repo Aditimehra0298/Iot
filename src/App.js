@@ -859,26 +859,19 @@ function App() {
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (learningModes['2-month'] === 'offline') {
                             openForm('2-month');
-                          }}
-                          className="w-full text-center py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-xs sm:text-sm hover:from-cyan-500 hover:to-blue-500"
-                        >
-                          {selectedProgram === '2-month' ? 'Selected' : 'Offline Enroll'}
-                        </button>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
+                          } else {
                             openOnlineForm('2-month');
-                          }}
-                          className="w-full text-center py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-xs sm:text-sm hover:from-emerald-500 hover:to-green-500"
-                        >
-                          Online Enroll
-                        </button>
-                      </div>
+                          }
+                        }}
+                        className="w-full text-center py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-cyan-500 hover:to-blue-500"
+                      >
+                        {selectedProgram === '2-month' ? 'Selected' : 'Choose Program'}
+                      </button>
                   </div>
                 </div>
 
@@ -991,26 +984,19 @@ function App() {
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (learningModes['4-month'] === 'offline') {
                             openForm('4-month');
-                          }}
-                          className="w-full text-center py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-xs sm:text-sm hover:from-emerald-500 hover:to-green-500"
-                        >
-                          {selectedProgram === '4-month' ? 'Selected' : 'Offline Enroll'}
-                        </button>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
+                          } else {
                             openOnlineForm('4-month');
-                          }}
-                          className="w-full text-center py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-xs sm:text-sm hover:from-emerald-500 hover:to-green-500"
-                        >
-                          Online Enroll
-                        </button>
-                      </div>
+                          }
+                        }}
+                        className="w-full text-center py-3 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-emerald-500 hover:to-green-500"
+                      >
+                        {selectedProgram === '4-month' ? 'Selected' : 'Choose Program'}
+                      </button>
                   </div>
                 </div>
 
@@ -1125,26 +1111,19 @@ function App() {
                         </div>
                       </div>
                       
-                      <div className="space-y-2">
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (learningModes['6-month'] === 'offline') {
                             openForm('6-month');
-                          }}
-                          className="w-full text-center py-2 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-xs sm:text-sm hover:from-red-500 hover:to-orange-500"
-                        >
-                          {selectedProgram === '6-month' ? 'Selected' : 'Offline Enroll'}
-                        </button>
-                        <button 
-                          onClick={(e) => {
-                            e.stopPropagation();
+                          } else {
                             openOnlineForm('6-month');
-                          }}
-                          className="w-full text-center py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-xs sm:text-sm hover:from-emerald-500 hover:to-green-500"
-                        >
-                          Online Enroll
-                        </button>
-                      </div>
+                          }
+                        }}
+                        className="w-full text-center py-3 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-red-500 hover:to-orange-500"
+                      >
+                        {selectedProgram === '6-month' ? 'Selected' : 'Choose Program'}
+                      </button>
                   </div>
                 </div>
 
