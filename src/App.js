@@ -991,14 +991,15 @@ function App() {
             onLoad={() => console.log('Program section background image loaded successfully')}
             onError={(e) => console.error('Program section background image failed to load:', e)}
           />
-          {/* Overlay to ensure content readability */}
-          <div className="absolute inset-0 bg-white/40"></div>
+          {/* Gradient overlay for better content visibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-purple-600/70 to-teal-600/80"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-                     <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 text-gray-900">
+          <div className="bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 text-gray-900">
               Choose Your Learning Path
-           </h3>
+            </h3>
 
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 justify-center">
             {/* 2-Month Program */}
@@ -1541,6 +1542,7 @@ function App() {
             </div>
           </div>
         </div>
+          </div>
         </div>
         
       </section>
