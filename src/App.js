@@ -1776,55 +1776,10 @@ function App() {
             Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs.
           </p>
           
-          {/* Learning Mode Selection */}
-          <div className="mb-8">
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-2 shadow-md border border-gray-200 max-w-md mx-auto">
-              <div className="flex items-center space-x-1">
-                {/* Offline Mode */}
-                <button
-                  onClick={() => setCtaLearningMode('offline')}
-                  className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
-                    ctaLearningMode === 'offline'
-                      ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md shadow-[#4A90E2]/25'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  <div className="w-4 h-4">
-                    <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span>Offline</span>
-                </button>
-
-                {/* Online Mode */}
-                <button
-                  onClick={() => setCtaLearningMode('online')}
-                  className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
-                    ctaLearningMode === 'online'
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md shadow-green-500/25'
-                      : 'bg-green-100 text-green-600 hover:bg-green-200'
-                  }`}
-                >
-                  <div className="w-4 h-4">
-                    <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                    </svg>
-                  </div>
-                  <span>Online</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={openCtaForm}
-              className={`font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                ctaLearningMode === 'offline'
-                  ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white hover:shadow-[#4A90E2]/25'
-                  : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white hover:shadow-green-500/25'
-              }`}
+              className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
             >
               Enroll Now
             </button>
@@ -2136,7 +2091,7 @@ function App() {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-900">Enroll in IoT Training - {ctaLearningMode === 'offline' ? 'Offline' : 'Online'} Form</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Enroll in IoT Training</h3>
               <button 
                 onClick={() => setShowCtaForm(false)}
                 className="text-gray-400 hover:text-gray-600 transition-colors"
@@ -2145,6 +2100,47 @@ function App() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
+            </div>
+
+            {/* Learning Mode Switch inside form */}
+            <div className="mb-6">
+              <div className="bg-gray-50 rounded-xl p-2 shadow-sm border border-gray-200">
+                <div className="flex items-center space-x-1">
+                  {/* Offline Mode */}
+                  <button
+                    onClick={() => setCtaLearningMode('offline')}
+                    className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
+                      ctaLearningMode === 'offline'
+                        ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md shadow-[#4A90E2]/25'
+                        : 'bg-white text-gray-600 hover:bg-gray-100'
+                    }`}
+                  >
+                    <div className="w-4 h-4">
+                      <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span>Offline</span>
+                  </button>
+
+                  {/* Online Mode */}
+                  <button
+                    onClick={() => setCtaLearningMode('online')}
+                    className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
+                      ctaLearningMode === 'online'
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md shadow-green-500/25'
+                        : 'bg-white text-green-600 hover:bg-green-100'
+                    }`}
+                  >
+                    <div className="w-4 h-4">
+                      <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                      </svg>
+                    </div>
+                    <span>Online</span>
+                  </button>
+                </div>
+              </div>
             </div>
 
             <form onSubmit={handleCtaFormSubmit} className="space-y-4">
