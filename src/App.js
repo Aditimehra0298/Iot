@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, ShoppingCart, CloudRain, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, ShoppingCart, CloudRain, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -828,16 +828,17 @@ function App() {
               </div>
               <div className="flex flex-col">
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent leading-tight">
-                  Institute of Testing & Certification
+                  Internet of Things & Robotics
                 </span>
                 <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight">
-                  India Pvt. Ltd.
+                  Division of ITC India Pvt Ltd.
                 </span>
               </div>
             </div>
             
             <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
               <a href="#programs" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Programs</a>
+              <a href="#projects" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Projects</a>
               <a href="#syllabus" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Syllabus</a>
               <a href="#prerequisites" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Prerequisites</a>
               <button 
@@ -865,6 +866,7 @@ function App() {
         <div className={`md:hidden transition-all duration-300 ${mobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden bg-white/95 backdrop-blur-md border-t border-[#4A90E2]/20`}>
           <div className="px-4 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4">
             <a href="#programs" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Programs</a>
+            <a href="#projects" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Projects</a>
             <a href="#syllabus" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Syllabus</a>
             <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
             <button 
@@ -1693,21 +1695,21 @@ function App() {
       </section>
 
       {/* IoT & Robotics Masterclass Section */}
-      <section className="relative z-10 mt-20 pt-48 sm:pt-32 md:pt-36 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
+      <section id="projects" className="relative z-10 mt-8 pt-16 sm:pt-12 md:pt-16 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-16">
-            <div className="mb-6 sm:mb-4 flex justify-center pt-16 sm:pt-0">
-              <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full shadow-lg">
+          <div className="text-center mb-16 sm:mb-20">
+            <div className="mb-8 sm:mb-6 flex justify-center pt-4 sm:pt-2">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-sm font-semibold rounded-full shadow-lg">
                 <Zap className="w-3 h-3 mr-1.5" />
                 Industry-Leading Featured Projects
               </div>
             </div>
             
-                        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-white">
+            <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-12 sm:mb-16 text-white">
               IoT & Robotics Masterclass
-              </h4>
+            </h4>
              
              
              <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -1732,9 +1734,9 @@ function App() {
           </div>
 
           {/* Core Modules */}
-          <div className="mb-16 sm:mb-20">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12 text-center">Our Core Projects</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          <div className="mb-24 sm:mb-20">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12 sm:mb-16 text-center">Our Core Projects</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
               {masterclassModules.map((module, index) => {
                 const IconComponent = module.icon;
                 return (
@@ -1810,8 +1812,8 @@ function App() {
           </div>
 
           {/* Advanced Specializations */}
-          <div className="mb-16 sm:mb-20">
-            <div className="text-center mb-8 sm:mb-12">
+          <div className="mb-24 sm:mb-20">
+            <div className="text-center mb-12 sm:mb-16">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Advanced Specializations</h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
                 After completing core training, advance to specialized robotics applications in high-impact industries
@@ -1879,16 +1881,16 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-orange-100 to-red-100 border border-orange-200 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 mb-4 sm:mb-6">
-                <h4 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 flex items-center gap-2">
-                  <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400" />
+              <div className="bg-white/95 backdrop-blur-sm border border-orange-300 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 shadow-lg">
+                <h4 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
+                  <Flame className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500" />
                   Advanced Training Unlocks
                 </h4>
-                <p className="text-gray-200 leading-relaxed text-xs sm:text-sm md:text-base">
+                <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg">
                   Upon completion of core modules, trainers gain access to specialized robotics workshops including 
-                  <span className="text-orange-600 font-semibold"> drone manufacturing</span>, 
-                  <span className="text-green-600 font-semibold"> agricultural automation systems</span>, and 
-                  <span className="text-pink-600 font-semibold"> medical robotics development</span>. 
+                  <span className="text-orange-600 font-semibold bg-orange-50 px-2 py-1 rounded"> drone manufacturing</span>, 
+                  <span className="text-green-600 font-semibold bg-green-50 px-2 py-1 rounded"> agricultural automation systems</span>, and 
+                  <span className="text-pink-600 font-semibold bg-pink-50 px-2 py-1 rounded"> medical robotics development</span>. 
                   Build real-world solutions that make a difference.
                 </p>
               </div>
@@ -2094,7 +2096,7 @@ function App() {
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
-                  <span className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300 cursor-default">
+                  <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300 cursor-default border border-gray-200">
                     NABL Accredited • BIS Approved
                   </span>
                 </div>
@@ -2232,9 +2234,9 @@ function App() {
               
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
+                  <div className="w-16 h-16 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
                     <Shield className="w-8 h-8 text-[#4A90E2] group-hover:animate-pulse" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#4A90E2] rounded-full animate-ping group-hover:animate-bounce"></div>
                   </div>
                   <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Trusted Expertise</h5>
                   <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">NABL accredited with BIS approval and European recognition</p>
@@ -2368,7 +2370,7 @@ function App() {
                   className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg text-blue-600">
+                    <div className="flex-shrink-0 p-2 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg text-[#4A90E2]">
                       {faq.icon}
                     </div>
                     <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 pr-4">
@@ -2476,50 +2478,199 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-white/90 backdrop-blur-md border-t border-[#7FB3D3] py-6 sm:py-8 md:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
+      <footer className="relative z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+        {/* Enhanced Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+        </div>
+        
+        {/* Top Border Gradient */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4A90E2] via-[#7FB3D3] to-[#4A90E2]"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 mb-16">
+            {/* Company Info */}
+            <div className="lg:col-span-5">
+              <div className="flex items-center space-x-4 mb-8">
                 <div className="relative">
-                  {/* Clean footer logo */}
+                  {/* Enhanced glowing background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full blur-xl opacity-30 animate-pulse scale-125"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full blur-lg opacity-50 animate-pulse scale-110"></div>
+                  
+                  {/* Logo container with backdrop */}
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 border border-white/20 shadow-2xl">
                   <img 
                     src="/l5.png" 
                     alt="IoT Academy Logo" 
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain relative z-10"
                   />
                 </div>
-                <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-[#8B6F47] to-[#6B8FA8] bg-clip-text text-transparent">
-                  Master Class in IoT & Robotics
-                </span>
+                  
+                  {/* Enhanced animated indicator */}
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full animate-pulse shadow-lg flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
+                  IoT Academy
+                  </h3>
+                  <p className="text-sm text-gray-300 font-medium">Master Class in IoT & Robotics</p>
+                  <p className="text-xs text-gray-400 mt-1">Division of ITC India Pvt Ltd.</p>
               </div>
-              <p className="text-gray-700 text-xs sm:text-sm">
-                Empowering the next generation of IoT and Electronics engineers through hands-on learning and real-world projects.
+              </div>
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
+                Empowering the next generation of IoT and Electronics engineers through hands-on learning, real-world projects, and industry-leading expertise. Transform your career with cutting-edge technology education.
               </p>
+              
+              {/* Enhanced Social Media Icons */}
+              <div className="flex space-x-6">
+                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#E4405F] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Instagram className="w-7 h-7 text-gray-300 group-hover:text-white" />
+                </a>
+                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#0077B5] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Linkedin className="w-7 h-7 text-gray-300 group-hover:text-white" />
+                </a>
+                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#1877F2] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Facebook className="w-7 h-7 text-gray-300 group-hover:text-white" />
+                </a>
+                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#FF0000] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Youtube className="w-7 h-7 text-gray-300 group-hover:text-white" />
+                </a>
+              </div>
             </div>
             
-            <div>
-              <h4 className="text-gray-800 font-semibold mb-4 text-sm sm:text-base">Quick Links</h4>
-              <ul className="space-y-2 text-xs sm:text-sm">
-                <li><a href="#programs" className="text-gray-600 hover:text-[#8B6F47] transition-colors">Programs</a></li>
-                <li><a href="#syllabus" className="text-gray-600 hover:text-[#8B6F47] transition-colors">Syllabus</a></li>
-                <li><a href="#prerequisites" className="text-gray-600 hover:text-[#8B6F47] transition-colors">Prerequisites</a></li>
-                                 <li><button className="text-gray-600 hover:text-[#8B6F47] transition-colors">Contact</button></li>
+
+            
+            {/* Quick Links */}
+            <div className="lg:col-span-2">
+              <h4 className="text-white font-bold mb-8 text-2xl relative">
+                Quick Links
+                <div className="absolute -bottom-3 left-0 w-16 h-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full"></div>
+              </h4>
+              <ul className="space-y-5">
+                <li><a href="#programs" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
+                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Programs</span>
+                </a></li>
+                <li><a href="#projects" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
+                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Projects</span>
+                </a></li>
+                <li><a href="#syllabus" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
+                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Syllabus</span>
+                </a></li>
+                <li><a href="#prerequisites" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
+                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Prerequisites</span>
+                </a></li>
+                <li><button className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5 w-full text-left">
+                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
+                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Contact</span>
+                </button></li>
               </ul>
             </div>
             
-            <div>
-              <h4 className="text-gray-800 font-semibold mb-4 text-sm sm:text-base">Contact Info</h4>
-              <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
-                <li>Email: info@itcindia.org</li>
-                <li>Phone: 09316473033</li>
-                <li>Address: Plot No. 146, JLPL Industrial Area, Sector 82, Mohali, Punjab, 160062</li>
+                                    {/* Contact Info */}
+            <div className="lg:col-span-3">
+              <h4 className="text-white font-bold mb-8 text-2xl relative">
+                Contact Info
+                <div className="absolute -bottom-3 left-0 w-16 h-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full"></div>
+              </h4>
+              <ul className="space-y-8">
+                <li className="flex items-start space-x-5 group">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-4 h-4 bg-white rounded-full"></div>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-base font-semibold">Email</p>
+                    <a href="mailto:info@itcindia.org" className="text-white hover:text-[#4A90E2] transition-colors text-base font-bold">info@itcindia.org</a>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-5 group">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-4 h-4 bg-white rounded-full"></div>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-base font-semibold">Phone</p>
+                    <a href="tel:09316473033" className="text-white hover:text-[#4A90E2] transition-colors text-base font-bold">09316473033</a>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-5 group">
+                  <div className="w-10 h-10 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-4 h-4 bg-white rounded-full"></div>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-base font-semibold">Address</p>
+                    <p className="text-white text-base font-bold leading-relaxed">Plot No. 146, JLPL Industrial Area, Sector 82, Mohali, Punjab, 160062</p>
+                  </div>
+                </li>
               </ul>
+            </div>
+            
+            {/* Certifications & Accreditations */}
+            <div className="lg:col-span-2">
+              <h4 className="text-white font-bold mb-8 text-2xl relative">
+                Accreditations
+                <div className="absolute -bottom-3 left-0 w-16 h-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full"></div>
+              </h4>
+              
+              <div className="flex justify-center items-center">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden">
+                  {/* Background glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2]/20 to-[#7FB3D3]/20 rounded-2xl blur-xl"></div>
+                  
+                  <div className="relative z-10">
+                    <img 
+                      src="https://calibrationservices.home.blog/wp-content/uploads/2023/12/nabl-500x500-1.png" 
+                      alt="NABL Certified Laboratory" 
+                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain mx-auto"
+                    />
+                    <p className="text-center text-white text-sm font-bold mt-3">
+                      NABL Certified
+                    </p>
+                    <p className="text-center text-gray-300 text-xs mt-1">
+                      Laboratory
+                    </p>
+                    <div className="flex justify-center mt-2">
+                      <div className="flex space-x-1">
+                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full animate-pulse"></div>
+                        <div className="w-1.5 h-1.5 bg-[#7FB3D3] rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           
-          <div className="border-t border-[#E8D5C4] mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-600">
-            <p> Copyright © 2015 -2025 ITC India.org All Rights Reserved.</p>
+          {/* Enhanced Bottom Section */}
+          <div className="border-t border-gray-700 pt-12">
+            <div className="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
+              <div className="text-center lg:text-left">
+                <p className="text-gray-400 text-base font-semibold">
+                  Copyright © 2015 - 2025 ITC India.org All Rights Reserved.
+                </p>
+                <p className="text-gray-500 text-sm mt-3 flex items-center justify-center lg:justify-start space-x-3">
+                  <span className="w-3 h-3 bg-[#4A90E2] rounded-full animate-pulse"></span>
+                  <span className="font-medium">NABL Accredited</span>
+                  <span className="w-3 h-3 bg-[#7FB3D3] rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></span>
+                  <span className="font-medium">BIS Approved</span>
+                  <span className="w-3 h-3 bg-[#4A90E2] rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></span>
+                  <span className="font-medium">ISO Certified</span>
+                </p>
+              </div>
+              <div className="flex items-center space-x-10 text-base">
+                <a href="https://www.itcindia.org/privacy-policy/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Privacy Policy</a>
+                <a href="https://www.itcindia.org/services/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Terms of Service</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Cookie Policy</a>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
@@ -2949,9 +3100,9 @@ function App() {
             </div>
             
             <div className="space-y-4">
-              <div className="bg-blue-50 rounded-lg p-4">
-                <h3 className="font-semibold text-blue-900 mb-2">What happens next?</h3>
-                <ul className="text-sm text-blue-800 space-y-1 text-left">
+              <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-gray-200">
+                <h3 className="font-semibold text-gray-900 mb-2">What happens next?</h3>
+                <ul className="text-sm text-gray-700 space-y-1 text-left">
                   <li>• Our team will review your application</li>
                   <li>• We'll contact you within 24 hours</li>
                   <li>• Schedule your program start date</li>
