@@ -1693,12 +1693,12 @@ function App() {
       </section>
 
       {/* IoT & Robotics Masterclass Section */}
-      <section className="relative z-10 pt-20 sm:pt-16 md:pt-20 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
+      <section className="relative z-10 pt-32 sm:pt-20 md:pt-24 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16">
-            <div className="mb-6 sm:mb-4 flex justify-center pt-4 sm:pt-0">
+            <div className="mb-6 sm:mb-4 flex justify-center pt-8 sm:pt-0">
               <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full shadow-lg">
                 <Zap className="w-3 h-3 mr-1.5" />
                 Industry-Leading Featured Projects
