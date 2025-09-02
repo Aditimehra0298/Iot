@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, ShoppingCart, CloudRain, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -44,6 +44,103 @@ function App() {
   const [showThankYou, setShowThankYou] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState('');
   const [openItems, setOpenItems] = useState([]);
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  // Masterclass modules data
+  const masterclassModules = [
+    {
+      id: 1,
+      title: "DevFlow Studio",
+      subtitle: "IoT Development Foundation",
+      description: "Master the fundamentals of IoT development with hands-on projects using sensors, microcontrollers, and cloud integration.",
+      icon: Cpu,
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/20",
+      hoverColor: "group-hover:border-blue-500/60",
+      technologies: ["Arduino", "Raspberry Pi", "MQTT", "Cloud IoT"],
+      duration: "4 weeks",
+      level: "Beginner",
+      projects: 8,
+      animation: "animate-pulse-slow"
+    },
+    {
+      id: 2,
+      title: "OptiScan Matrix",
+      subtitle: "AI-Driven Autonomous Inventory Cart",
+      description: "Build intelligent inventory systems with computer vision, autonomous navigation, and real-time optimization algorithms.",
+      icon: ShoppingCart,
+      color: "from-emerald-500 to-teal-500",
+      bgColor: "bg-emerald-500/10",
+      borderColor: "border-emerald-500/20",
+      hoverColor: "group-hover:border-emerald-500/60",
+      technologies: ["Computer Vision", "ROS", "TensorFlow", "LIDAR"],
+      duration: "6 weeks",
+      level: "Intermediate",
+      projects: 12,
+      animation: "animate-bounce-slow"
+    },
+    {
+      id: 3,
+      title: "EnviroX Sentinel",
+      subtitle: "Real-Time IoT Climate Surveillance Platform",
+      description: "Develop comprehensive environmental monitoring systems with predictive analytics and automated response mechanisms.",
+      icon: CloudRain,
+      color: "from-sky-500 to-blue-500",
+      bgColor: "bg-sky-500/10",
+      borderColor: "border-sky-500/20",
+      hoverColor: "group-hover:border-sky-500/60",
+      technologies: ["IoT Sensors", "Time Series DB", "Machine Learning", "Edge Computing"],
+      duration: "5 weeks",
+      level: "Intermediate",
+      projects: 10,
+      animation: "animate-wave"
+    },
+    {
+      id: 4,
+      title: "InfernoGuard Nexus",
+      subtitle: "Intelligent Fire Detection & Alert Framework",
+      description: "Create advanced fire detection systems using thermal imaging, pattern recognition, and emergency response coordination.",
+      icon: Flame,
+      color: "from-red-500 to-orange-500",
+      bgColor: "bg-red-500/10",
+      borderColor: "border-red-500/20",
+      hoverColor: "group-hover:border-red-500/60",
+      technologies: ["Thermal Imaging", "Pattern Recognition", "Emergency Systems", "Real-time Processing"],
+      duration: "4 weeks",
+      level: "Advanced",
+      projects: 6,
+      animation: "animate-flicker"
+    }
+  ];
+
+  // Advanced specializations data
+  const advancedSpecializations = [
+    {
+      id: 1,
+      title: "Agricultural Robotics",
+      description: "Design autonomous farming robots for crop monitoring, harvesting, and precision agriculture",
+      icon: Wheat,
+      color: "from-green-500 to-lime-500",
+      projects: ["Crop Monitoring Drones", "Automated Harvesting Systems", "Soil Analysis Robots"]
+    },
+    {
+      id: 2,
+      title: "Medical Robotics",
+      description: "Develop surgical assistance robots, patient monitoring systems, and rehabilitation devices",
+      icon: Stethoscope,
+      color: "from-pink-500 to-rose-500",
+      projects: ["Surgical Assistant Robots", "Patient Monitoring IoT", "Rehabilitation Devices"]
+    },
+    {
+      id: 3,
+      title: "Drone Technology",
+      description: "Master autonomous drone systems for surveillance, delivery, and environmental monitoring",
+      icon: Drone,
+      color: "from-purple-500 to-indigo-500",
+      projects: ["Autonomous Delivery Drones", "Surveillance Systems", "Environmental Mapping"]
+    }
+  ];
 
   // Testimonials data
   const testimonials = [
@@ -1539,7 +1636,7 @@ function App() {
                     </div>
                   </div>
                 )}
-            </div>
+              </div>
           </div>
         </div>
         </div>
@@ -1590,6 +1687,214 @@ function App() {
                   Discover the hands-on approach that makes our IoT Academy the preferred choice for professionals
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IoT & Robotics Masterclass Section */}
+      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#4A90E2]/20 to-[#7FB3D3]/20 rounded-full border border-[#4A90E2]/30 mb-6">
+              <Zap className="w-4 h-4 text-[#4A90E2]" />
+              <span className="text-[#4A90E2] text-sm font-medium">Professional Certification Program</span>
+            </div>
+            
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+              IoT & Robotics
+              <span className="block bg-gradient-to-r from-[#4A90E2] via-[#7FB3D3] to-[#4A90E2] bg-clip-text text-transparent">
+                Masterclass
+              </span>
+            </h2>
+            
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+              Transform from beginner to expert with our comprehensive training program. 
+              Master IoT fundamentals, then advance to cutting-edge robotics applications in agriculture and medical fields.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                <span>19 weeks total</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                <span>Live mentorship</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4" />
+                <span>Industry certification</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Core Modules */}
+          <div className="mb-16 sm:mb-20">
+            <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Core Training Modules</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              {masterclassModules.map((module, index) => {
+                const IconComponent = module.icon;
+                return (
+                  <div
+                    key={module.id}
+                    className={`group relative bg-white/90 backdrop-blur-sm border border-[#7FB3D3] rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:rotate-1 transition-all duration-500 cursor-pointer`}
+                    onMouseEnter={() => setHoveredProject(module.id)}
+                    onMouseLeave={() => setHoveredProject(null)}
+                  >
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3]">
+                          <IconComponent 
+                            className={`w-6 h-6 sm:w-8 sm:h-8 text-white ${hoveredProject === module.id ? 'scale-110' : ''} transition-transform duration-300`} 
+                          />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className={`px-2 py-1 text-xs rounded-full ${
+                              module.level === 'Beginner' ? 'bg-green-100 text-green-700' :
+                              module.level === 'Intermediate' ? 'bg-yellow-100 text-yellow-700' :
+                              'bg-red-100 text-red-700'
+                            }`}>
+                              {module.level}
+                            </span>
+                            <span className="text-gray-500 text-sm">{module.duration}</span>
+                          </div>
+                          <h4 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#4A90E2] transition-colors duration-300">
+                            {module.title}
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Subtitle */}
+                    <h5 className="text-base sm:text-lg font-medium text-[#4A90E2] mb-4">
+                      {module.subtitle}
+                    </h5>
+
+                    {/* Description */}
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {module.description}
+                    </p>
+
+                    {/* Stats */}
+                    <div className="flex items-center gap-6 mb-6 text-sm text-gray-500">
+                      <div className="flex items-center gap-1">
+                        <Award className="w-4 h-4" />
+                        <span>{module.projects} Projects</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400" />
+                        <span>4.9/5 Rating</span>
+                      </div>
+                    </div>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2">
+                      {module.technologies.map((tech, techIndex) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-[#4A90E2] hover:text-white transition-colors duration-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Advanced Specializations */}
+          <div className="mb-16 sm:mb-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Advanced Specializations</h3>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                After completing core training, advance to specialized robotics applications in high-impact industries
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {advancedSpecializations.map((spec, index) => {
+                const IconComponent = spec.icon;
+                return (
+                  <div
+                    key={spec.id}
+                    className="group relative bg-white/90 backdrop-blur-sm border border-[#7FB3D3] rounded-xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-500 cursor-pointer"
+                  >
+                    <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-xl bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    <h4 className="text-lg font-bold text-gray-900 mb-3">{spec.title}</h4>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{spec.description}</p>
+                    
+                    <div className="space-y-2">
+                      <p className="text-xs text-gray-500 font-medium">Key Projects:</p>
+                      {spec.projects.map((project, projectIndex) => (
+                        <div key={projectIndex} className="flex items-center gap-2 text-xs text-gray-600">
+                          <div className="w-1 h-1 bg-[#4A90E2] rounded-full" />
+                          <span>{project}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Training Progression */}
+          <div className="text-center">
+            <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#4A90E2]/10 to-[#7FB3D3]/10 backdrop-blur-sm border border-[#4A90E2]/20 rounded-2xl p-6 sm:p-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Your Learning Journey</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg sm:text-xl">1</span>
+                  </div>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Foundation</h4>
+                  <p className="text-gray-600 text-sm">Master IoT basics and sensor integration</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg sm:text-xl">2</span>
+                  </div>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Advanced Systems</h4>
+                  <p className="text-gray-600 text-sm">Build complex autonomous systems</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg sm:text-xl">3</span>
+                  </div>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Specialization</h4>
+                  <p className="text-gray-600 text-sm">Focus on agriculture, medical, or drone tech</p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-100 to-red-100 border border-orange-200 rounded-xl p-4 sm:p-6 mb-6">
+                <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                  <Flame className="w-5 h-5 text-orange-500" />
+                  Advanced Training Unlocks
+                </h4>
+                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                  Upon completion of core modules, trainers gain access to specialized robotics workshops including 
+                  <span className="text-orange-600 font-semibold"> drone manufacturing</span>, 
+                  <span className="text-green-600 font-semibold"> agricultural automation systems</span>, and 
+                  <span className="text-pink-600 font-semibold"> medical robotics development</span>. 
+                  Build real-world solutions that make a difference.
+                </p>
+              </div>
+
+              <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#4A90E2]/25">
+                Enroll in Masterclass
+              </button>
             </div>
           </div>
         </div>
