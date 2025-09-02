@@ -31,6 +31,16 @@ function App() {
     course: '',
     message: ''
   });
+  const [ctaLearningMode, setCtaLearningMode] = useState('offline');
+  const [showCtaForm, setShowCtaForm] = useState(false);
+  const [ctaFormData, setCtaFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    location: '',
+    course: '',
+    message: ''
+  });
 
   // Set loading to false after component mounts
   React.useEffect(() => {
@@ -70,6 +80,33 @@ function App() {
   const openOnlineForm = (program) => {
     setSelectedProgramForOnlineForm(program);
     setShowOnlineForm(true);
+  };
+
+  const openCtaForm = () => {
+    setShowCtaForm(true);
+  };
+
+  const handleCtaInputChange = (e) => {
+    const { name, value } = e.target;
+    setCtaFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleCtaFormSubmit = (e) => {
+    e.preventDefault();
+    console.log('CTA form submitted:', { ...ctaFormData, mode: ctaLearningMode });
+    alert(`Thank you for your interest in ${ctaLearningMode} training! We will contact you soon.`);
+    setShowCtaForm(false);
+    setCtaFormData({
+      name: '',
+      phone: '',
+      email: '',
+      location: '',
+      course: '',
+      message: ''
+    });
   };
 
   const handleOnlineInputChange = (e) => {
@@ -1739,8 +1776,56 @@ function App() {
             Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs.
           </p>
           
+          {/* Learning Mode Selection */}
+          <div className="mb-8">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-2 shadow-md border border-gray-200 max-w-md mx-auto">
+              <div className="flex items-center space-x-1">
+                {/* Offline Mode */}
+                <button
+                  onClick={() => setCtaLearningMode('offline')}
+                  className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
+                    ctaLearningMode === 'offline'
+                      ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md shadow-[#4A90E2]/25'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  <div className="w-4 h-4">
+                    <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span>Offline</span>
+                </button>
+
+                {/* Online Mode */}
+                <button
+                  onClick={() => setCtaLearningMode('online')}
+                  className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
+                    ctaLearningMode === 'online'
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md shadow-green-500/25'
+                      : 'bg-green-100 text-green-600 hover:bg-green-200'
+                  }`}
+                >
+                  <div className="w-4 h-4">
+                    <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                    </svg>
+                  </div>
+                  <span>Online</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25">
+            <button 
+              onClick={openCtaForm}
+              className={`font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                ctaLearningMode === 'offline'
+                  ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white hover:shadow-[#4A90E2]/25'
+                  : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white hover:shadow-green-500/25'
+              }`}
+            >
               Enroll Now
             </button>
             <button className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105">
@@ -1765,7 +1850,7 @@ function App() {
                   />
                 </div>
                 <span className="text-xl font-bold bg-gradient-to-r from-[#8B6F47] to-[#6B8FA8] bg-clip-text text-transparent">
-                  IoT Academy
+                  Master Class in IoT & Robotics
                 </span>
               </div>
               <p className="text-gray-700 text-sm">
@@ -1786,15 +1871,15 @@ function App() {
             <div>
               <h4 className="text-gray-800 font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>Email: info@iotacademy.com</li>
-                <li>Phone: +1 (555) 123-4567</li>
-                <li>Address: 123 Tech Street, Innovation City</li>
+                <li>Email: info@itcindia.org</li>
+                <li>Phone: 09316473033</li>
+                <li>Address: Plot No. 146, JLPL Industrial Area, Sector 82, Mohali, Punjab, 160062</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-[#E8D5C4] mt-8 pt-8 text-center text-sm text-gray-600">
-            <p>&copy; 2024 IoT Academy. All rights reserved.</p>
+            <p> Copyright © 2015 -2025 ITC India.org All Rights Reserved.</p>
           </div>
         </div>
       </footer>
@@ -2026,6 +2111,139 @@ function App() {
                   className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Submit Online Enrollment Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* CTA Enrollment Form Modal */}
+      {showCtaForm && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-2xl font-bold text-gray-900">Enroll in IoT Training - {ctaLearningMode === 'offline' ? 'Offline' : 'Online'} Form</h3>
+              <button 
+                onClick={() => setShowCtaForm(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <form onSubmit={handleCtaFormSubmit} className="space-y-4">
+              {/* Name */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={ctaFormData.name}
+                  onChange={handleCtaInputChange}
+                  required
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    ctaLearningMode === 'offline' ? 'focus:ring-[#4A90E2]' : 'focus:ring-green-500'
+                  }`}
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={ctaFormData.phone}
+                  onChange={handleCtaInputChange}
+                  required
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    ctaLearningMode === 'offline' ? 'focus:ring-[#4A90E2]' : 'focus:ring-green-500'
+                  }`}
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={ctaFormData.email}
+                  onChange={handleCtaInputChange}
+                  required
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    ctaLearningMode === 'offline' ? 'focus:ring-[#4A90E2]' : 'focus:ring-green-500'
+                  }`}
+                  placeholder="Enter your email address"
+                />
+              </div>
+
+              {/* Location */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={ctaFormData.location}
+                  onChange={handleCtaInputChange}
+                  required
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    ctaLearningMode === 'offline' ? 'focus:ring-[#4A90E2]' : 'focus:ring-green-500'
+                  }`}
+                  placeholder="Enter your city/state"
+                />
+              </div>
+
+              {/* Course Plan Dropdown */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Course Plan *</label>
+                <select
+                  name="course"
+                  value={ctaFormData.course}
+                  onChange={handleCtaInputChange}
+                  required
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    ctaLearningMode === 'offline' ? 'focus:ring-[#4A90E2]' : 'focus:ring-green-500'
+                  }`}
+                >
+                  <option value="">Select Course Plan</option>
+                  <option value="silver-8-weeks">Silver (8 weeks)</option>
+                  <option value="gold-16-weeks">Gold (16 weeks)</option>
+                  <option value="diamond-24-weeks">Diamond (24 weeks)</option>
+                </select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Message (Optional)</label>
+                <textarea
+                  name="message"
+                  value={ctaFormData.message}
+                  onChange={handleCtaInputChange}
+                  rows={3}
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-300 resize-none ${
+                    ctaLearningMode === 'offline' ? 'focus:ring-[#4A90E2]' : 'focus:ring-green-500'
+                  }`}
+                  placeholder="Any additional information or questions..."
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  className={`w-full font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                    ctaLearningMode === 'offline'
+                      ? 'bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white'
+                      : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white'
+                  }`}
+                >
+                  Submit {ctaLearningMode === 'offline' ? 'Offline' : 'Online'} Enrollment Request
                 </button>
               </div>
             </form>
