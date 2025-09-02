@@ -1623,7 +1623,7 @@ function App() {
       {/* CTA Section */}
       <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
             Ready to Start Your IoT Journey?
           </h2>
           <p className="text-lg sm:text-xl text-gray-900 mb-8 sm:mb-12 max-w-2xl mx-auto font-medium">
