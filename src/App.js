@@ -1872,9 +1872,9 @@ function App() {
 
 
       {/* Stats Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-0">
+      <section className="relative z-10 py-16 sm:py-20 px-0">
+        <div className="w-full">
+          <div className="grid grid-cols-5 gap-0">
             {[
               { number: '500+', label: 'Students Trained', icon: Users },
               { number: '50+', label: 'Projects Built', icon: Wrench },
