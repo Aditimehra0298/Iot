@@ -41,6 +41,8 @@ function App() {
     course: '',
     message: ''
   });
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [thankYouMessage, setThankYouMessage] = useState('');
 
   // Set loading to false after component mounts
   React.useEffect(() => {
@@ -77,7 +79,8 @@ function App() {
       });
       
       console.log('Form submitted to Google Sheets:', { ...formData, program: selectedProgramForForm });
-      alert('Thank you for your interest! We will contact you soon.');
+      setThankYouMessage(`Thank you for your interest in ${selectedProgramForForm === '2-month' ? 'Silver' : selectedProgramForForm === '4-month' ? 'Gold' : 'Diamond'} offline training! We will contact you soon.`);
+      setShowThankYou(true);
       setShowForm(false);
       setFormData({
         name: '',
@@ -144,7 +147,8 @@ function App() {
       });
       
       console.log('CTA form submitted to Google Sheets:', { ...ctaFormData, mode: ctaLearningMode });
-      alert(`Thank you for your interest in ${ctaLearningMode} training! We will contact you soon.`);
+      setThankYouMessage(`Thank you for your interest in ${ctaLearningMode} training! We will contact you soon.`);
+      setShowThankYou(true);
       setShowCtaForm(false);
       setCtaFormData({
         name: '',
@@ -198,7 +202,8 @@ function App() {
       });
       
       console.log('Online form submitted to Google Sheets:', { ...onlineFormData, program: selectedProgramForOnlineForm });
-      alert('Thank you for your interest in online training! We will contact you soon.');
+      setThankYouMessage(`Thank you for your interest in ${selectedProgramForOnlineForm === '2-month' ? 'Silver' : selectedProgramForOnlineForm === '4-month' ? 'Gold' : 'Diamond'} online training! We will contact you soon.`);
+      setShowThankYou(true);
       setShowOnlineForm(false);
       setOnlineFormData({
         name: '',
@@ -2365,6 +2370,58 @@ function App() {
         </div>
       )}
 
+      {/* Thank You Page Modal */}
+      {showThankYou && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl animate-fade-in">
+            <div className="mb-6">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {thankYouMessage}
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-blue-50 rounded-lg p-4">
+                <h3 className="font-semibold text-blue-900 mb-2">What happens next?</h3>
+                <ul className="text-sm text-blue-800 space-y-1 text-left">
+                  <li>• Our team will review your application</li>
+                  <li>• We'll contact you within 24 hours</li>
+                  <li>• Schedule your program start date</li>
+                  <li>• Begin your IoT journey!</li>
+                </ul>
+              </div>
+              
+              <div className="flex space-x-3">
+                <button
+                  onClick={() => {
+                    setShowThankYou(false);
+                    setThankYouMessage('');
+                  }}
+                  className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Continue Browsing
+                </button>
+                <button
+                  onClick={() => {
+                    setShowThankYou(false);
+                    setThankYouMessage('');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="flex-1 bg-gray-100 text-gray-700 py-3 px-6 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+                >
+                  Back to Top
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       
     </div>
   );
