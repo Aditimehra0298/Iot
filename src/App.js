@@ -557,7 +557,10 @@ function App() {
               <a href="#programs" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg hover:scale-105 transform duration-200">Programs</a>
               <a href="#syllabus" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg hover:scale-105 transform duration-200">Syllabus</a>
               <a href="#prerequisites" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg hover:scale-105 transform duration-200">Prerequisites</a>
-              <button className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+              <button 
+                onClick={openCtaForm}
+                className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
                 Enroll Now
               </button>
             </div>
@@ -581,7 +584,10 @@ function App() {
             <a href="#programs" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Programs</a>
             <a href="#syllabus" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Syllabus</a>
             <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
-            <button className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full transition-all duration-300 shadow-lg">
+            <button 
+              onClick={openCtaForm}
+              className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full transition-all duration-300 shadow-lg"
+            >
               Enroll Now
             </button>
           </div>
