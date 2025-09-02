@@ -1862,7 +1862,7 @@ function App() {
             {/* Why Choose Us */}
             <div className="text-center">
               <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
-                Why Choose ITC India?
+                What Our Student Says
               </h4>
               
               <div className="grid md:grid-cols-3 gap-8">
