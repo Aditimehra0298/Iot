@@ -160,6 +160,20 @@ html {
   animation: scroll-right-to-left 30s linear infinite;
 }
 
+/* Scroll left animation for testimonials */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
 
 
 /* Glassmorphism effects */

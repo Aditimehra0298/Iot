@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star } from 'lucide-react';
+import { ChevronDown, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -43,6 +43,40 @@ function App() {
   });
   const [showThankYou, setShowThankYou] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState('');
+
+  // Testimonials data
+  const testimonials = [
+    {
+      text: "Krishworks Technology provided excellent IoT training and project support for our compliance courses in Bengaluru. Their expertise helped us implement customized IoT solutions seamlessly.",
+      author: "Dr. Ishani Roy",
+      location: "Bengaluru"
+    },
+    {
+      text: "The team at Krishworks guided us through IoT project phases and training, ensuring smooth integration with our existing systems. Their proactive support in Bengaluru was invaluable.",
+      author: "Chryslynn D'Costa",
+      location: "Bengaluru"
+    },
+    {
+      text: "Krishworks delivered hands-on IoT training sessions that empowered our staff in Kolkata to operate real-time monitoring systems effectively during the project roll-out.",
+      author: "Diptesh Mukherjee",
+      location: "Kolkata"
+    },
+    {
+      text: "BrandStory conducted detailed IoT workshops and helped implement our business automation project in Mumbai successfully, enabling us to optimize operations.",
+      author: "Rahul Gupta",
+      location: "Mumbai"
+    },
+    {
+      text: "Sieora's IoT training and project management services in Chennai elevated our team's technical capabilities, leading to successful deployment of smart home automation systems.",
+      author: "Priya Menon",
+      location: "Chennai"
+    },
+    {
+      text: "Yalantis provided comprehensive IoT training coupled with project execution support in Delhi, which enhanced our logistics platform's efficiency and real-time data handling.",
+      author: "Anil Sharma",
+      location: "Delhi"
+    }
+  ];
 
 
   // Set loading to false after component mounts
@@ -1858,18 +1892,6 @@ function App() {
         </div>
       </section>
 
-      {/* What Our Client Says Heading Section */}
-      <section className="py-8 sm:py-12 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
-            What Our Client Says
-          </h2>
-        </div>
-      </section>
-
-
-
-
 
       {/* Stats Section */}
       <section className="relative z-10 py-16 sm:py-20 px-0">
@@ -1925,6 +1947,85 @@ function App() {
             >
               Download Brochure
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover how our IoT training and project support have transformed businesses across India
+            </p>
+          </div>
+          
+          <div className="relative">
+            <div className="flex animate-scroll-left space-x-6">
+              {/* First set of testimonials */}
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex-shrink-0 w-96 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-1 mb-3">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <Star 
+                            key={starIndex} 
+                            className="h-4 w-4 text-yellow-400 fill-current" 
+                          />
+                        ))}
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                        {testimonial.text}
+                      </p>
+                      <div className="border-t border-gray-100 pt-4">
+                        <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                        <p className="text-blue-600 text-sm">{testimonial.location}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex-shrink-0 w-96 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-1 mb-3">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <Star 
+                            key={starIndex} 
+                            className="h-4 w-4 text-yellow-400 fill-current" 
+                          />
+                        ))}
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                        {testimonial.text}
+                      </p>
+                      <div className="border-t border-gray-100 pt-4">
+                        <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                        <p className="text-blue-600 text-sm">{testimonial.location}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
