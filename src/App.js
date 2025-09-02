@@ -43,7 +43,7 @@ function App() {
   });
   const [showThankYou, setShowThankYou] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState('');
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
 
   // Set loading to false after component mounts
   React.useEffect(() => {
@@ -605,50 +605,7 @@ function App() {
     }
   ];
 
-  const testimonials = [
-    {
-      quote: "The IoT training at ITC India completely transformed my understanding of connected devices. The hands-on approach and real-world projects made all the difference. I landed my dream job as an IoT Engineer within 2 months!",
-      author: "Rajesh Kumar",
-      role: "IoT Engineer, TechCorp",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      quote: "As a working professional, I needed flexible learning options. The online training format was perfect for me. The instructors were incredibly supportive, and the curriculum was industry-relevant. Highly recommended!",
-      author: "Priya Sharma",
-      role: "Software Developer, InnovateTech",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      quote: "The Diamond program exceeded my expectations. From basic concepts to advanced IoT applications, every module was well-structured. The placement assistance helped me secure a position at a leading tech company.",
-      author: "Amit Singh",
-      role: "IoT Solutions Architect, DataFlow",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      quote: "The practical approach to learning IoT concepts was amazing. We built real projects from day one, which gave me confidence to start my own IoT consulting business. The mentors are industry experts!",
-      author: "Neha Gupta",
-      role: "IoT Consultant, Self-Employed",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      quote: "Coming from a non-technical background, I was worried about learning IoT. But the instructors made everything so clear and easy to understand. Now I'm working as a Product Manager for IoT devices!",
-      author: "Vikram Kumar",
-      role: "Product Manager, SmartTech",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      quote: "The Gold program was perfect for my career transition. The comprehensive curriculum covered everything from sensors to cloud integration. The placement team helped me get multiple job offers!",
-      author: "Sneha Mehta",
-      role: "IoT Developer, CloudConnect",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
-    }
-  ];
+
 
   const currentProgram = selectedProgram ? programs[selectedProgram] : null;
 
@@ -1910,63 +1867,7 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h3 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
-            What Our Client Says
-          </h3>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Real stories from real students who transformed their careers
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -ml-12 sm:-ml-16 -mt-12 sm:-mt-16"></div>
-            <div className="absolute bottom-0 right-0 w-20 sm:w-24 h-20 sm:h-24 bg-gradient-to-br from-orange-100 to-red-100 rounded-full -mr-10 sm:-mr-12 -mb-10 sm:-mb-12"></div>
-            
-            <div className="relative z-10">
-              <div className="flex items-center justify-center mb-6 sm:mb-8">
-                <img
-                  src={testimonials[currentTestimonial].image}
-                  alt={testimonials[currentTestimonial].author}
-                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-white shadow-lg"
-                />
-              </div>
-              
-              <div className="flex justify-center mb-4 sm:mb-6">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <svg key={i} className="text-yellow-400 fill-current w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                  </svg>
-                ))}
-              </div>
-              
-              <blockquote className="text-base sm:text-lg md:text-xl text-gray-700 text-center mb-4 sm:mb-6 italic leading-relaxed">
-                "{testimonials[currentTestimonial].quote}"
-              </blockquote>
-              
-              <div className="text-center">
-                <div className="font-semibold text-blue-600 text-base sm:text-lg">{testimonials[currentTestimonial].author}</div>
-                <div className="text-gray-500 text-sm sm:text-base">{testimonials[currentTestimonial].role}</div>
-              </div>
-              
-              <div className="flex justify-center space-x-2 mt-6 sm:mt-8">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? 'bg-blue-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Stats Section */}
       <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
