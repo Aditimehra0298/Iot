@@ -11,11 +11,51 @@ function App() {
     '4-month': 'offline',
     '6-month': 'offline'
   });
+  const [showForm, setShowForm] = useState(false);
+  const [selectedProgramForForm, setSelectedProgramForForm] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    location: '',
+    course: '',
+    message: ''
+  });
 
   // Set loading to false after component mounts
   React.useEffect(() => {
     setIsLoading(false);
   }, []);
+
+  // Form handling functions
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', { ...formData, program: selectedProgramForForm });
+    alert('Thank you for your interest! We will contact you soon.');
+    setShowForm(false);
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      location: '',
+      course: '',
+      message: ''
+    });
+  };
+
+  const openForm = (program) => {
+    setSelectedProgramForForm(program);
+    setShowForm(true);
+  };
 
   const programs = {
     '2-month': {
@@ -780,9 +820,15 @@ function App() {
                         </div>
                       </div>
                       
-                      <div className="text-center py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base">
-                        {selectedProgram === '2-month' ? 'Selected' : 'Choose Program'}
-                      </div>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openForm('2-month');
+                        }}
+                        className="w-full text-center py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-cyan-500 hover:to-blue-500"
+                      >
+                        {selectedProgram === '2-month' ? 'Selected' : 'Enroll Now'}
+                      </button>
                   </div>
                 </div>
 
@@ -895,9 +941,15 @@ function App() {
                         </div>
                       </div>
                       
-                      <div className="text-center py-3 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base">
-                        {selectedProgram === '4-month' ? 'Selected' : 'Choose Program'}
-                      </div>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openForm('4-month');
+                        }}
+                        className="w-full text-center py-3 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-emerald-500 hover:to-green-500"
+                      >
+                        {selectedProgram === '4-month' ? 'Selected' : 'Enroll Now'}
+                      </button>
                   </div>
                 </div>
 
@@ -1012,9 +1064,15 @@ function App() {
                         </div>
                       </div>
                       
-                      <div className="text-center py-3 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base">
-                        {selectedProgram === '6-month' ? 'Selected' : 'Choose Program'}
-                      </div>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openForm('6-month');
+                        }}
+                        className="w-full text-center py-3 rounded-2xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-red-500 hover:to-orange-500"
+                      >
+                        {selectedProgram === '6-month' ? 'Selected' : 'Enroll Now'}
+                      </button>
                   </div>
                 </div>
 
@@ -1213,7 +1271,7 @@ function App() {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Watch Our IoT Academy in Action
+              Watch Our Master Class in IoT & Robotics
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               See how our comprehensive IoT training programs transform beginners into skilled professionals
@@ -1689,6 +1747,123 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Enrollment Form Modal */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-2xl font-bold text-gray-900">Enroll in {selectedProgramForForm === '2-month' ? 'Silver (8 weeks)' : selectedProgramForForm === '4-month' ? 'Gold (16 weeks)' : 'Diamond (24 weeks)'}</h3>
+              <button 
+                onClick={() => setShowForm(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <form onSubmit={handleFormSubmit} className="space-y-4">
+              {/* Name */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
+                  placeholder="Enter your email address"
+                />
+              </div>
+
+              {/* Location */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
+                  placeholder="Enter your city/state"
+                />
+              </div>
+
+              {/* Course Plan Dropdown */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Course Plan *</label>
+                <select
+                  name="course"
+                  value={formData.course}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300"
+                >
+                  <option value="">Select Course Plan</option>
+                  <option value="silver-8-weeks">Silver (8 weeks)</option>
+                  <option value="gold-16-weeks">Gold (16 weeks)</option>
+                  <option value="diamond-24-weeks">Diamond (24 weeks)</option>
+                </select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Message (Optional)</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={3}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all duration-300 resize-none"
+                  placeholder="Any additional information or questions..."
+                />
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  Submit Enrollment Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       
     </div>
