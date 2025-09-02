@@ -1828,7 +1828,20 @@ function App() {
             >
               Enroll Now
             </button>
-            <button className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105">
+            <button 
+              onClick={() => {
+                // Open brochure in new window for PDF download
+                const brochureWindow = window.open('/brochure.html', '_blank');
+                if (brochureWindow) {
+                  brochureWindow.onload = () => {
+                    setTimeout(() => {
+                      brochureWindow.print();
+                    }, 1000);
+                  };
+                }
+              }}
+              className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105"
+            >
               Download Brochure
             </button>
           </div>
