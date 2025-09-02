@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Database, Wifi as WifiIcon, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, ShoppingCart, CloudRain, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, ShoppingCart, CloudRain, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -249,7 +249,7 @@ function App() {
     
     try {
       // Submit to Google Sheets
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -318,7 +318,7 @@ function App() {
     
     try {
       // Submit to Google Sheets
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -372,7 +372,7 @@ function App() {
     
     try {
       // Submit to Google Sheets
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbzmgACkaI0vuqEMe8KX7R79h62FJDqJZ2s7jpar632wKQZF5k-oeneS6vXbf4OhXxV-/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -762,33 +762,7 @@ function App() {
     }
   ];
 
-  const hardwareRequirements = [
-    {
-      category: 'Microcontroller Boards',
-      items: ['Arduino board', 'ESP-32 Board', 'Raspberry Pi'],
-      icon: Cpu
-    },
-    {
-      category: 'Basic Electronics & Wiring',
-      items: ['Breadboard', 'Jumper Wires', 'Power Supply', 'LEDs', 'Buzzer', 'Potentiometer', 'RLC components', 'Diode', 'Transistors', 'Push Button'],
-      icon: Wrench
-    },
-    {
-      category: 'Sensors (Input Devices)',
-      items: ['DHT11/DHT22 Sensor', 'LDR Sensor', 'PIR Sensor', 'Ultrasonic Sensor (HC-SR04)', 'IR Sensor', 'Soil Sensor', 'Sound Sensor', 'Touch Sensor'],
-      icon: Database
-    },
-    {
-      category: 'Actuators (Output Devices)',
-      items: ['DC Motors', 'Servo Motor', 'Stepper Motor', 'Relays', 'DC Fan'],
-      icon: Play
-    },
-    {
-      category: 'Communication & Display',
-      items: ['LCD I2C Display', 'OLED Display', 'RTC Module', 'SD Card Module', 'RFID Reader', 'NFC', 'TFT Display', 'HC-05 Bluetooth'],
-      icon: WifiIcon
-    }
-  ];
+
 
 
 
@@ -1555,7 +1529,7 @@ function App() {
                         activeWeek === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                       }`}>
                         <div className="mb-4">
-                          <h5 className={`font-semibold mb-3 text-xs sm:text-sm font-bold border-b pb-2 transition-all duration-300 ${
+                          <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
                             selectedProgram === '2-month' ? 'text-cyan-500 border-cyan-500/30' :
                             selectedProgram === '4-month' ? 'text-emerald-500 border-emerald-500/30' :
                             selectedProgram === '6-month' ? 'text-red-500 border-red-500/30' :
@@ -1578,7 +1552,7 @@ function App() {
                           
                         {/* Projects Section */}
                         <div>
-                          <h5 className={`font-semibold mb-3 text-xs sm:text-sm font-bold border-b pb-2 transition-all duration-300 ${
+                          <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
                             selectedProgram === '2-month' ? 'text-blue-500 border-blue-500/30' :
                             selectedProgram === '4-month' ? 'text-green-500 border-green-500/30' :
                             selectedProgram === '6-month' ? 'text-orange-500 border-orange-500/30' :
@@ -2528,16 +2502,16 @@ function App() {
               
               {/* Enhanced Social Media Icons */}
               <div className="flex space-x-6">
-                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#E4405F] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                <a href="https://instagram.com/itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#E4405F] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
                   <Instagram className="w-7 h-7 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#0077B5] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                <a href="https://linkedin.com/company/itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#0077B5] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
                   <Linkedin className="w-7 h-7 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#1877F2] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                <a href="https://facebook.com/itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#1877F2] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
                   <Facebook className="w-7 h-7 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="#" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#FF0000] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                <a href="https://youtube.com/@itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#FF0000] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
                   <Youtube className="w-7 h-7 text-gray-300 group-hover:text-white" />
                 </a>
               </div>
@@ -2586,7 +2560,7 @@ function App() {
                   <div className="w-10 h-10 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <div className="w-4 h-4 bg-white rounded-full"></div>
                   </div>
-                  <div>
+            <div>
                     <p className="text-gray-300 text-base font-semibold">Email</p>
                     <a href="mailto:info@itcindia.org" className="text-white hover:text-[#4A90E2] transition-colors text-base font-bold">info@itcindia.org</a>
                   </div>
@@ -2668,7 +2642,7 @@ function App() {
               <div className="flex items-center space-x-10 text-base">
                 <a href="https://www.itcindia.org/privacy-policy/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Privacy Policy</a>
                 <a href="https://www.itcindia.org/services/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Terms of Service</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Cookie Policy</a>
+                <a href="https://www.itcindia.org/terms-conditions/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Cookie Policy</a>
               </div>
             </div>
           </div>
