@@ -1905,7 +1905,7 @@ function App() {
       <section id="testimonials" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
-            What Our Student Says
+            What Our Client Says
           </h3>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Real stories from real students who transformed their careers
