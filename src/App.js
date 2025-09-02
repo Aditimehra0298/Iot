@@ -815,34 +815,34 @@ function App() {
 
             {/* Navigation */}
       <nav className="relative z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#4A90E2] shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20 sm:h-24">
-            <div className="flex items-center space-x-6">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 sm:h-20 md:h-24">
+            <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
               <div className="relative">
                 {/* Enhanced logo with subtle shadow */}
                 <img 
                   src="/l5.png" 
                   alt="IoT Academy Logo" 
-                  className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-lg"
+                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain drop-shadow-lg"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent leading-tight">
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent leading-tight">
                   Institute of Testing & Certification
                 </span>
-                <span className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight">
+                <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight">
                   India Pvt. Ltd.
                 </span>
               </div>
             </div>
             
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#programs" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg hover:scale-105 transform duration-200">Programs</a>
-              <a href="#syllabus" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg hover:scale-105 transform duration-200">Syllabus</a>
-              <a href="#prerequisites" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg hover:scale-105 transform duration-200">Prerequisites</a>
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
+              <a href="#programs" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Programs</a>
+              <a href="#syllabus" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Syllabus</a>
+              <a href="#prerequisites" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Prerequisites</a>
               <button 
                 onClick={openCtaForm}
-                className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 xl:px-8 rounded-full text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Enroll Now
               </button>
@@ -863,13 +863,13 @@ function App() {
 
         {/* Mobile Menu */}
         <div className={`md:hidden transition-all duration-300 ${mobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden bg-white/95 backdrop-blur-md border-t border-[#4A90E2]/20`}>
-          <div className="px-6 py-6 space-y-4">
-            <a href="#programs" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Programs</a>
-            <a href="#syllabus" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Syllabus</a>
-            <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
+          <div className="px-4 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4">
+            <a href="#programs" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Programs</a>
+            <a href="#syllabus" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Syllabus</a>
+            <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
             <button 
               onClick={openCtaForm}
-              className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full transition-all duration-300 shadow-lg"
+              className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg"
             >
               Enroll Now
             </button>
@@ -878,7 +878,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] flex items-center px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video 
@@ -913,11 +913,11 @@ function App() {
                 </div>
               </div>
               
-                             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-fade-in leading-tight drop-shadow-2xl bg-gradient-to-r from-blue-300/20 to-blue-400/20 px-6 py-4 rounded-2xl inline-block border border-blue-300/30">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 animate-fade-in leading-tight drop-shadow-2xl bg-gradient-to-r from-blue-300/20 to-blue-400/20 px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl inline-block border border-blue-300/30">
                 Master Class in IoT & Robotics
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg">
                 Transform your career with hands-on IoT and Electronics training. Build real-world projects and master industry-standard technologies.
               </p>
 
@@ -935,10 +935,10 @@ function App() {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
                 <button
                   onClick={openCtaForm}
-                  className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
+                  className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
                 >
                   Explore Programs
                 </button>
@@ -952,7 +952,7 @@ function App() {
                     link.click();
                     document.body.removeChild(link);
                   }}
-                  className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 px-6 rounded-full text-base transition-all duration-300 hover:scale-105"
+                  className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-sm sm:text-base transition-all duration-300 hover:scale-105"
                 >
                   Download Brochure
                 </button>
@@ -1078,7 +1078,7 @@ function App() {
       </section>
 
       {/* Program Selection */}
-      <section id="programs" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
+      <section id="programs" className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
           <img 
@@ -1098,9 +1098,9 @@ function App() {
               </h4>
               
 
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 justify-center">
+          <div className="flex flex-col sm:flex-row lg:flex-row gap-4 sm:gap-6 md:gap-8 justify-center">
             {/* 2-Month Program */}
-            <div className="flex-1 max-w-sm">
+            <div className="flex-1 max-w-xs sm:max-w-sm md:max-w-md">
                   <div 
                     onClick={() => setSelectedProgram('2-month')}
                     className={`relative cursor-pointer group transition-all duration-500 ${
@@ -1223,7 +1223,7 @@ function App() {
                 </div>
 
             {/* 4-Month Program */}
-            <div className="flex-1 max-w-sm">
+            <div className="flex-1 max-w-xs sm:max-w-sm md:max-w-md">
                   <div 
                     onClick={() => setSelectedProgram('4-month')}
                     className={`relative cursor-pointer group transition-all duration-500 ${
@@ -1348,7 +1348,7 @@ function App() {
                 </div>
 
             {/* 6-Month Program */}
-            <div className="flex-1 max-w-sm">
+            <div className="flex-1 max-w-xs sm:max-w-sm md:max-w-md">
                   <div 
                     onClick={() => setSelectedProgram('6-month')}
                     className={`relative cursor-pointer group transition-all duration-500 ${
@@ -1477,7 +1477,7 @@ function App() {
             </div>
 
         {/* Syllabus Details Section */}
-        <div className="relative z-10 py-4 sm:py-6 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className={`relative bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border shadow-lg transition-all duration-300 overflow-hidden ${
             selectedProgram === '2-month' ? 'border-blue-500 shadow-blue-500/20' :
@@ -1511,11 +1511,11 @@ function App() {
 
             {!isLoading && (((selectedProgram && currentProgram) || (!selectedProgram && programs && programs['2-month']))) ? (
               <div className="overflow-x-auto">
-                <div className="flex gap-4 sm:gap-6 pb-4 min-w-max">
+                <div className="flex gap-3 sm:gap-4 md:gap-6 pb-4 min-w-max">
                   {((selectedProgram && currentProgram?.weeks) ? currentProgram.weeks : ((programs && programs['2-month']?.weeks) || [])).map((week, index) => (
                       <div 
                         key={index} 
-                      className={`bg-white/90 rounded-2xl p-4 sm:p-6 border transition-all duration-300 hover:shadow-lg cursor-pointer shadow-md w-80 flex-shrink-0 ${
+                      className={`bg-white/90 rounded-2xl p-3 sm:p-4 md:p-6 border transition-all duration-300 hover:shadow-lg cursor-pointer shadow-md w-72 sm:w-80 flex-shrink-0 ${
                         selectedProgram === '2-month' ? 'border-blue-500 hover:border-cyan-500 hover:shadow-cyan-500/20' :
                         selectedProgram === '4-month' ? 'border-green-500 hover:border-emerald-500 hover:shadow-green-500/20' :
                         selectedProgram === '6-month' ? 'border-orange-500 hover:border-red-500 hover:shadow-orange-500/20' :
@@ -1531,7 +1531,7 @@ function App() {
                       >
                       {/* Week Header */}
                       <div className="text-center mb-4">
-                        <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center font-bold text-2xl text-white mb-3 transition-all duration-300 ${
+                        <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto rounded-full flex items-center justify-center font-bold text-lg sm:text-xl md:text-2xl text-white mb-3 transition-all duration-300 ${
                           selectedProgram === '2-month' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' :
                           selectedProgram === '4-month' ? 'bg-gradient-to-r from-green-500 to-emerald-500' :
                           selectedProgram === '6-month' ? 'bg-gradient-to-r from-orange-500 to-red-500' :
@@ -1539,13 +1539,13 @@ function App() {
                         }`}>
                                 {week.week}
                               </div>
-                        <h4 className={`text-lg font-bold mb-2 transition-all duration-300 ${
+                        <h4 className={`text-base sm:text-lg font-bold mb-2 transition-all duration-300 ${
                           selectedProgram === '2-month' ? 'text-blue-500' :
                           selectedProgram === '4-month' ? 'text-green-500' :
                           selectedProgram === '6-month' ? 'text-orange-500' :
                           'text-blue-500'
                         }`}>{week.module}</h4>
-                        <div className="text-gray-600 text-sm font-medium">Week {week.week}</div>
+                        <div className="text-gray-600 text-xs sm:text-sm font-medium">Week {week.week}</div>
                           </div>
                           
                       {/* Topics Section - Hidden by default, shown on click */}
@@ -1553,13 +1553,13 @@ function App() {
                         activeWeek === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                       }`}>
                         <div className="mb-4">
-                          <h5 className={`font-semibold mb-3 text-sm font-bold border-b pb-2 transition-all duration-300 ${
+                          <h5 className={`font-semibold mb-3 text-xs sm:text-sm font-bold border-b pb-2 transition-all duration-300 ${
                             selectedProgram === '2-month' ? 'text-cyan-500 border-cyan-500/30' :
                             selectedProgram === '4-month' ? 'text-emerald-500 border-emerald-500/30' :
                             selectedProgram === '6-month' ? 'text-red-500 border-red-500/30' :
                             'text-cyan-500 border-cyan-500/30'
                           }`}>Topics Covered:</h5>
-                          <ul className="text-gray-800 text-sm space-y-2">
+                          <ul className="text-gray-800 text-xs sm:text-sm space-y-2">
                               {week.topics.map((topic, i) => (
                                 <li key={i} className="flex items-start">
                                 <div className={`w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0 transition-all duration-300 ${
@@ -1576,13 +1576,13 @@ function App() {
                           
                         {/* Projects Section */}
                         <div>
-                          <h5 className={`font-semibold mb-3 text-sm font-bold border-b pb-2 transition-all duration-300 ${
+                          <h5 className={`font-semibold mb-3 text-xs sm:text-sm font-bold border-b pb-2 transition-all duration-300 ${
                             selectedProgram === '2-month' ? 'text-blue-500 border-blue-500/30' :
                             selectedProgram === '4-month' ? 'text-green-500 border-green-500/30' :
                             selectedProgram === '6-month' ? 'text-orange-500 border-orange-500/30' :
                             'text-blue-500 border-blue-500/30'
                           }`}>Projects:</h5>
-                          <ul className="text-gray-800 text-sm space-y-2">
+                          <ul className="text-gray-800 text-xs sm:text-sm space-y-2">
                               {week.projects.map((project, i) => (
                                 <li key={i} className="flex items-start">
                                 <div className={`w-4 h-4 mt-1 mr-3 flex-shrink-0 transition-all duration-300 ${
@@ -1604,10 +1604,10 @@ function App() {
                       <div className="mt-4 pt-4 border-t border-gray-200">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-2">
-                            <span className="text-xs text-gray-500 font-medium">
+                            <span className="text-xs sm:text-sm text-gray-500 font-medium">
                               {activeWeek === index ? 'Hide Details' : 'Click to View Details'}
                             </span>
-                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeWeek === index ? 'rotate-180' : ''} ${
+                            <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${activeWeek === index ? 'rotate-180' : ''} ${
                               selectedProgram === '2-month' ? 'text-blue-500' :
                               selectedProgram === '4-month' ? 'text-green-500' :
                               selectedProgram === '6-month' ? 'text-orange-500' :
@@ -1693,28 +1693,29 @@ function App() {
       </section>
 
       {/* IoT & Robotics Masterclass Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#4A90E2]/20 to-[#7FB3D3]/20 rounded-full border border-[#4A90E2]/30 mb-6">
-              <Zap className="w-4 h-4 text-[#4A90E2]" />
-              <span className="text-[#4A90E2] text-sm font-medium">Professional Certification Program</span>
+            <div className="mb-4 flex justify-center">
+              <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full shadow-lg">
+                <Zap className="w-3 h-3 mr-1.5" />
+                Professional Certification Program
+              </div>
             </div>
             
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
-              IoT & Robotics
-              <span className="block bg-gradient-to-r from-[#4A90E2] via-[#7FB3D3] to-[#4A90E2] bg-clip-text text-transparent">
-                Masterclass
-              </span>
-            </h2>
-            
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+                        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-white">
+              IoT & Robotics Masterclass
+              </h4>
+             
+             
+             <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
               Transform from beginner to expert with our comprehensive training program. 
               Master IoT fundamentals, then advance to cutting-edge robotics applications in agriculture and medical fields.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
                 <span>19 weeks total</span>
@@ -1732,7 +1733,7 @@ function App() {
 
           {/* Core Modules */}
           <div className="mb-16 sm:mb-20">
-            <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">Core Training Modules</h3>
+            <h3 className="text-3xl font-bold text-white mb-12 text-center">Core Training Modules</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {masterclassModules.map((module, index) => {
                 const IconComponent = module.icon;
@@ -1811,8 +1812,8 @@ function App() {
           {/* Advanced Specializations */}
           <div className="mb-16 sm:mb-20">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Advanced Specializations</h3>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <h3 className="text-3xl font-bold text-white mb-4">Advanced Specializations</h3>
+              <p className="text-lg text-gray-200 max-w-2xl mx-auto">
                 After completing core training, advance to specialized robotics applications in high-impact industries
               </p>
             </div>
@@ -1850,40 +1851,40 @@ function App() {
           {/* Training Progression */}
           <div className="text-center">
             <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#4A90E2]/10 to-[#7FB3D3]/10 backdrop-blur-sm border border-[#4A90E2]/20 rounded-2xl p-6 sm:p-8">
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Your Learning Journey</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6">Your Learning Journey</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-lg sm:text-xl">1</span>
                   </div>
-                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Foundation</h4>
-                  <p className="text-gray-600 text-sm">Master IoT basics and sensor integration</p>
+                  <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Foundation</h4>
+                  <p className="text-gray-200 text-sm">Master IoT basics and sensor integration</p>
                 </div>
                 
                 <div className="text-center">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-lg sm:text-xl">2</span>
                   </div>
-                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Advanced Systems</h4>
-                  <p className="text-gray-600 text-sm">Build complex autonomous systems</p>
+                  <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Advanced Systems</h4>
+                  <p className="text-gray-200 text-sm">Build complex autonomous systems</p>
                 </div>
                 
                 <div className="text-center">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-lg sm:text-xl">3</span>
                   </div>
-                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Specialization</h4>
-                  <p className="text-gray-600 text-sm">Focus on agriculture, medical, or drone tech</p>
+                  <h4 className="text-base sm:text-lg font-semibold text-white mb-2">Specialization</h4>
+                  <p className="text-gray-200 text-sm">Focus on agriculture, medical, or drone tech</p>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-orange-100 to-red-100 border border-orange-200 rounded-xl p-4 sm:p-6 mb-6">
-                <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                  <Flame className="w-5 h-5 text-orange-500" />
+                <h4 className="text-lg sm:text-xl font-bold text-white mb-3 flex items-center gap-2">
+                  <Flame className="w-5 h-5 text-orange-400" />
                   Advanced Training Unlocks
                 </h4>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-200 leading-relaxed text-sm sm:text-base">
                   Upon completion of core modules, trainers gain access to specialized robotics workshops including 
                   <span className="text-orange-600 font-semibold"> drone manufacturing</span>, 
                   <span className="text-green-600 font-semibold"> agricultural automation systems</span>, and 
@@ -1892,7 +1893,20 @@ function App() {
                 </p>
               </div>
 
-              <button className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#4A90E2]/25">
+              <button 
+                onClick={() => {
+                  setCtaFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    location: '',
+                    course: 'Masterclass',
+                    message: ''
+                  });
+                  setShowCtaForm(true);
+                }}
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#4A90E2]/25"
+              >
                 Enroll in Masterclass
               </button>
             </div>
@@ -2253,24 +2267,24 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 md:mb-12 text-blue-900">
               What Our Clients Say
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Discover how our IoT training and project support have transformed businesses across India
             </p>
           </div>
           
-          <div className="relative">
-            <div className="flex animate-scroll-left space-x-6">
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll-left space-x-6 py-4">
               {/* First set of testimonials */}
               {testimonials.map((testimonial, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-6"
+                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
@@ -2285,12 +2299,12 @@ function App() {
                           />
                         ))}
                       </div>
-                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-sm leading-relaxed mb-4">
+                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
                         {testimonial.text}
                       </p>
                       <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300">{testimonial.author}</p>
-                        <p className="text-blue-600 text-sm font-semibold">{testimonial.location}</p>
+                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
+                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
                       </div>
                     </div>
                   </div>
@@ -2300,7 +2314,7 @@ function App() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-6"
+                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
@@ -2315,12 +2329,12 @@ function App() {
                           />
                         ))}
                       </div>
-                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-sm leading-relaxed mb-4">
+                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
                         {testimonial.text}
                       </p>
                       <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300">{testimonial.author}</p>
-                        <p className="text-blue-600 text-sm font-semibold">{testimonial.location}</p>
+                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
+                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
                       </div>
                     </div>
                   </div>
@@ -2332,13 +2346,13 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 md:mb-12 text-blue-900">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to know about our IoT and Robotics training programs
             </p>
           </div>
@@ -2357,15 +2371,15 @@ function App() {
                     <div className="flex-shrink-0 p-2 bg-blue-100 rounded-lg text-blue-600">
                       {faq.icon}
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 pr-4">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 pr-4">
                       {faq.question}
                     </h3>
                   </div>
                   <div className="flex-shrink-0 ml-4">
                     {openItems.includes(index) ? (
-                      <ChevronUp className="h-5 w-5 text-blue-600 transition-transform duration-200" />
+                      <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-blue-600 transition-transform duration-200" />
+                      <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
                     )}
                   </div>
                 </button>
@@ -2379,7 +2393,7 @@ function App() {
                 >
                   <div className="px-6 pb-5">
                     <div className="pl-14">
-                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed">
+                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed text-sm sm:text-base">
                         {faq.answer}
                       </p>
                     </div>
@@ -2390,12 +2404,12 @@ function App() {
           </div>
 
           <div className="mt-12 text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-3">Still have questions?</h3>
-              <p className="text-blue-100 mb-6">
+            <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl p-6 sm:p-8 text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3">Still have questions?</h3>
+              <p className="text-blue-100 mb-6 text-sm sm:text-base">
                 Our experts are here to help you choose the right training path for your career goals.
               </p>
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 transform hover:scale-105">
+              <button className="bg-white text-blue-600 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 transform hover:scale-105 text-sm sm:text-base">
                 Contact Our Training Team
               </button>
             </div>
@@ -2404,9 +2418,9 @@ function App() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-0">
+      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-0">
         <div className="w-full">
-          <div className="grid grid-cols-5 gap-0">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-0">
             {[
               { number: '500+', label: 'Students Trained', icon: Users },
               { number: '50+', label: 'Projects Built', icon: Wrench },
@@ -2427,19 +2441,19 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-4 sm:mb-6 md:mb-8 text-blue-900">
             Ready to Start Your IoT Journey?
           </h2>
-          <p className="text-lg sm:text-xl text-gray-900 mb-8 sm:mb-12 max-w-2xl mx-auto font-medium">
+          <p className="text-base sm:text-lg md:text-xl text-gray-900 mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto font-medium">
             Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <button 
               onClick={openCtaForm}
-              className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
+              className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
             >
               Enroll Now
             </button>
@@ -2453,7 +2467,7 @@ function App() {
                 link.click();
                 document.body.removeChild(link);
               }}
-              className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105"
+              className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105"
             >
               Download Brochure
             </button>
@@ -2462,9 +2476,9 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-white/90 backdrop-blur-md border-t border-[#7FB3D3] py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="relative z-10 bg-white/90 backdrop-blur-md border-t border-[#7FB3D3] py-6 sm:py-8 md:py-12 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="relative">
@@ -2472,21 +2486,21 @@ function App() {
                   <img 
                     src="/l5.png" 
                     alt="IoT Academy Logo" 
-                    className="w-18 h-18 object-contain"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
                   />
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-[#8B6F47] to-[#6B8FA8] bg-clip-text text-transparent">
+                <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-[#8B6F47] to-[#6B8FA8] bg-clip-text text-transparent">
                   Master Class in IoT & Robotics
                 </span>
               </div>
-              <p className="text-gray-700 text-sm">
+              <p className="text-gray-700 text-xs sm:text-sm">
                 Empowering the next generation of IoT and Electronics engineers through hands-on learning and real-world projects.
               </p>
             </div>
             
             <div>
-              <h4 className="text-gray-800 font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
+              <h4 className="text-gray-800 font-semibold mb-4 text-sm sm:text-base">Quick Links</h4>
+              <ul className="space-y-2 text-xs sm:text-sm">
                 <li><a href="#programs" className="text-gray-600 hover:text-[#8B6F47] transition-colors">Programs</a></li>
                 <li><a href="#syllabus" className="text-gray-600 hover:text-[#8B6F47] transition-colors">Syllabus</a></li>
                 <li><a href="#prerequisites" className="text-gray-600 hover:text-[#8B6F47] transition-colors">Prerequisites</a></li>
@@ -2495,8 +2509,8 @@ function App() {
             </div>
             
             <div>
-              <h4 className="text-gray-800 font-semibold mb-4">Contact Info</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="text-gray-800 font-semibold mb-4 text-sm sm:text-base">Contact Info</h4>
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
                 <li>Email: info@itcindia.org</li>
                 <li>Phone: 09316473033</li>
                 <li>Address: Plot No. 146, JLPL Industrial Area, Sector 82, Mohali, Punjab, 160062</li>
@@ -2504,7 +2518,7 @@ function App() {
             </div>
           </div>
           
-          <div className="border-t border-[#E8D5C4] mt-8 pt-8 text-center text-sm text-gray-600">
+          <div className="border-t border-[#E8D5C4] mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-600">
             <p> Copyright © 2015 -2025 ITC India.org All Rights Reserved.</p>
           </div>
         </div>
