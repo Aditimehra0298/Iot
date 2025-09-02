@@ -991,15 +991,15 @@ function App() {
             onLoad={() => console.log('Program section background image loaded successfully')}
             onError={(e) => console.error('Program section background image failed to load:', e)}
           />
-          {/* Gradient overlay for better content visibility */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 via-purple-600/70 to-teal-600/80"></div>
+          {/* Overlay to ensure content readability */}
+          <div className="absolute inset-0 bg-white/40"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 text-gray-900">
-              Choose Your Learning Path
-            </h3>
+        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+              Choose Our Program
+              </h4>
+              
 
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 justify-center">
             {/* 2-Month Program */}
@@ -1542,7 +1542,6 @@ function App() {
             </div>
           </div>
         </div>
-          </div>
         </div>
         
       </section>
@@ -1948,65 +1947,6 @@ function App() {
         </div>
       </section>
 
-
-      {/* Stats Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-0">
-        <div className="w-full">
-          <div className="grid grid-cols-5 gap-0">
-            {[
-              { number: '500+', label: 'Students Trained', icon: Users },
-              { number: '50+', label: 'Projects Built', icon: Wrench },
-              { number: '95%', label: 'Success Rate', icon: Award },
-              { number: '24/7', label: 'Support', icon: Clock },
-              { number: '100%', label: 'Placement Assistant', icon: Award }
-            ].map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
-                </div>
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                <div className="text-gray-800 text-sm sm:text-base font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
-            Ready to Start Your IoT Journey?
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-900 mb-8 sm:mb-12 max-w-2xl mx-auto font-medium">
-            Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={openCtaForm}
-              className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
-            >
-              Enroll Now
-            </button>
-            <button 
-              onClick={() => {
-                // Download the existing PDF file
-                const link = document.createElement('a');
-                link.href = '/Who We Are.pdf';
-                link.download = 'Who We Are.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-              className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105"
-            >
-              Download Brochure
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
       <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2154,6 +2094,64 @@ function App() {
                 Contact Our Training Team
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="relative z-10 py-16 sm:py-20 px-0">
+        <div className="w-full">
+          <div className="grid grid-cols-5 gap-0">
+            {[
+              { number: '500+', label: 'Students Trained', icon: Users },
+              { number: '50+', label: 'Projects Built', icon: Wrench },
+              { number: '95%', label: 'Success Rate', icon: Award },
+              { number: '24/7', label: 'Support', icon: Clock },
+              { number: '100%', label: 'Placement Assistant', icon: Award }
+            ].map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                </div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-gray-800 text-sm sm:text-base font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
+            Ready to Start Your IoT Journey?
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-900 mb-8 sm:mb-12 max-w-2xl mx-auto font-medium">
+            Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={openCtaForm}
+              className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
+            >
+              Enroll Now
+            </button>
+            <button 
+              onClick={() => {
+                // Download the existing PDF file
+                const link = document.createElement('a');
+                link.href = '/Who We Are.pdf';
+                link.download = 'Who We Are.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105"
+            >
+              Download Brochure
+            </button>
           </div>
         </div>
       </section>
