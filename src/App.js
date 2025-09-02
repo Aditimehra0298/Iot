@@ -43,6 +43,7 @@ function App() {
   });
   const [showThankYou, setShowThankYou] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState('');
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   // Set loading to false after component mounts
   React.useEffect(() => {
@@ -601,6 +602,51 @@ function App() {
       category: 'Communication & Display',
       items: ['LCD I2C Display', 'OLED Display', 'RTC Module', 'SD Card Module', 'RFID Reader', 'NFC', 'TFT Display', 'HC-05 Bluetooth'],
       icon: WifiIcon
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "The IoT training at ITC India completely transformed my understanding of connected devices. The hands-on approach and real-world projects made all the difference. I landed my dream job as an IoT Engineer within 2 months!",
+      author: "Rajesh Kumar",
+      role: "IoT Engineer, TechCorp",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "As a working professional, I needed flexible learning options. The online training format was perfect for me. The instructors were incredibly supportive, and the curriculum was industry-relevant. Highly recommended!",
+      author: "Priya Sharma",
+      role: "Software Developer, InnovateTech",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "The Diamond program exceeded my expectations. From basic concepts to advanced IoT applications, every module was well-structured. The placement assistance helped me secure a position at a leading tech company.",
+      author: "Amit Singh",
+      role: "IoT Solutions Architect, DataFlow",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "The practical approach to learning IoT concepts was amazing. We built real projects from day one, which gave me confidence to start my own IoT consulting business. The mentors are industry experts!",
+      author: "Neha Gupta",
+      role: "IoT Consultant, Self-Employed",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "Coming from a non-technical background, I was worried about learning IoT. But the instructors made everything so clear and easy to understand. Now I'm working as a Product Manager for IoT devices!",
+      author: "Vikram Kumar",
+      role: "Product Manager, SmartTech",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      quote: "The Gold program was perfect for my career transition. The comprehensive curriculum covered everything from sensors to cloud integration. The placement team helped me get multiple job offers!",
+      author: "Sneha Mehta",
+      role: "IoT Developer, CloudConnect",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
     }
   ];
 
@@ -1855,364 +1901,59 @@ function App() {
         </div>
       </section>
 
-      {/* Client Testimonials Section */}
-      <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-4 text-blue-900">
-              What Our Students Say
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from our successful graduates who have transformed their careers with our IoT training programs
-            </p>
-          </div>
-
-          {/* Scrolling Square Grid Testimonials */}
-          <div className="overflow-hidden">
-            <div className="flex animate-scroll-right-to-left space-x-6">
-              {/* First Set - 3x2 Grid */}
-              <div className="grid grid-cols-3 grid-rows-2 gap-6 min-w-full flex-shrink-0">
-            {/* Testimonial 1 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-blue-100 aspect-square flex flex-col justify-between">
-              <div>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
-                    ))}
+            {/* Testimonials Section */}
+      <section id="testimonials" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
+            🗣️ Hear What Students Say
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            Real stories from real students who transformed their careers
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -ml-12 sm:-ml-16 -mt-12 sm:-mt-16"></div>
+            <div className="absolute bottom-0 right-0 w-20 sm:w-24 h-20 sm:h-24 bg-gradient-to-br from-orange-100 to-red-100 rounded-full -mr-10 sm:-mr-12 -mb-10 sm:-mb-12"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-6 sm:mb-8">
+                <img
+                  src={testimonials[currentTestimonial].image}
+                  alt={testimonials[currentTestimonial].author}
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-4 border-white shadow-lg"
+                />
               </div>
-                </div>
-                <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                  "The IoT training at ITC India completely transformed my understanding of connected devices. The hands-on approach and real-world projects made all the difference. I landed my dream job as an IoT Engineer within 2 months!"
-                </p>
+              
+              <div className="flex justify-center mb-4 sm:mb-6">
+                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                  <svg key={i} className="text-yellow-400 fill-current w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 20 20">
+                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                  </svg>
+                ))}
               </div>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  RK
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">Rajesh Kumar</h4>
-                  <p className="text-xs text-gray-600">IoT Engineer, TechCorp</p>
-                </div>
+              
+              <blockquote className="text-base sm:text-lg md:text-xl text-gray-700 text-center mb-4 sm:mb-6 italic leading-relaxed">
+                "{testimonials[currentTestimonial].quote}"
+              </blockquote>
+              
+              <div className="text-center">
+                <div className="font-semibold text-blue-600 text-base sm:text-lg">{testimonials[currentTestimonial].author}</div>
+                <div className="text-gray-500 text-sm sm:text-base">{testimonials[currentTestimonial].role}</div>
               </div>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-green-100 aspect-square flex flex-col justify-between">
-              <div>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                  "As a working professional, I needed flexible learning options. The online training format was perfect for me. The instructors were incredibly supportive, and the curriculum was industry-relevant. Highly recommended!"
-                </p>
+              
+              <div className="flex justify-center space-x-2 mt-6 sm:mt-8">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                      index === currentTestimonial ? 'bg-blue-600 scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                  />
+                ))}
               </div>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  PS
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">Priya Sharma</h4>
-                  <p className="text-xs text-gray-600">Software Developer, InnovateTech</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-purple-100 aspect-square flex flex-col justify-between">
-              <div>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                  "The Diamond program exceeded my expectations. From basic concepts to advanced IoT applications, every module was well-structured. The placement assistance helped me secure a position at a leading tech company."
-                </p>
-              </div>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  AS
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">Amit Singh</h4>
-                  <p className="text-xs text-gray-600">IoT Solutions Architect, DataFlow</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 4 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-orange-100 aspect-square flex flex-col justify-between">
-              <div>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                  "The practical approach to learning IoT concepts was amazing. We built real projects from day one, which gave me confidence to start my own IoT consulting business. The mentors are industry experts!"
-                </p>
-              </div>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  NG
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">Neha Gupta</h4>
-                  <p className="text-xs text-gray-600">IoT Consultant, Self-Employed</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 5 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-teal-100 aspect-square flex flex-col justify-between">
-              <div>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                  "Coming from a non-technical background, I was worried about learning IoT. But the instructors made everything so clear and easy to understand. Now I'm working as a Product Manager for IoT devices!"
-                </p>
-              </div>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  VK
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">Vikram Kumar</h4>
-                  <p className="text-xs text-gray-600">Product Manager, SmartTech</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 6 */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-pink-100 aspect-square flex flex-col justify-between">
-              <div>
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                  "The Gold program was perfect for my career transition. The comprehensive curriculum covered everything from sensors to cloud integration. The placement team helped me get multiple job offers!"
-                </p>
-              </div>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                  SM
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 text-sm">Sneha Mehta</h4>
-                  <p className="text-xs text-gray-600">IoT Developer, CloudConnect</p>
-                </div>
-                </div>
-              </div>
-
-              {/* Duplicate Set for Seamless Loop */}
-              <div className="grid grid-cols-3 grid-rows-2 gap-6 min-w-full flex-shrink-0">
-                  {/* Testimonial 1 */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-blue-100 aspect-square flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                        "The IoT training at ITC India completely transformed my understanding of connected devices. The hands-on approach and real-world projects made all the difference. I landed my dream job as an IoT Engineer within 2 months!"
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                        RK
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Rajesh Kumar</h4>
-                        <p className="text-xs text-gray-600">IoT Engineer, TechCorp</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 2 */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-green-100 aspect-square flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                        "As a working professional, I needed flexible learning options. The online training format was perfect for me. The instructors were incredibly supportive, and the curriculum was industry-relevant. Highly recommended!"
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                        PS
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Priya Sharma</h4>
-                        <p className="text-xs text-gray-600">Software Developer, InnovateTech</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 3 */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-purple-100 aspect-square flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                        "The Diamond program exceeded my expectations. From basic concepts to advanced IoT applications, every module was well-structured. The placement assistance helped me secure a position at a leading tech company."
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                        AS
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Amit Singh</h4>
-                        <p className="text-xs text-gray-600">IoT Solutions Architect, DataFlow</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 4 */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-orange-100 aspect-square flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                        "The practical approach to learning IoT concepts was amazing. We built real projects from day one, which gave me confidence to start my own IoT consulting business. The mentors are industry experts!"
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                        NG
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Neha Gupta</h4>
-                        <p className="text-xs text-gray-600">IoT Consultant, Self-Employed</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 5 */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-teal-100 aspect-square flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                        "Coming from a non-technical background, I was worried about learning IoT. But the instructors made everything so clear and easy to understand. Now I'm working as a Product Manager for IoT devices!"
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                        VK
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Vikram Kumar</h4>
-                        <p className="text-xs text-gray-600">Product Manager, SmartTech</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Testimonial 6 */}
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-pink-100 aspect-square flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center mb-4">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                      <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">
-                        "The Gold program was perfect for my career transition. The comprehensive curriculum covered everything from sensors to cloud integration. The placement team helped me get multiple job offers!"
-                      </p>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                        SM
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Sneha Mehta</h4>
-                        <p className="text-xs text-gray-600">IoT Developer, CloudConnect</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-12">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Join Our Success Stories?</h3>
-              <p className="text-gray-600 mb-6">Start your IoT journey today and become the next success story!</p>
-              <button
-                onClick={openCtaForm}
-                className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
-              >
-                Start Your Journey Now
-              </button>
             </div>
           </div>
         </div>
