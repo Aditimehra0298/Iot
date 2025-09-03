@@ -1651,7 +1651,7 @@ function App() {
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
                 <iframe
                   key={isVideoMuted ? 'muted' : 'unmuted'}
-                  src={`https://player.vimeo.com/video/1114846409?title=0&byline=0&portrait=0&autoplay=1&loop=1&controls=0${isVideoMuted ? '&muted=1' : ''}`}
+                  src={`https://player.vimeo.com/video/1115389578?title=0&byline=0&portrait=0&autoplay=1&loop=1&controls=0${isVideoMuted ? '&muted=1' : ''}`}
                   title="IoT Academy Introduction Video"
                   className="w-full h-full"
                   frameBorder="0"
