@@ -45,6 +45,7 @@ function App() {
   const [thankYouMessage, setThankYouMessage] = useState('');
   const [openItems, setOpenItems] = useState([]);
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [isVideoMuted, setIsVideoMuted] = useState(false);
 
   // Masterclass modules data
   const masterclassModules = [
@@ -226,12 +227,12 @@ function App() {
     setIsLoading(false);
   }, []);
 
-  // FAQ toggle function
+  // FAQ toggle function - only one item can be open at a time
   const toggleItem = (index) => {
     setOpenItems(prev => 
       prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
+        ? [] // Close if already open
+        : [index] // Open only this item, close all others
     );
   };
 
@@ -421,7 +422,7 @@ function App() {
       ideal: 'Beginners, Bootcamps, Engineering Students',
       focus: 'Foundations + Intermediate + Cloud',
       color: 'from-blue-500 to-cyan-500',
-      price: '$299',
+      price: '₹15,000',
       weeks: [
         {
           week: 1,
@@ -479,7 +480,7 @@ function App() {
       ideal: 'Intermediate Learners, Career Switchers',
       focus: 'Advanced IoT + Industrial Protocols',
       color: 'from-green-500 to-emerald-500',
-      price: '$599',
+      price: '₹28,000',
       weeks: [
         {
           week: 1,
@@ -585,7 +586,7 @@ function App() {
       ideal: 'Advanced Learners, Industry Professionals',
       focus: 'Complete IoT + AI + Industry 4.0',
       color: 'from-orange-500 to-red-500',
-      price: '$999',
+      price: '₹50,000',
       weeks: [
         {
           week: 1,
@@ -804,8 +805,8 @@ function App() {
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent leading-tight">
                   Internet of Things & Robotics
                 </span>
-                <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight">
-                  Division of ITC India Pvt Ltd.
+                <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight">
+                  Division of ITC India Pvt. Ltd.
                 </span>
               </div>
             </div>
@@ -1125,6 +1126,11 @@ function App() {
                           </p>
                           <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['2-month'].price}</div>
                         
+                        {/* Training Mode Label */}
+                        <div className="mb-2">
+                          <p className="text-sm font-semibold text-gray-700 text-center">Training Mode</p>
+                        </div>
+                        
                         {/* Learning Mode Switch */}
                         <div className="mb-4">
                           <div className="bg-white/90 backdrop-blur-sm rounded-xl p-1.5 shadow-md border border-gray-200">
@@ -1249,6 +1255,11 @@ function App() {
                             <span className="text-emerald-500 font-semibold">Focus:</span> {programs['4-month'].focus}
                           </p>
                           <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['4-month'].price}</div>
+                        
+                        {/* Training Mode Label */}
+                        <div className="mb-2">
+                          <p className="text-sm font-semibold text-gray-700 text-center">Training Mode</p>
+                        </div>
                         
                         {/* Learning Mode Switch */}
                         <div className="mb-4">
@@ -1377,6 +1388,11 @@ function App() {
                           </p>
                           <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{programs['6-month'].price}</div>
                         
+                        {/* Training Mode Label */}
+                        <div className="mb-2">
+                          <p className="text-sm font-semibold text-gray-700 text-center">Training Mode</p>
+                        </div>
+                        
                         {/* Learning Mode Switch */}
                         <div className="mb-4">
                           <div className="bg-white/90 backdrop-blur-sm rounded-xl p-1.5 shadow-md border border-gray-200">
@@ -1455,27 +1471,14 @@ function App() {
         {/* Syllabus Details Section */}
         <div className="relative z-10 py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className={`relative bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border shadow-lg transition-all duration-300 overflow-hidden ${
+          <div className={`relative bg-white rounded-3xl p-6 sm:p-8 border shadow-lg transition-all duration-300 overflow-hidden ${
             selectedProgram === '2-month' ? 'border-blue-500 shadow-blue-500/20' :
             selectedProgram === '4-month' ? 'border-green-500 shadow-green-500/20' :
             selectedProgram === '6-month' ? 'border-orange-500 shadow-orange-500/20' :
             'border-blue-500 shadow-blue-500/20'
           }`}>
-            {/* Background Image */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-              <img 
-                src="/Untitled design (20).png" 
-                alt="Syllabus Background" 
-                className="w-full h-full object-cover opacity-60"
-                onLoad={() => console.log('Syllabus section background image loaded successfully')}
-                onError={(e) => console.error('Syllabus section background image failed to load:', e)}
-              />
-              {/* Overlay to ensure content readability */}
-              <div className="absolute inset-0 bg-white/30"></div>
-            </div>
-            
-            {/* Content with relative positioning */}
-            <div className="relative z-10">
+            {/* Content */}
+            <div>
             <h3 className={`text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center transition-all duration-300 ${
               selectedProgram === '2-month' ? 'bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent' :
               selectedProgram === '4-month' ? 'bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent' :
@@ -1630,15 +1633,15 @@ function App() {
             onLoad={() => console.log('Video section background image loaded successfully')}
             onError={(e) => console.error('Video section background image failed to load:', e)}
           />
-          <div className="absolute inset-0 bg-white/60"></div>
+          <div className="absolute inset-0 bg-blue-900/80"></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Master Class in IoT & Robotics
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            <h4 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              About Master Class in IoT & Robotics
+            </h4>
+            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
               See how our comprehensive IoT training programs transform beginners into skilled professionals
             </p>
           </div>
@@ -1647,13 +1650,35 @@ function App() {
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-2xl">
               <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
                 <iframe
-                  src="https://player.vimeo.com/video/1114846409?title=0&byline=0&portrait=0"
+                  key={isVideoMuted ? 'muted' : 'unmuted'}
+                  src={`https://player.vimeo.com/video/1114846409?title=0&byline=0&portrait=0&autoplay=1&loop=1&controls=0${isVideoMuted ? '&muted=1' : ''}`}
                   title="IoT Academy Introduction Video"
                   className="w-full h-full"
                   frameBorder="0"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                 ></iframe>
+                
+                {/* Mute/Unmute Button */}
+                <div className="absolute top-4 right-4 z-20">
+                  <button
+                    onClick={() => setIsVideoMuted(!isVideoMuted)}
+                    className="bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
+                    title={isVideoMuted ? "Unmute Video" : "Mute Video"}
+                  >
+                    {isVideoMuted ? (
+                      // Muted icon
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                      </svg>
+                    ) : (
+                      // Unmuted icon
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                      </svg>
+                    )}
+                  </button>
+                </div>
               </div>
               <div className="mt-6 text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -1669,7 +1694,7 @@ function App() {
       </section>
 
       {/* IoT & Robotics Masterclass Section */}
-      <section id="projects" className="relative z-10 mt-8 pt-16 sm:pt-12 md:pt-16 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
+      <section id="projects" className="relative z-10 mt-24 sm:mt-20 md:mt-24 pt-32 sm:pt-24 md:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
@@ -1897,9 +1922,11 @@ function App() {
             Prerequisites & Requirements
           </h4>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
+          <div className="relative overflow-hidden mb-12 sm:mb-16">
+            <div className="flex animate-scroll-left space-x-6">
+              {/* First set of prerequisites */}
             {prerequisites.map((req, index) => (
-              <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
+                <div key={`first-${index}`} className="flex-shrink-0 w-80 bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0">
                     <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -1998,15 +2025,122 @@ function App() {
                         <p className="text-xs text-gray-600 text-center mt-2">IoT Applications - Mobile & Web</p>
                       </div>
                     )}
-                  </div>
+                    </div>
                 </div>
               </div>
             ))}
+              
+              {/* Duplicate set for seamless loop */}
+              {prerequisites.map((req, index) => (
+                <div key={`second-${index}`} className="flex-shrink-0 w-80 bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0">
+                      <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+          </div>
+                    <div className="flex-1">
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{req.title}</h3>
+                      <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${
+                        req.level === 'Required' ? 'bg-red-500/20 text-red-600' :
+                        req.level === 'Must-Have' ? 'bg-orange-500/20 text-orange-600' :
+                        'bg-green-500/20 text-green-600'
+                      }`}>
+                        {req.level}
+                      </div>
+                      <p className="text-gray-800 text-xs sm:text-sm font-medium">{req.description}</p>
+                      
+                      {/* Add video for Basic Programming Knowledge */}
+                      {req.title === 'Basic Programming Knowledge' && (
+                        <div className="mt-4">
+                          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                            <video
+                              className="w-full h-full object-cover"
+                              preload="auto"
+                              poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            >
+                              <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                          <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
+                        </div>
+                      )}
+                      
+                      {/* Add video for Basic Electronics Knowledge */}
+                      {req.title === 'Basic Electronics Knowledge' && (
+                        <div className="mt-4">
+                          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                            <video
+                              className="w-full h-full object-cover"
+                              preload="auto"
+                              poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            >
+                              <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                          <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Electronics Basics</p>
+                        </div>
+                      )}
+                      
+                      {/* Add video for Basic Computer Literacy */}
+                      {req.title === 'Basic Computer Literacy' && (
+                        <div className="mt-4">
+                          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                            <video
+                              className="w-full h-full object-cover"
+                              preload="auto"
+                              poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            >
+                              <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                          <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Computer Skills</p>
+                        </div>
+                      )}
+                      
+                      {/* Add video for Internet & Mobile Apps */}
+                      {req.title === 'Internet & Mobile Apps' && (
+                        <div className="mt-4">
+                          <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                            <video
+                              className="w-full h-full object-cover"
+                              preload="auto"
+                              poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            >
+                              <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                          <p className="text-xs text-gray-600 text-center mt-2">IoT Applications - Mobile & Web</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* What We Offer Section */}
           <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
-            WHAT WE OFFER
+            What We Offer
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
@@ -2103,7 +2237,16 @@ function App() {
 
             {/* Services Grid */}
             <div className="mb-8">
-              <h4 className="text-2xl font-bold text-gray-800 mb-6 text-center">What We Do</h4>
+              <div className="flex justify-center mb-6">
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white rounded-full shadow-lg">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                      <Settings className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="font-bold text-lg">What We Do</span>
+                  </div>
+                </div>
+              </div>
               <p className="text-gray-600 text-center mb-8 text-lg">
                 Comprehensive testing and calibration services across multiple domains
               </p>
@@ -2202,9 +2345,16 @@ function App() {
 
             {/* Why Choose Us */}
             <div className="text-center">
-              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
-                Why choose us
-              </h4>
+              <div className="flex justify-center mb-8 sm:mb-12">
+                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white rounded-full shadow-lg">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                      <Star className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="font-bold text-xl sm:text-2xl">Why Choose Us</span>
+                  </div>
+                </div>
+              </div>
               
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
@@ -2333,50 +2483,100 @@ function App() {
             </p>
           </div>
 
-          <div className="space-y-4">
-            {faqData.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="flex-shrink-0 p-2 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg text-[#4A90E2]">
-                      {faq.icon}
-                    </div>
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 pr-4">
-                      {faq.question}
-                    </h3>
-                  </div>
-                  <div className="flex-shrink-0 ml-4">
-                    {openItems.includes(index) ? (
-                      <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
-                    ) : (
-                      <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
-                    )}
-                  </div>
-                </button>
-                
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Left Column - First 4 FAQs */}
+            <div className="space-y-4">
+              {faqData.slice(0, 4).map((faq, index) => (
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openItems.includes(index) 
-                      ? 'max-h-96 opacity-100' 
-                      : 'max-h-0 opacity-0'
-                  }`}
+                  key={index}
+                  className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] overflow-hidden"
                 >
-                  <div className="px-6 pb-5">
-                    <div className="pl-14">
-                      <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed text-sm sm:text-base">
-                        {faq.answer}
-                      </p>
+                  <button
+                    onClick={() => toggleItem(index)}
+                    className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className="flex-shrink-0 p-2 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg text-[#4A90E2]">
+                        {faq.icon}
+                      </div>
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 pr-4">
+                        {faq.question}
+          </h3>
                     </div>
+                    <div className="flex-shrink-0 ml-4">
+                      {openItems.includes(index) ? (
+                        <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
+                      )}
+                    </div>
+                  </button>
+                  
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      openItems.includes(index) 
+                        ? 'max-h-96 opacity-100' 
+                        : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="px-6 pb-5">
+                      <div className="pl-14">
+                        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed text-sm sm:text-base">
+                          {faq.answer}
+                        </p>
                   </div>
                 </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Right Column - Last 4 FAQs */}
+            <div className="space-y-4">
+              {faqData.slice(4, 8).map((faq, index) => (
+                <div
+                  key={index + 4}
+                  className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] overflow-hidden"
+                >
+                  <button
+                    onClick={() => toggleItem(index + 4)}
+                    className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className="flex-shrink-0 p-2 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-lg text-[#4A90E2]">
+                        {faq.icon}
+                      </div>
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 pr-4">
+                        {faq.question}
+                      </h3>
+                    </div>
+                    <div className="flex-shrink-0 ml-4">
+                      {openItems.includes(index + 4) ? (
+                        <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 transition-transform duration-200" />
+                      )}
+                    </div>
+                  </button>
+                  
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      openItems.includes(index + 4) 
+                        ? 'max-h-96 opacity-100' 
+                        : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="px-6 pb-5">
+                      <div className="pl-14">
+                        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed text-sm sm:text-base">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
               </div>
             ))}
+            </div>
           </div>
 
           <div className="mt-12 text-center">
@@ -2550,7 +2750,7 @@ function App() {
             </div>
             
                                     {/* Contact Info */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-5">
               <h4 className="text-white font-bold mb-8 text-2xl relative">
                 Contact Info
                 <div className="absolute -bottom-3 left-0 w-16 h-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full"></div>
@@ -2586,41 +2786,7 @@ function App() {
               </ul>
             </div>
             
-            {/* Certifications & Accreditations */}
-            <div className="lg:col-span-2">
-              <h4 className="text-white font-bold mb-8 text-2xl relative">
-                Accreditations
-                <div className="absolute -bottom-3 left-0 w-16 h-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full"></div>
-              </h4>
-              
-              <div className="flex justify-center items-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative overflow-hidden">
-                  {/* Background glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2]/20 to-[#7FB3D3]/20 rounded-2xl blur-xl"></div>
-                  
-                  <div className="relative z-10">
-                    <img 
-                      src="https://calibrationservices.home.blog/wp-content/uploads/2023/12/nabl-500x500-1.png" 
-                      alt="NABL Certified Laboratory" 
-                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain mx-auto"
-                    />
-                    <p className="text-center text-white text-sm font-bold mt-3">
-                      NABL Certified
-                    </p>
-                    <p className="text-center text-gray-300 text-xs mt-1">
-                      Laboratory
-                    </p>
-                    <div className="flex justify-center mt-2">
-                      <div className="flex space-x-1">
-                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full animate-pulse"></div>
-                        <div className="w-1.5 h-1.5 bg-[#7FB3D3] rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                        <div className="w-1.5 h-1.5 bg-[#4A90E2] rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
           
           {/* Enhanced Bottom Section */}
@@ -3109,6 +3275,44 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/919758079838"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-12 right-4 sm:bottom-16 sm:right-6 z-50 group"
+        aria-label="Contact us on WhatsApp"
+      >
+        <div className="bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
+          <svg className="w-6 h-6 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.87 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+          </svg>
+        </div>
+        {/* Tooltip - Hidden on mobile */}
+        <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden sm:block">
+          Chat on WhatsApp
+          <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+        </div>
+      </a>
+
+      {/* Floating Phone Button */}
+      <a
+        href="tel:+919758079838"
+        className="fixed bottom-32 right-4 sm:bottom-36 sm:right-6 z-50 group"
+        aria-label="Call us"
+      >
+        <div className="bg-red-500 hover:bg-red-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center">
+          <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </div>
+        {/* Tooltip - Hidden on mobile */}
+        <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden sm:block">
+          Call Now
+          <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+        </div>
+      </a>
       
     </div>
   );
