@@ -2178,37 +2178,49 @@ function App() {
             <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
               Featured Projects Gallery
             </h3>
-            <div className="relative max-w-5xl mx-auto">
-              <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide rounded-2xl shadow-xl">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {/* Project 1 */}
-                <div className="flex-none w-full snap-center relative">
-                  <div className="relative w-full h-64 sm:h-80 bg-gradient-to-br from-[#4A90E2] to-[#7FB3D3] rounded-2xl flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <Bot className="h-16 w-16 mx-auto mb-4" />
-                      <h4 className="text-2xl font-bold mb-2">Autonomous Robot</h4>
-                      <p className="text-lg">Smart navigation and obstacle avoidance</p>
+                <div className="relative group">
+                  <img 
+                    src="/WhatsApp Image 2025-09-02 at 12.29.40.jpeg" 
+                    alt="IoT Project 1" 
+                    className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
+                    <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      <h4 className="text-white text-xl font-bold mb-1">Autonomous Robot</h4>
+                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Smart navigation and obstacle avoidance</p>
                     </div>
                   </div>
                 </div>
                 
                 {/* Project 2 */}
-                <div className="flex-none w-full snap-center relative">
-                  <div className="relative w-full h-64 sm:h-80 bg-gradient-to-br from-[#7FB3D3] to-[#4A90E2] rounded-2xl flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <Home className="h-16 w-16 mx-auto mb-4" />
-                      <h4 className="text-2xl font-bold mb-2">Smart Home Hub</h4>
-                      <p className="text-lg">Complete home automation system</p>
+                <div className="relative group">
+                  <img 
+                    src="/WhatsApp Image 2025-09-02 at 12.30.24.jpeg" 
+                    alt="IoT Project 2" 
+                    className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
+                    <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      <h4 className="text-white text-xl font-bold mb-1">Smart Home Hub</h4>
+                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Complete home automation system</p>
                     </div>
                   </div>
                 </div>
                 
                 {/* Project 3 */}
-                <div className="flex-none w-full snap-center relative">
-                  <div className="relative w-full h-64 sm:h-80 bg-gradient-to-br from-[#4A90E2] to-[#7FB3D3] rounded-2xl flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <Monitor className="h-16 w-16 mx-auto mb-4" />
-                      <h4 className="text-2xl font-bold mb-2">Industrial IoT Sensors</h4>
-                      <p className="text-lg">Real-time monitoring and analytics</p>
+                <div className="relative group">
+                  <img 
+                    src="/WhatsApp Image 2025-09-02 at 12.31.08.jpeg" 
+                    alt="IoT Project 3" 
+                    className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
+                    <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      <h4 className="text-white text-xl font-bold mb-1">Industrial IoT Sensors</h4>
+                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Real-time monitoring and analytics</p>
                     </div>
                   </div>
                 </div>
@@ -2964,161 +2976,164 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Enhanced Footer */}
       <footer className="relative z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
-        {/* Enhanced Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 animate-pulse" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}></div>
         </div>
         
-        {/* Top Border Gradient */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4A90E2] via-[#7FB3D3] to-[#4A90E2]"></div>
+        {/* Top Border with Animation */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4A90E2] via-[#7FB3D3] to-[#4A90E2] animate-pulse"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-28">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
             {/* Company Info */}
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-2">
               <div className="flex items-center space-x-4 mb-8">
-                <div className="relative">
+                <div className="relative group">
                   {/* Enhanced glowing background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full blur-xl opacity-30 animate-pulse scale-125"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full blur-lg opacity-50 animate-pulse scale-110"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 animate-pulse scale-125"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300 animate-pulse scale-110"></div>
                   
                   {/* Logo container with backdrop */}
-                  <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 border border-white/20 shadow-2xl">
-                  <img 
-                    src="/l5.png" 
-                    alt="IoT Academy Logo" 
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-300 group-hover:scale-105">
+                    <img 
+                      src="/l5.png" 
+                      alt="IoT Academy Logo" 
                       className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain relative z-10"
-                  />
-                </div>
+                    />
+                  </div>
                   
                   {/* Enhanced animated indicator */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full animate-pulse shadow-lg flex items-center justify-center">
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full animate-pulse shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
-                  IoT Academy
+                    Master Class in IoT & Robotics
                   </h3>
-                  <p className="text-sm text-gray-300 font-medium">Master Class in IoT & Robotics</p>
-                  <p className="text-xs text-gray-400 mt-1">Division of ITC India Pvt Ltd.</p>
+                  <p className="text-sm text-gray-400 mt-1">Division of ITC India Pvt Ltd.</p>
+                </div>
               </div>
-              </div>
+              
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
                 Empowering the next generation of IoT and Electronics engineers through hands-on learning, real-world projects, and industry-leading expertise. Transform your career with cutting-edge technology education.
               </p>
               
               {/* Enhanced Social Media Icons */}
-              <div className="flex space-x-6">
-                <a href="https://instagram.com/itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#E4405F] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
-                  <Instagram className="w-7 h-7 text-gray-300 group-hover:text-white" />
+              <div className="flex flex-wrap gap-4">
+                <a href="https://instagram.com/itcindia" className="group p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#E4405F] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Instagram className="w-6 h-6 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="https://linkedin.com/company/itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#0077B5] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
-                  <Linkedin className="w-7 h-7 text-gray-300 group-hover:text-white" />
+                <a href="https://linkedin.com/company/itcindia" className="group p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#0077B5] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Linkedin className="w-6 h-6 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="https://facebook.com/itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#1877F2] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
-                  <Facebook className="w-7 h-7 text-gray-300 group-hover:text-white" />
+                <a href="https://facebook.com/itcindia" className="group p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#1877F2] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Facebook className="w-6 h-6 text-gray-300 group-hover:text-white" />
                 </a>
-                <a href="https://youtube.com/@itcindia" className="group p-5 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#FF0000] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
-                  <Youtube className="w-7 h-7 text-gray-300 group-hover:text-white" />
+                <a href="https://youtube.com/@itcindia" className="group p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-[#FF0000] transition-all duration-300 transform hover:scale-110 hover:rotate-12 border border-white/20 shadow-lg hover:shadow-xl">
+                  <Youtube className="w-6 h-6 text-gray-300 group-hover:text-white" />
                 </a>
               </div>
             </div>
             
-
-            
             {/* Quick Links */}
-            <div className="lg:col-span-2">
-              <h4 className="text-white font-bold mb-8 text-2xl relative">
+            <div>
+              <h4 className="text-white font-bold mb-8 text-xl relative group">
                 Quick Links
-                <div className="absolute -bottom-3 left-0 w-16 h-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full"></div>
+                <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full group-hover:w-16 transition-all duration-300"></div>
               </h4>
-              <ul className="space-y-5">
-                <li><a href="#programs" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
-                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
-                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Programs</span>
+              <ul className="space-y-4">
+                <li><a href="#programs" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Programs</span>
                 </a></li>
-                <li><a href="#projects" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
-                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
-                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Projects</span>
+                <li><a href="#projects" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Projects</span>
                 </a></li>
-                <li><a href="#syllabus" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
-                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
-                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Syllabus</span>
+                <li><a href="#syllabus" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Syllabus</span>
                 </a></li>
-                <li><a href="#prerequisites" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5">
-                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
-                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Prerequisites</span>
+                <li><a href="#prerequisites" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Prerequisites</span>
                 </a></li>
-                <li><button className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-3 px-4 rounded-lg hover:bg-white/5 w-full text-left">
-                  <ChevronRight className="w-5 h-5 mr-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2" />
-                  <span className="group-hover:translate-x-3 transition-transform duration-300 font-medium">Contact</span>
+                <li><button className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5 w-full text-left">
+                  <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Contact</span>
                 </button></li>
               </ul>
             </div>
             
-                                    {/* Contact Info */}
-            <div className="lg:col-span-5">
-              <h4 className="text-white font-bold mb-8 text-2xl relative">
-                Contact Info
-                <div className="absolute -bottom-3 left-0 w-16 h-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full"></div>
-              </h4>
-              <ul className="space-y-8">
-                <li className="flex items-start space-x-5 group">
-                  <div className="w-10 h-10 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <div className="w-4 h-4 bg-white rounded-full"></div>
-                  </div>
+            {/* Contact Info */}
             <div>
-                    <p className="text-gray-300 text-base font-semibold">Email</p>
-                    <a href="mailto:info@itcindia.org" className="text-white hover:text-[#4A90E2] transition-colors text-base font-bold">info@itcindia.org</a>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-5 group">
-                  <div className="w-10 h-10 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <div className="w-4 h-4 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 text-base font-semibold">Phone</p>
-                    <a href="tel:09316473033" className="text-white hover:text-[#4A90E2] transition-colors text-base font-bold">09316473033</a>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-5 group">
-                  <div className="w-10 h-10 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <div className="w-4 h-4 bg-white rounded-full"></div>
+              <h4 className="text-white font-bold mb-8 text-xl relative group">
+                Contact Info
+                <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full group-hover:w-16 transition-all duration-300"></div>
+              </h4>
+              <ul className="space-y-6">
+                <li className="flex items-start space-x-4 group">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                   <div>
-                    <p className="text-gray-300 text-base font-semibold">Address</p>
-                    <p className="text-white text-base font-bold leading-relaxed">Plot No. 146, JLPL Industrial Area, Sector 82, Mohali, Punjab, 160062</p>
+                    <p className="text-gray-300 text-sm font-semibold">Email</p>
+                    <a href="mailto:info@itcindia.org" className="text-white hover:text-[#4A90E2] transition-colors text-sm font-bold">info@itcindia.org</a>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-4 group">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-semibold">Phone</p>
+                    <a href="tel:09316473033" className="text-white hover:text-[#4A90E2] transition-colors text-sm font-bold">09316473033</a>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-4 group">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-semibold">Address</p>
+                    <p className="text-white text-sm font-bold leading-relaxed">Plot No. 146, JLPL Industrial Area, Sector 82, Mohali, Punjab, 160062</p>
                   </div>
                 </li>
               </ul>
             </div>
-            
-
           </div>
           
           {/* Enhanced Bottom Section */}
           <div className="border-t border-gray-700 pt-12">
-            <div className="flex flex-col lg:flex-row justify-between items-center space-y-8 lg:space-y-0">
+            <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
               <div className="text-center lg:text-left">
-                <p className="text-gray-400 text-base font-semibold">
+                <p className="text-gray-400 text-sm font-semibold mb-4">
                   Copyright © 2015 - 2025 ITC India.org All Rights Reserved.
                 </p>
-                <p className="text-gray-500 text-sm mt-3 flex items-center justify-center lg:justify-start space-x-3">
-                  <span className="w-3 h-3 bg-[#4A90E2] rounded-full animate-pulse"></span>
-                  <span className="font-medium">NABL Accredited</span>
-                  <span className="w-3 h-3 bg-[#7FB3D3] rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></span>
-                  <span className="font-medium">BIS Approved</span>
-                  <span className="w-3 h-3 bg-[#4A90E2] rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></span>
-                  <span className="font-medium">ISO Certified</span>
-                </p>
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                  <div className="flex items-center space-x-2">
+                    <span className="w-2 h-2 bg-[#4A90E2] rounded-full animate-pulse"></span>
+                    <span className="text-gray-500 text-xs font-medium">NABL Accredited</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="w-2 h-2 bg-[#7FB3D3] rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></span>
+                    <span className="text-gray-500 text-xs font-medium">BIS Approved</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="w-2 h-2 bg-[#4A90E2] rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></span>
+                    <span className="text-gray-500 text-xs font-medium">ISO Certified</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center space-x-10 text-base">
+              <div className="flex flex-wrap items-center justify-center lg:justify-end gap-6 text-sm">
                 <a href="https://www.itcindia.org/privacy-policy/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Privacy Policy</a>
                 <a href="https://www.itcindia.org/services/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Terms of Service</a>
                 <a href="https://www.itcindia.org/terms-conditions/" className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-105 transform font-medium">Cookie Policy</a>
