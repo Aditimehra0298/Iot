@@ -800,6 +800,7 @@ function App() {
 
 
 
+  const currentProgram = selectedProgram ? programs[selectedProgram] : null;
 
 
 
@@ -1659,103 +1660,49 @@ function App() {
               {/* Silver Tier */}
               <button
                 onClick={() => setSelectedTier('silver')}
-                className={`relative group transition-all duration-300 transform ${
-                  selectedTier === 'silver' ? 'scale-105' : 'hover:scale-102'
+                className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform ${
+                  selectedTier === 'silver' 
+                    ? 'bg-gradient-to-r from-gray-500 to-gray-700 text-white shadow-lg scale-105' 
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:scale-102'
                 }`}
               >
-                <div className={`relative bg-gradient-to-br from-gray-100 to-gray-300 p-1 rounded-2xl shadow-lg transition-all duration-300 ${
-                  selectedTier === 'silver' ? 'shadow-gray-400/50 ring-4 ring-gray-300' : 'hover:shadow-xl'
-                }`}>
-                  <div className="bg-white rounded-xl p-6 w-48 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
-                      <span className="text-2xl">🥈</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-700 mb-2">Silver</h3>
-                    <p className="text-sm text-gray-600 mb-4">Basic Foundation</p>
-                    <div className="text-xs text-gray-500">
-                      <p>• Core Concepts</p>
-                      <p>• Basic Projects</p>
-                      <p>• Essential Skills</p>
-                    </div>
-                  </div>
-                </div>
-                {selectedTier === 'silver' && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gray-500 rounded-full flex items-center justify-center animate-bounce">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                )}
+                🥈 Silver
               </button>
 
               {/* Gold Tier */}
               <button
                 onClick={() => setSelectedTier('gold')}
-                className={`relative group transition-all duration-300 transform ${
-                  selectedTier === 'gold' ? 'scale-105' : 'hover:scale-102'
+                className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform ${
+                  selectedTier === 'gold' 
+                    ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-lg scale-105' 
+                    : 'bg-yellow-200 text-yellow-700 hover:bg-yellow-300 hover:scale-102'
                 }`}
               >
-                <div className={`relative bg-gradient-to-br from-yellow-200 to-yellow-400 p-1 rounded-2xl shadow-lg transition-all duration-300 ${
-                  selectedTier === 'gold' ? 'shadow-yellow-400/50 ring-4 ring-yellow-300' : 'hover:shadow-xl'
-                }`}>
-                  <div className="bg-white rounded-xl p-6 w-48 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
-                      <span className="text-2xl">🥇</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-yellow-700 mb-2">Gold</h3>
-                    <p className="text-sm text-yellow-600 mb-4">Advanced Learning</p>
-                    <div className="text-xs text-yellow-600">
-                      <p>• Advanced Projects</p>
-                      <p>• Industry Skills</p>
-                      <p>• Expert Mentorship</p>
-                    </div>
-                  </div>
-                </div>
-                {selectedTier === 'gold' && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center animate-bounce">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                )}
+                🥇 Gold
               </button>
 
               {/* Diamond Tier */}
               <button
                 onClick={() => setSelectedTier('diamond')}
-                className={`relative group transition-all duration-300 transform ${
-                  selectedTier === 'diamond' ? 'scale-105' : 'hover:scale-102'
+                className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform ${
+                  selectedTier === 'diamond' 
+                    ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg scale-105' 
+                    : 'bg-purple-200 text-purple-700 hover:bg-purple-300 hover:scale-102'
                 }`}
               >
-                <div className={`relative bg-gradient-to-br from-purple-200 to-purple-400 p-1 rounded-2xl shadow-lg transition-all duration-300 ${
-                  selectedTier === 'diamond' ? 'shadow-purple-400/50 ring-4 ring-purple-300' : 'hover:shadow-xl'
-                }`}>
-                  <div className="bg-white rounded-xl p-6 w-48 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
-                      <span className="text-2xl">💎</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-purple-700 mb-2">Diamond</h3>
-                    <p className="text-sm text-purple-600 mb-4">Master Level</p>
-                    <div className="text-xs text-purple-600">
-                      <p>• Master Projects</p>
-                      <p>• Leadership Skills</p>
-                      <p>• Certification</p>
-                    </div>
-                  </div>
-                </div>
-                {selectedTier === 'diamond' && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center animate-bounce">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                )}
+                💎 Diamond
               </button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
         {/* Syllabus Details Section */}
         <div className="relative z-10 py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className={`relative bg-white rounded-3xl p-6 sm:p-8 border shadow-lg transition-all duration-300 overflow-hidden ${
-            selectedProgram === '2-month' ? 'border-gray-500 shadow-gray-500/20' :
-            selectedProgram === '4-month' ? 'border-yellow-500 shadow-yellow-500/20' :
-            selectedProgram === '6-month' ? 'border-purple-500 shadow-purple-500/20' :
+            selectedTier === 'silver' ? 'border-gray-500 shadow-gray-500/20' :
+            selectedTier === 'gold' ? 'border-yellow-500 shadow-yellow-500/20' :
+            selectedTier === 'diamond' ? 'border-purple-500 shadow-purple-500/20' :
             'border-gray-500 shadow-gray-500/20'
           }`}>
             {/* Content */}
@@ -1774,31 +1721,39 @@ function App() {
 
             {!isLoading ? (
               <div className="overflow-x-hidden">
-                <div className="auto-scroll-week-grid flex gap-3 sm:gap-4 md:gap-6 pb-4 min-w-max">
+                <div className={`auto-scroll-week-grid ${selectedTier} flex gap-3 sm:gap-4 md:gap-6 pb-4 min-w-max`} style={{width: 'max-content'}}>
                   {(() => {
                     // Define tier-based syllabus content
                     const tierSyllabus = {
                       silver: [
-                        { week: 1, title: "IoT Fundamentals", topics: ["Introduction to IoT", "Basic Electronics", "Arduino Basics", "Sensors & Actuators"] },
-                        { week: 2, title: "Basic Programming", topics: ["C++ for Arduino", "Basic Python", "Serial Communication", "Data Types"] },
-                        { week: 3, title: "Simple Projects", topics: ["LED Control", "Temperature Sensor", "Basic Automation", "Project Planning"] },
-                        { week: 4, title: "Foundation Review", topics: ["Concept Review", "Basic Troubleshooting", "Documentation", "Final Project"] }
+                        { week: 1, module: "IoT Fundamentals", topics: ["Introduction to IoT", "Basic Electronics", "Arduino Basics", "Sensors & Actuators"], projects: ["LED Control", "Temperature Sensor", "Basic Automation"] },
+                        { week: 2, module: "Basic Programming", topics: ["C++ for Arduino", "Basic Python", "Serial Communication", "Data Types"], projects: ["Data Logger", "Simple Dashboard", "Alert System"] },
+                        { week: 3, module: "Simple Projects", topics: ["LED Control", "Temperature Sensor", "Basic Automation", "Project Planning"], projects: ["Smart Light", "Weather Station", "Motion Detector"] },
+                        { week: 4, module: "Foundation Review", topics: ["Concept Review", "Basic Troubleshooting", "Documentation", "Final Project"], projects: ["Portfolio Project", "Documentation", "Presentation"] },
+                        { week: 5, module: "Basic Electronics", topics: ["Circuit Design", "Components", "Soldering", "Testing"], projects: ["Basic Circuit", "Component Testing", "Soldering Practice"] },
+                        { week: 6, module: "Sensor Integration", topics: ["Temperature Sensors", "Motion Sensors", "Light Sensors", "Data Collection"], projects: ["Sensor Network", "Data Logger", "Monitoring System"] },
+                        { week: 7, module: "Basic Robotics", topics: ["Motor Control", "Servo Motors", "Basic Movement", "Simple Automation"], projects: ["Moving Robot", "Servo Control", "Automated System"] },
+                        { week: 8, module: "Final Project", topics: ["Project Planning", "Implementation", "Testing", "Documentation"], projects: ["Complete IoT Project", "Final Presentation", "Portfolio"] }
                       ],
                       gold: [
-                        { week: 1, title: "Advanced IoT Concepts", topics: ["IoT Architecture", "Protocols (MQTT, HTTP)", "Cloud Integration", "Data Management"] },
-                        { week: 2, title: "Robotics Fundamentals", topics: ["Robot Mechanics", "Motor Control", "Sensor Integration", "Navigation Systems"] },
-                        { week: 3, title: "Advanced Programming", topics: ["Python Advanced", "API Development", "Database Integration", "Real-time Processing"] },
-                        { week: 4, title: "Industry Projects", topics: ["Smart Home System", "Industrial Automation", "Data Analytics", "Project Management"] },
-                        { week: 5, title: "Expert Mentorship", topics: ["Code Review", "Best Practices", "Industry Standards", "Career Guidance"] },
-                        { week: 6, title: "Portfolio Development", topics: ["Project Documentation", "Git Version Control", "Professional Presentation", "Certification Prep"] }
+                        { week: 1, module: "Advanced IoT Concepts", topics: ["IoT Architecture", "Protocols (MQTT, HTTP)", "Cloud Integration", "Data Management"], projects: ["Cloud Dashboard", "API Integration", "Data Analytics"] },
+                        { week: 2, module: "Robotics Fundamentals", topics: ["Robot Mechanics", "Motor Control", "Sensor Integration", "Navigation Systems"], projects: ["Line Follower", "Obstacle Avoidance", "Pick & Place"] },
+                        { week: 3, module: "Advanced Programming", topics: ["Python Advanced", "API Development", "Database Integration", "Real-time Processing"], projects: ["Real-time Monitor", "Database System", "API Server"] },
+                        { week: 4, module: "Industry Projects", topics: ["Smart Home System", "Industrial Automation", "Data Analytics", "Project Management"], projects: ["Smart Home Hub", "Industrial Monitor", "Analytics Dashboard"] },
+                        { week: 5, module: "Expert Mentorship", topics: ["Code Review", "Best Practices", "Industry Standards", "Career Guidance"], projects: ["Code Optimization", "Best Practices", "Portfolio Review"] },
+                        { week: 6, module: "Portfolio Development", topics: ["Project Documentation", "Git Version Control", "Professional Presentation", "Certification Prep"], projects: ["Git Portfolio", "Documentation", "Certification"] },
+                        { week: 7, module: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"], projects: ["AI Robot", "Vision System", "ML Model"] },
+                        { week: 8, module: "IoT Security", topics: ["Security Protocols", "Encryption", "Authentication", "Network Security"], projects: ["Secure Communication", "Encryption System", "Security Audit"] }
                       ],
                       diamond: [
-                        { week: 1, title: "Master IoT Architecture", topics: ["Enterprise IoT", "Microservices", "Edge Computing", "Security Protocols"] },
-                        { week: 2, title: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"] },
-                        { week: 3, title: "Leadership & Innovation", topics: ["Team Management", "Innovation Strategies", "Technology Trends", "Strategic Planning"] },
-                        { week: 4, title: "Master Projects", topics: ["Complex System Design", "Multi-platform Integration", "Performance Optimization", "Scalability"] },
-                        { week: 5, title: "Certification & Assessment", topics: ["Professional Certification", "Industry Assessment", "Portfolio Review", "Expert Evaluation"] },
-                        { week: 6, title: "Career Advancement", topics: ["Leadership Skills", "Industry Networking", "Consulting Preparation", "Entrepreneurship"] }
+                        { week: 1, module: "Master IoT Architecture", topics: ["Enterprise IoT", "Microservices", "Edge Computing", "Security Protocols"], projects: ["Enterprise System", "Microservice API", "Edge Computing"] },
+                        { week: 2, module: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"], projects: ["AI Robot", "Vision System", "ML Model"] },
+                        { week: 3, module: "Leadership & Innovation", topics: ["Team Management", "Innovation Strategies", "Technology Trends", "Strategic Planning"], projects: ["Team Project", "Innovation Lab", "Strategy Plan"] },
+                        { week: 4, module: "Master Projects", topics: ["Complex System Design", "Multi-platform Integration", "Performance Optimization", "Scalability"], projects: ["Complex System", "Multi-platform", "Optimization"] },
+                        { week: 5, module: "Certification & Assessment", topics: ["Professional Certification", "Industry Assessment", "Portfolio Review", "Expert Evaluation"], projects: ["Certification Prep", "Assessment", "Expert Review"] },
+                        { week: 6, module: "Career Advancement", topics: ["Leadership Skills", "Industry Networking", "Consulting Preparation", "Entrepreneurship"], projects: ["Leadership Project", "Networking", "Business Plan"] },
+                        { week: 7, module: "Advanced AI & ML", topics: ["Deep Learning", "Neural Networks", "Computer Vision", "Natural Language Processing"], projects: ["AI Model", "Vision System", "NLP Project"] },
+                        { week: 8, module: "Enterprise Solutions", topics: ["Cloud Architecture", "DevOps", "Scalability", "Performance Optimization"], projects: ["Cloud System", "DevOps Pipeline", "Scalable Architecture"] }
                       ]
                     };
                     
@@ -1836,7 +1791,7 @@ function App() {
                           selectedTier === 'gold' ? 'text-yellow-500' :
                           selectedTier === 'diamond' ? 'text-purple-500' :
                           'text-gray-500'
-                        }`}>{week.title}</h4>
+                        }`}>{week.module}</h4>
                         <div className="text-gray-600 text-xs sm:text-sm font-medium">Week {week.week}</div>
                           </div>
                           
@@ -1873,9 +1828,9 @@ function App() {
                             selectedTier === 'gold' ? 'text-green-500 border-green-500/30' :
                             selectedTier === 'diamond' ? 'text-purple-500 border-purple-500/30' :
                             'text-gray-500 border-gray-500/30'
-                          }`}>Key Learning Areas:</h5>
+                          }`}>Projects:</h5>
                           <ul className="text-gray-800 text-xs sm:text-sm space-y-2">
-                              {week.topics.slice(0, 3).map((topic, i) => (
+                              {week.projects.map((project, i) => (
                                 <li key={i} className="flex items-start">
                                 <div className={`w-4 h-4 mt-1 mr-3 flex-shrink-0 transition-all duration-300 ${
                                   selectedTier === 'silver' ? 'text-gray-500' :
@@ -1885,7 +1840,7 @@ function App() {
                                 }`}>
                                   <Zap className="w-full h-full" />
                                 </div>
-                                <span className="leading-relaxed">{topic}</span>
+                                <span className="leading-relaxed">{project}</span>
                                 </li>
                               ))}
                             </ul>
@@ -3138,12 +3093,12 @@ function App() {
                   
                   {/* Logo container with backdrop */}
                   <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-300 group-hover:scale-105">
-                    <img 
-                      src="/l5.png" 
-                      alt="IoT Academy Logo" 
+                  <img 
+                    src="/l5.png" 
+                    alt="IoT Academy Logo" 
                       className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain relative z-10"
-                    />
-                  </div>
+                  />
+                </div>
                   
                   {/* Enhanced animated indicator */}
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full animate-pulse shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -3155,7 +3110,7 @@ function App() {
                     Master Class in IoT & Robotics
                   </h3>
                   <p className="text-sm text-gray-400 mt-1">Division of ITC India Pvt Ltd.</p>
-                </div>
+              </div>
               </div>
               
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
@@ -3209,7 +3164,7 @@ function App() {
               </ul>
             </div>
             
-            {/* Contact Info */}
+                                    {/* Contact Info */}
             <div>
               <h4 className="text-white font-bold mb-8 text-xl relative group">
                 Contact Info
@@ -3220,7 +3175,7 @@ function App() {
                   <div className="w-8 h-8 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
-                  <div>
+            <div>
                     <p className="text-gray-300 text-sm font-semibold">Email</p>
                     <a href="mailto:info@itcindia.org" className="text-white hover:text-[#4A90E2] transition-colors text-sm font-bold">info@itcindia.org</a>
                   </div>
@@ -3258,7 +3213,7 @@ function App() {
                   <div className="flex items-center space-x-2">
                     <span className="w-2 h-2 bg-[#4A90E2] rounded-full animate-pulse"></span>
                     <span className="text-gray-500 text-xs font-medium">NABL Accredited</span>
-                  </div>
+              </div>
                   <div className="flex items-center space-x-2">
                     <span className="w-2 h-2 bg-[#7FB3D3] rounded-full animate-pulse" style={{animationDelay: '0.3s'}}></span>
                     <span className="text-gray-500 text-xs font-medium">BIS Approved</span>
