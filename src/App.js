@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, ShoppingCart, CloudRain, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
