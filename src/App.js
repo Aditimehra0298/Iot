@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wre
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
+  const [selectedTier, setSelectedTier] = useState('silver');
   const [activeWeek, setActiveWeek] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -799,7 +800,6 @@ function App() {
 
 
 
-  const currentProgram = selectedProgram ? programs[selectedProgram] : null;
 
 
 
@@ -945,8 +945,8 @@ function App() {
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent leading-tight">
                   Internet of Things & Robotics
                 </span>
-                <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight">
-                  Division of ITC India Pvt. Ltd.
+                <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight Serif bold italic">
+                  A Division of ITC (India)Pvt. Ltd.
                 </span>
               </div>
             </div>
@@ -1020,7 +1020,7 @@ function App() {
               <div className="mb-4 flex justify-center lg:justify-start">
                 <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full shadow-lg">
                   <Cpu className="w-3 h-3 mr-1.5" />
-                  IoT & Robotics Division of ITC India
+                  Premier IoT & Robotics testing, Certification, and training Hub
                 </div>
               </div>
               
@@ -1040,7 +1040,7 @@ function App() {
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8">
                 {[
-                  { icon: Zap, text: '20+ Projects', color: 'text-[#4A90E2]' },
+                  { icon: Zap, text: '100+ Projects', color: 'text-[#4A90E2]' },
                   { icon: Users, text: 'Expert Mentors', color: 'text-[#7FB3D3]' },
                   { icon: BookOpen, text: 'Industry Skills', color: 'text-[#4A90E2]' },
                   { icon: Wrench, text: 'Hands-on Learning', color: 'text-[#7FB3D3]' }
@@ -1643,6 +1643,112 @@ function App() {
               </div>
             </div>
 
+        {/* Tier Selection Section */}
+        <div className="relative z-10 py-6 sm:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent mb-4">
+                Choose Your Learning Tier
+              </h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                Select the tier that matches your learning goals and unlock the appropriate syllabus content
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+              {/* Silver Tier */}
+              <button
+                onClick={() => setSelectedTier('silver')}
+                className={`relative group transition-all duration-300 transform ${
+                  selectedTier === 'silver' ? 'scale-105' : 'hover:scale-102'
+                }`}
+              >
+                <div className={`relative bg-gradient-to-br from-gray-100 to-gray-300 p-1 rounded-2xl shadow-lg transition-all duration-300 ${
+                  selectedTier === 'silver' ? 'shadow-gray-400/50 ring-4 ring-gray-300' : 'hover:shadow-xl'
+                }`}>
+                  <div className="bg-white rounded-xl p-6 w-48 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🥈</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-700 mb-2">Silver</h3>
+                    <p className="text-sm text-gray-600 mb-4">Basic Foundation</p>
+                    <div className="text-xs text-gray-500">
+                      <p>• Core Concepts</p>
+                      <p>• Basic Projects</p>
+                      <p>• Essential Skills</p>
+                    </div>
+                  </div>
+                </div>
+                {selectedTier === 'silver' && (
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gray-500 rounded-full flex items-center justify-center animate-bounce">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                )}
+              </button>
+
+              {/* Gold Tier */}
+              <button
+                onClick={() => setSelectedTier('gold')}
+                className={`relative group transition-all duration-300 transform ${
+                  selectedTier === 'gold' ? 'scale-105' : 'hover:scale-102'
+                }`}
+              >
+                <div className={`relative bg-gradient-to-br from-yellow-200 to-yellow-400 p-1 rounded-2xl shadow-lg transition-all duration-300 ${
+                  selectedTier === 'gold' ? 'shadow-yellow-400/50 ring-4 ring-yellow-300' : 'hover:shadow-xl'
+                }`}>
+                  <div className="bg-white rounded-xl p-6 w-48 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🥇</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-yellow-700 mb-2">Gold</h3>
+                    <p className="text-sm text-yellow-600 mb-4">Advanced Learning</p>
+                    <div className="text-xs text-yellow-600">
+                      <p>• Advanced Projects</p>
+                      <p>• Industry Skills</p>
+                      <p>• Expert Mentorship</p>
+                    </div>
+                  </div>
+                </div>
+                {selectedTier === 'gold' && (
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center animate-bounce">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                )}
+              </button>
+
+              {/* Diamond Tier */}
+              <button
+                onClick={() => setSelectedTier('diamond')}
+                className={`relative group transition-all duration-300 transform ${
+                  selectedTier === 'diamond' ? 'scale-105' : 'hover:scale-102'
+                }`}
+              >
+                <div className={`relative bg-gradient-to-br from-purple-200 to-purple-400 p-1 rounded-2xl shadow-lg transition-all duration-300 ${
+                  selectedTier === 'diamond' ? 'shadow-purple-400/50 ring-4 ring-purple-300' : 'hover:shadow-xl'
+                }`}>
+                  <div className="bg-white rounded-xl p-6 w-48 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">💎</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-purple-700 mb-2">Diamond</h3>
+                    <p className="text-sm text-purple-600 mb-4">Master Level</p>
+                    <div className="text-xs text-purple-600">
+                      <p>• Master Projects</p>
+                      <p>• Leadership Skills</p>
+                      <p>• Certification</p>
+                    </div>
+                  </div>
+                </div>
+                {selectedTier === 'diamond' && (
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center animate-bounce">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Syllabus Details Section */}
         <div className="relative z-10 py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1655,30 +1761,62 @@ function App() {
             {/* Content */}
             <div>
             <h3 className={`text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center transition-all duration-300 ${
-              selectedProgram === '2-month' ? 'bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent' :
-              selectedProgram === '4-month' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent' :
-              selectedProgram === '6-month' ? 'bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent' :
+              selectedTier === 'silver' ? 'bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent' :
+              selectedTier === 'gold' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent' :
+              selectedTier === 'diamond' ? 'bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent' :
               'bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent'
             }`}>
-              {selectedProgram ? `${currentProgram.title} - Detailed Syllabus` : `${(programs && programs['2-month']?.title) || '2-Month IoT Bootcamp'} - Detailed Syllabus`}
+              {selectedTier === 'silver' ? 'Silver Tier - Foundation Syllabus' :
+               selectedTier === 'gold' ? 'Gold Tier - Advanced Syllabus' :
+               selectedTier === 'diamond' ? 'Diamond Tier - Master Syllabus' :
+               'Silver Tier - Foundation Syllabus'}
                 </h3>
 
-            {!isLoading && (((selectedProgram && currentProgram) || (!selectedProgram && programs && programs['2-month']))) ? (
+            {!isLoading ? (
               <div className="overflow-x-hidden">
                 <div className="auto-scroll-week-grid flex gap-3 sm:gap-4 md:gap-6 pb-4 min-w-max">
-                  {((selectedProgram && currentProgram?.weeks) ? currentProgram.weeks : ((programs && programs['2-month']?.weeks) || [])).map((week, index) => (
+                  {(() => {
+                    // Define tier-based syllabus content
+                    const tierSyllabus = {
+                      silver: [
+                        { week: 1, title: "IoT Fundamentals", topics: ["Introduction to IoT", "Basic Electronics", "Arduino Basics", "Sensors & Actuators"] },
+                        { week: 2, title: "Basic Programming", topics: ["C++ for Arduino", "Basic Python", "Serial Communication", "Data Types"] },
+                        { week: 3, title: "Simple Projects", topics: ["LED Control", "Temperature Sensor", "Basic Automation", "Project Planning"] },
+                        { week: 4, title: "Foundation Review", topics: ["Concept Review", "Basic Troubleshooting", "Documentation", "Final Project"] }
+                      ],
+                      gold: [
+                        { week: 1, title: "Advanced IoT Concepts", topics: ["IoT Architecture", "Protocols (MQTT, HTTP)", "Cloud Integration", "Data Management"] },
+                        { week: 2, title: "Robotics Fundamentals", topics: ["Robot Mechanics", "Motor Control", "Sensor Integration", "Navigation Systems"] },
+                        { week: 3, title: "Advanced Programming", topics: ["Python Advanced", "API Development", "Database Integration", "Real-time Processing"] },
+                        { week: 4, title: "Industry Projects", topics: ["Smart Home System", "Industrial Automation", "Data Analytics", "Project Management"] },
+                        { week: 5, title: "Expert Mentorship", topics: ["Code Review", "Best Practices", "Industry Standards", "Career Guidance"] },
+                        { week: 6, title: "Portfolio Development", topics: ["Project Documentation", "Git Version Control", "Professional Presentation", "Certification Prep"] }
+                      ],
+                      diamond: [
+                        { week: 1, title: "Master IoT Architecture", topics: ["Enterprise IoT", "Microservices", "Edge Computing", "Security Protocols"] },
+                        { week: 2, title: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"] },
+                        { week: 3, title: "Leadership & Innovation", topics: ["Team Management", "Innovation Strategies", "Technology Trends", "Strategic Planning"] },
+                        { week: 4, title: "Master Projects", topics: ["Complex System Design", "Multi-platform Integration", "Performance Optimization", "Scalability"] },
+                        { week: 5, title: "Certification & Assessment", topics: ["Professional Certification", "Industry Assessment", "Portfolio Review", "Expert Evaluation"] },
+                        { week: 6, title: "Career Advancement", topics: ["Leadership Skills", "Industry Networking", "Consulting Preparation", "Entrepreneurship"] }
+                      ]
+                    };
+                    
+                    const currentSyllabus = tierSyllabus[selectedTier] || tierSyllabus.silver;
+                    
+                    return currentSyllabus.map((week, index) => (
                       <div 
                         key={index} 
                       className={`bg-white/90 rounded-2xl p-3 sm:p-4 md:p-6 border transition-all duration-300 hover:shadow-lg cursor-pointer shadow-md w-72 sm:w-80 flex-shrink-0 ${
-                        selectedProgram === '2-month' ? 'border-gray-500 hover:border-gray-600 hover:shadow-gray-500/20' :
-                        selectedProgram === '4-month' ? 'border-yellow-500 hover:border-yellow-600 hover:shadow-yellow-500/20' :
-                        selectedProgram === '6-month' ? 'border-purple-500 hover:border-purple-600 hover:shadow-purple-500/20' :
+                        selectedTier === 'silver' ? 'border-gray-500 hover:border-gray-600 hover:shadow-gray-500/20' :
+                        selectedTier === 'gold' ? 'border-yellow-500 hover:border-yellow-600 hover:shadow-yellow-500/20' :
+                        selectedTier === 'diamond' ? 'border-purple-500 hover:border-purple-600 hover:shadow-purple-500/20' :
                         'border-gray-500 hover:border-gray-600 hover:shadow-gray-500/20'
                       } ${
                         activeWeek === index ? 
-                          (selectedProgram === '2-month' ? 'border-gray-600 shadow-lg shadow-gray-500/20' :
-                           selectedProgram === '4-month' ? 'border-yellow-600 shadow-lg shadow-yellow-500/20' :
-                           selectedProgram === '6-month' ? 'border-purple-600 shadow-lg shadow-purple-500/20' :
+                          (selectedTier === 'silver' ? 'border-gray-600 shadow-lg shadow-gray-500/20' :
+                           selectedTier === 'gold' ? 'border-yellow-600 shadow-lg shadow-yellow-500/20' :
+                           selectedTier === 'diamond' ? 'border-purple-600 shadow-lg shadow-purple-500/20' :
                            'border-gray-600 shadow-lg shadow-gray-500/20') : ''
                         }`}
                         onClick={() => setActiveWeek(activeWeek === index ? null : index)}
@@ -1686,19 +1824,19 @@ function App() {
                       {/* Week Header */}
                       <div className="text-center mb-4">
                         <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto rounded-full flex items-center justify-center font-bold text-lg sm:text-xl md:text-2xl text-white mb-3 transition-all duration-300 ${
-                          selectedProgram === '2-month' ? 'bg-gradient-to-r from-gray-400 to-gray-600' :
-                          selectedProgram === '4-month' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600' :
-                          selectedProgram === '6-month' ? 'bg-gradient-to-r from-purple-500 to-purple-700' :
+                          selectedTier === 'silver' ? 'bg-gradient-to-r from-gray-400 to-gray-600' :
+                          selectedTier === 'gold' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600' :
+                          selectedTier === 'diamond' ? 'bg-gradient-to-r from-purple-500 to-purple-700' :
                           'bg-gradient-to-r from-gray-400 to-gray-600'
                         }`}>
                                 {week.week}
                               </div>
                         <h4 className={`text-base sm:text-lg font-bold mb-2 transition-all duration-300 ${
-                          selectedProgram === '2-month' ? 'text-gray-500' :
-                          selectedProgram === '4-month' ? 'text-yellow-500' :
-                          selectedProgram === '6-month' ? 'text-purple-500' :
+                          selectedTier === 'silver' ? 'text-gray-500' :
+                          selectedTier === 'gold' ? 'text-yellow-500' :
+                          selectedTier === 'diamond' ? 'text-purple-500' :
                           'text-gray-500'
-                        }`}>{week.module}</h4>
+                        }`}>{week.title}</h4>
                         <div className="text-gray-600 text-xs sm:text-sm font-medium">Week {week.week}</div>
                           </div>
                           
@@ -1708,18 +1846,18 @@ function App() {
                       }`}>
                         <div className="mb-4">
                           <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
-                            selectedProgram === '2-month' ? 'text-cyan-500 border-cyan-500/30' :
-                            selectedProgram === '4-month' ? 'text-emerald-500 border-emerald-500/30' :
-                            selectedProgram === '6-month' ? 'text-purple-500 border-purple-500/30' :
+                            selectedTier === 'silver' ? 'text-cyan-500 border-cyan-500/30' :
+                            selectedTier === 'gold' ? 'text-emerald-500 border-emerald-500/30' :
+                            selectedTier === 'diamond' ? 'text-purple-500 border-purple-500/30' :
                             'text-cyan-500 border-cyan-500/30'
                           }`}>Topics Covered:</h5>
                           <ul className="text-gray-800 text-xs sm:text-sm space-y-2">
                               {week.topics.map((topic, i) => (
                                 <li key={i} className="flex items-start">
                                 <div className={`w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0 transition-all duration-300 ${
-                                  selectedProgram === '2-month' ? 'bg-cyan-500' :
-                                  selectedProgram === '4-month' ? 'bg-emerald-500' :
-                                  selectedProgram === '6-month' ? 'bg-purple-500' :
+                                  selectedTier === 'silver' ? 'bg-cyan-500' :
+                                  selectedTier === 'gold' ? 'bg-emerald-500' :
+                                  selectedTier === 'diamond' ? 'bg-purple-500' :
                                   'bg-cyan-500'
                                 }`}></div>
                                 <span className="leading-relaxed">{topic}</span>
@@ -1731,23 +1869,23 @@ function App() {
                         {/* Projects Section */}
                         <div>
                           <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
-                            selectedProgram === '2-month' ? 'text-gray-500 border-gray-500/30' :
-                            selectedProgram === '4-month' ? 'text-green-500 border-green-500/30' :
-                            selectedProgram === '6-month' ? 'text-purple-500 border-purple-500/30' :
+                            selectedTier === 'silver' ? 'text-gray-500 border-gray-500/30' :
+                            selectedTier === 'gold' ? 'text-green-500 border-green-500/30' :
+                            selectedTier === 'diamond' ? 'text-purple-500 border-purple-500/30' :
                             'text-gray-500 border-gray-500/30'
-                          }`}>Projects:</h5>
+                          }`}>Key Learning Areas:</h5>
                           <ul className="text-gray-800 text-xs sm:text-sm space-y-2">
-                              {week.projects.map((project, i) => (
+                              {week.topics.slice(0, 3).map((topic, i) => (
                                 <li key={i} className="flex items-start">
                                 <div className={`w-4 h-4 mt-1 mr-3 flex-shrink-0 transition-all duration-300 ${
-                                  selectedProgram === '2-month' ? 'text-gray-500' :
-                                  selectedProgram === '4-month' ? 'text-green-500' :
-                                  selectedProgram === '6-month' ? 'text-purple-500' :
+                                  selectedTier === 'silver' ? 'text-gray-500' :
+                                  selectedTier === 'gold' ? 'text-green-500' :
+                                  selectedTier === 'diamond' ? 'text-purple-500' :
                                   'text-gray-500'
                                 }`}>
                                   <Zap className="w-full h-full" />
                                 </div>
-                                <span className="leading-relaxed">{project}</span>
+                                <span className="leading-relaxed">{topic}</span>
                                 </li>
                               ))}
                             </ul>
@@ -1762,16 +1900,17 @@ function App() {
                               {activeWeek === index ? 'Hide Details' : 'Click to View Details'}
                             </span>
                             <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${activeWeek === index ? 'rotate-180' : ''} ${
-                              selectedProgram === '2-month' ? 'text-blue-500' :
-                              selectedProgram === '4-month' ? 'text-green-500' :
-                              selectedProgram === '6-month' ? 'text-orange-500' :
+                              selectedTier === 'silver' ? 'text-blue-500' :
+                              selectedTier === 'gold' ? 'text-green-500' :
+                              selectedTier === 'diamond' ? 'text-orange-500' :
                               'text-blue-500'
                             }`} />
                           </div>
                           </div>
                         </div>
                       </div>
-                    ))}
+                    ));
+                  })()}
                 </div>
               </div>
             ) : isLoading ? (
@@ -2189,8 +2328,7 @@ function App() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
                     <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <h4 className="text-white text-xl font-bold mb-1">Autonomous Robot</h4>
-                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Smart navigation and obstacle avoidance</p>
+                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Smart navigation System</p>
                     </div>
                   </div>
                 </div>
@@ -2204,8 +2342,7 @@ function App() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
                     <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <h4 className="text-white text-xl font-bold mb-1">Smart Home Hub</h4>
-                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Complete home automation system</p>
+                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Complete automation system</p>
                     </div>
                   </div>
                 </div>
@@ -2219,7 +2356,6 @@ function App() {
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
                     <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <h4 className="text-white text-xl font-bold mb-1">Industrial IoT Sensors</h4>
                       <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Real-time monitoring and analytics</p>
                     </div>
                   </div>
