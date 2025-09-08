@@ -41,14 +41,6 @@ function App() {
   const [showOnlineForm, setShowOnlineForm] = useState(false);
   const [selectedProgramForForm, setSelectedProgramForForm] = useState(null);
   const [selectedProgramForOnlineForm, setSelectedProgramForOnlineForm] = useState(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    location: '',
-    course: '',
-    message: ''
-  });
   const [onlineFormData, setOnlineFormData] = useState({
     name: '',
     phone: '',
@@ -285,6 +277,16 @@ function App() {
     setIsLoading(false);
   }, []);
 
+
+  // FAQ toggle function - only one item can be open at a time
+  const toggleItem = (index) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? [] // Close if already open
+        : [index] // Open only this item, close all others
+    );
+  };
+
   // Form handling functions
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -307,24 +309,6 @@ function App() {
       message: '',
       program: ''
     });
-  };
-
-  // FAQ toggle function - only one item can be open at a time
-  const toggleItem = (index) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? [] // Close if already open
-        : [index] // Open only this item, close all others
-    );
-  };
-
-  // Form handling functions
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
   };
 
   const handleFormSubmit = async (e) => {
