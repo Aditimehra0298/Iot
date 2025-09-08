@@ -3792,7 +3792,7 @@ function App() {
                   </div>
             <div>
                     <p className="text-gray-300 text-sm font-semibold">Email</p>
-                    <a href="contact.iot2025@gmail.com" className="text-white hover:text-[#4A90E2] transition-colors text-sm font-bold">info@itcindia.org</a>
+                    <a href="contact.iot2025@gmail.com" className="text-white hover:text-[#4A90E2] transition-colors text-sm font-bold">contact.iot2025@gmail.com</a>
                   </div>
                 </li>
                 <li className="flex items-start space-x-4 group">
@@ -3801,7 +3801,7 @@ function App() {
                   </div>
                   <div>
                     <p className="text-gray-300 text-sm font-semibold">Phone</p>
-                    <a href="tel:7409176805" className="text-white hover:text-[#4A90E2] transition-colors text-sm font-bold">09316473033</a>
+                    <a href="tel:7409176805" className="text-white hover:text-[#4A90E2] transition-colors text-sm font-bold">+919758079838</a>
                   </div>
                 </li>
                 <li className="flex items-start space-x-4 group">
