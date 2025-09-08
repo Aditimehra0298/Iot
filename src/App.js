@@ -3287,18 +3287,18 @@ function App() {
                 {/* Content */}
                 <div className="relative z-10 p-8 sm:p-10">
                   <div className="flex flex-col items-center text-center">
-                    {/* Expert Photo Placeholder */}
-                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] flex items-center justify-center mb-6 shadow-lg">
-                      <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white flex items-center justify-center">
-                        <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent">
-                          DR
-                        </span>
-                      </div>
+                    {/* Expert Photo */}
+                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white">
+                      <img 
+                        src="/WhatsApp Image 2025-09-06 at 09.36.10.jpeg" 
+                        alt="Surjit Verma"
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     
                     {/* Expert Info */}
                     <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-                      Dr. Rajesh Kumar
+                      Surjit Verma
                     </h3>
                     <p className="text-lg font-semibold text-[#4A90E2] mb-4">
                       Chief Technology Officer & IoT Specialist
