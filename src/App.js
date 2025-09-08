@@ -4,6 +4,14 @@ import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wre
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [selectedTier, setSelectedTier] = useState('silver');
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    program: ''
+  });
 
   // Syllabus navigation functions
   const scrollSyllabusLeft = () => {
@@ -276,6 +284,30 @@ function App() {
   React.useEffect(() => {
     setIsLoading(false);
   }, []);
+
+  // Form handling functions
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you can add form submission logic
+    console.log('Form submitted:', formData);
+    alert('Thank you for your interest! We will contact you soon.');
+    setShowContactForm(false);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      program: ''
+    });
+  };
 
   // FAQ toggle function - only one item can be open at a time
   const toggleItem = (index) => {
@@ -3616,7 +3648,10 @@ function App() {
               <p className="text-blue-100 mb-6 text-sm sm:text-base">
                 Our experts are here to help you choose the right training path for your career goals.
               </p>
-              <button className="bg-white text-blue-600 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 transform hover:scale-105 text-sm sm:text-base">
+              <button 
+                onClick={() => setShowContactForm(true)}
+                className="bg-white text-blue-600 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 transform hover:scale-105 text-sm sm:text-base"
+              >
                 Contact Our Training Team
               </button>
             </div>
@@ -4347,6 +4382,127 @@ function App() {
           <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
         </div>
       </a>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="p-6 sm:p-8">
+              {/* Header */}
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                  Contact Our Training Team
+                </h2>
+                <button
+                  onClick={() => setShowContactForm(false)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Form */}
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Program Interest
+                    </label>
+                    <select
+                      name="program"
+                      value={formData.program}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all"
+                    >
+                      <option value="">Select a program</option>
+                      <option value="2-month">2-Month IoT Bootcamp (Silver)</option>
+                      <option value="4-month">4-Month IoT Mastery (Gold)</option>
+                      <option value="6-month">6-Month IoT & AI Mastery (Diamond)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4A90E2] focus:border-transparent transition-all resize-none"
+                    placeholder="Tell us about your goals and any questions you have..."
+                  />
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <button
+                    type="submit"
+                    className="flex-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#7FB3D3] hover:to-[#4A90E2] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    Send Message
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowContactForm(false)}
+                    className="flex-1 bg-gray-200 text-gray-800 py-3 px-6 rounded-lg font-semibold hover:bg-gray-300 transition-all duration-300"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
       
     </div>
     </>
