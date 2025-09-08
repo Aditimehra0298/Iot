@@ -230,43 +230,43 @@ function App() {
   // FAQ data
   const faqData = [
     {
-      question: "What makes your IoT training program different from others?",
-      answer: "Our IoT training combines hands-on project work with real-world industry scenarios. Students work with actual hardware, sensors, and cloud platforms used by leading companies. We focus on practical implementation rather than just theory, ensuring you can immediately apply what you learn in professional environments.",
+      question: "What makes this IoT training program different from others?",
+      answer: "Focus on hands-on, real-world projects, industry applications, and placement-oriented skill development.",
       icon: <Zap className="h-5 w-5" />
     },
     {
-      question: "Do I need programming experience to start IoT and robotics training?",
-      answer: "While basic programming knowledge helps, we welcome complete beginners! Our curriculum starts with fundamentals and gradually builds complexity. We cover essential programming concepts in Python and C++ specifically for IoT and robotics applications, ensuring everyone can follow along regardless of their starting point.",
+      question: "Do I need programming experience to start?",
+      answer: "No prior experience needed—the program is designed for beginners, students, and professionals, introducing coding step-by-step through practical activities.",
       icon: <Brain className="h-5 w-5" />
     },
     {
       question: "What kind of projects will I work on during the training?",
-      answer: "You'll build real-world projects like smart home automation systems, industrial monitoring dashboards, autonomous robot navigation, sensor data analytics platforms, and connected device networks. Each project is designed to showcase different aspects of IoT and robotics, from hardware integration to cloud deployment.",
+      answer: "You will develop industry-relevant IoT, Robotics, Embedded Systems, and basic AI/ML projects to build job-ready skills.",
       icon: <Settings className="h-5 w-5" />
     },
     {
-      question: "How long does it take to become job-ready in IoT and robotics?",
-      answer: "Our intensive 6-month program is designed to make you industry-ready. This includes 3 months of core IoT concepts, 2 months of robotics specialization, and 1 month of capstone project work. We also provide career support including portfolio development and interview preparation.",
+      question: "How long does it take to become job-ready in IoT and Robotics?",
+      answer: "Most students are ready for internships or entry-level roles within 4–6 months, depending on the program.",
       icon: <Rocket className="h-5 w-5" />
     },
     {
-      question: "What hardware and software tools will I learn to use?",
-      answer: "You'll master Arduino, Raspberry Pi, ESP32, various sensors (temperature, humidity, motion, cameras), actuators, and communication protocols (WiFi, Bluetooth, LoRa). On the software side, we cover Python, C++, Node.js, MQTT, cloud platforms (AWS IoT, Google Cloud), and mobile app development for device control.",
+      question: "What hardware and software tools will I learn?",
+      answer: "Training covers Arduino, ESP32, Raspberry Pi, sensors, actuators, robotics kits, Python, MQTT, Node-RED, AWS IoT, Google Cloud, and more.",
       icon: <Settings className="h-5 w-5" />
     },
     {
-      question: "Is there ongoing support after completing the training?",
-      answer: "Absolutely! We provide 1 year of post-training support including access to our alumni network, monthly tech talks, project mentorship, career guidance, and priority access to advanced workshops. Our community stays connected through our private Discord server where you can share projects and get help.",
+      question: "Is ongoing support available after completing the training?",
+      answer: "Yes—ongoing guidance includes project modifications, resume review, interview preparation, and access to an alumni network.",
       icon: <Brain className="h-5 w-5" />
     },
     {
-      question: "Can I specialize in specific IoT domains like smart cities or healthcare?",
-      answer: "Yes! After completing the core curriculum, you can choose specialization tracks in smart cities, healthcare IoT, industrial automation, agriculture tech, or consumer electronics. Each track includes domain-specific projects, industry case studies, and connections with relevant employers.",
+      question: "Can I specialize in domains like Smart Cities or Healthcare?",
+      answer: "Yes, you can select specialization tracks such as Smart Cities, Healthcare IoT, Industrial Automation, or Agriculture IoT for advanced expertise.",
       icon: <Zap className="h-5 w-5" />
     },
     {
-      question: "What are the career opportunities after IoT and robotics training?",
-      answer: "Graduates find roles as IoT Engineers, Robotics Developers, Embedded Systems Engineers, Solutions Architects, Product Managers for tech companies, and many start their own IoT consulting businesses. The demand is growing rapidly with average starting salaries ranging from ₹6-12 LPA depending on skills and location.",
+      question: "What are the career outcomes after IoT and Robotics training?",
+      answer: "Graduates pursue roles like IoT Developer, Robotics Engineer, Embedded Systems Engineer, or AI/ML Specialist, with strong placement assistance for career growth.",
       icon: <Rocket className="h-5 w-5" />
     }
   ];
@@ -1741,10 +1741,10 @@ function App() {
               selectedTier === 'diamond' ? 'bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent' :
               'bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent'
             }`}>
-              {selectedTier === 'silver' ? 'Silver Tier - Foundation Syllabus' :
-               selectedTier === 'gold' ? 'Gold Tier - Advanced Syllabus' :
-               selectedTier === 'diamond' ? 'Diamond Tier - Master Syllabus' :
-               'Silver Tier - Foundation Syllabus'}
+              {selectedTier === 'silver' ? '2-Month IoT Bootcamp - SILVER Membership Syllabus' :
+               selectedTier === 'gold' ? '4-Month IoT Mastery - GOLD Membership Syllabus' :
+               selectedTier === 'diamond' ? '6-Month IoT & AI Mastery - DIAMOND Membership Syllabus' :
+               '2-Month IoT Bootcamp - SILVER Membership Syllabus'}
                 </h3>
 
             {!isLoading ? (
@@ -3301,22 +3301,28 @@ function App() {
                       Surjit Verma
                     </h3>
                     <p className="text-lg font-semibold text-[#4A90E2] mb-4">
-                      Chief Technology Officer & IoT Specialist
+                      IoT & Robotics Engineer
                     </p>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
-                      With over 15 years of experience in IoT architecture and embedded systems, Dr. Kumar has led numerous smart city projects across India. He holds a Ph.D. in Electronics Engineering and has published 50+ research papers in international journals.
+                      Surjit Verma is an IoT engineer with expertise in embedded systems, robotics, wireless communication, and cloud integration. He has worked on projects including humanoid robots, smart fire detection, IoT weather stations, and AI-powered shopping carts. Skilled in ESP32, STM32, Raspberry Pi, LoRaWAN, Zigbee, MQTT, and cloud platforms, he specializes in developing smart, connected solutions for industries and enterprises.
                     </p>
                     
                     {/* Expertise Tags */}
                     <div className="flex flex-wrap gap-2 justify-center">
                       <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
-                        IoT Architecture
-                      </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
                         Embedded Systems
                       </span>
                       <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
-                        Smart Cities
+                        Robotics
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        ESP32/STM32
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        LoRaWAN/Zigbee
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        Cloud Integration
                       </span>
                     </div>
                   </div>
