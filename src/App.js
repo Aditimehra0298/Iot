@@ -3649,7 +3649,7 @@ function App() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-0">
             {[
               { number: '500+', label: 'Students Trained', icon: Users },
-              { number: '50+', label: 'Projects Built', icon: Wrench },
+              { number: '100+', label: 'Projects Built', icon: Wrench },
               { number: '95%', label: 'Success Rate', icon: Award },
               { number: '24/7', label: 'Support', icon: Clock },
               { number: '100%', label: 'Placement Assistant', icon: Award }
