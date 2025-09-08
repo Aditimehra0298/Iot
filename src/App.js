@@ -866,6 +866,14 @@ function App() {
           100% { transform: translateX(calc(-100% - 1rem)); }
         }
         
+        @keyframes irritatingLoop {
+          0% { transform: translateX(0) rotate(0deg) scale(1); }
+          25% { transform: translateX(-25%) rotate(1deg) scale(1.02); }
+          50% { transform: translateX(-50%) rotate(0deg) scale(1); }
+          75% { transform: translateX(-75%) rotate(-1deg) scale(0.98); }
+          100% { transform: translateX(-100%) rotate(0deg) scale(1); }
+        }
+        
         @keyframes annoyingBounce {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           25% { transform: translateY(-10px) rotate(2deg); }
@@ -911,6 +919,13 @@ function App() {
         }
         
         .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+        
+        .animate-scroll-left {
+          animation: irritatingLoop 8s linear infinite;
+        }
+        .animate-scroll-left:hover {
           animation-play-state: paused;
         }
         
@@ -1064,11 +1079,11 @@ function App() {
                 Master Class in IoT & Robotics
               </h1>
               
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white mb-4 sm:mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg">
                 Transform your career with hands-on IoT and Electronics training. Build real-world projects and master industry-standard technologies.
               </p>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                 {[
                   { icon: Zap, text: '100+ Projects', color: 'text-[#4A90E2]' },
                   { icon: Users, text: 'Expert Mentors', color: 'text-[#7FB3D3]' },
@@ -1227,7 +1242,7 @@ function App() {
       </section>
 
       {/* Program Selection */}
-      <section id="programs" className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen">
+      <section id="programs" className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
           <img 
@@ -1242,7 +1257,7 @@ function App() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
               Choose Our Program
               </h4>
               
@@ -2034,11 +2049,11 @@ function App() {
       </section>
 
       {/* IoT & Robotics Masterclass Section */}
-      <section id="projects" className="relative z-10 mt-8 sm:mt-12 md:mt-16 pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
+      <section id="projects" className="relative z-10 mt-4 sm:mt-6 md:mt-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 sm:mb-20">
+          <div className="text-center mb-6 sm:mb-8">
             <div className="mb-8 sm:mb-6 flex justify-center pt-4 sm:pt-2">
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-sm font-semibold rounded-full shadow-lg">
                 <Zap className="w-3 h-3 mr-1.5" />
@@ -2046,10 +2061,36 @@ function App() {
               </div>
             </div>
             
-            <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-12 sm:mb-16 text-white">
+            <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white">
               IoT & Robotics Projects
             </h4>
              
+            {/* Key Features Highlight */}
+            <div className="mb-4 sm:mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-xl font-bold text-white mb-2">Hands-On Learning</h5>
+                  <p className="text-gray-300 text-sm">Build real projects with industry-standard hardware and software</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-xl font-bold text-white mb-2">Industry Ready</h5>
+                  <p className="text-gray-300 text-sm">Skills that directly apply to professional IoT and robotics careers</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-xl font-bold text-white mb-2">Expert Mentorship</h5>
+                  <p className="text-gray-300 text-sm">Learn from experienced professionals in IoT and robotics</p>
+                </div>
+              </div>
+            </div>
              
              <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8">
               Transform from beginner to expert with our comprehensive training program. 
@@ -2073,8 +2114,8 @@ function App() {
           </div>
 
           {/* Core Modules */}
-          <div className="mb-24 sm:mb-20">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12 sm:mb-16 text-center">Our Core Projects</h3>
+          <div className="mb-12 sm:mb-16">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12 text-center">Our Core Projects</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
               {masterclassModules.map((module, index) => {
                 const IconComponent = module.icon;
@@ -2340,8 +2381,8 @@ function App() {
           </div>
 
           {/* Featured Projects Gallery */}
-          <div className="mb-12 sm:mb-16">
-            <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
+          <div className="mb-8 sm:mb-12">
+            <h3 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-white">
               Featured Projects Gallery
             </h3>
             <div className="max-w-7xl mx-auto">
@@ -2776,7 +2817,7 @@ function App() {
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="max-w-6xl mx-auto">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
             Prerequisites & Requirements
           </h4>
 
@@ -2997,7 +3038,7 @@ function App() {
           </div>
 
           {/* What We Offer Section */}
-          <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+          <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
             What We Offer
           </h4>
 
@@ -3063,7 +3104,7 @@ function App() {
             
             <div className="relative z-10 p-4 sm:p-8 lg:p-12">
               
-              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-white leading-tight">
+              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white leading-tight">
                 About ITC India - Premier Testing & Calibration Laboratory
               </h4>
             
@@ -3214,7 +3255,7 @@ function App() {
 
             {/* Why Choose Us */}
             <div className="text-center">
-              <div className="flex justify-center mb-8 sm:mb-12">
+              <div className="flex justify-center mb-6 sm:mb-8">
                 <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white rounded-full shadow-lg">
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -3260,7 +3301,7 @@ function App() {
       </section>
 
       {/* Meet Our Experts Section */}
-      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8" 
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8" 
                style={{
                  backgroundImage: 'url(/world-map-background.jpg)',
                  backgroundSize: 'cover',
@@ -3336,36 +3377,42 @@ function App() {
                 {/* Content */}
                 <div className="relative z-10 p-8 sm:p-10">
                   <div className="flex flex-col items-center text-center">
-                    {/* Expert Photo Placeholder */}
-                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] flex items-center justify-center mb-6 shadow-lg">
-                      <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white flex items-center justify-center">
-                        <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent">
-                          AS
-                        </span>
-                      </div>
+                    {/* Expert Photo */}
+                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white">
+                      <img 
+                        src="/WhatsApp Image 2025-09-08 at 10.07.42.jpeg" 
+                        alt="Prof. Anjali Sharma"
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     
                     {/* Expert Info */}
                     <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-                      Prof. Anjali Sharma
+                      Gurwinder Singh
                     </h3>
                     <p className="text-lg font-semibold text-[#4A90E2] mb-4">
-                      Robotics Research Director & AI Expert
+                      Head of Photometry, Research & Calibration at ITC India Pvt Ltd.
                     </p>
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
-                      A pioneer in robotics and artificial intelligence with 12+ years of research experience. Prof. Sharma has developed cutting-edge robotic systems for healthcare and manufacturing industries. She holds multiple patents and has mentored 200+ students in robotics.
+                      Specialist in LM-79 testing, LED lighting systems, photometric calibration, IoT-enabled smart lighting, and robotics applications. With over a decade of experience in R&D and testing, I combine electrical engineering, IoT, and robotics expertise to develop innovative, efficient, and automated solutions for the lighting and testing industry. Skilled in compliance with international standards and driving technology-based improvements in smart infrastructure.
                     </p>
                     
                     {/* Expertise Tags */}
                     <div className="flex flex-wrap gap-2 justify-center">
                       <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
-                        Robotics
+                        Photometry
                       </span>
                       <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
-                        AI/ML
+                        LED Testing
                       </span>
                       <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
-                        Healthcare Tech
+                        IoT Lighting
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        Calibration
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        R&D
                       </span>
                     </div>
                   </div>
@@ -3377,7 +3424,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 md:mb-12 text-blue-900">
@@ -3456,7 +3503,7 @@ function App() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 md:mb-12 text-blue-900">
@@ -3578,7 +3625,7 @@ function App() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-0">
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-0">
         <div className="w-full">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-0">
             {[
@@ -3601,7 +3648,7 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-4 sm:mb-6 md:mb-8 text-blue-900">
             Ready to Start Your IoT Journey?
@@ -3647,7 +3694,7 @@ function App() {
         {/* Top Border with Animation */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4A90E2] via-[#7FB3D3] to-[#4A90E2] animate-pulse"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-28">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             
