@@ -4,6 +4,23 @@ import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wre
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [selectedTier, setSelectedTier] = useState('silver');
+
+  // Syllabus navigation functions
+  const scrollSyllabusLeft = () => {
+    const container = document.getElementById('syllabus-container');
+    if (container) {
+      const scrollAmount = 300; // Adjust scroll distance
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  const scrollSyllabusRight = () => {
+    const container = document.getElementById('syllabus-container');
+    if (container) {
+      const scrollAmount = 300; // Adjust scroll distance
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
   const [activeWeek, setActiveWeek] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -800,7 +817,6 @@ function App() {
 
 
 
-  const currentProgram = selectedProgram ? programs[selectedProgram] : null;
 
 
 
@@ -845,6 +861,11 @@ function App() {
           100% { transform: translateX(calc(-100% + 100vw)); }
         }
         
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-100% - 1rem)); }
+        }
+        
         @keyframes annoyingBounce {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           25% { transform: translateY(-10px) rotate(2deg); }
@@ -882,6 +903,14 @@ function App() {
         }
         
         .auto-scroll-week-grid:hover {
+          animation-play-state: paused;
+        }
+        
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+        }
+        
+        .animate-scroll:hover {
           animation-play-state: paused;
         }
         
@@ -1044,7 +1073,9 @@ function App() {
                   { icon: Zap, text: '100+ Projects', color: 'text-[#4A90E2]' },
                   { icon: Users, text: 'Expert Mentors', color: 'text-[#7FB3D3]' },
                   { icon: BookOpen, text: 'Industry Skills', color: 'text-[#4A90E2]' },
-                  { icon: Wrench, text: 'Hands-on Learning', color: 'text-[#7FB3D3]' }
+                  { icon: Wrench, text: 'Hands-on Learning', color: 'text-[#7FB3D3]' },
+                  { icon: Award, text: 'Free Internships', color: 'text-[#4A90E2]' },
+                  { icon: Users, text: 'Placement Assistance', color: 'text-[#7FB3D3]' }
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-2 bg-white/90 px-3 sm:px-4 py-2 rounded-full backdrop-blur-sm hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-lg">
                     <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${item.color}`} />
@@ -1226,7 +1257,7 @@ function App() {
                     }`}
                   >
                 {/* Silver Badge */}
-                <div className="absolute -top-4 -left-4 z-20">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
                   <div className="relative">
                     {/* Badge Background */}
                     <div className="w-16 h-16 bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 rounded-full shadow-2xl border-4 border-gray-200 flex items-center justify-center transform rotate-12">
@@ -1327,6 +1358,8 @@ function App() {
                           onClick={(e) => {
                             e.stopPropagation();
                             setSelectedProgram('2-month');
+                            setSelectedTier('silver');
+                            document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
                           className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-gray-300 to-gray-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-gray-400 hover:to-gray-600"
                         >
@@ -1367,7 +1400,7 @@ function App() {
                     }`}
                   >
                 {/* Gold Badge */}
-                <div className="absolute -top-4 -left-4 z-20">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
                   <div className="relative">
                     {/* Badge Background */}
                     <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full shadow-2xl border-4 border-yellow-300 flex items-center justify-center transform -rotate-12">
@@ -1468,6 +1501,8 @@ function App() {
                           onClick={(e) => {
                             e.stopPropagation();
                             setSelectedProgram('4-month');
+                            setSelectedTier('gold');
+                            document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
                           className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-yellow-300 to-yellow-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-yellow-400 hover:to-yellow-600"
                         >
@@ -1508,7 +1543,7 @@ function App() {
                     }`}
                   >
                 {/* Diamond Badge */}
-                <div className="absolute -top-4 -left-4 z-20">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
                   <div className="relative">
                     {/* Badge Background */}
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-400 via-purple-500 to-pink-600 rounded-full shadow-2xl border-4 border-purple-300 flex items-center justify-center transform rotate-6">
@@ -1611,6 +1646,8 @@ function App() {
                           onClick={(e) => {
                             e.stopPropagation();
                             setSelectedProgram('6-month');
+                            setSelectedTier('diamond');
+                            document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
                           className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-purple-300 to-purple-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-purple-400 hover:to-purple-600"
                         >
@@ -1647,15 +1684,6 @@ function App() {
         {/* Tier Selection Section */}
         <div className="relative z-10 py-6 sm:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent mb-4">
-                Choose Your Learning Tier
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Select the tier that matches your learning goals and unlock the appropriate syllabus content
-              </p>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
               {/* Silver Tier */}
               <button
@@ -1697,7 +1725,7 @@ function App() {
             </div>
 
         {/* Syllabus Details Section */}
-        <div className="relative z-10 py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
+        <div id="syllabus" className="relative z-10 py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className={`relative bg-white rounded-3xl p-6 sm:p-8 border shadow-lg transition-all duration-300 overflow-hidden ${
             selectedTier === 'silver' ? 'border-gray-500 shadow-gray-500/20' :
@@ -1720,8 +1748,26 @@ function App() {
                 </h3>
 
             {!isLoading ? (
-              <div className="overflow-x-hidden">
-                <div className={`auto-scroll-week-grid ${selectedTier} flex gap-3 sm:gap-4 md:gap-6 pb-4 min-w-max`} style={{width: 'max-content'}}>
+              <div className="relative">
+                {/* Navigation Arrows */}
+                <button
+                  onClick={scrollSyllabusLeft}
+                  className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 -ml-4 transition-all duration-300 hover:scale-110"
+                  aria-label="Scroll left"
+                >
+                  <ChevronRight className="w-6 h-6 text-gray-600 rotate-180" />
+                </button>
+                
+                <button
+                  onClick={scrollSyllabusRight}
+                  className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 -mr-4 transition-all duration-300 hover:scale-110"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="w-6 h-6 text-gray-600" />
+                </button>
+
+                <div className="overflow-x-auto scrollbar-hide" id="syllabus-container">
+                  <div className={`${selectedTier} flex gap-1 sm:gap-2 md:gap-3 pb-4 min-w-max`} style={{width: 'max-content'}}>
                   {(() => {
                     // Define tier-based syllabus content
                     const tierSyllabus = {
@@ -1743,17 +1789,41 @@ function App() {
                         { week: 5, module: "Expert Mentorship", topics: ["Code Review", "Best Practices", "Industry Standards", "Career Guidance"], projects: ["Code Optimization", "Best Practices", "Portfolio Review"] },
                         { week: 6, module: "Portfolio Development", topics: ["Project Documentation", "Git Version Control", "Professional Presentation", "Certification Prep"], projects: ["Git Portfolio", "Documentation", "Certification"] },
                         { week: 7, module: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"], projects: ["AI Robot", "Vision System", "ML Model"] },
-                        { week: 8, module: "IoT Security", topics: ["Security Protocols", "Encryption", "Authentication", "Network Security"], projects: ["Secure Communication", "Encryption System", "Security Audit"] }
+                        { week: 8, module: "IoT Security", topics: ["Security Protocols", "Encryption", "Authentication", "Network Security"], projects: ["Secure Communication", "Encryption System", "Security Audit"] },
+                        { week: 9, module: "Advanced Electronics", topics: ["Circuit Design", "PCB Layout", "Signal Processing", "Power Management"], projects: ["Custom PCB", "Signal Processor", "Power System"] },
+                        { week: 10, module: "Wireless Communication", topics: ["WiFi, Bluetooth", "LoRa, Zigbee", "5G Integration", "Mesh Networks"], projects: ["Wireless Network", "Mesh System", "5G Project"] },
+                        { week: 11, module: "Data Science & Analytics", topics: ["Data Visualization", "Statistical Analysis", "Predictive Modeling", "Big Data"], projects: ["Analytics Dashboard", "Predictive Model", "Big Data System"] },
+                        { week: 12, module: "Cloud Computing", topics: ["AWS, Azure", "Microservices", "Containerization", "Serverless"], projects: ["Cloud Deployment", "Microservice App", "Serverless Function"] },
+                        { week: 13, module: "Mobile App Development", topics: ["React Native", "Flutter", "IoT Mobile Apps", "Cross-platform"], projects: ["IoT Mobile App", "Cross-platform App", "Mobile Dashboard"] },
+                        { week: 14, module: "Advanced AI & ML", topics: ["Deep Learning", "Neural Networks", "Computer Vision", "Natural Language Processing"], projects: ["AI Model", "Vision System", "NLP Project"] },
+                        { week: 15, module: "Industry Internship", topics: ["Real-world Projects", "Industry Mentorship", "Professional Development", "Networking"], projects: ["Industry Project", "Professional Network", "Career Development"] },
+                        { week: 16, module: "Final Capstone", topics: ["Comprehensive Project", "Portfolio Presentation", "Industry Certification", "Career Launch"], projects: ["Capstone Project", "Portfolio", "Certification"] }
                       ],
                       diamond: [
                         { week: 1, module: "Master IoT Architecture", topics: ["Enterprise IoT", "Microservices", "Edge Computing", "Security Protocols"], projects: ["Enterprise System", "Microservice API", "Edge Computing"] },
                         { week: 2, module: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"], projects: ["AI Robot", "Vision System", "ML Model"] },
                         { week: 3, module: "Leadership & Innovation", topics: ["Team Management", "Innovation Strategies", "Technology Trends", "Strategic Planning"], projects: ["Team Project", "Innovation Lab", "Strategy Plan"] },
                         { week: 4, module: "Master Projects", topics: ["Complex System Design", "Multi-platform Integration", "Performance Optimization", "Scalability"], projects: ["Complex System", "Multi-platform", "Optimization"] },
-                        { week: 5, module: "Certification & Assessment", topics: ["Professional Certification", "Industry Assessment", "Portfolio Review", "Expert Evaluation"], projects: ["Certification Prep", "Assessment", "Expert Review"] },
-                        { week: 6, module: "Career Advancement", topics: ["Leadership Skills", "Industry Networking", "Consulting Preparation", "Entrepreneurship"], projects: ["Leadership Project", "Networking", "Business Plan"] },
-                        { week: 7, module: "Advanced AI & ML", topics: ["Deep Learning", "Neural Networks", "Computer Vision", "Natural Language Processing"], projects: ["AI Model", "Vision System", "NLP Project"] },
-                        { week: 8, module: "Enterprise Solutions", topics: ["Cloud Architecture", "DevOps", "Scalability", "Performance Optimization"], projects: ["Cloud System", "DevOps Pipeline", "Scalable Architecture"] }
+                        { week: 5, module: "Advanced Electronics", topics: ["Circuit Design", "PCB Layout", "Signal Processing", "Power Management"], projects: ["Custom PCB", "Signal Processor", "Power System"] },
+                        { week: 6, module: "Wireless Communication", topics: ["WiFi, Bluetooth", "LoRa, Zigbee", "5G Integration", "Mesh Networks"], projects: ["Wireless Network", "Mesh System", "5G Project"] },
+                        { week: 7, module: "Data Science & Analytics", topics: ["Data Visualization", "Statistical Analysis", "Predictive Modeling", "Big Data"], projects: ["Analytics Dashboard", "Predictive Model", "Big Data System"] },
+                        { week: 8, module: "Cloud Computing", topics: ["AWS, Azure", "Microservices", "Containerization", "Serverless"], projects: ["Cloud Deployment", "Microservice App", "Serverless Function"] },
+                        { week: 9, module: "Mobile App Development", topics: ["React Native", "Flutter", "IoT Mobile Apps", "Cross-platform"], projects: ["IoT Mobile App", "Cross-platform App", "Mobile Dashboard"] },
+                        { week: 10, module: "Advanced AI & ML", topics: ["Deep Learning", "Neural Networks", "Computer Vision", "Natural Language Processing"], projects: ["AI Model", "Vision System", "NLP Project"] },
+                        { week: 11, module: "Enterprise Solutions", topics: ["Cloud Architecture", "DevOps", "Scalability", "Performance Optimization"], projects: ["Cloud System", "DevOps Pipeline", "Scalable Architecture"] },
+                        { week: 12, module: "IoT Security Mastery", topics: ["Advanced Security", "Penetration Testing", "Compliance", "Risk Management"], projects: ["Security Audit", "Penetration Test", "Compliance Report"] },
+                        { week: 13, module: "Blockchain & IoT", topics: ["Blockchain Integration", "Smart Contracts", "Decentralized Systems", "Cryptocurrency"], projects: ["Blockchain IoT", "Smart Contract", "Decentralized App"] },
+                        { week: 14, module: "Quantum Computing", topics: ["Quantum Algorithms", "Quantum IoT", "Quantum Security", "Future Technologies"], projects: ["Quantum Algorithm", "Quantum Security", "Future Tech"] },
+                        { week: 15, module: "Industry 4.0 & 5.0", topics: ["Smart Manufacturing", "Digital Twins", "Cyber-Physical Systems", "Autonomous Systems"], projects: ["Smart Factory", "Digital Twin", "CPS System"] },
+                        { week: 16, module: "Research & Development", topics: ["R&D Methodologies", "Patent Development", "Innovation Labs", "Technology Transfer"], projects: ["R&D Project", "Patent Application", "Innovation Lab"] },
+                        { week: 17, module: "Advanced Internship", topics: ["Industry Leadership", "Mentoring Others", "Project Management", "Strategic Planning"], projects: ["Leadership Project", "Mentoring Program", "Strategic Plan"] },
+                        { week: 18, module: "Certification & Assessment", topics: ["Professional Certification", "Industry Assessment", "Portfolio Review", "Expert Evaluation"], projects: ["Certification Prep", "Assessment", "Expert Review"] },
+                        { week: 19, module: "Career Advancement", topics: ["Leadership Skills", "Industry Networking", "Consulting Preparation", "Entrepreneurship"], projects: ["Leadership Project", "Networking", "Business Plan"] },
+                        { week: 20, module: "Global Technology Trends", topics: ["Emerging Technologies", "Market Analysis", "Technology Forecasting", "Global Standards"], projects: ["Trend Analysis", "Market Report", "Technology Forecast"] },
+                        { week: 21, module: "Ethics & Sustainability", topics: ["AI Ethics", "Sustainable Technology", "Green IoT", "Social Impact"], projects: ["Ethics Framework", "Green Technology", "Social Impact"] },
+                        { week: 22, module: "Advanced Capstone", topics: ["Comprehensive Project", "Industry Integration", "Real-world Application", "Innovation Showcase"], projects: ["Capstone Project", "Industry Integration", "Innovation Showcase"] },
+                        { week: 23, module: "Master Portfolio", topics: ["Portfolio Development", "Professional Branding", "Industry Presentation", "Career Launch"], projects: ["Master Portfolio", "Professional Brand", "Industry Presentation"] },
+                        { week: 24, module: "Future Leadership", topics: ["Technology Leadership", "Innovation Management", "Strategic Vision", "Industry Transformation"], projects: ["Leadership Project", "Innovation Management", "Strategic Vision"] }
                       ]
                     };
                     
@@ -1867,6 +1937,7 @@ function App() {
                     ));
                   })()}
                 </div>
+                </div>
               </div>
             ) : isLoading ? (
               <div className="flex items-center justify-center h-64">
@@ -1892,7 +1963,7 @@ function App() {
       </section>
 
       {/* Video Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
@@ -1963,7 +2034,7 @@ function App() {
       </section>
 
       {/* IoT & Robotics Masterclass Section */}
-      <section id="projects" className="relative z-10 mt-24 sm:mt-20 md:mt-24 pt-32 sm:pt-24 md:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
+      <section id="projects" className="relative z-10 mt-8 sm:mt-12 md:mt-16 pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
@@ -2082,9 +2153,9 @@ function App() {
           {/* Advanced Specializations */}
           <div className="mb-24 sm:mb-20">
             <div className="text-center mb-12 sm:mb-16">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Advanced Specializations</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Our Advanced Specializations Areas</h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
-                After completing core training, advance to specialized robotics applications in high-impact industries
+              After completing core training and projects, experience our advanced and specialised IoT, Robotics and AI-based applications in high-impact industries
               </p>
             </div>
 
@@ -2190,10 +2261,11 @@ function App() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6">
-              IoT & Robotics Master Training
+              IoT & Robotics Master Internship
             </h2>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Dive into the future with our comprehensive training. Learn to build and program intelligent devices, from connected sensors to autonomous robots. Get hands-on with real-world projects and become an expert in the most in-demand fields.
+            Dive into the future with our comprehensive internships. Learn to build and program intelligent devices, from connected sensors to autonomous robots. Get hands-on with real-world Industry 5.0 projects and become an expert in the most in-demand fields.
+
             </p>
             <div className="flex justify-center">
               <button 
@@ -2268,51 +2340,420 @@ function App() {
           </div>
 
           {/* Featured Projects Gallery */}
-          <div className="mb-16">
+          <div className="mb-24 sm:mb-32">
             <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
               Featured Projects Gallery
             </h3>
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="relative overflow-hidden">
+                <div className="flex gap-4 sm:gap-6 animate-scroll">
+                  {/* First set of images */}
                 {/* Project 1 */}
-                <div className="relative group">
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
                   <img 
-                    src="/WhatsApp Image 2025-09-02 at 12.29.40.jpeg" 
+                    src="/1.jpeg" 
                     alt="IoT Project 1" 
-                    className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
-                    <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Smart navigation System</p>
-                    </div>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Smart IoT Solution</p>
                   </div>
                 </div>
                 
                 {/* Project 2 */}
-                <div className="relative group">
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
                   <img 
-                    src="/WhatsApp Image 2025-09-02 at 12.30.24.jpeg" 
+                    src="/2.jpeg" 
                     alt="IoT Project 2" 
-                    className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
-                    <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Complete automation system</p>
-                    </div>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Automation System</p>
                   </div>
                 </div>
                 
                 {/* Project 3 */}
-                <div className="relative group">
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
                   <img 
-                    src="/WhatsApp Image 2025-09-02 at 12.31.08.jpeg" 
+                    src="/3.jpeg" 
                     alt="IoT Project 3" 
-                    className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-2xl flex items-end">
-                    <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                      <p className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Real-time monitoring and analytics</p>
-                    </div>
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Monitoring Device</p>
+                  </div>
+                </div>
+                
+                {/* Project 4 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/4.jpeg" 
+                    alt="IoT Project 4" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Robotics Project</p>
+                  </div>
+                </div>
+                
+                {/* Project 6 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/6.jpeg" 
+                    alt="IoT Project 6" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Smart Technology</p>
+                  </div>
+                </div>
+                
+                {/* Project 8 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/8.jpeg" 
+                    alt="IoT Project 8" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">IoT Innovation</p>
+                  </div>
+                </div>
+                
+                {/* Project 9 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/9.jpeg" 
+                    alt="IoT Project 9" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Connected Device</p>
+                  </div>
+                </div>
+                
+                {/* Project 10 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/10.jpeg" 
+                    alt="IoT Project 10" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Smart Sensor</p>
+                  </div>
+                </div>
+                
+                {/* Project 11 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/11.jpeg" 
+                    alt="IoT Project 11" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Data Analytics</p>
+                  </div>
+                </div>
+                
+                {/* Project 12 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/12.jpeg" 
+                    alt="IoT Project 12" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Wireless Control</p>
+                  </div>
+                </div>
+                
+                {/* Project 13 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/13.jpeg" 
+                    alt="IoT Project 13" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Embedded System</p>
+                  </div>
+                </div>
+                
+                {/* Project 14 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/14.jpeg" 
+                    alt="IoT Project 14" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Network Protocol</p>
+                  </div>
+                </div>
+                
+                {/* Project 15 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/15.jpeg" 
+                    alt="IoT Project 15" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Cloud Integration</p>
+                  </div>
+                </div>
+                
+                {/* Project 16 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/16.jpeg" 
+                    alt="IoT Project 16" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Mobile App</p>
+                  </div>
+                </div>
+                
+                {/* Project 17 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/17.jpeg" 
+                    alt="IoT Project 17" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Security System</p>
+                  </div>
+                </div>
+                
+                {/* Project 18 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/18.jpeg" 
+                    alt="IoT Project 18" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Machine Learning</p>
+                  </div>
+                </div>
+                
+                {/* Project 19 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/19.jpeg" 
+                    alt="IoT Project 19" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">AI Integration</p>
+                  </div>
+                </div>
+                
+                {/* Duplicate set for seamless loop */}
+                {/* Project 1 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/1.jpeg" 
+                    alt="IoT Project 1" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Smart IoT Solution</p>
+                  </div>
+                </div>
+                
+                {/* Project 2 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/2.jpeg" 
+                    alt="IoT Project 2" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Automation System</p>
+                  </div>
+                </div>
+                
+                {/* Project 3 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/3.jpeg" 
+                    alt="IoT Project 3" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Monitoring Device</p>
+                  </div>
+                </div>
+                
+                {/* Project 4 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/4.jpeg" 
+                    alt="IoT Project 4" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Robotics Project</p>
+                  </div>
+                </div>
+                
+                {/* Project 6 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/6.jpeg" 
+                    alt="IoT Project 6" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Smart Technology</p>
+                  </div>
+                </div>
+                
+                {/* Project 8 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/8.jpeg" 
+                    alt="IoT Project 8" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">IoT Innovation</p>
+                  </div>
+                </div>
+                
+                {/* Project 9 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/9.jpeg" 
+                    alt="IoT Project 9" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Connected Device</p>
+                  </div>
+                </div>
+                
+                {/* Project 10 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/10.jpeg" 
+                    alt="IoT Project 10" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Smart Sensor</p>
+                  </div>
+                </div>
+                
+                {/* Project 11 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/11.jpeg" 
+                    alt="IoT Project 11" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Data Analytics</p>
+                  </div>
+                </div>
+                
+                {/* Project 12 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/12.jpeg" 
+                    alt="IoT Project 12" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Wireless Control</p>
+                  </div>
+                </div>
+                
+                {/* Project 13 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/13.jpeg" 
+                    alt="IoT Project 13" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Embedded System</p>
+                  </div>
+                </div>
+                
+                {/* Project 14 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/14.jpeg" 
+                    alt="IoT Project 14" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Network Protocol</p>
+                  </div>
+                </div>
+                
+                {/* Project 15 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/15.jpeg" 
+                    alt="IoT Project 15" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Cloud Integration</p>
+                  </div>
+                </div>
+                
+                {/* Project 16 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/16.jpeg" 
+                    alt="IoT Project 16" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Mobile App</p>
+                  </div>
+                </div>
+                
+                {/* Project 17 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/17.jpeg" 
+                    alt="IoT Project 17" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Security System</p>
+                  </div>
+                </div>
+                
+                {/* Project 18 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/18.jpeg" 
+                    alt="IoT Project 18" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Machine Learning</p>
+                  </div>
+                </div>
+                
+                {/* Project 19 */}
+                <div className="relative group flex-shrink-0 w-64 sm:w-72">
+                  <img 
+                    src="/19.jpeg" 
+                    alt="IoT Project 19" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">AI Integration</p>
                   </div>
                 </div>
               </div>
@@ -2320,13 +2761,14 @@ function App() {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center">
+          <div className="text-center mt-8 sm:mt-12">
             <button 
               onClick={openCtaForm}
               className="px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full shadow-lg hover:from-[#7FB3D3] hover:to-[#4A90E2] transition-all duration-300 hover:scale-105 transform"
             >
               Start Your Career Journey Now
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -2561,7 +3003,7 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {/* Hands-On IoT Training Programs */}
-            <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
+            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
@@ -2577,7 +3019,7 @@ function App() {
           </div>
 
             {/* Industry-Relevant Curriculum */}
-            <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
+            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
@@ -2593,7 +3035,7 @@ function App() {
             </div>
 
             {/* Customized Learning for Teams & Individuals */}
-            <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
+            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
@@ -2610,13 +3052,23 @@ function App() {
           </div>
 
           {/* ITC India Testing Laboratory Section */}
-          <div className="mt-16 sm:mt-20">
-                          <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-blue-900">
+          <div className="mt-16 sm:mt-20 relative overflow-hidden rounded-3xl"
+               style={{
+                 background: 'url("/black-head-background.png"), linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center',
+                 backgroundRepeat: 'no-repeat',
+                 minHeight: '600px'
+               }}>
+            
+            <div className="relative z-10 p-4 sm:p-8 lg:p-12">
+              
+              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-8 sm:mb-12 text-white leading-tight">
                 About ITC India - Premier Testing & Calibration Laboratory
               </h4>
             
             {/* Header Section */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
@@ -2719,6 +3171,7 @@ function App() {
                       src="https://nablwp.qci.org.in/assets/2.5X3.5.png" 
                       alt="NABL Accredited Badge" 
                       className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-lg hover:scale-110 transition-transform duration-300"
+                        onError={(e) => { e.target.src = 'https://placehold.co/96x96/7FB3D3/ffffff?text=NABL' }}
                     />
                   </div>
                   
@@ -2773,7 +3226,7 @@ function App() {
               </div>
               
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
+                  <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
                   <div className="w-16 h-16 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
                     <Shield className="w-8 h-8 text-[#4A90E2] group-hover:animate-pulse" />
                     <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#4A90E2] rounded-full animate-ping group-hover:animate-bounce"></div>
@@ -2782,7 +3235,7 @@ function App() {
                   <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">NABL accredited with BIS approval and European recognition</p>
                 </div>
                 
-                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
+                  <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
                     <Microscope className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
                     <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
@@ -2791,7 +3244,7 @@ function App() {
                   <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">State-of-the-art laboratories with cutting-edge equipment</p>
                 </div>
                 
-                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
+                  <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
                     <Award className="w-8 h-8 text-purple-600 group-hover:animate-pulse" />
                     <div className="absolute -top-1 -right-1 w-4 h-4 bg-purple-400 rounded-full animate-ping group-hover:animate-bounce"></div>
@@ -2802,9 +3255,118 @@ function App() {
               </div>
             </div>
           </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Meet Our Experts Section */}
+      <section className="relative z-10 py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8" 
+               style={{
+                 backgroundImage: 'url(/world-map-background.jpg)',
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center',
+                 backgroundRepeat: 'no-repeat'
+               }}>
+        {/* Background Overlay */}
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 md:mb-12 bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent">
+              Meet Our Experts
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Learn from industry veterans and academic leaders who bring decades of experience in IoT and Robotics
+            </p>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Expert 1 */}
+            <div className="relative group">
+              <div className="relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm shadow-2xl transition-all duration-500 group-hover:shadow-3xl group-hover:scale-105">
+                {/* Content */}
+                <div className="relative z-10 p-8 sm:p-10">
+                  <div className="flex flex-col items-center text-center">
+                    {/* Expert Photo Placeholder */}
+                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] flex items-center justify-center mb-6 shadow-lg">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white flex items-center justify-center">
+                        <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent">
+                          DR
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Expert Info */}
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                      Dr. Rajesh Kumar
+                    </h3>
+                    <p className="text-lg font-semibold text-[#4A90E2] mb-4">
+                      Chief Technology Officer & IoT Specialist
+                    </p>
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+                      With over 15 years of experience in IoT architecture and embedded systems, Dr. Kumar has led numerous smart city projects across India. He holds a Ph.D. in Electronics Engineering and has published 50+ research papers in international journals.
+                    </p>
+                    
+                    {/* Expertise Tags */}
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        IoT Architecture
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        Embedded Systems
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        Smart Cities
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            {/* Expert 2 */}
+            <div className="relative group">
+              <div className="relative overflow-hidden rounded-3xl bg-white/70 backdrop-blur-sm shadow-2xl transition-all duration-500 group-hover:shadow-3xl group-hover:scale-105">
+                {/* Content */}
+                <div className="relative z-10 p-8 sm:p-10">
+                  <div className="flex flex-col items-center text-center">
+                    {/* Expert Photo Placeholder */}
+                    <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] flex items-center justify-center mb-6 shadow-lg">
+                      <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white flex items-center justify-center">
+                        <span className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent">
+                          AS
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Expert Info */}
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+                      Prof. Anjali Sharma
+                    </h3>
+                    <p className="text-lg font-semibold text-[#4A90E2] mb-4">
+                      Robotics Research Director & AI Expert
+                    </p>
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
+                      A pioneer in robotics and artificial intelligence with 12+ years of research experience. Prof. Sharma has developed cutting-edge robotic systems for healthcare and manufacturing industries. She holds multiple patents and has mentored 200+ students in robotics.
+                    </p>
+                    
+                    {/* Expertise Tags */}
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        Robotics
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        AI/ML
+                      </span>
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full">
+                        Healthcare Tech
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -3109,12 +3671,12 @@ function App() {
                   <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent">
                     Master Class in IoT & Robotics
                   </h3>
-                  <p className="text-sm text-gray-400 mt-1">Division of ITC India Pvt Ltd.</p>
+                  <p className="text-sm text-gray-400 mt-1 italic">from ITC (India)Pvt Ltd.</p>
               </div>
               </div>
               
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
-                Empowering the next generation of IoT and Electronics engineers through hands-on learning, real-world projects, and industry-leading expertise. Transform your career with cutting-edge technology education.
+              Premier IoT and Robotics Testing, Certification, Training and Student-Internship hub. Offering ISO/IEC standard testing and certification, industry collaboration for product development, innovative IoT manufacturing, and flexible training programs (2-6 months) for students with placement assistance. Empowering professionals and students through practical learning and career transformation in cutting-edge technologies.
               </p>
               
               {/* Enhanced Social Media Icons */}
