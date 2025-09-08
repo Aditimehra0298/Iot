@@ -2340,7 +2340,7 @@ function App() {
           </div>
 
           {/* Featured Projects Gallery */}
-          <div className="mb-24 sm:mb-32">
+          <div className="mb-12 sm:mb-16">
             <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
               Featured Projects Gallery
             </h3>
@@ -2761,7 +2761,7 @@ function App() {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-8 sm:mt-12">
+          <div className="text-center mt-4 sm:mt-6">
             <button 
               onClick={openCtaForm}
               className="px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full shadow-lg hover:from-[#7FB3D3] hover:to-[#4A90E2] transition-all duration-300 hover:scale-105 transform"
