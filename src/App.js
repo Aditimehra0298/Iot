@@ -1017,6 +1017,7 @@ function App() {
               <a href="#projects" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Projects</a>
               <a href="#syllabus" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Syllabus</a>
               <a href="#prerequisites" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Prerequisites</a>
+              <a href="#Internships" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Internships</a>
               <button 
                 onClick={openCtaForm}
                 className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 xl:px-8 rounded-full text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
