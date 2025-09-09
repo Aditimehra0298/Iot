@@ -1005,7 +1005,7 @@ function App() {
       </div>
 
             {/* Navigation */}
-      <nav className="relative z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#4A90E2] shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b-2 border-[#4A90E2] shadow-lg">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20 md:h-24">
             <div className="flex items-center space-x-2 sm:space-x-4 md:space-x-6">
@@ -1073,7 +1073,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] flex items-center px-3 sm:px-4 md:px-6 lg:px-8">
+      <section className="relative z-10 min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] flex items-center px-3 sm:px-4 md:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video 
