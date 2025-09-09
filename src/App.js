@@ -1284,7 +1284,12 @@ function App() {
             {/* 2-Month Program */}
             <div className="flex-1 max-w-xs sm:max-w-sm md:max-w-md">
                   <div 
-                    onClick={() => setSelectedProgram('2-month')}
+                    onClick={() => {
+                      setSelectedProgram('2-month');
+                      setSelectedTier('silver');
+                      setActiveWeek('all');
+                      document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className={`relative cursor-pointer group transition-all duration-500 ${
                       selectedProgram === '2-month' ? 'scale-105' : 'hover:scale-102'
                     }`}
@@ -1428,7 +1433,12 @@ function App() {
             {/* 4-Month Program */}
             <div className="flex-1 max-w-xs sm:max-w-sm md:max-w-md">
                   <div 
-                    onClick={() => setSelectedProgram('4-month')}
+                    onClick={() => {
+                      setSelectedProgram('4-month');
+                      setSelectedTier('gold');
+                      setActiveWeek('all');
+                      document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className={`relative cursor-pointer group transition-all duration-500 ${
                       selectedProgram === '4-month' ? 'scale-105' : 'hover:scale-102'
                     }`}
@@ -1572,7 +1582,12 @@ function App() {
             {/* 6-Month Program */}
             <div className="flex-1 max-w-xs sm:max-w-sm md:max-w-md">
                   <div 
-                    onClick={() => setSelectedProgram('6-month')}
+                    onClick={() => {
+                      setSelectedProgram('6-month');
+                      setSelectedTier('diamond');
+                      setActiveWeek('all');
+                      document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className={`relative cursor-pointer group transition-all duration-500 ${
                       selectedProgram === '6-month' ? 'scale-105' : 'hover:scale-102'
                     }`}
@@ -1720,13 +1735,6 @@ function App() {
         {/* Tier Selection Section */}
         <div className="relative z-10 py-6 sm:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            {/* Detailed View Badge */}
-            <div className="flex justify-center mb-6">
-              <div className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
-                📚 Detailed View Syllabus
-              </div>
-            </div>
-            
             <div className="flex justify-center items-center">
               {/* Combined Tier Selection Button */}
               <div className="bg-gradient-to-r from-gray-300 via-yellow-300 to-purple-300 rounded-full p-1 shadow-lg">
