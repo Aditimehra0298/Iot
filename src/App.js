@@ -952,11 +952,8 @@ function App() {
         }
         
         @keyframes irritatingLoop {
-          0% { transform: translateX(100%) rotate(0deg) scale(1); }
-          25% { transform: translateX(25%) rotate(1deg) scale(1.02); }
-          50% { transform: translateX(-50%) rotate(0deg) scale(1); }
-          75% { transform: translateX(-75%) rotate(-1deg) scale(0.98); }
-          100% { transform: translateX(-100%) rotate(0deg) scale(1); }
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
         }
         .animate-scroll-left:hover {
           animation-play-state: paused;
