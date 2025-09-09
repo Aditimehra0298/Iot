@@ -1096,9 +1096,10 @@ function App() {
             <div className="text-center lg:text-left px-2 sm:px-0">
               {/* IoT and Robotics Division Badge */}
               <div className="mb-3 sm:mb-4 flex justify-center lg:justify-start">
-                <div className="inline-flex items-center px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs sm:text-sm font-semibold rounded-full shadow-lg">
-                  <Cpu className="w-3 h-3 mr-1 sm:mr-1.5" />
+                <div className="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-bold rounded-full shadow-xl border border-white/20 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                  <Cpu className="w-4 h-4 mr-2 sm:mr-2.5 text-yellow-300" />
                   <span className="hidden xs:inline">Premier IoT & Robotics Testing, Certification, and Training Hub</span>
+                  <span className="xs:hidden">IoT & Robotics Hub</span>
                 </div>
               </div>
               
