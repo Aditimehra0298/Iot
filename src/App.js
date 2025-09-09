@@ -2116,8 +2116,8 @@ function App() {
               </button>
               
               <button 
-                onClick={() => setCurrentProjectIndex(Math.min(6, currentProjectIndex + 1))}
-                disabled={currentProjectIndex === 6}
+                onClick={() => setCurrentProjectIndex(Math.min(5, currentProjectIndex + 1))}
+                disabled={currentProjectIndex === 5}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <ChevronRight className="w-6 h-6 text-gray-700" />
@@ -2125,8 +2125,8 @@ function App() {
 
               {/* Project Display */}
               <div className="flex overflow-hidden">
-                {/* First 6 Projects */}
-                {masterclassModules.slice(0, 6).map((module, index) => {
+                {/* First 5 Projects */}
+                {masterclassModules.slice(0, 5).map((module, index) => {
                 const IconComponent = module.icon;
                   const isActive = index === currentProjectIndex;
                 return (
@@ -2203,12 +2203,32 @@ function App() {
                 );
               })}
 
-                {/* 7th Project - Many More */}
+                {/* 6th Project - Highlighted 6th Project + Many More */}
                 <div className={`flex-shrink-0 w-full transition-all duration-500 ${
-                  currentProjectIndex === 6 ? 'opacity-100' : 'opacity-0 absolute'
+                  currentProjectIndex === 5 ? 'opacity-100' : 'opacity-0 absolute'
                 }`}>
                   <div className="group relative bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:rotate-1 transition-all duration-500 cursor-pointer mx-4">
                     <div className="text-center">
+                      {/* Highlighted 6th Project */}
+                      <div className="mb-6 p-4 bg-white/20 backdrop-blur-sm rounded-lg">
+                        <div className="flex items-center justify-center mb-3">
+                          <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-white/30">
+                            {(() => {
+                              const sixthModule = masterclassModules[5];
+                              const IconComponent = sixthModule.icon;
+                              return <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 text-white" />;
+                            })()}
+                          </div>
+                        </div>
+                        <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
+                          {masterclassModules[5]?.title}
+                        </h4>
+                        <p className="text-white/90 text-sm">
+                          {masterclassModules[5]?.subtitle}
+                        </p>
+                      </div>
+                      
+                      {/* Many More Section */}
                       <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl bg-white/20 mx-auto mb-6">
                         <Plus className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
                       </div>
@@ -2230,7 +2250,7 @@ function App() {
 
               {/* Dots Indicator */}
               <div className="flex justify-center mt-6 space-x-2">
-                {[...Array(7)].map((_, index) => (
+                {[...Array(6)].map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentProjectIndex(index)}
