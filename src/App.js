@@ -3610,30 +3610,31 @@ function App() {
                 
                 <div className="grid md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-8 lg:px-12">
                   <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
-                  <div className="w-16 h-16 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
-                    <Shield className="w-8 h-8 text-[#4A90E2] group-hover:animate-pulse" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#4A90E2] rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <div className="w-16 h-16 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
+                      <Shield className="w-8 h-8 text-[#4A90E2] group-hover:animate-pulse" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#4A90E2] rounded-full animate-ping group-hover:animate-bounce"></div>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Trusted Expertise</h5>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">NABL accredited with BIS approval and European recognition</p>
                   </div>
-                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Trusted Expertise</h5>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">NABL accredited with BIS approval and European recognition</p>
-                </div>
-                
+                  
                   <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
-                    <Microscope className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
+                      <Microscope className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors duration-300">Advanced Facilities</h5>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">State-of-the-art laboratories with cutting-edge equipment</p>
                   </div>
-                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors duration-300">Advanced Facilities</h5>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">State-of-the-art laboratories with cutting-edge equipment</p>
-                </div>
-                
+                  
                   <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
-                    <Award className="w-8 h-8 text-purple-600 group-hover:animate-pulse" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-purple-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
+                      <Award className="w-8 h-8 text-purple-600 group-hover:animate-pulse" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-purple-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    </div>
+                    <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">Complete Solutions</h5>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">End-to-end support from testing to market compliance</p>
                   </div>
-                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">Complete Solutions</h5>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">End-to-end support from testing to market compliance</p>
                 </div>
               </div>
             </div>
