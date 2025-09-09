@@ -1786,8 +1786,8 @@ function App() {
               </div>
             </div>
         {/* Syllabus Details Section */}
-        <div id="syllabus" className="relative z-10 py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4 lg:px-6">
-        <div className="max-w-[140rem] mx-auto">
+         <div id="syllabus" className="relative z-10 py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4 lg:px-6">
+         <div className="max-w-[160rem] mx-auto">
           <div className={`relative bg-white rounded-3xl p-6 sm:p-8 border shadow-lg transition-all duration-300 overflow-hidden ${
             selectedTier === 'silver' ? 'border-gray-500 shadow-gray-500/20' :
             selectedTier === 'gold' ? 'border-yellow-500 shadow-yellow-500/20' :
@@ -1828,7 +1828,7 @@ function App() {
                 </button>
 
                 <div className="overflow-x-auto scrollbar-hide" id="syllabus-container">
-                  <div className={`${selectedTier} flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 pb-4 min-w-max`} style={{width: 'max-content'}}>
+                  <div className={`${selectedTier} flex gap-1 sm:gap-2 md:gap-3 pb-4 min-w-max`} style={{width: 'max-content'}}>
                   {(() => {
                     // Define tier-based syllabus content
                     const tierSyllabus = {
@@ -1893,7 +1893,7 @@ function App() {
                     return currentSyllabus.map((week, index) => (
                       <div 
                         key={index} 
-                      className={`bg-white/90 rounded-2xl p-4 sm:p-5 md:p-6 lg:p-7 border transition-all duration-300 hover:shadow-lg cursor-pointer shadow-md w-80 sm:w-96 md:w-[28rem] lg:w-[32rem] flex-shrink-0 ${
+                      className={`bg-white/90 rounded-2xl p-3 sm:p-4 md:p-6 border transition-all duration-300 hover:shadow-lg cursor-pointer shadow-md w-72 sm:w-80 flex-shrink-0 ${
                         selectedTier === 'silver' ? 'border-gray-500 hover:border-gray-600 hover:shadow-gray-500/20' :
                         selectedTier === 'gold' ? 'border-yellow-500 hover:border-yellow-600 hover:shadow-yellow-500/20' :
                         selectedTier === 'diamond' ? 'border-purple-500 hover:border-purple-600 hover:shadow-purple-500/20' :
