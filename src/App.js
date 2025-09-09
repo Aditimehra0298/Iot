@@ -3024,57 +3024,136 @@ function App() {
 
           {/* What We Offer Section */}
           <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
-             How Our Trainings Are Unique
+             What We Offer
           </h4>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-            {/* Hands-On IoT Training Programs */}
-            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
-                  <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
+          <div className="space-y-8 sm:space-y-12 mb-12 sm:mb-16">
+            {/* Industry-Relevant Training */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] shadow-lg">
+              <h5 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">
+                <span className="text-[#4A90E2]">Industry-Relevant Training:</span>
+              </h5>
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center">
+                Our workshops combine 30% theory with 70% hands-on practice, covering:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h6 className="font-semibold text-gray-900 mb-1">Expert-led Training:</h6>
+                    <p className="text-gray-700 text-sm sm:text-base">Delivered by experienced industry professionals.</p>
                   </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Hands-On IoT Training Programs</h4>
                 </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
-                Learn by doing, not just by listening. Our workshops and courses immerse you in real-world IoT projects-covering sensors, embedded systems, connectivity, and cloud integration.
-              </p>
-              <div className="mt-6 flex justify-center">
-                <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full group-hover:w-24 transition-all duration-500"></div>
-              </div>
-          </div>
-
-            {/* Industry-Relevant Curriculum */}
-            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
-                  <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h6 className="font-semibold text-gray-900 mb-1">Tailored Learning:</h6>
+                    <p className="text-gray-700 text-sm sm:text-base">Programs customized for individuals, teams, and academic needs.</p>
+                  </div>
                 </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Industry-Relevant Curriculum</h4>
-              </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
-                We focus on practical skills that matter today. From device communication protocols to data security and edge computing, our curriculum is designed to keep you ahead in a connected world.
-              </p>
-              <div className="mt-6 flex justify-center">
-                <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full group-hover:w-24 transition-all duration-500"></div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h6 className="font-semibold text-gray-900 mb-1">Practical Skills:</h6>
+                    <p className="text-gray-700 text-sm sm:text-base">Building real-world IoT solutions with a project-based approach.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h6 className="font-semibold text-gray-900 mb-1">Future-Ready Curriculum:</h6>
+                    <p className="text-gray-700 text-sm sm:text-base">Keeping students ahead in a connected, evolving tech landscape.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Customized Learning for Teams & Individuals */}
-            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
-                  <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
-                </div>
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Customized Learning for Teams & Individuals</h4>
-              </div>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center group-hover:text-gray-800 transition-colors duration-300">
-                Whether you're a student, startup team, or enterprise workforce, our training adapts to your needs. We offer tailored modules to fit different learning goals and business objectives.
+            {/* IoT Trainer Kits */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] shadow-lg">
+              <h5 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">
+                <span className="text-[#4A90E2]">IoT Trainer Kits:</span>
+              </h5>
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center">
+                We provide Best customized IoT Trainer Kits to make learning interactive and practical. Each kit includes:
               </p>
-              <div className="mt-6 flex justify-center">
-                <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full group-hover:w-24 transition-all duration-500"></div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-700 text-sm sm:text-base">200+ industry-grade sensors and actuators</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-700 text-sm sm:text-base">Pre-configured hardware and software for rapid prototyping</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-700 text-sm sm:text-base">Ready-to-use project templates and guided documentation</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-700 text-sm sm:text-base">Step-by-step tutorials for both beginners and advanced learners</p>
+                </div>
+              </div>
             </div>
-          </div>
+
+            {/* Training Mode - Online & Offline */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] shadow-lg">
+              <h5 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">
+                <span className="text-[#4A90E2]">Training Mode – Online & Offline:</span>
+              </h5>
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center">
+                Our Training Mode learning system ensures students have the best of both digital and in-person learning experiences:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <div>
+                  <h6 className="font-semibold text-[#4A90E2] text-lg mb-4 text-center">Online:</h6>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                      <p className="text-gray-700 text-sm sm:text-base">High-quality video tutorials, interactive modules, and real-time project support</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <h6 className="font-semibold text-[#4A90E2] text-lg mb-4 text-center">Offline:</h6>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                      <p className="text-gray-700 text-sm sm:text-base">Practical workshops, mentoring sessions, and hands-on guidance in our training center</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-700 text-sm sm:text-base">Updated Learning Libraries: Access to continuously evolving codes, guides, and resources</p>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-[#4A90E2] rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-700 text-sm sm:text-base">Collaborative Tools: Designed for teamwork, remote learning, and efficient project execution</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Conclusion */}
+            <div className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-2xl p-6 sm:p-8 text-white text-center">
+              <p className="text-base sm:text-lg leading-relaxed">
+                By combining industry-driven content with hands-on training, ITC India helps institutions build a future-ready workforce, prepared for the rapidly evolving IoT and robotics landscape.
+              </p>
+            </div>
           </div>
         </div>
       </section>
