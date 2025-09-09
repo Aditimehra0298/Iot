@@ -1274,7 +1274,7 @@ function App() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white-900">
               Choose Our Program
               </h4>
               
@@ -2338,7 +2338,7 @@ function App() {
           {/* What We Offer Section */}
           <div className="mb-16">
             <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
-              What We Offer
+              What We Offer during InternshipS
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {/* Card 1 */}
@@ -2389,14 +2389,12 @@ function App() {
                 <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Student Aspiring for 2 month to 6 month Industrial Internship</p>
               </div>
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
-                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Students integration and Professionals specializing in Robotics and IoT</p>
+                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Students and Professionals interested to specialize in Robotics and IoT</p>
               </div>
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
                 <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Anyone passionate about building and innovating with technology</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
-                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]"></p>
-              </div>
+
             </div>
           </div>
 
@@ -2837,7 +2835,7 @@ function App() {
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="max-w-6xl mx-auto">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white-900">
             Prerequisites & Requirements
           </h4>
 
@@ -3058,8 +3056,8 @@ function App() {
           </div>
 
           {/* What We Offer Section */}
-          <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-blue-900">
-            What We Offer
+          <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white-900">
+             We Offer
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
@@ -3124,10 +3122,12 @@ function App() {
             
             <div className="relative z-10 p-4 sm:p-8 lg:p-12">
               
-              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-Blue-900 leading-tight">
+              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white-900 leading-tight">
                 About ITC (India) Pvt. Ltd.
-                <span>Premier Testing & Calibration Laboratory</span>
               </h4>
+              
+              <span>Premier Testing & Calibration Laboratory</span>
+            </div>
             
             {/* Header Section */}
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
