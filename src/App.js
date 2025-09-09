@@ -3428,9 +3428,9 @@ function App() {
       </section>
 
       {/* ITC India Section (moved above CTA) */}
-      <section className="relative z-10 py-4 sm:py-8 md:py-12 lg:py-16 px-2 sm:px-4 md:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden rounded-2xl sm:rounded-3xl"
+      <section className="relative z-10 py-4 sm:py-8 md:py-12 lg:py-16 px-0">
+        <div className="w-full">
+          <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden"
                style={{
                  background: 'url("/black-head-background.png"), linear-gradient(135deg, #3b82f6, #1d4ed8)',
                  backgroundSize: 'cover',
@@ -3439,8 +3439,8 @@ function App() {
                  minHeight: '400px'
                }}>
             
-            <div className="relative z-10 p-3 sm:p-6 md:p-8 lg:p-12">
-              <div className="text-center">
+            <div className="relative z-10 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+              <div className="text-center max-w-6xl mx-auto">
                 <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-4 sm:mb-6 md:mb-8 text-white leading-tight">
                   About ITC (India) Pvt. Ltd.
                 </h4>
@@ -3449,8 +3449,8 @@ function App() {
             </div>
             
             {/* Header Section */}
-            <div className="bg-black/30 text-white backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 border border-white/30 shadow-2xl mb-4 sm:mb-6 md:mb-8">
-              <div className="text-center mb-6 sm:mb-8">
+            <div className="bg-black/30 text-white backdrop-blur-md p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 border-t border-b border-white/30 shadow-2xl mb-4 sm:mb-6 md:mb-8">
+              <div className="text-center mb-6 sm:mb-8 max-w-6xl mx-auto">
                 <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 gap-3 sm:gap-0">
                   <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-[#4A90E2] animate-pulse" />
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md hover:shadow-lg transition-all duration-300">
@@ -3485,22 +3485,23 @@ function App() {
             </div>
 
             {/* Services Grid */}
-            <div className="mb-6 sm:mb-8">
-              <div className="flex justify-center mb-4 sm:mb-6">
-                <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
-                  <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white/20 rounded-full flex items-center justify-center">
-                      <Settings className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+            <div className="mb-6 sm:mb-8 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+              <div className="max-w-6xl mx-auto">
+                <div className="flex justify-center mb-4 sm:mb-6">
+                  <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
+                    <div className="flex items-center space-x-2 sm:space-x-3">
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white/20 rounded-full flex items-center justify-center">
+                        <Settings className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+                      </div>
+                      <span className="font-bold text-sm sm:text-base md:text-lg">What We Do</span>
                     </div>
-                    <span className="font-bold text-sm sm:text-base md:text-lg">What We Do</span>
                   </div>
                 </div>
-              </div>
-              <p className="text-white text-center mb-6 sm:mb-8 text-sm sm:text-base md:text-lg font-semibold px-2">
-                Comprehensive testing and calibration services across multiple domains
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <p className="text-white text-center mb-6 sm:mb-8 text-sm sm:text-base md:text-lg font-semibold px-2">
+                  Comprehensive testing and calibration services across multiple domains
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 md:px-8 lg:px-12">
                 <div className="group bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
                   <div className="relative">
                     <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-yellow-600 mb-3 sm:mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
@@ -3594,19 +3595,20 @@ function App() {
             </div>
 
             {/* Why Choose Us */}
-            <div className="text-center">
-              <div className="flex justify-center mb-6 sm:mb-8">
-                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <Star className="w-5 h-5 text-white" />
+            <div className="text-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+              <div className="max-w-6xl mx-auto">
+                <div className="flex justify-center mb-6 sm:mb-8">
+                  <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <Star className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="font-bold text-xl sm:text-2xl">Why Choose Us</span>
                     </div>
-                    <span className="font-bold text-xl sm:text-2xl">Why Choose Us</span>
                   </div>
                 </div>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
+                
+                <div className="grid md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-8 lg:px-12">
                   <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
                   <div className="w-16 h-16 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
                     <Shield className="w-8 h-8 text-[#4A90E2] group-hover:animate-pulse" />
