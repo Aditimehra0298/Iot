@@ -2234,6 +2234,13 @@ function App() {
                 );
               })}
             </div>
+            
+            {/* Many More Capsule */}
+            <div className="flex justify-center mt-8 sm:mt-12">
+              <div className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform cursor-pointer">
+                + Many More
+              </div>
+            </div>
           </div>
 
           {/* Advanced Specializations */}
