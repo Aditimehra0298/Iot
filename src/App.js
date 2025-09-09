@@ -992,7 +992,7 @@ function App() {
           animation-play-state: running;
         }
       `}</style>
-      <div className="min-h-screen bg-gradient-to-br from-[#1E40AF] via-[#6B7280] to-[#E8F4FD] text-gray-900 relative overflow-hidden">
+      <div className="min-h-screen text-gray-900 relative overflow-hidden">
       {/* Background Image */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -1004,8 +1004,7 @@ function App() {
             onError={(e) => console.error('Main background image failed to load:', e)}
           />
         </div>
-        {/* Smooth blue gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF] via-[#6B7280] to-[#E8F4FD]"></div>
+        {/* Background removed */}
       </div>
 
             {/* Navigation */}
@@ -2368,7 +2367,7 @@ function App() {
       </section>
 
       {/* IoT & Robotics Master Training Section */}
-      <section id="Internships" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1E40AF] via-[#6B7280] to-[#E8F4FD]">
+      <section id="Internships" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
