@@ -29,7 +29,7 @@ function App() {
       container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
-  const [activeWeek, setActiveWeek] = useState(null);
+  const [activeWeek, setActiveWeek] = useState('all');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [learningModes, setLearningModes] = useState({
