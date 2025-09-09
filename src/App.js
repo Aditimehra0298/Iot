@@ -1099,7 +1099,7 @@ function App() {
                 <div className="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-bold rounded-full shadow-xl border border-white/20 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300">
                   <Cpu className="w-4 h-4 mr-2 sm:mr-2.5 text-yellow-300" />
                   <span className="hidden xs:inline">Premier IoT & Robotics Testing, Certification, and Training Hub</span>
-                  <span className="xs:hidden">IoT & Robotics Hub</span>
+                  <span className="xs:hidden">Premier IoT & Robotics Testing, Certification, and Training Hub</span>
                 </div>
               </div>
               
@@ -2882,10 +2882,10 @@ function App() {
           </h4>
 
           <div className="relative overflow-hidden mb-12 sm:mb-16">
-            <div className="flex animate-scroll-left space-x-6">
+            <div className="flex animate-scroll-left space-x-6 py-4">
               {/* First set of prerequisites */}
             {prerequisites.map((req, index) => (
-                <div key={`first-${index}`} className="individual-card-move flex-shrink-0 w-80 bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
+                <div key={`first-${index}`} className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center flex-shrink-0">
                     <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -2991,7 +2991,7 @@ function App() {
               
               {/* Duplicate set for seamless loop */}
               {prerequisites.map((req, index) => (
-                <div key={`second-${index}`} className="individual-card-move flex-shrink-0 w-80 bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300 shadow-lg">
+                <div key={`second-${index}`} className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center flex-shrink-0">
                       <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
