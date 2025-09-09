@@ -3538,6 +3538,7 @@ function App() {
                   <p className="text-gray-600 text-xs sm:text-sm">UN 38.3, IS 16046, IEC 62133 compliance</p>
                 </div>
               </div>
+              </div>
             </div>
 
             {/* Calibration Services */}
