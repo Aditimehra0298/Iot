@@ -1960,10 +1960,10 @@ function App() {
                         {/* Projects Section */}
                         <div>
                           <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
-                            selectedTier === 'silver' ? 'text-gray-500 border-gray-500/30' :
-                            selectedTier === 'gold' ? 'text-green-500 border-green-500/30' :
+                            selectedTier === 'silver' ? 'text-cyan-500 border-cyan-500/30' :
+                            selectedTier === 'gold' ? 'text-emerald-500 border-emerald-500/30' :
                             selectedTier === 'diamond' ? 'text-purple-500 border-purple-500/30' :
-                            'text-gray-500 border-gray-500/30'
+                            'text-cyan-500 border-cyan-500/30'
                           }`}>Projects:</h5>
                           <ul className="text-gray-800 text-xs sm:text-sm space-y-2">
                               {week.projects.map((project, i) => (
