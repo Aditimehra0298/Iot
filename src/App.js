@@ -948,7 +948,12 @@ function App() {
         }
         
         .animate-scroll-left {
-          animation: irritatingLoop 8s linear infinite;
+          animation: scrollLeft 20s linear infinite;
+        }
+        
+        @keyframes scrollLeft {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
         }
         .animate-scroll-left:hover {
           animation-play-state: paused;
@@ -2854,7 +2859,7 @@ function App() {
                           <video
                             className="w-full h-full object-cover"
                             preload="auto"
-                            poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
+                            poster="https://www.pexels.com/download/video/7868350/.mp4"
                             autoPlay
                             muted
                             loop
