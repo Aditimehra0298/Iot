@@ -1073,7 +1073,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-[90vh] sm:min-h-[85vh] lg:min-h-[90vh] flex items-center px-2 sm:px-4 md:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24">
+      <section className="relative z-10 min-h-screen sm:min-h-[85vh] lg:min-h-[90vh] flex items-start sm:items-center px-2 sm:px-4 md:px-6 lg:px-8 pt-20 sm:pt-20 md:pt-24 pb-8 sm:pb-0">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video 
@@ -1091,7 +1091,7 @@ function App() {
         </div>
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-6 lg:gap-8 items-start lg:items-center">
             {/* Left Side - Content */}
             <div className="text-center lg:text-left px-2 sm:px-0">
               {/* IoT and Robotics Division Badge */}
@@ -1099,25 +1099,24 @@ function App() {
                 <div className="inline-flex items-center px-2 sm:px-3 py-1 sm:py-1.5 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs sm:text-sm font-semibold rounded-full shadow-lg">
                   <Cpu className="w-3 h-3 mr-1 sm:mr-1.5" />
                   <span className="hidden xs:inline">Premier IoT & Robotics Testing, Certification, and Training Hub</span>
-                  <span className="xs:hidden">IoT & Robotics Hub</span>
                 </div>
               </div>
               
-              <div className="mb-4 sm:mb-6 flex justify-center lg:justify-start">
+              <div className="mb-3 sm:mb-6 flex justify-center lg:justify-start">
                 <div className="relative">
-                  <Cpu className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-[#4A90E2]" />
+                  <Cpu className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 text-[#4A90E2]" />
                 </div>
               </div>
               
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl heading-primary text-white mb-3 sm:mb-4 md:mb-6 animate-fade-in drop-shadow-2xl bg-gradient-to-r from-blue-300/20 to-blue-400/20 px-2 sm:px-3 md:px-4 lg:px-6 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl inline-block border border-blue-300/30 leading-tight">
+              <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl heading-primary text-white mb-2 sm:mb-4 md:mb-6 animate-fade-in drop-shadow-2xl bg-gradient-to-r from-blue-300/20 to-blue-400/20 px-2 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl inline-block border border-blue-300/30 leading-tight">
                 Master Class in IoT & Robotics
               </h1>
               
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-4 sm:mb-5 md:mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg px-1">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-3 sm:mb-5 md:mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg px-1">
                 Transform your career with hands-on IoT, Robotics and Electronics training. Build real-world projects and master industry-standard technologies
               </p>
 
-              <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-5 md:mb-6">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-5 md:mb-6">
                 {[
                   { icon: Zap, text: '100+ Projects', color: 'text-[#4A90E2]' },
                   { icon: Users, text: 'Expert Mentors', color: 'text-[#7FB3D3]' },
@@ -1158,7 +1157,7 @@ function App() {
             </div>
 
             {/* Right Side - Video Collage */}
-            <div className="flex justify-center lg:justify-end mt-6 lg:mt-0">
+            <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div className="relative group w-full max-w-sm sm:max-w-md lg:max-w-2xl">
                 {/* Video Collage Container */}
                 <div className="relative bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] backdrop-blur-md rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 border border-[#4A90E2]/30 shadow-xl overflow-hidden">
