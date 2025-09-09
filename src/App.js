@@ -1717,43 +1717,45 @@ function App() {
         {/* Tier Selection Section */}
         <div className="relative z-10 py-6 sm:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              {/* Silver Tier */}
-              <button
-                onClick={() => setSelectedTier('silver')}
-                className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform ${
-                  selectedTier === 'silver' 
-                    ? 'bg-gradient-to-r from-gray-500 to-gray-700 text-white shadow-lg scale-105' 
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:scale-102'
-                }`}
-              >
-                🥈 Silver
-              </button>
-
-              {/* Gold Tier */}
-              <button
-                onClick={() => setSelectedTier('gold')}
-                className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform ${
-                  selectedTier === 'gold' 
-                    ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-lg scale-105' 
-                    : 'bg-yellow-200 text-yellow-700 hover:bg-yellow-300 hover:scale-102'
-                }`}
-              >
-                🥇 Gold
-              </button>
-
-              {/* Diamond Tier */}
-              <button
-                onClick={() => setSelectedTier('diamond')}
-                className={`px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform ${
-                  selectedTier === 'diamond' 
-                    ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg scale-105' 
-                    : 'bg-purple-200 text-purple-700 hover:bg-purple-300 hover:scale-102'
-                }`}
-              >
-                💎 Diamond
-              </button>
+            <div className="flex justify-center items-center">
+              {/* Combined Tier Selection Button */}
+              <div className="bg-gradient-to-r from-gray-300 via-yellow-300 to-purple-300 rounded-full p-1 shadow-lg">
+                <div className="flex bg-white rounded-full p-1">
+                  <button
+                    onClick={() => setSelectedTier('silver')}
+                    className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedTier === 'silver' 
+                        ? 'bg-gradient-to-r from-gray-500 to-gray-700 text-white shadow-lg scale-105' 
+                        : 'text-gray-700 hover:bg-gray-100 hover:scale-102'
+                    }`}
+                  >
+                    🥈 Silver
+                  </button>
+                  
+                  <button
+                    onClick={() => setSelectedTier('gold')}
+                    className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedTier === 'gold' 
+                        ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-lg scale-105' 
+                        : 'text-yellow-700 hover:bg-yellow-100 hover:scale-102'
+                    }`}
+                  >
+                    🥇 Gold
+                  </button>
+                  
+                  <button
+                    onClick={() => setSelectedTier('diamond')}
+                    className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedTier === 'diamond' 
+                        ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg scale-105' 
+                        : 'text-purple-700 hover:bg-purple-100 hover:scale-102'
+                    }`}
+                  >
+                    💎 Diamond
+                  </button>
                 </div>
+              </div>
+            </div>
               </div>
             </div>
 
