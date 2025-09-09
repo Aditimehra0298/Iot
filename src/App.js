@@ -911,7 +911,7 @@ function App() {
         }
         
         .irritating-syllabus {
-          animation: irritatingLoop 3s ease-in-out infinite;
+          animation: irritatingLoop 3s linear infinite;
         }
         
         .continuous-move {
