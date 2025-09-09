@@ -948,10 +948,10 @@ function App() {
         }
         
         .animate-scroll-left {
-          animation: irritatingScroll 15s linear infinite;
+          animation: irritatingScrollLeft 15s linear infinite;
         }
         
-        @keyframes irritatingScroll {
+        @keyframes irritatingScrollLeft {
           0% { transform: translateX(100%) rotate(0deg) scale(1); }
           5% { transform: translateX(90%) rotate(1deg) scale(1.02); }
           10% { transform: translateX(80%) rotate(-0.5deg) scale(0.98); }
