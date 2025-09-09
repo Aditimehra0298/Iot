@@ -3089,18 +3089,19 @@ function App() {
                  backgroundRepeat: 'no-repeat',
                  minHeight: '600px'
                }}>
+            <div className="absolute inset-0 bg-black/40"></div>
             
             <div className="relative z-10 p-4 sm:p-8 lg:p-12">
               <div className="text-center">
                 <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white leading-tight">
                   About ITC (India) Pvt. Ltd.
                 </h4>
-                <span className="text-lg sm:text-xl text-blue-100 font-semibold">Premier Testing & Calibration Laboratory</span>
+                <span className="text-lg sm:text-xl text-white font-semibold drop-shadow-lg">Premier Testing & Calibration Laboratory</span>
               </div>
             </div>
             
             {/* Header Section */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#4A90E2] shadow-lg mb-8">
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
