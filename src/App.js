@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, ChevronLeft, Plus, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -63,6 +63,7 @@ function App() {
   const [thankYouMessage, setThankYouMessage] = useState('');
   const [openItems, setOpenItems] = useState([]);
   const [hoveredProject, setHoveredProject] = useState(null);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   // Masterclass modules data
   const masterclassModules = [
@@ -2102,20 +2103,46 @@ function App() {
           {/* Core Modules */}
           <div className="mb-12 sm:mb-16">
             <h3 className="text-2xl sm:text-3xl heading-secondary text-white mb-8 sm:mb-12 text-center">Our Core Projects</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
-              {masterclassModules.map((module, index) => {
+            
+            {/* Project Carousel */}
+            <div className="relative">
+              {/* Navigation Arrows */}
+              <button 
+                onClick={() => setCurrentProjectIndex(Math.max(0, currentProjectIndex - 1))}
+                disabled={currentProjectIndex === 0}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-700" />
+              </button>
+              
+              <button 
+                onClick={() => setCurrentProjectIndex(Math.min(6, currentProjectIndex + 1))}
+                disabled={currentProjectIndex === 6}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-700" />
+              </button>
+
+              {/* Project Display */}
+              <div className="flex overflow-hidden">
+                {/* First 6 Projects */}
+                {masterclassModules.slice(0, 6).map((module, index) => {
                 const IconComponent = module.icon;
+                  const isActive = index === currentProjectIndex;
                 return (
                   <div
                     key={module.id}
-                    className={`group relative bg-white/90 backdrop-blur-sm border border-[#7FB3D3] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:rotate-1 transition-all duration-500 cursor-pointer`}
-                    onMouseEnter={() => setHoveredProject(module.id)}
-                    onMouseLeave={() => setHoveredProject(null)}
-                  >
+                      className={`flex-shrink-0 w-full transition-all duration-500 ${
+                        isActive ? 'opacity-100' : 'opacity-0 absolute'
+                      }`}
+                    >
+                      <div className="group relative bg-white/90 backdrop-blur-sm border border-[#7FB3D3] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:rotate-1 transition-all duration-500 cursor-pointer mx-4"
+                           onMouseEnter={() => setHoveredProject(module.id)}
+                           onMouseLeave={() => setHoveredProject(null)}>
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4 sm:mb-6">
                       <div className="flex items-center gap-3 sm:gap-4">
-                        <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD]">
+                            <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD]">
                           <IconComponent 
                             className={`w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white ${hoveredProject === module.id ? 'scale-110' : ''} transition-transform duration-300`} 
                           />
@@ -2170,16 +2197,50 @@ function App() {
                           {tech}
                         </span>
                       ))}
+                        </div>
                     </div>
                   </div>
                 );
               })}
-            </div>
-            
-            {/* Many More Capsule */}
-            <div className="flex justify-center mt-8 sm:mt-12">
-              <div className="bg-gradient-to-r from-gray-600 to-gray-800 text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform cursor-pointer">
-                Several Projects
+
+                {/* 7th Project - Many More */}
+                <div className={`flex-shrink-0 w-full transition-all duration-500 ${
+                  currentProjectIndex === 6 ? 'opacity-100' : 'opacity-0 absolute'
+                }`}>
+                  <div className="group relative bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:rotate-1 transition-all duration-500 cursor-pointer mx-4">
+                    <div className="text-center">
+                      <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl bg-white/20 mx-auto mb-6">
+                        <Plus className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
+                      </div>
+                      <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
+                        + MANY MORE PROJECTS
+                      </h4>
+                      <p className="text-white/90 text-sm sm:text-base md:text-lg mb-6">
+                        Explore our extensive collection of IoT projects, advanced robotics applications, and cutting-edge AI implementations
+                      </p>
+                      <div className="flex justify-center">
+                        <div className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-white/30 transition-all duration-300">
+                          Discover More
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center mt-6 space-x-2">
+                {[...Array(7)].map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentProjectIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentProjectIndex 
+                        ? 'bg-[#4A90E2] scale-125' 
+                        : 'bg-white/50 hover:bg-white/70'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
