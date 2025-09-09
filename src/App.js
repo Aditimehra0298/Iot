@@ -89,7 +89,7 @@ function App() {
       subtitle: "Automated irrigation with soil-moisture sensing, weather updates, and mobile notifications",
       description: "Develop an intelligent agricultural monitoring system that automatically manages irrigation based on soil moisture levels and provides weather updates with mobile notifications.",
       icon: Sprout,
-      color: "from-green-500 to-emerald-500",
+      color: "from-amber-500 to-yellow-500",
       bgColor: "bg-green-500/10",
       borderColor: "border-green-500/20",
       hoverColor: "group-hover:border-green-500/60",
@@ -1938,7 +1938,7 @@ function App() {
                         <div className="mb-4">
                           <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
                             selectedTier === 'silver' ? 'text-cyan-500 border-cyan-500/30' :
-                            selectedTier === 'gold' ? 'text-emerald-500 border-emerald-500/30' :
+                            selectedTier === 'gold' ? 'text-yellow-500 border-yellow-500/30' :
                             selectedTier === 'diamond' ? 'text-purple-500 border-purple-500/30' :
                             'text-cyan-500 border-cyan-500/30'
                           }`}>Topics Covered:</h5>
@@ -1947,7 +1947,7 @@ function App() {
                                 <li key={i} className="flex items-start">
                                 <div className={`w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0 transition-all duration-300 ${
                                   selectedTier === 'silver' ? 'bg-cyan-500' :
-                                  selectedTier === 'gold' ? 'bg-emerald-500' :
+                                  selectedTier === 'gold' ? 'bg-yellow-500' :
                                   selectedTier === 'diamond' ? 'bg-purple-500' :
                                   'bg-cyan-500'
                                 }`}></div>
@@ -1961,7 +1961,7 @@ function App() {
                         <div>
                           <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
                             selectedTier === 'silver' ? 'text-cyan-500 border-cyan-500/30' :
-                            selectedTier === 'gold' ? 'text-emerald-500 border-emerald-500/30' :
+                            selectedTier === 'gold' ? 'text-yellow-500 border-yellow-500/30' :
                             selectedTier === 'diamond' ? 'text-purple-500 border-purple-500/30' :
                             'text-cyan-500 border-cyan-500/30'
                           }`}>Projects:</h5>
@@ -1970,7 +1970,7 @@ function App() {
                                 <li key={i} className="flex items-start">
                                 <div className={`w-4 h-4 mt-1 mr-3 flex-shrink-0 transition-all duration-300 ${
                                   selectedTier === 'silver' ? 'text-gray-500' :
-                                  selectedTier === 'gold' ? 'text-green-500' :
+                                  selectedTier === 'gold' ? 'text-amber-500' :
                                   selectedTier === 'diamond' ? 'text-purple-500' :
                                   'text-gray-500'
                                 }`}>
@@ -1992,7 +1992,7 @@ function App() {
                             </span>
                             <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${activeWeek === index ? 'rotate-180' : ''} ${
                               selectedTier === 'silver' ? 'text-blue-500' :
-                              selectedTier === 'gold' ? 'text-green-500' :
+                              selectedTier === 'gold' ? 'text-amber-500' :
                               selectedTier === 'diamond' ? 'text-orange-500' :
                               'text-blue-500'
                             }`} />
@@ -2336,7 +2336,7 @@ function App() {
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg">
                   Upon completion of core modules, trainers gain access to specialized robotics workshops including 
                   <span className="text-orange-600 font-semibold bg-orange-50 px-2 py-1 rounded"> drone manufacturing</span>, 
-                  <span className="text-green-600 font-semibold bg-green-50 px-2 py-1 rounded"> agricultural automation systems</span>, and 
+                  <span className="text-amber-600 font-semibold bg-green-50 px-2 py-1 rounded"> agricultural automation systems</span>, and 
                   <span className="text-pink-600 font-semibold bg-pink-50 px-2 py-1 rounded"> medical robotics development</span>. 
                   Build real-world solutions that make a difference.
                 </p>
@@ -2900,7 +2900,7 @@ function App() {
                     <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${
                       req.level === 'Required' ? 'bg-red-500/20 text-red-600' :
                       req.level === 'Must-Have' ? 'bg-orange-500/20 text-orange-600' :
-                      'bg-green-500/20 text-green-600'
+                      'bg-green-500/20 text-amber-600'
                     }`}>
                       {req.level}
                     </div>
@@ -3006,7 +3006,7 @@ function App() {
                       <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${
                         req.level === 'Required' ? 'bg-red-500/20 text-red-600' :
                         req.level === 'Must-Have' ? 'bg-orange-500/20 text-orange-600' :
-                        'bg-green-500/20 text-green-600'
+                        'bg-green-500/20 text-amber-600'
                       }`}>
                         {req.level}
                       </div>
@@ -3653,7 +3653,7 @@ function App() {
 
                 <div className="group bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
                   <div className="relative">
-                    <Battery className="w-8 h-8 sm:w-10 sm:h-10 text-green-600 mb-3 sm:mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
+                    <Battery className="w-8 h-8 sm:w-10 sm:h-10 text-amber-600 mb-3 sm:mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
                     <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
                   </div>
                   <h5 className="text-base sm:text-lg font-bold text-gray-800 mb-2">Battery Testing</h5>
@@ -3743,10 +3743,10 @@ function App() {
                   
                   <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
                     <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
-                      <Microscope className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
+                      <Microscope className="w-8 h-8 text-amber-600 group-hover:animate-pulse" />
                       <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
                     </div>
-                    <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors duration-300">Advanced Facilities</h5>
+                    <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-amber-600 transition-colors duration-300">Advanced Facilities</h5>
                     <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">State-of-the-art laboratories with cutting-edge equipment</p>
                   </div>
                   
@@ -4194,7 +4194,7 @@ function App() {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-yellow-500 hover:to-amber-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Submit Online Enrollment Request
                 </button>
@@ -4246,8 +4246,8 @@ function App() {
                     onClick={() => setCtaLearningMode('online')}
                     className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
                       ctaLearningMode === 'online'
-                        ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-md shadow-green-500/25'
-                        : 'bg-white text-green-600 hover:bg-green-100'
+                        ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-md shadow-yellow-500/25'
+                        : 'bg-white text-amber-600 hover:bg-yellow-100'
                     }`}
                   >
                     <div className="w-4 h-4">
@@ -4367,7 +4367,7 @@ function App() {
                   className={`w-full font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                     ctaLearningMode === 'offline'
                       ? 'bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#4A90E2] text-white'
-                      : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white'
+                      : 'bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-yellow-500 hover:to-amber-500 text-white'
                   }`}
                 >
                   Submit {ctaLearningMode === 'offline' ? 'Offline' : 'Online'} Enrollment Request
@@ -4384,7 +4384,7 @@ function App() {
           <div className="bg-white rounded-2xl p-8 max-w-md w-full text-center shadow-2xl animate-fade-in">
             <div className="mb-6">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-10 h-10 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
