@@ -1897,7 +1897,7 @@ function App() {
                            selectedTier === 'diamond' ? 'border-purple-600 shadow-lg shadow-purple-500/20' :
                            'border-gray-600 shadow-lg shadow-gray-500/20') : ''
                         }`}
-                        onClick={() => setActiveWeek(activeWeek === index ? null : index)}
+                        onClick={() => setActiveWeek('all')}
                       >
                       {/* Week Header */}
                       <div className="text-center mb-4">
