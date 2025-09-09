@@ -1923,7 +1923,12 @@ function App() {
                           selectedTier === 'diamond' ? 'text-purple-500' :
                           'text-gray-500'
                         }`}>{week.module}</h4>
-                        <div className="text-gray-600 text-xs sm:text-sm font-medium">Week {week.week}</div>
+                        <div className={`text-xs sm:text-sm font-medium transition-all duration-300 ${
+                          selectedTier === 'silver' ? 'text-[#4A90E2]' :
+                          selectedTier === 'gold' ? 'text-yellow-600' :
+                          selectedTier === 'diamond' ? 'text-purple-600' :
+                          'text-gray-600'
+                        }`}>Week {week.week}</div>
                           </div>
                           
                       {/* Topics Section - Hidden by default, shown on click */}
