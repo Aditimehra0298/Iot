@@ -2985,9 +2985,9 @@ function App() {
                               className="w-full h-full object-cover"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                            autoPlay
+                              autoPlay
                             muted
-                            loop
+                              loop
                               muted
                               playsInline
                             >
@@ -3007,9 +3007,9 @@ function App() {
                               className="w-full h-full object-cover"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                            autoPlay
+                              autoPlay
                             muted
-                            loop
+                              loop
                               muted
                               playsInline
                             >
@@ -3029,9 +3029,9 @@ function App() {
                               className="w-full h-full object-cover"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
-                            autoPlay
+                              autoPlay
                             muted
-                            loop
+                              loop
                               muted
                               playsInline
                             >
