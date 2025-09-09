@@ -1787,7 +1787,7 @@ function App() {
             </div>
         {/* Syllabus Details Section */}
          <div id="syllabus" className="relative z-10 py-3 sm:py-4 md:py-6 px-2 sm:px-3 md:px-4 lg:px-6">
-         <div className="max-w-[160rem] mx-auto">
+         <div className="max-w-[200rem] mx-auto">
           <div className={`relative bg-white rounded-3xl p-6 sm:p-8 border shadow-lg transition-all duration-300 overflow-hidden ${
             selectedTier === 'silver' ? 'border-gray-500 shadow-gray-500/20' :
             selectedTier === 'gold' ? 'border-yellow-500 shadow-yellow-500/20' :
