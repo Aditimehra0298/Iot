@@ -1753,38 +1753,38 @@ function App() {
               {/* Combined Tier Selection Button */}
               <div className="bg-gradient-to-r from-gray-300 via-yellow-300 to-purple-300 rounded-full p-1 shadow-lg">
                 <div className="flex bg-white rounded-full p-1">
-                  <button
-                    onClick={() => setSelectedTier('silver')}
+              <button
+                onClick={() => setSelectedTier('silver')}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
-                      selectedTier === 'silver' 
-                        ? 'bg-gradient-to-r from-gray-500 to-gray-700 text-white shadow-lg scale-105' 
+                  selectedTier === 'silver' 
+                    ? 'bg-gradient-to-r from-gray-500 to-gray-700 text-white shadow-lg scale-105' 
                         : 'text-gray-700 hover:bg-gray-100 hover:scale-102'
-                    }`}
-                  >
-                    🥈 Silver
-                  </button>
-                  
-                  <button
-                    onClick={() => setSelectedTier('gold')}
+                }`}
+              >
+                🥈 Silver
+              </button>
+
+              <button
+                onClick={() => setSelectedTier('gold')}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
-                      selectedTier === 'gold' 
-                        ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-lg scale-105' 
+                  selectedTier === 'gold' 
+                    ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-lg scale-105' 
                         : 'text-yellow-700 hover:bg-yellow-100 hover:scale-102'
-                    }`}
-                  >
-                    🥇 Gold
-                  </button>
-                  
-                  <button
-                    onClick={() => setSelectedTier('diamond')}
+                }`}
+              >
+                🥇 Gold
+              </button>
+
+              <button
+                onClick={() => setSelectedTier('diamond')}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
-                      selectedTier === 'diamond' 
-                        ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg scale-105' 
+                  selectedTier === 'diamond' 
+                    ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg scale-105' 
                         : 'text-purple-700 hover:bg-purple-100 hover:scale-102'
-                    }`}
-                  >
-                    💎 Diamond
-                  </button>
+                }`}
+              >
+                💎 Diamond
+              </button>
                 </div>
               </div>
             </div>
@@ -3073,217 +3073,8 @@ function App() {
               </p>
               <div className="mt-6 flex justify-center">
                 <div className="w-16 h-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full group-hover:w-24 transition-all duration-500"></div>
-              </div>
             </div>
           </div>
-          {/* ITC India Testing Laboratory Section */}
-          <div className="mt-16 sm:mt-20 relative overflow-hidden rounded-3xl"
-               style={{
-                 background: 'url("/black-head-background.png"), linear-gradient(135deg, #3b82f6, #1d4ed8)',
-                 backgroundSize: 'cover',
-                 backgroundPosition: 'center',
-                 backgroundRepeat: 'no-repeat',
-                 minHeight: '600px'
-               }}>
-            
-            <div className="relative z-10 p-4 sm:p-8 lg:p-12">
-              <div className="text-center">
-                <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white leading-tight">
-                  About ITC (India) Pvt. Ltd.
-                </h4>
-                <span className="text-lg sm:text-xl text-blue-100 font-semibold">Premier Testing & Calibration Laboratory</span>
-              </div>
-            </div>
-            
-            {/* Header Section */}
-            <div className="bg-black/30 text-white backdrop-blur-md rounded-2xl p-8 sm:p-12 border border-white/30 shadow-2xl mb-8">
-              <div className="text-center mb-8">
-                <div className="flex items-center justify-center mb-6">
-                  <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
-                  <span className="px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md hover:shadow-lg transition-all duration-300">
-                    NABL Accredited • BIS Approved
-                  </span>
-                </div>
-                
-                <h4 className="text-3xl sm:text-4xl font-bold text-white mb-6 drop-shadow-xl">
-                  Your Trusted Partner for 
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD]"> Quality Assurance</span>
-                </h4>
-                
-                <p className="text-lg text-white/95 mb-8 leading-relaxed drop-shadow max-w-4xl mx-auto">
-                  Based in Mohali, Punjab, we're a premier testing and calibration laboratory 
-                  delivering end-to-end solutions for electrical, electronic, photometric, and 
-                  solar equipment. Internationally recognized and locally trusted.
-                </p>
-
-                <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                  <div className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                    <Award className="w-6 h-6 mx-auto mb-2 group-hover:animate-bounce" />
-                    <div className="text-sm font-semibold">ISO/IEC 17025</div>
-                    <div className="text-xs opacity-90">Certified</div>
-                  </div>
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                    <Globe className="w-6 h-6 mx-auto mb-2 group-hover:animate-spin" />
-                    <div className="text-sm font-semibold">European</div>
-                    <div className="text-xs opacity-90">Recognized</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Services Grid */}
-            <div className="mb-8">
-              <div className="flex justify-center mb-6">
-                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                      <Settings className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="font-bold text-lg">What We Do</span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-white text-center mb-8 text-lg font-semibold">
-                Comprehensive testing and calibration services across multiple domains
-              </p>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
-                  <div className="relative">
-                    <Zap className="w-10 h-10 text-yellow-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping group-hover:animate-bounce"></div>
-                  </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Electrical Safety</h5>
-                  <p className="text-gray-600 text-sm">IEC 60335, IEC 60601, IS 13252 compliance testing</p>
-                </div>
-
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
-                  <div className="relative">
-                    <Eye className="w-10 h-10 text-indigo-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-indigo-400 rounded-full animate-ping group-hover:animate-bounce"></div>
-                  </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Photometric</h5>
-                  <p className="text-gray-600 text-sm">LM-79 LED testing with goniophotometer analysis</p>
-                </div>
-
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
-                  <div className="relative">
-                    <Sun className="w-10 h-10 text-orange-600 mb-4 group-hover:scale-125 group-hover:animate-spin transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full animate-ping group-hover:animate-bounce"></div>
-                  </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Solar Testing</h5>
-                  <p className="text-gray-600 text-sm">PV modules, inverters, and UV disinfection systems</p>
-                </div>
-
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
-                  <div className="relative">
-                    <Battery className="w-10 h-10 text-green-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
-                  </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Battery Testing</h5>
-                  <p className="text-gray-600 text-sm">UN 38.3, IS 16046, IEC 62133 compliance</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Calibration Services */}
-            <div className="mb-8">
-              <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-2xl p-8 sm:p-12 relative overflow-hidden hover:scale-[1.02] transition-all duration-500 cursor-pointer group">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400"></div>
-                
-                <div className="text-center mb-8 relative z-10">
-                  {/* NABL Badge */}
-                  <div className="flex justify-center mb-6">
-                    <img 
-                      src="https://nablwp.qci.org.in/assets/2.5X3.5.png" 
-                      alt="NABL Accredited Badge" 
-                      className="w-20 h-20 sm:w-24 sm:h-24 object-contain drop-shadow-lg hover:scale-110 transition-transform duration-300"
-                        onError={(e) => { e.target.src = 'https://placehold.co/96x96/7FB3D3/ffffff?text=NABL' }}
-                    />
-                  </div>
-                  
-                  <div className="relative inline-block">
-                    <Microscope className="w-16 h-16 mx-auto mb-4 text-indigo-200 group-hover:animate-bounce transition-all duration-300" />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping"></div>
-                    <Star className="absolute -top-1 -right-1 w-4 h-4 text-yellow-300 animate-spin" />
-                  </div>
-                  <h4 className="text-3xl font-bold mb-4 group-hover:scale-105 transition-transform duration-300">NABL-Accredited Calibration</h4>
-                  <p className="text-xl text-indigo-100 group-hover:text-white transition-colors duration-300">Precision calibration services traceable to international standards</p>
-                </div>
-                
-                <div className="grid md:grid-cols-3 gap-8 relative z-10">
-                  <div className="text-center">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group/card">
-                      <Zap className="w-8 h-8 mx-auto mb-3 text-yellow-300 group-hover/card:animate-bounce" />
-                      <h5 className="font-bold mb-2">Electrical</h5>
-                      <p className="text-sm text-indigo-100">Multimeters, oscilloscopes, power analyzers</p>
-                    </div>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group/card">
-                      <Sun className="w-8 h-8 mx-auto mb-3 text-orange-300 group-hover/card:animate-spin" />
-                      <h5 className="font-bold mb-2">Thermal</h5>
-                      <p className="text-sm text-indigo-100">Temperature sensors, thermometers, calibrators</p>
-                    </div>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group/card">
-                      <Eye className="w-8 h-8 mx-auto mb-3 text-purple-300 group-hover/card:animate-pulse" />
-                      <h5 className="font-bold mb-2">Photometric</h5>
-                      <p className="text-sm text-indigo-100">Pyranometers, UV sources, standard lamps</p>
-                    </div>
-                  </div>
-                </div>
-              </div>e
-
-      
-            </div>
-
-            {/* Why Choose Us */}
-            <div className="text-center">
-              <div className="flex justify-center mb-6 sm:mb-8">
-                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <Star className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="font-bold text-xl sm:text-2xl">Why Choose Us</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
-                  <div className="w-16 h-16 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
-                    <Shield className="w-8 h-8 text-[#4A90E2] group-hover:animate-pulse" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#4A90E2] rounded-full animate-ping group-hover:animate-bounce"></div>
-                  </div>
-                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">Trusted Expertise</h5>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">NABL accredited with BIS approval and European recognition</p>
-                </div>
-                
-                  <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
-                    <Microscope className="w-8 h-8 text-green-600 group-hover:animate-pulse" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
-                  </div>
-                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors duration-300">Advanced Facilities</h5>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">State-of-the-art laboratories with cutting-edge equipment</p>
-                </div>
-                
-                  <div className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3]">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-bounce relative">
-                    <Award className="w-8 h-8 text-purple-600 group-hover:animate-pulse" />
-                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-purple-400 rounded-full animate-ping group-hover:animate-bounce"></div>
-                  </div>
-                  <h5 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">Complete Solutions</h5>
-                  <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">End-to-end support from testing to market compliance</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -3541,8 +3332,8 @@ function App() {
                         <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed text-sm sm:text-base">
                           {faq.answer}
                         </p>
-                      </div>
-                    </div>
+                  </div>
+                </div>
                   </div>
                 </div>
               ))}
@@ -3632,6 +3423,32 @@ function App() {
                 <div className="text-gray-800 text-sm sm:text-base font-medium">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ITC India Section (moved above CTA) */}
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative overflow-hidden rounded-3xl"
+               style={{
+                 background: 'url("/black-head-background.png"), linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center',
+                 backgroundRepeat: 'no-repeat'
+               }}>
+            <div className="relative z-10 p-6 sm:p-10 lg:p-12">
+              <div className="text-center">
+                <h4 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 text-white leading-tight">
+                  About ITC (India) Pvt. Ltd.
+                </h4>
+                <p className="text-blue-100 text-lg sm:text-xl mb-8">Premier Testing & Calibration Laboratory</p>
+                <div className="inline-flex items-center gap-3 bg-black/30 text-white backdrop-blur-md rounded-full px-5 py-2 border border-white/30 shadow">
+                  <Shield className="w-5 h-5 text-[#4A90E2]" />
+                  <span className="text-sm font-semibold">NABL Accredited • BIS Approved</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
