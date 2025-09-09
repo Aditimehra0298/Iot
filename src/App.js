@@ -1045,7 +1045,7 @@ function App() {
             <a href="#projects" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Projects</a>
             <a href="#syllabus" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Syllabus</a>
             <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
-            <a href="#Interships" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Internships</a>
+            <a href="#Internships" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Internships</a>
             <button 
               onClick={openCtaForm}
               className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg"
@@ -2314,7 +2314,7 @@ function App() {
       </section>
 
       {/* IoT & Robotics Master Training Section */}
-      <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4A90E2] via-[#7FB3D3] to-[#E8F4FD]">
+      <section id="Internships" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4A90E2] via-[#7FB3D3] to-[#E8F4FD]">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
@@ -2338,7 +2338,7 @@ function App() {
           {/* What We Offer Section */}
           <div className="mb-16">
             <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
-              What We Offer during InternshipS
+              What We Offer during Internships
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {/* Card 1 */}
@@ -3795,7 +3795,7 @@ function App() {
                   <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                   <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Prerequisites</span>
                 </a></li>
-                <li><a href="#Interships" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
+                <li><a href="#Internships" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
                   <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                   <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Internships</span>
                 </a></li>
