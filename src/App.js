@@ -1275,7 +1275,7 @@ function App() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white-900">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white">
               Choose Our Program
               </h4>
               
