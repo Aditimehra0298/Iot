@@ -3096,21 +3096,21 @@ function App() {
             </div>
             
             {/* Header Section */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
+            <div className="bg-black/30 text-white backdrop-blur-md rounded-2xl p-8 sm:p-12 border border-white/30 shadow-2xl mb-8">
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
-                  <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300 cursor-default border border-white/30">
+                  <span className="px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md hover:shadow-lg transition-all duration-300">
                     NABL Accredited • BIS Approved
                   </span>
                 </div>
                 
-                <h4 className="text-3xl sm:text-4xl font-bold text-white mb-6 hover:text-[#E8F4FD] transition-colors duration-300">
+                <h4 className="text-3xl sm:text-4xl font-bold text-white mb-6 drop-shadow-xl">
                   Your Trusted Partner for 
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD]"> Quality Assurance</span>
                 </h4>
                 
-                <p className="text-lg text-white/90 mb-8 leading-relaxed hover:text-white transition-colors duration-300 max-w-4xl mx-auto">
+                <p className="text-lg text-white/95 mb-8 leading-relaxed drop-shadow max-w-4xl mx-auto">
                   Based in Mohali, Punjab, we're a premier testing and calibration laboratory 
                   delivering end-to-end solutions for electrical, electronic, photometric, and 
                   solar equipment. Internationally recognized and locally trusted.
