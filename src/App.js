@@ -952,17 +952,8 @@ function App() {
         }
         
         @keyframes irritatingLoop {
-          0% { transform: translateX(100%) rotate(0deg) scale(1); }
-          10% { transform: translateX(80%) rotate(1deg) scale(1.02); }
-          20% { transform: translateX(60%) rotate(-0.5deg) scale(0.98); }
-          30% { transform: translateX(40%) rotate(1.5deg) scale(1.01); }
-          40% { transform: translateX(20%) rotate(-1deg) scale(0.99); }
-          50% { transform: translateX(0%) rotate(2deg) scale(1.03); }
-          60% { transform: translateX(-20%) rotate(-1.5deg) scale(0.97); }
-          70% { transform: translateX(-40%) rotate(2.5deg) scale(1.02); }
-          80% { transform: translateX(-60%) rotate(-2deg) scale(0.98); }
-          90% { transform: translateX(-80%) rotate(3deg) scale(1.01); }
-          100% { transform: translateX(-100%) rotate(0deg) scale(1); }
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
         }
         .animate-scroll-left:hover {
           animation-play-state: paused;
