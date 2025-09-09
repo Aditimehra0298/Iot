@@ -948,12 +948,31 @@ function App() {
         }
         
         .animate-scroll-left {
-          animation: scrollLeft 20s linear infinite;
+          animation: irritatingScroll 15s linear infinite;
         }
         
-        @keyframes scrollLeft {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
+        @keyframes irritatingScroll {
+          0% { transform: translateX(100%) rotate(0deg) scale(1); }
+          5% { transform: translateX(90%) rotate(1deg) scale(1.02); }
+          10% { transform: translateX(80%) rotate(-0.5deg) scale(0.98); }
+          15% { transform: translateX(70%) rotate(1.5deg) scale(1.01); }
+          20% { transform: translateX(60%) rotate(-1deg) scale(0.99); }
+          25% { transform: translateX(50%) rotate(2deg) scale(1.03); }
+          30% { transform: translateX(40%) rotate(-1.5deg) scale(0.97); }
+          35% { transform: translateX(30%) rotate(2.5deg) scale(1.02); }
+          40% { transform: translateX(20%) rotate(-2deg) scale(0.98); }
+          45% { transform: translateX(10%) rotate(3deg) scale(1.01); }
+          50% { transform: translateX(0%) rotate(-2.5deg) scale(0.99); }
+          55% { transform: translateX(-10%) rotate(3.5deg) scale(1.02); }
+          60% { transform: translateX(-20%) rotate(-3deg) scale(0.98); }
+          65% { transform: translateX(-30%) rotate(4deg) scale(1.01); }
+          70% { transform: translateX(-40%) rotate(-3.5deg) scale(0.99); }
+          75% { transform: translateX(-50%) rotate(4.5deg) scale(1.02); }
+          80% { transform: translateX(-60%) rotate(-4deg) scale(0.98); }
+          85% { transform: translateX(-70%) rotate(5deg) scale(1.01); }
+          90% { transform: translateX(-80%) rotate(-4.5deg) scale(0.99); }
+          95% { transform: translateX(-90%) rotate(5.5deg) scale(1.02); }
+          100% { transform: translateX(-100%) rotate(0deg) scale(1); }
         }
         .animate-scroll-left:hover {
           animation-play-state: paused;
