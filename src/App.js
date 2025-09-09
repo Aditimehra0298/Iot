@@ -2831,7 +2831,7 @@ function App() {
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                           <video
-                            className="w-full h-full object-cover irritating-syllabus"
+                            className="w-full h-full object-cover"
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
                             autoPlay
@@ -2852,7 +2852,7 @@ function App() {
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                           <video
-                            className="w-full h-full object-cover irritating-syllabus"
+                            className="w-full h-full object-cover"
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
                             autoPlay
@@ -2873,7 +2873,7 @@ function App() {
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                           <video
-                            className="w-full h-full object-cover irritating-syllabus"
+                            className="w-full h-full object-cover"
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
                             autoPlay
@@ -2894,7 +2894,7 @@ function App() {
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                           <video
-                            className="w-full h-full object-cover irritating-syllabus"
+                            className="w-full h-full object-cover"
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
                             autoPlay
@@ -2937,7 +2937,7 @@ function App() {
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                             <video
-                              className="w-full h-full object-cover irritating-syllabus"
+                              className="w-full h-full object-cover"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
                               autoPlay
@@ -2958,7 +2958,7 @@ function App() {
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                             <video
-                              className="w-full h-full object-cover irritating-syllabus"
+                              className="w-full h-full object-cover"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
                             autoPlay
@@ -2980,7 +2980,7 @@ function App() {
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                             <video
-                              className="w-full h-full object-cover irritating-syllabus"
+                              className="w-full h-full object-cover"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
                             autoPlay
@@ -3002,7 +3002,7 @@ function App() {
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                             <video
-                              className="w-full h-full object-cover irritating-syllabus"
+                              className="w-full h-full object-cover"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
                             autoPlay
