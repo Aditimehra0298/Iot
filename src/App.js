@@ -63,7 +63,6 @@ function App() {
   const [thankYouMessage, setThankYouMessage] = useState('');
   const [openItems, setOpenItems] = useState([]);
   const [hoveredProject, setHoveredProject] = useState(null);
-  const [isVideoMuted, setIsVideoMuted] = useState(false);
 
   // Masterclass modules data
   const masterclassModules = [
@@ -992,7 +991,7 @@ function App() {
           animation-play-state: running;
         }
       `}</style>
-      <div className="min-h-screen bg-gradient-to-br from-[#1E40AF] to-[#E8F4FD] text-gray-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-[#1E40AF] via-[#6B7280] to-[#E8F4FD] text-gray-900 relative overflow-hidden">
       {/* Background Image */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -1005,7 +1004,7 @@ function App() {
           />
         </div>
         {/* Smooth blue gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF] to-[#E8F4FD]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF] via-[#6B7280] to-[#E8F4FD]"></div>
       </div>
 
             {/* Navigation */}
@@ -1025,7 +1024,7 @@ function App() {
                 <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-r from-[#1A365D] to-[#1E40AF] bg-clip-text text-transparent leading-tight">
                   Internet of Things & Robotics
                 </span>
-                <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm font-semibold bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] bg-clip-text text-transparent leading-tight Serif bold italic">
+                <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm font-semibold bg-gradient-to-r from-[#1E40AF] to-[#6B7280] bg-clip-text text-transparent leading-tight Serif bold italic">
                   A Division of ITC (India) Pvt. Ltd.
                 </span>
               </div>
@@ -1039,7 +1038,7 @@ function App() {
               <a href="#Internships" className="text-gray-900 hover:text-[#1E40AF] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Internships</a>
               <button 
                 onClick={openCtaForm}
-                className="bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#1E40AF] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 xl:px-8 rounded-full text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-[#1E40AF] to-[#6B7280] hover:from-[#6B7280] hover:to-[#1E40AF] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 xl:px-8 rounded-full text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Enroll Now
               </button>
@@ -1068,7 +1067,7 @@ function App() {
             <a href="#Internships" className="block text-gray-900 hover:text-[#1E40AF] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Internships</a>
             <button 
               onClick={openCtaForm}
-              className="w-full bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#1E40AF] text-white font-bold py-3 px-6 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg"
+              className="w-full bg-gradient-to-r from-[#1E40AF] to-[#6B7280] hover:from-[#6B7280] hover:to-[#1E40AF] text-white font-bold py-3 px-6 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg"
             >
               Enroll Now
             </button>
@@ -1100,7 +1099,7 @@ function App() {
             <div className="text-center lg:text-left">
               {/* IoT and Robotics Division Badge */}
               <div className="mb-4 flex justify-center lg:justify-start">
-                <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full shadow-lg">
+                <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full shadow-lg">
                   <Cpu className="w-3 h-3 mr-1.5" />
                   Premier IoT & Robotics Testing, Certification, and Training Hub
                 </div>
@@ -1139,7 +1138,7 @@ function App() {
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
                 <button
                   onClick={openCtaForm}
-                  className="bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#1E40AF] text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#1E40AF]/25"
+                  className="bg-gradient-to-r from-[#1E40AF] to-[#6B7280] hover:from-[#6B7280] hover:to-[#1E40AF] text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#1E40AF]/25"
                 >
                   Explore Programs
                 </button>
@@ -1164,7 +1163,7 @@ function App() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative group">
                 {/* Video Collage Container */}
-                <div className="relative bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] backdrop-blur-md rounded-3xl p-6 border border-[#1E40AF]/30 shadow-xl overflow-hidden">
+                <div className="relative bg-gradient-to-r from-[#1E40AF] to-[#6B7280] backdrop-blur-md rounded-3xl p-6 border border-[#1E40AF]/30 shadow-xl overflow-hidden">
                   <div className="relative max-w-2xl">
                     {/* Main Large Video - Top */}
                     <div className="relative mb-3">
@@ -1279,7 +1278,7 @@ function App() {
       </section>
 
       {/* Program Selection */}
-      <section id="programs" className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen bg-gradient-to-br from-[#1E40AF] to-[#E8F4FD]">
+      <section id="programs" className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen bg-gradient-to-br from-[#1E40AF] via-[#6B7280] to-[#E8F4FD]">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
           <img 
@@ -1756,7 +1755,7 @@ function App() {
           <div className="max-w-7xl mx-auto">
             {/* Detailed View Badge */}
             <div className="flex justify-center mb-6">
-              <div className="bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
+              <div className="bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
                 📚 View Detailed Syllabus
               </div>
             </div>
@@ -2041,76 +2040,6 @@ function App() {
         
       </section>
 
-      {/* Video Section */}
-      <section className="relative z-10 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <img
-            src="/Untitled design (20).png"
-            alt="Background Pattern"
-            className="w-full h-full object-cover opacity-20"
-            onLoad={() => console.log('Video section background image loaded successfully')}
-            onError={(e) => console.error('Video section background image failed to load:', e)}
-          />
-          <div className="absolute inset-0 bg-blue-900/80"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h4 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              About The Master Class 
-            </h4>
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-              See how our comprehensive IoT training programs transform beginners into skilled professionals
-            </p>
-          </div>
-          
-          <div className="w-full">
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-2xl">
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
-                <iframe
-                  key={isVideoMuted ? 'muted' : 'unmuted'}
-                  src={`https://player.vimeo.com/video/1115389578?title=0&byline=0&portrait=0&autoplay=1&loop=1&controls=0${isVideoMuted ? '&muted=1' : ''}`}
-                  title="IoT Academy Introduction Video"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                
-                {/* Mute/Unmute Button */}
-                <div className="absolute top-4 right-4 z-20">
-                  <button
-                    onClick={() => setIsVideoMuted(!isVideoMuted)}
-                    className="bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
-                    title={isVideoMuted ? "Unmute Video" : "Mute Video"}
-                  >
-                    {isVideoMuted ? (
-                      // Muted icon
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
-                      </svg>
-                    ) : (
-                      // Unmuted icon
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                      </svg>
-                    )}
-                  </button>
-                </div>
-              </div>
-              <div className="mt-6 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Experience Our IoT Training
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Discover the hands-on approach that makes our IoT Academy the preferred choice for professionals
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* IoT & Robotics Masterclass Section */}
       <section id="projects" className="relative z-10 mt-4 sm:mt-6 md:mt-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
@@ -2119,7 +2048,7 @@ function App() {
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
             <div className="mb-8 sm:mb-6 flex justify-center pt-4 sm:pt-2">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-sm font-semibold rounded-full shadow-lg">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-sm font-semibold rounded-full shadow-lg">
                 <Zap className="w-3 h-3 mr-1.5" />
                 Industry-Leading Featured Projects
               </div>
@@ -2133,21 +2062,21 @@ function App() {
             <div className="mb-4 sm:mb-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-white" />
                   </div>
                   <h5 className="text-xl font-bold text-white mb-2">Hands-On Learning</h5>
                   <p className="text-gray-300 text-sm">Build real projects with industry-standard hardware and software</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award className="w-8 h-8 text-white" />
                   </div>
                   <h5 className="text-xl font-bold text-white mb-2">Industry Ready</h5>
                   <p className="text-gray-300 text-sm">Skills that directly apply to professional IoT and robotics careers</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-white" />
                   </div>
                   <h5 className="text-xl font-bold text-white mb-2">Expert Mentorship</h5>
@@ -2193,7 +2122,7 @@ function App() {
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4 sm:mb-6">
                       <div className="flex items-center gap-3 sm:gap-4">
-                        <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD]">
+                        <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-r from-[#1E40AF] to-[#6B7280]">
                           <IconComponent 
                             className={`w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white ${hoveredProject === module.id ? 'scale-110' : ''} transition-transform duration-300`} 
                           />
@@ -2279,7 +2208,7 @@ function App() {
                     key={spec.id}
                     className="group relative bg-white/90 backdrop-blur-sm border border-[#6B7280] rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-500 cursor-pointer"
                   >
-                    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 rounded-lg sm:rounded-xl bg-gradient-to-r from-[#1E40AF] to-[#6B7280] group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     
@@ -2308,7 +2237,7 @@ function App() {
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
                 <div className="text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                     <span className="text-white font-bold text-base sm:text-lg md:text-xl">1</span>
                   </div>
                   <h4 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">Foundation</h4>
@@ -2316,7 +2245,7 @@ function App() {
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                     <span className="text-white font-bold text-base sm:text-lg md:text-xl">2</span>
                   </div>
                   <h4 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">Advanced Systems</h4>
@@ -2324,7 +2253,7 @@ function App() {
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                     <span className="text-white font-bold text-base sm:text-lg md:text-xl">3</span>
                   </div>
                   <h4 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">Specialization</h4>
@@ -2358,7 +2287,7 @@ function App() {
                   });
                   setShowCtaForm(true);
                 }}
-                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#1E40AF] text-white font-semibold rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#1E40AF]/25 text-sm sm:text-base"
+                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] hover:from-[#6B7280] hover:to-[#1E40AF] text-white font-semibold rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#1E40AF]/25 text-sm sm:text-base"
               >
                 Enroll in Masterclass
               </button>
@@ -2368,7 +2297,7 @@ function App() {
       </section>
 
       {/* IoT & Robotics Master Training Section */}
-      <section id="Internships" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1E40AF] to-[#E8F4FD]">
+      <section id="Internships" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#1E40AF] via-[#6B7280] to-[#E8F4FD]">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
@@ -2382,7 +2311,7 @@ function App() {
             <div className="flex justify-center">
               <button 
                 onClick={openCtaForm}
-                className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full shadow-lg hover:from-[#E8F4FD] hover:to-[#1E40AF] transition-all duration-300 hover:scale-105 transform"
+                className="px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full shadow-lg hover:from-[#6B7280] hover:to-[#1E40AF] transition-all duration-300 hover:scale-105 transform"
               >
                 Get Started Now
               </button>
@@ -2877,7 +2806,7 @@ function App() {
           <div className="text-center mt-4 sm:mt-6">
             <button 
               onClick={openCtaForm}
-              className="px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full shadow-lg hover:from-[#E8F4FD] hover:to-[#1E40AF] transition-all duration-300 hover:scale-105 transform"
+              className="px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full shadow-lg hover:from-[#6B7280] hover:to-[#1E40AF] transition-all duration-300 hover:scale-105 transform"
             >
               Start Your Internship Now
               </button>
@@ -2899,7 +2828,7 @@ function App() {
             {prerequisites.map((req, index) => (
                 <div key={`first-${index}`} className="individual-card-move flex-shrink-0 w-80 bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#6B7280] hover:border-[#1E40AF] transition-all duration-300 shadow-lg">
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center flex-shrink-0">
                     <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -3005,7 +2934,7 @@ function App() {
               {prerequisites.map((req, index) => (
                 <div key={`second-${index}`} className="individual-card-move flex-shrink-0 w-80 bg-white/90 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-[#6B7280] hover:border-[#1E40AF] transition-all duration-300 shadow-lg">
                   <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center flex-shrink-0">
                       <req.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
                     <div className="flex-1">
@@ -3118,7 +3047,7 @@ function App() {
             {/* Hands-On IoT Training Programs */}
             <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#6B7280] hover:border-[#1E40AF] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#1E40AF]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
                   </div>
                 <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#1E40AF] transition-colors duration-300">Hands-On IoT Training Programs</h4>
@@ -3127,14 +3056,14 @@ function App() {
                 Learn by doing, not just by listening. Our workshops and courses immerse you in real-world IoT projects-covering sensors, embedded systems, connectivity, and cloud integration.
               </p>
               <div className="mt-6 flex justify-center">
-                <div className="w-16 h-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full group-hover:w-24 transition-all duration-500"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full group-hover:w-24 transition-all duration-500"></div>
               </div>
           </div>
 
             {/* Industry-Relevant Curriculum */}
             <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#6B7280] hover:border-[#1E40AF] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#1E40AF]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <BookOpen className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
                 </div>
                 <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#1E40AF] transition-colors duration-300">Industry-Relevant Curriculum</h4>
@@ -3143,14 +3072,14 @@ function App() {
                 We focus on practical skills that matter today. From device communication protocols to data security and edge computing, our curriculum is designed to keep you ahead in a connected world.
               </p>
               <div className="mt-6 flex justify-center">
-                <div className="w-16 h-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full group-hover:w-24 transition-all duration-500"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full group-hover:w-24 transition-all duration-500"></div>
               </div>
             </div>
 
             {/* Customized Learning for Teams & Individuals */}
             <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#6B7280] hover:border-[#1E40AF] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#1E40AF]/20 transform hover:-translate-y-2">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <Users className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
                 </div>
                 <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#1E40AF] transition-colors duration-300">Customized Learning for Teams & Individuals</h4>
@@ -3159,7 +3088,7 @@ function App() {
                 Whether you're a student, startup team, or enterprise workforce, our training adapts to your needs. We offer tailored modules to fit different learning goals and business objectives.
               </p>
               <div className="mt-6 flex justify-center">
-                <div className="w-16 h-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full group-hover:w-24 transition-all duration-500"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full group-hover:w-24 transition-all duration-500"></div>
               </div>
             </div>
           </div>
@@ -3195,7 +3124,7 @@ function App() {
                 
                 <h4 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 hover:text-[#1E40AF] transition-colors duration-300">
                   Your Trusted Partner for 
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD]"> Quality Assurance</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E40AF] to-[#6B7280]"> Quality Assurance</span>
                 </h4>
                 
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed hover:text-gray-800 transition-colors duration-300 max-w-4xl mx-auto">
@@ -3205,7 +3134,7 @@ function App() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                  <div className="bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                  <div className="bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                     <Award className="w-6 h-6 mx-auto mb-2 group-hover:animate-bounce" />
                     <div className="text-sm font-semibold">ISO/IEC 17025</div>
                     <div className="text-xs opacity-90">Certified</div>
@@ -3222,7 +3151,7 @@ function App() {
             {/* Services Grid */}
             <div className="mb-8">
               <div className="flex justify-center mb-6">
-                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white rounded-full shadow-lg">
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white rounded-full shadow-lg">
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                       <Settings className="w-4 h-4 text-white" />
@@ -3333,7 +3262,7 @@ function App() {
             {/* Why Choose Us */}
             <div className="text-center">
               <div className="flex justify-center mb-6 sm:mb-8">
-                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white rounded-full shadow-lg">
+                <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white rounded-full shadow-lg">
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                       <Star className="w-5 h-5 text-white" />
@@ -3426,19 +3355,19 @@ function App() {
                     
                     {/* Expertise Tags */}
                     <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         Embedded Systems
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         Robotics
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         ESP32/STM32
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         LoRaWAN/Zigbee
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         Cloud Integration
                       </span>
                     </div>
@@ -3475,19 +3404,19 @@ function App() {
                     
                     {/* Expertise Tags */}
                     <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         Photometry
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         LED Testing
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         IoT Lighting
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         Calibration
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white text-xs font-semibold rounded-full">
                         R&D
                       </span>
                     </div>
@@ -3715,7 +3644,7 @@ function App() {
               { number: '100%', label: 'Placement Assistant', icon: Award }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
@@ -3739,7 +3668,7 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <button 
               onClick={openCtaForm}
-              className="bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#1E40AF] text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#1E40AF]/25"
+              className="bg-gradient-to-r from-[#1E40AF] to-[#6B7280] hover:from-[#6B7280] hover:to-[#1E40AF] text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#1E40AF]/25"
             >
               Enroll Now
             </button>
@@ -3782,8 +3711,8 @@ function App() {
               <div className="flex items-center space-x-4 mb-8">
                 <div className="relative group">
                   {/* Enhanced glowing background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 animate-pulse scale-125"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300 animate-pulse scale-110"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300 animate-pulse scale-125"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300 animate-pulse scale-110"></div>
                   
                   {/* Logo container with backdrop */}
                   <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-4 border border-white/20 shadow-2xl group-hover:shadow-3xl transition-all duration-300 group-hover:scale-105">
@@ -3795,12 +3724,12 @@ function App() {
                 </div>
                   
                   {/* Enhanced animated indicator */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full animate-pulse shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full animate-pulse shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] bg-clip-text text-transparent">
+                  <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1E40AF] to-[#6B7280] bg-clip-text text-transparent">
                     Master Class in IoT & Robotics
                   </h3>
                   <p className="text-sm text-gray-400 mt-1 italic">from ITC (India)Pvt Ltd.</p>
@@ -3832,7 +3761,7 @@ function App() {
             <div>
               <h4 className="text-white font-bold mb-8 text-xl relative group">
                 Quick Links
-                <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full group-hover:w-16 transition-all duration-300"></div>
+                <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full group-hover:w-16 transition-all duration-300"></div>
               </h4>
               <ul className="space-y-4">
                 <li><a href="#programs" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
@@ -3866,11 +3795,11 @@ function App() {
             <div>
               <h4 className="text-white font-bold mb-8 text-xl relative group">
                 Contact Info
-                <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full group-hover:w-16 transition-all duration-300"></div>
+                <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full group-hover:w-16 transition-all duration-300"></div>
               </h4>
               <ul className="space-y-6">
                 <li className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
             <div>
@@ -3879,7 +3808,7 @@ function App() {
                   </div>
                 </li>
                 <li className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                   <div>
@@ -3888,7 +3817,7 @@ function App() {
                   </div>
                 </li>
                 <li className="flex items-start space-x-4 group">
-                  <div className="w-8 h-8 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                   <div>
@@ -4039,7 +3968,7 @@ function App() {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#1E40AF] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="w-full bg-gradient-to-r from-[#1E40AF] to-[#6B7280] hover:from-[#6B7280] hover:to-[#1E40AF] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Submit Enrollment Request
                 </button>
@@ -4191,7 +4120,7 @@ function App() {
                     onClick={() => setCtaLearningMode('offline')}
                     className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 flex items-center space-x-2 ${
                       ctaLearningMode === 'offline'
-                        ? 'bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white shadow-md shadow-[#1E40AF]/25'
+                        ? 'bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white shadow-md shadow-[#1E40AF]/25'
                         : 'bg-white text-gray-600 hover:bg-gray-100'
                     }`}
                   >
@@ -4328,7 +4257,7 @@ function App() {
                   type="submit"
                   className={`w-full font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                     ctaLearningMode === 'offline'
-                      ? 'bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#1E40AF] text-white'
+                      ? 'bg-gradient-to-r from-[#1E40AF] to-[#6B7280] hover:from-[#6B7280] hover:to-[#1E40AF] text-white'
                       : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white'
                   }`}
                 >
@@ -4534,7 +4463,7 @@ function App() {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <button
                     type="submit"
-                    className="flex-1 bg-gradient-to-r from-[#1E40AF] to-[#E8F4FD] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#E8F4FD] hover:to-[#1E40AF] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="flex-1 bg-gradient-to-r from-[#1E40AF] to-[#6B7280] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#6B7280] hover:to-[#1E40AF] transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Send Message
                   </button>
