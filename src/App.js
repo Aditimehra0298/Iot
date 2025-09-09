@@ -3042,9 +3042,8 @@ function App() {
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
                               autoPlay
-                            muted
-                              loop
                               muted
+                              loop
                               playsInline
                             >
                               <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
@@ -3064,9 +3063,8 @@ function App() {
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
                               autoPlay
-                            muted
-                              loop
                               muted
+                              loop
                               playsInline
                             >
                               <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
@@ -3086,9 +3084,8 @@ function App() {
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
                               autoPlay
-                            muted
-                              loop
                               muted
+                              loop
                               playsInline
                             >
                               <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
