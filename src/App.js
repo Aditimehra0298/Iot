@@ -914,6 +914,25 @@ function App() {
           animation: irritatingLoop 3s linear infinite;
         }
         
+        /* Standardized Heading Classes */
+        .heading-primary {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-weight: 800;
+          line-height: 1.1;
+        }
+        
+        .heading-secondary {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-weight: 700;
+          line-height: 1.2;
+        }
+        
+        .heading-tertiary {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          font-weight: 600;
+          line-height: 1.3;
+        }
+        
         .continuous-move {
           animation: continuousMove 8s linear infinite;
         }
@@ -1093,7 +1112,7 @@ function App() {
                 </div>
               </div>
               
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 animate-fade-in leading-tight drop-shadow-2xl bg-gradient-to-r from-blue-300/20 to-blue-400/20 px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl inline-block border border-blue-300/30">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl heading-primary text-white mb-3 sm:mb-4 md:mb-6 animate-fade-in drop-shadow-2xl bg-gradient-to-r from-blue-300/20 to-blue-400/20 px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl inline-block border border-blue-300/30">
                 Master Class in IoT & Robotics
               </h1>
               
@@ -1275,8 +1294,8 @@ function App() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white">
-              Choose Our Program
+        <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
+              Choose your Program
               </h4>
               
 
@@ -1329,7 +1348,7 @@ function App() {
                             </div>
                           </div>
                           
-                          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['2-month'].title}</h3>
+                          <h3 className="text-xl sm:text-2xl heading-tertiary mb-4 text-gray-900">{programs['2-month'].title}</h3>
                           <p className="text-gray-800 mb-2 text-sm sm:text-base">
                             <span className="text-blue-500 font-semibold">Ideal for:</span> {programs['2-month'].ideal}
                           </p>
@@ -1478,7 +1497,7 @@ function App() {
                             </div>
                           </div>
                           
-                          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['4-month'].title}</h3>
+                          <h3 className="text-xl sm:text-2xl heading-tertiary mb-4 text-gray-900">{programs['4-month'].title}</h3>
                           <p className="text-gray-800 mb-2 text-sm sm:text-base">
                             <span className="text-yellow-500 font-semibold">Ideal for:</span> {programs['4-month'].ideal}
                           </p>
@@ -1629,7 +1648,7 @@ function App() {
                             </div>
                           </div>
                           
-                          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">{programs['6-month'].title}</h3>
+                          <h3 className="text-xl sm:text-2xl heading-tertiary mb-4 text-gray-900">{programs['6-month'].title}</h3>
                           <p className="text-gray-800 mb-2 text-sm sm:text-base">
                             <span className="text-purple-600 font-semibold">Ideal for:</span> {programs['6-month'].ideal}
                           </p>
@@ -1738,7 +1757,7 @@ function App() {
             {/* Detailed View Badge */}
             <div className="flex justify-center mb-6">
               <div className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
-                📚 Detailed View Syllabus
+                📚 View Detailed Syllabus
               </div>
             </div>
             
@@ -2106,7 +2125,7 @@ function App() {
               </div>
             </div>
             
-            <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white">
+            <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
               IoT & Robotics Projects
             </h4>
              
@@ -2160,7 +2179,7 @@ function App() {
 
           {/* Core Modules */}
           <div className="mb-12 sm:mb-16">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12 text-center">Our Core Projects</h3>
+            <h3 className="text-2xl sm:text-3xl heading-secondary text-white mb-8 sm:mb-12 text-center">Our Core Projects</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
               {masterclassModules.map((module, index) => {
                 const IconComponent = module.icon;
@@ -2246,7 +2265,7 @@ function App() {
           {/* Advanced Specializations */}
           <div className="mb-24 sm:mb-20">
             <div className="text-center mb-12 sm:mb-16">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Our Advanced Specialization Areas</h3>
+              <h3 className="text-2xl sm:text-3xl heading-secondary text-white mb-3 sm:mb-4">Our Advanced Specialization Areas</h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
               After completing core training and projects, experience our advanced and specialised IoT, Robotics and AI-based applications in high-impact industries
               </p>
@@ -2435,7 +2454,7 @@ function App() {
 
           {/* Featured Projects Gallery */}
           <div className="mb-8 sm:mb-12">
-            <h3 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-white">
+            <h3 className="text-3xl sm:text-4xl heading-secondary text-center mb-8 text-white">
               Featured Projects Gallery
             </h3>
             <div className="max-w-7xl mx-auto">
@@ -2870,7 +2889,7 @@ function App() {
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="max-w-6xl mx-auto">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
             Prerequisites & Requirements
           </h4>
 
@@ -3091,8 +3110,8 @@ function App() {
           </div>
 
           {/* What We Offer Section */}
-          <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white-900">
-             We Offer
+          <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
+             How Our Trainings Are Unique
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
@@ -3306,7 +3325,9 @@ function App() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>e
+
+      
             </div>
 
             {/* Why Choose Us */}
