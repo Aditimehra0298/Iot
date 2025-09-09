@@ -2835,8 +2835,8 @@ function App() {
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
                             autoPlay
-                            loop
                             muted
+                            loop
                             playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
@@ -2856,8 +2856,8 @@ function App() {
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4"
                             autoPlay
-                            loop
                             muted
+                            loop
                             playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
@@ -2877,8 +2877,8 @@ function App() {
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
                             autoPlay
-                            loop
                             muted
+                            loop
                             playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
@@ -2898,8 +2898,8 @@ function App() {
                             preload="auto"
                             poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
                             autoPlay
-                            loop
                             muted
+                            loop
                             playsInline
                           >
                             <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
@@ -2941,8 +2941,8 @@ function App() {
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
                               autoPlay
-                              loop
                               muted
+                              loop
                               playsInline
                             >
                               <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
@@ -2961,8 +2961,9 @@ function App() {
                               className="w-full h-full object-cover irritating-syllabus"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                              autoPlay
-                              loop
+                            autoPlay
+                            muted
+                            loop
                               muted
                               playsInline
                             >
@@ -2982,8 +2983,9 @@ function App() {
                               className="w-full h-full object-cover irritating-syllabus"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                              autoPlay
-                              loop
+                            autoPlay
+                            muted
+                            loop
                               muted
                               playsInline
                             >
@@ -3003,8 +3005,9 @@ function App() {
                               className="w-full h-full object-cover irritating-syllabus"
                               preload="auto"
                               poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
-                              autoPlay
-                              loop
+                            autoPlay
+                            muted
+                            loop
                               muted
                               playsInline
                             >
@@ -3024,7 +3027,7 @@ function App() {
 
           {/* What We Offer Section */}
           <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
-             What We Offer
+            What We Offer
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
@@ -3033,11 +3036,11 @@ function App() {
               <div className="text-center mb-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg group-hover:shadow-xl">
                   <Wrench className="w-8 h-8 sm:w-10 sm:h-10 text-white group-hover:rotate-12 transition-transform duration-500" />
-                </div>
+                  </div>
                 <h5 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#4A90E2] transition-colors duration-300">
                   <span className="text-[#4A90E2]">Industry-Relevant Training</span>
                 </h5>
-              </div>
+                </div>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-center mb-4">
                 30% theory with 70% hands-on practice
               </p>
@@ -3055,7 +3058,7 @@ function App() {
                   <span className="text-gray-700">Project-based practical skills</span>
                 </li>
               </ul>
-            </div>
+          </div>
 
             {/* IoT Trainer Kits */}
             <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-[#4A90E2]/20 transform hover:-translate-y-2">
@@ -3113,7 +3116,7 @@ function App() {
                   <span className="text-gray-700">Updated learning libraries</span>
                 </li>
               </ul>
-            </div>
+          </div>
           </div>
         </div>
       </section>
