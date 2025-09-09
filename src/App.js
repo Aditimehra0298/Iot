@@ -479,7 +479,6 @@ function App() {
       });
     }
   };
-
   const programs = {
     '2-month': {
       title: '2-Month IoT Bootcamp',
@@ -827,14 +826,6 @@ function App() {
       icon: Globe
     }
   ];
-
-
-
-
-
-
-
-
   return (
     <>
       <style jsx>{`
@@ -1276,7 +1267,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Program Selection */}
       <section id="programs" className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen bg-gradient-to-br from-[#4A90E2] via-[#7FB3D3] to-[#E8F4FD]">
         {/* Background Image */}
@@ -1801,7 +1791,6 @@ function App() {
             </div>
               </div>
             </div>
-
         {/* Syllabus Details Section */}
         <div id="syllabus" className="relative z-10 py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2295,7 +2284,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* IoT & Robotics Master Training Section */}
       <section id="Internships" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4A90E2] via-[#7FB3D3] to-[#E8F4FD]">
         <div className="max-w-7xl mx-auto">
@@ -2814,7 +2802,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="max-w-6xl mx-auto">
@@ -3160,7 +3147,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-center mb-8 text-lg">
+              <p className="text-gray-900 text-center mb-8 text-lg font-semibold">
                 Comprehensive testing and calibration services across multiple domains
               </p>
               
@@ -3427,7 +3414,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -3977,7 +3963,6 @@ function App() {
           </div>
         </div>
       )}
-
       {/* Online Enrollment Form Modal */}
       {showOnlineForm && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
