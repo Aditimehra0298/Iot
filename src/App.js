@@ -1007,7 +1007,7 @@ function App() {
                   Internet of Things & Robotics
                 </span>
                 <span className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] bg-clip-text text-transparent leading-tight Serif bold italic">
-                  A Division of ITC (India)Pvt. Ltd.
+                  A Division of ITC (India) Pvt. Ltd.
                 </span>
               </div>
             </div>
@@ -1045,6 +1045,7 @@ function App() {
             <a href="#projects" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Projects</a>
             <a href="#syllabus" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Syllabus</a>
             <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
+            <a href="#Interships" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Internships</a>
             <button 
               onClick={openCtaForm}
               className="w-full bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] hover:from-[#7FB3D3] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg"
@@ -1081,7 +1082,7 @@ function App() {
               <div className="mb-4 flex justify-center lg:justify-start">
                 <div className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs font-semibold rounded-full shadow-lg">
                   <Cpu className="w-3 h-3 mr-1.5" />
-                  Premier IoT & Robotics testing, Certification, and training Hub
+                  Premier IoT & Robotics Testing, Certification, and Training Hub
                 </div>
               </div>
               
@@ -1096,7 +1097,7 @@ function App() {
               </h1>
               
               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium drop-shadow-lg">
-                Transform your career with hands-on IoT and Electronics training. Build real-world projects and master industry-standard technologies.
+                Transform your career with hands-on IoT, Robotics and Electronics training. Build real-world projects and master industry-standard technologies
               </p>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6">
@@ -1105,7 +1106,7 @@ function App() {
                   { icon: Users, text: 'Expert Mentors', color: 'text-[#7FB3D3]' },
                   { icon: BookOpen, text: 'Industry Skills', color: 'text-[#4A90E2]' },
                   { icon: Wrench, text: 'Hands-on Learning', color: 'text-[#7FB3D3]' },
-                  { icon: Award, text: 'Free Internships', color: 'text-[#4A90E2]' },
+                  { icon: Award, text: 'Internships', color: 'text-[#4A90E2]' },
                   { icon: Users, text: 'Placement Assistance', color: 'text-[#7FB3D3]' }
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-2 bg-white/90 px-3 sm:px-4 py-2 rounded-full backdrop-blur-sm hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-lg">
@@ -2010,7 +2011,7 @@ function App() {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h4 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              About Master Class in IoT & Robotics
+              About The Master Class 
             </h4>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
               See how our comprehensive IoT training programs transform beginners into skilled professionals
@@ -2210,7 +2211,7 @@ function App() {
           {/* Advanced Specializations */}
           <div className="mb-24 sm:mb-20">
             <div className="text-center mb-12 sm:mb-16">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Our Advanced Specializations Areas</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Our Advanced Specialization Areas</h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
               After completing core training and projects, experience our advanced and specialised IoT, Robotics and AI-based applications in high-impact industries
               </p>
@@ -2318,7 +2319,7 @@ function App() {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-6">
-              IoT & Robotics Master Internship
+              IoT, Robotics, AI Master Internship
             </h2>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
             Dive into the future with our comprehensive internships. Learn to build and program intelligent devices, from connected sensors to autonomous robots. Get hands-on with real-world Industry 5.0 projects and become an expert in the most in-demand fields.
@@ -2385,13 +2386,16 @@ function App() {
             </h3>
             <div className="grid md:grid-cols-3 gap-6 sm:gap-8 text-center max-w-5xl mx-auto">
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
-                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Aspiring engineers and tech enthusiasts</p>
+                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Student Aspiring for 2 month to 6 month Industrial Internship</p>
               </div>
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
-                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Students and professionals specializing in robotics and IoT</p>
+                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Students integration and Professionals specializing in Robotics and IoT</p>
               </div>
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
                 <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Anyone passionate about building and innovating with technology</p>
+              </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
+                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]"></p>
               </div>
             </div>
           </div>
@@ -2823,7 +2827,7 @@ function App() {
               onClick={openCtaForm}
               className="px-10 py-5 text-lg font-bold text-white bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] rounded-full shadow-lg hover:from-[#7FB3D3] hover:to-[#4A90E2] transition-all duration-300 hover:scale-105 transform"
             >
-              Start Your Career Journey Now
+              Start Your Internship Now
               </button>
             </div>
           </div>
@@ -3120,8 +3124,9 @@ function App() {
             
             <div className="relative z-10 p-4 sm:p-8 lg:p-12">
               
-              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white leading-tight">
-                About ITC India - Premier Testing & Calibration Laboratory
+              <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-Blue-900 leading-tight">
+                About ITC (India) Pvt. Ltd.
+                <span>Premier Testing & Calibration Laboratory</span>
               </h4>
             
             {/* Header Section */}
@@ -3330,7 +3335,7 @@ function App() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 md:mb-12 bg-gradient-to-r from-[#1A365D] to-[#4A90E2] bg-clip-text text-transparent">
-              Meet Our Experts
+              Meet Our IOT & Robotics Experts
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Learn from industry veterans and academic leaders who bring decades of experience in IoT and Robotics
@@ -3790,6 +3795,10 @@ function App() {
                 <li><a href="#prerequisites" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
                   <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                   <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Prerequisites</span>
+                </a></li>
+                <li><a href="#Interships" className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5">
+                  <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium text-sm">Internships</span>
                 </a></li>
                 <li><button className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/5 w-full text-left">
                   <ChevronRight className="w-4 h-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
