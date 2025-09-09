@@ -1739,7 +1739,6 @@ function App() {
                 </div>
               </div>
             </div>
-
         {/* Tier Selection Section */}
         <div className="relative z-10 py-6 sm:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2218,7 +2217,6 @@ function App() {
               })}
             </div>
           </div>
-
           {/* Training Progression */}
           <div className="text-center">
             <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#4A90E2]/10 to-[#7FB3D3]/10 backdrop-blur-sm border border-[#4A90E2]/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
@@ -2714,7 +2712,6 @@ function App() {
                     <p className="text-white text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-2">Embedded System</p>
                   </div>
                 </div>
-                
                 {/* Project 14 */}
                 <div className="relative group flex-shrink-0 w-64 sm:w-72">
                   <img 
@@ -3079,7 +3076,6 @@ function App() {
               </div>
             </div>
           </div>
-
           {/* ITC India Testing Laboratory Section */}
           <div className="mt-16 sm:mt-20 relative overflow-hidden rounded-3xl"
                style={{
@@ -3089,33 +3085,32 @@ function App() {
                  backgroundRepeat: 'no-repeat',
                  minHeight: '600px'
                }}>
-            <div className="absolute inset-0 bg-black/40"></div>
             
             <div className="relative z-10 p-4 sm:p-8 lg:p-12">
               <div className="text-center">
                 <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white leading-tight">
                   About ITC (India) Pvt. Ltd.
                 </h4>
-                <span className="text-lg sm:text-xl text-white font-semibold drop-shadow-lg">Premier Testing & Calibration Laboratory</span>
+                <span className="text-lg sm:text-xl text-blue-100 font-semibold">Premier Testing & Calibration Laboratory</span>
               </div>
             </div>
             
             {/* Header Section */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#4A90E2] shadow-lg mb-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-[#7FB3D3] shadow-lg mb-8">
               <div className="text-center mb-8">
                 <div className="flex items-center justify-center mb-6">
                   <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
-                  <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300 cursor-default border border-gray-200">
+                  <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform duration-300 cursor-default border border-white/30">
                     NABL Accredited • BIS Approved
                   </span>
                 </div>
                 
-                <h4 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 hover:text-[#4A90E2] transition-colors duration-300">
+                <h4 className="text-3xl sm:text-4xl font-bold text-white mb-6 hover:text-[#E8F4FD] transition-colors duration-300">
                   Your Trusted Partner for 
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD]"> Quality Assurance</span>
                 </h4>
                 
-                <p className="text-lg text-gray-700 mb-8 leading-relaxed hover:text-gray-800 transition-colors duration-300 max-w-4xl mx-auto">
+                <p className="text-lg text-white/90 mb-8 leading-relaxed hover:text-white transition-colors duration-300 max-w-4xl mx-auto">
                   Based in Mohali, Punjab, we're a premier testing and calibration laboratory 
                   delivering end-to-end solutions for electrical, electronic, photometric, and 
                   solar equipment. Internationally recognized and locally trusted.
@@ -3148,7 +3143,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-900 text-center mb-8 text-lg font-semibold">
+              <p className="text-white text-center mb-8 text-lg font-semibold">
                 Comprehensive testing and calibration services across multiple domains
               </p>
               
@@ -3493,7 +3488,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -3547,8 +3541,8 @@ function App() {
                         <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 leading-relaxed text-sm sm:text-base">
                           {faq.answer}
                         </p>
-                  </div>
-                </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -4466,7 +4460,6 @@ function App() {
           </div>
         </div>
       )}
-      
     </div>
     </>
   );
