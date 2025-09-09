@@ -1274,22 +1274,10 @@ function App() {
         </div>
       </section>
       {/* Program Selection */}
-      <section id="programs" className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen bg-gradient-to-br from-[#4A90E2] via-[#7FB3D3] to-[#E8F4FD]">
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-          <img 
-            src="/Untitled design (20).png" 
-            alt="Program Background" 
-            className="w-full h-full object-cover opacity-50"
-            onLoad={() => console.log('Program section background image loaded successfully')}
-            onError={(e) => console.error('Program section background image failed to load:', e)}
-          />
-          {/* Overlay to ensure content readability */}
-          <div className="absolute inset-0 bg-white/40"></div>
-        </div>
+      <section id="programs" className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 min-h-screen">
         
         <div className="max-w-7xl mx-auto relative z-10">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-gray-900">
               Choose your Program
               </h4>
               
