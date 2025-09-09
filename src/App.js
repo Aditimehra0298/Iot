@@ -2237,8 +2237,8 @@ function App() {
             
             {/* Many More Capsule */}
             <div className="flex justify-center mt-8 sm:mt-12">
-              <div className="bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform cursor-pointer">
-                + Many More
+              <div className="bg-gradient-to-r from-gray-600 to-gray-800 text-white px-8 py-4 rounded-full font-bold text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform cursor-pointer">
+                Several Projects
               </div>
             </div>
           </div>
@@ -2870,7 +2870,7 @@ function App() {
       {/* Prerequisites Section */}
       <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
         <div className="max-w-6xl mx-auto">
-        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white-900">
+        <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white">
             Prerequisites & Requirements
           </h4>
 
