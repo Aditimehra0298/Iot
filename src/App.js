@@ -3428,56 +3428,56 @@ function App() {
       </section>
 
       {/* ITC India Section (moved above CTA) */}
-      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
+      <section className="relative z-10 py-4 sm:py-8 md:py-12 lg:py-16 px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="mt-16 sm:mt-20 relative overflow-hidden rounded-3xl"
+          <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden rounded-2xl sm:rounded-3xl"
                style={{
                  background: 'url("/black-head-background.png"), linear-gradient(135deg, #3b82f6, #1d4ed8)',
                  backgroundSize: 'cover',
                  backgroundPosition: 'center',
                  backgroundRepeat: 'no-repeat',
-                 minHeight: '600px'
+                 minHeight: '400px'
                }}>
             
-            <div className="relative z-10 p-4 sm:p-8 lg:p-12">
+            <div className="relative z-10 p-3 sm:p-6 md:p-8 lg:p-12">
               <div className="text-center">
-                <h4 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 text-white leading-tight">
+                <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-4 sm:mb-6 md:mb-8 text-white leading-tight">
                   About ITC (India) Pvt. Ltd.
                 </h4>
-                <span className="text-lg sm:text-xl text-blue-100 font-semibold">Premier Testing & Calibration Laboratory</span>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 font-semibold">Premier Testing & Calibration Laboratory</span>
               </div>
             </div>
             
             {/* Header Section */}
-            <div className="bg-black/30 text-white backdrop-blur-md rounded-2xl p-8 sm:p-12 border border-white/30 shadow-2xl mb-8">
-              <div className="text-center mb-8">
-                <div className="flex items-center justify-center mb-6">
-                  <Shield className="w-8 h-8 text-[#4A90E2] mr-3 animate-pulse" />
-                  <span className="px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="bg-black/30 text-white backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-12 border border-white/30 shadow-2xl mb-4 sm:mb-6 md:mb-8">
+              <div className="text-center mb-6 sm:mb-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 gap-3 sm:gap-0">
+                  <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-[#4A90E2] animate-pulse" />
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md hover:shadow-lg transition-all duration-300">
                     NABL Accredited • BIS Approved
                   </span>
                 </div>
                 
-                <h4 className="text-3xl sm:text-4xl font-bold text-white mb-6 drop-shadow-xl">
+                <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 drop-shadow-xl">
                   Your Trusted Partner for 
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD]"> Quality Assurance</span>
                 </h4>
                 
-                <p className="text-lg text-white/95 mb-8 leading-relaxed drop-shadow max-w-4xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg text-white/95 mb-6 sm:mb-8 leading-relaxed drop-shadow max-w-4xl mx-auto px-2">
                   Based in Mohali, Punjab, we're a premier testing and calibration laboratory 
                   delivering end-to-end solutions for electrical, electronic, photometric, and 
                   solar equipment. Internationally recognized and locally trusted.
                 </p>
 
-                <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-                  <div className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                    <Award className="w-6 h-6 mx-auto mb-2 group-hover:animate-bounce" />
-                    <div className="text-sm font-semibold">ISO/IEC 17025</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-sm sm:max-w-md mx-auto">
+                  <div className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white p-3 sm:p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                    <Award className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2 group-hover:animate-bounce" />
+                    <div className="text-xs sm:text-sm font-semibold">ISO/IEC 17025</div>
                     <div className="text-xs opacity-90">Certified</div>
                   </div>
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
-                    <Globe className="w-6 h-6 mx-auto mb-2 group-hover:animate-spin" />
-                    <div className="text-sm font-semibold">European</div>
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-3 sm:p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                    <Globe className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2 group-hover:animate-spin" />
+                    <div className="text-xs sm:text-sm font-semibold">European</div>
                     <div className="text-xs opacity-90">Recognized</div>
                   </div>
                 </div>
@@ -3485,56 +3485,56 @@ function App() {
             </div>
 
             {/* Services Grid */}
-            <div className="mb-8">
-              <div className="flex justify-center mb-6">
-                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                      <Settings className="w-4 h-4 text-white" />
+            <div className="mb-6 sm:mb-8">
+              <div className="flex justify-center mb-4 sm:mb-6">
+                <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
+                  <div className="flex items-center space-x-2 sm:space-x-3">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white/20 rounded-full flex items-center justify-center">
+                      <Settings className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                     </div>
-                    <span className="font-bold text-lg">What We Do</span>
+                    <span className="font-bold text-sm sm:text-base md:text-lg">What We Do</span>
                   </div>
                 </div>
               </div>
-              <p className="text-white text-center mb-8 text-lg font-semibold">
+              <p className="text-white text-center mb-6 sm:mb-8 text-sm sm:text-base md:text-lg font-semibold px-2">
                 Comprehensive testing and calibration services across multiple domains
               </p>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div className="group bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
                   <div className="relative">
-                    <Zap className="w-10 h-10 text-yellow-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <Zap className="w-8 h-8 sm:w-10 sm:h-10 text-yellow-600 mb-3 sm:mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-yellow-400 rounded-full animate-ping group-hover:animate-bounce"></div>
                   </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Electrical Safety</h5>
-                  <p className="text-gray-600 text-sm">IEC 60335, IEC 60601, IS 13252 compliance testing</p>
+                  <h5 className="text-base sm:text-lg font-bold text-gray-800 mb-2">Electrical Safety</h5>
+                  <p className="text-gray-600 text-xs sm:text-sm">IEC 60335, IEC 60601, IS 13252 compliance testing</p>
                 </div>
 
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+                <div className="group bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
                   <div className="relative">
-                    <Eye className="w-10 h-10 text-indigo-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-indigo-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <Eye className="w-8 h-8 sm:w-10 sm:h-10 text-indigo-600 mb-3 sm:mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-indigo-400 rounded-full animate-ping group-hover:animate-bounce"></div>
                   </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Photometric</h5>
-                  <p className="text-gray-600 text-sm">LM-79 LED testing with goniophotometer analysis</p>
+                  <h5 className="text-base sm:text-lg font-bold text-gray-800 mb-2">Photometric</h5>
+                  <p className="text-gray-600 text-xs sm:text-sm">LM-79 LED testing with goniophotometer analysis</p>
                 </div>
 
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+                <div className="group bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
                   <div className="relative">
-                    <Sun className="w-10 h-10 text-orange-600 mb-4 group-hover:scale-125 group-hover:animate-spin transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <Sun className="w-8 h-8 sm:w-10 sm:h-10 text-orange-600 mb-3 sm:mb-4 group-hover:scale-125 group-hover:animate-spin transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-orange-400 rounded-full animate-ping group-hover:animate-bounce"></div>
                   </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Solar Testing</h5>
-                  <p className="text-gray-600 text-sm">PV modules, inverters, and UV disinfection systems</p>
+                  <h5 className="text-base sm:text-lg font-bold text-gray-800 mb-2">Solar Testing</h5>
+                  <p className="text-gray-600 text-xs sm:text-sm">PV modules, inverters, and UV disinfection systems</p>
                 </div>
 
-                <div className="group bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
+                <div className="group bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:rotate-1 cursor-pointer border border-[#7FB3D3]">
                   <div className="relative">
-                    <Battery className="w-10 h-10 text-green-600 mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
+                    <Battery className="w-8 h-8 sm:w-10 sm:h-10 text-green-600 mb-3 sm:mb-4 group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
+                    <div className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full animate-ping group-hover:animate-bounce"></div>
                   </div>
-                  <h5 className="text-lg font-bold text-gray-800 mb-2">Battery Testing</h5>
-                  <p className="text-gray-600 text-sm">UN 38.3, IS 16046, IEC 62133 compliance</p>
+                  <h5 className="text-base sm:text-lg font-bold text-gray-800 mb-2">Battery Testing</h5>
+                  <p className="text-gray-600 text-xs sm:text-sm">UN 38.3, IS 16046, IEC 62133 compliance</p>
                 </div>
               </div>
             </div>
