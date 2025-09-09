@@ -1392,6 +1392,7 @@ function App() {
                             e.stopPropagation();
                             setSelectedProgram('2-month');
                             setSelectedTier('silver');
+                            setActiveWeek('all'); // Expand all weeks
                             document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
                           className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-gray-300 to-gray-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-gray-400 hover:to-gray-600"
@@ -1535,6 +1536,7 @@ function App() {
                             e.stopPropagation();
                             setSelectedProgram('4-month');
                             setSelectedTier('gold');
+                            setActiveWeek('all'); // Expand all weeks
                             document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
                           className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-yellow-300 to-yellow-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-yellow-400 hover:to-yellow-600"
@@ -1680,6 +1682,7 @@ function App() {
                             e.stopPropagation();
                             setSelectedProgram('6-month');
                             setSelectedTier('diamond');
+                            setActiveWeek('all'); // Expand all weeks
                             document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
                           className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-purple-300 to-purple-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-purple-400 hover:to-purple-600"
@@ -1880,7 +1883,7 @@ function App() {
                         selectedTier === 'diamond' ? 'border-purple-500 hover:border-purple-600 hover:shadow-purple-500/20' :
                         'border-gray-500 hover:border-gray-600 hover:shadow-gray-500/20'
                       } ${
-                        activeWeek === index ? 
+                        activeWeek === index || activeWeek === 'all' ? 
                           (selectedTier === 'silver' ? 'border-gray-600 shadow-lg shadow-gray-500/20' :
                            selectedTier === 'gold' ? 'border-yellow-600 shadow-lg shadow-yellow-500/20' :
                            selectedTier === 'diamond' ? 'border-purple-600 shadow-lg shadow-purple-500/20' :
@@ -1909,7 +1912,7 @@ function App() {
                           
                       {/* Topics Section - Hidden by default, shown on click */}
                       <div className={`transition-all duration-300 overflow-hidden ${
-                        activeWeek === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        activeWeek === index || activeWeek === 'all' ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                       }`}>
                         <div className="mb-4">
                           <h5 className={`font-bold mb-3 text-xs sm:text-sm border-b pb-2 transition-all duration-300 ${
