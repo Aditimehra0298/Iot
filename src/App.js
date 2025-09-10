@@ -948,7 +948,7 @@ function App() {
         }
         
         .animate-scroll-left {
-          animation: irritatingLoop 15s linear infinite;
+          animation: irritatingLoop 20s linear infinite;
         }
         
         @keyframes irritatingLoop {
@@ -3349,6 +3349,36 @@ function App() {
                   </div>
                 </div>
               ))}
+              {/* Third set for continuous flow */}
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={`third-${index}`}
+                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-1 mb-3">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <Star 
+                            key={starIndex} 
+                            className="h-4 w-4 text-yellow-400 fill-current" 
+                          />
+                        ))}
+                      </div>
+                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
+                        {testimonial.text}
+                      </p>
+                      <div className="border-t border-gray-100 pt-4">
+                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
+                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -3501,7 +3531,7 @@ function App() {
         </div>
       </section>
 
-      {/* ITC India Section (moved above CTA) */}
+      {/* ITC India Section */}
       <section className="relative z-10 py-4 sm:py-8 md:py-12 lg:py-16 px-0">
         <div className="w-full">
           <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden"
@@ -3513,21 +3543,13 @@ function App() {
                  minHeight: '400px'
                }}>
             
-            <div className="relative z-10 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-              <div className="text-center max-w-6xl mx-auto">
-                <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-4 sm:mb-6 md:mb-8 text-white leading-tight">
-                  About ITC (India) Pvt. Ltd.
-                </h4>
-                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 font-semibold">Premier Testing & Calibration Laboratory</span>
-              </div>
-            </div>
-            
             {/* Header Section */}
             <div className="bg-black/30 text-white backdrop-blur-md p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 border-t border-b border-white/30 shadow-2xl mb-4 sm:mb-6 md:mb-8">
               <div className="text-center mb-6 sm:mb-8 max-w-6xl mx-auto">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 drop-shadow-xl">
                   About ITC (India) Pvt. Ltd.
                 </h3>
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 font-semibold">Premier Testing & Calibration Laboratory</span>
                 
                 <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 gap-3 sm:gap-0">
                   <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-[#4A90E2] animate-pulse" />
