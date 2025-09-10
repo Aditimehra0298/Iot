@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, ChevronLeft, Plus, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, ChevronLeft, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -2121,76 +2121,76 @@ function App() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-16">
                 {/* Show 2 projects at a time */}
                 {masterclassModules.slice(currentProjectIndex * 2, (currentProjectIndex + 1) * 2).map((module, index) => {
-                  const IconComponent = module.icon;
-                  return (
-                    <div
-                      key={module.id}
+                const IconComponent = module.icon;
+                return (
+                  <div
+                    key={module.id}
                       className="group relative bg-white/90 backdrop-blur-sm border border-[#7FB3D3] rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:rotate-1 transition-all duration-500 cursor-pointer"
-                      onMouseEnter={() => setHoveredProject(module.id)}
-                      onMouseLeave={() => setHoveredProject(null)}
-                    >
-                      {/* Header */}
-                      <div className="flex items-start justify-between mb-4 sm:mb-6">
-                        <div className="flex items-center gap-3 sm:gap-4">
+                    onMouseEnter={() => setHoveredProject(module.id)}
+                    onMouseLeave={() => setHoveredProject(null)}
+                  >
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-4 sm:mb-6">
+                      <div className="flex items-center gap-3 sm:gap-4">
                           <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD]">
-                            <IconComponent 
-                              className={`w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white ${hoveredProject === module.id ? 'scale-110' : ''} transition-transform duration-300`} 
-                            />
+                          <IconComponent 
+                            className={`w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white ${hoveredProject === module.id ? 'scale-110' : ''} transition-transform duration-300`} 
+                          />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className={`px-2 py-1 text-xs rounded-full ${
+                              module.level === 'Beginner' ? 'bg-green-100 text-green-700' :
+                              module.level === 'Intermediate' ? 'bg-yellow-100 text-yellow-700' :
+                              'bg-red-100 text-red-700'
+                            }`}>
+                              {module.level}
+                            </span>
+                            <span className="text-gray-500 text-xs sm:text-sm">{module.duration}</span>
                           </div>
-                          <div>
-                            <div className="flex items-center gap-2 mb-1">
-                              <span className={`px-2 py-1 text-xs rounded-full ${
-                                module.level === 'Beginner' ? 'bg-green-100 text-green-700' :
-                                module.level === 'Intermediate' ? 'bg-yellow-100 text-yellow-700' :
-                                'bg-red-100 text-red-700'
-                              }`}>
-                                {module.level}
-                              </span>
-                              <span className="text-gray-500 text-xs sm:text-sm">{module.duration}</span>
-                            </div>
-                            <h4 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 group-hover:text-[#4A90E2] transition-colors duration-300">
-                              {module.title}
-                            </h4>
-                          </div>
+                          <h4 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 group-hover:text-[#4A90E2] transition-colors duration-300">
+                            {module.title}
+                          </h4>
                         </div>
                       </div>
+                    </div>
 
-                      {/* Subtitle */}
-                      <h5 className="text-sm sm:text-base md:text-lg font-medium text-[#4A90E2] mb-3 sm:mb-4">
-                        {module.subtitle}
-                      </h5>
+                    {/* Subtitle */}
+                    <h5 className="text-sm sm:text-base md:text-lg font-medium text-[#4A90E2] mb-3 sm:mb-4">
+                      {module.subtitle}
+                    </h5>
 
-                      {/* Description */}
-                      <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                        {module.description}
-                      </p>
+                    {/* Description */}
+                    <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                      {module.description}
+                    </p>
 
-                      {/* Stats */}
-                      <div className="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-500">
+                    {/* Stats */}
+                    <div className="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-500">
                         <div className="flex items-center gap-2 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                           <Award className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300" />
                           <span className="font-bold text-sm sm:text-base">{module.projects} Projects</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
-                          <span>4.9/5 Rating</span>
-                        </div>
                       </div>
-
-                      {/* Technologies */}
-                      <div className="flex flex-wrap gap-1 sm:gap-2">
-                        {module.technologies.map((tech, techIndex) => (
-                          <span
-                            key={tech}
-                            className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-[#4A90E2] hover:text-white transition-colors duration-300"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                      <div className="flex items-center gap-1">
+                        <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
+                        <span>4.9/5 Rating</span>
                       </div>
                     </div>
-                  );
-                })}
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-1 sm:gap-2">
+                      {module.technologies.map((tech, techIndex) => (
+                        <span
+                          key={tech}
+                          className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-[#4A90E2] hover:text-white transition-colors duration-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
 
               </div>
 
@@ -3291,34 +3291,34 @@ function App() {
                 testimonials.map((testimonial, index) => (
                   <div
                     key={`${setIndex}-${index}`}
-                    className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
+                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-1 mb-3">
+                        {[...Array(5)].map((_, starIndex) => (
+                          <Star 
+                            key={starIndex} 
+                            className="h-4 w-4 text-yellow-400 fill-current" 
+                          />
+                        ))}
                       </div>
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-1 mb-3">
-                          {[...Array(5)].map((_, starIndex) => (
-                            <Star 
-                              key={starIndex} 
-                              className="h-4 w-4 text-yellow-400 fill-current" 
-                            />
-                          ))}
-                        </div>
-                        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
-                          {testimonial.text}
-                        </p>
-                        <div className="border-t border-gray-100 pt-4">
-                          <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
-                          <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
-                        </div>
+                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
+                        {testimonial.text}
+                      </p>
+                      <div className="border-t border-gray-100 pt-4">
+                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
+                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
                       </div>
                     </div>
                   </div>
+              </div>
                 ))
               )}
-            </div>
+                    </div>
           </div>
         </div>
       </section>
