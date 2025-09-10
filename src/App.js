@@ -2030,7 +2030,7 @@ function App() {
 
 
       {/* About the Master Class Video Section */}
-      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
@@ -2041,7 +2041,7 @@ function App() {
             </p>
           </div>
           
-          <div className="relative bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden">
+          <div className="relative bg-gradient-to-r from-blue-800 to-blue-700 rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden border-2 border-blue-600">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
               <video
                 className="w-full h-full object-cover"
@@ -2063,7 +2063,7 @@ function App() {
               </div>
               
               {/* Video info badge */}
-              <div className="absolute top-4 left-4 bg-[#4A90E2]/90 backdrop-blur-sm rounded-lg p-2 border border-[#4A90E2]/50">
+              <div className="absolute top-4 left-4 bg-blue-600/90 backdrop-blur-sm rounded-lg p-2 border border-blue-500/50">
                 <div className="text-sm text-white font-semibold">
                   Master Class Preview
                 </div>
