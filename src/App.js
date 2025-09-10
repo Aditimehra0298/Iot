@@ -1173,7 +1173,7 @@ function App() {
                         playsInline
                         poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3C/text%3E%3C/svg%3E"
                       >
-                        <source src="https://cdn.pixabay.com/video/2019/10/10/27725-365890983_large.mp4" type="video/mp4" />
+                        <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                       
@@ -1208,7 +1208,7 @@ function App() {
                           playsInline
                           poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%231f2937'%3E%3C/text%3E%3C/svg%3E"
                         >
-                          <source src="https://cdn.pixabay.com/video/2022/11/26/140521-775376205_large.mp4" type="video/mp4" />
+                          <source src="https://media.istockphoto.com/id/2163416805/video/3d-animation-of-evtols-flying-over-skyscrapers-in-a-modern-city.mp4?s=mp4-640x640-is&k=20&c=oTefkHtdU2LS73Cu-wDw5ezKOFLCGGMLcZ4BMPNisj8=" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                         
@@ -2051,7 +2051,7 @@ function App() {
                 playsInline
                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%231f2937'%3E%3Ctext x='400' y='225' text-anchor='middle' fill='white' font-family='Arial' font-size='24'%3EMaster Class Video%3C/text%3E%3C/svg%3E"
               >
-                <source src="https://cdn.pixabay.com/video/2019/10/10/27725-365890983_large.mp4" type="video/mp4" />
+                <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
@@ -2086,7 +2086,7 @@ function App() {
       </section>
 
       {/* IoT & Robotics Masterclass Section */}
-      <section id="projects" className="relative z-10 mt-4 sm:mt-6 md:mt-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("/Screenshot%202025-09-02%20at%202.44.21%20PM.png")'}}>
+      <section id="projects" className="relative z-10 mt-4 sm:mt-6 md:mt-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
@@ -2921,13 +2921,13 @@ function App() {
                           <video
                             className="w-full h-full object-cover"
                             preload="auto"
-                            poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
+                            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EProgramming Video%3C/text%3E%3C/svg%3E"
                             autoPlay
                             muted
                             loop
                             playsInline
                           >
-                            <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
+                            <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                   </div>
@@ -2942,13 +2942,13 @@ function App() {
                           <video
                             className="w-full h-full object-cover"
                             preload="auto"
-                            poster="https://www.pexels.com/download/video/7868350/.mp4"
+                            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EElectronics Video%3C/text%3E%3C/svg%3E"
                             autoPlay
                             muted
                             loop
                             playsInline
                           >
-                            <source src="https://cdn.pixabay.com/video/2020/08/14/47215-450995786_large.mp4" type="video/mp4" />
+                            <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
@@ -3027,13 +3027,13 @@ function App() {
                             <video
                               className="w-full h-full object-cover"
                               preload="auto"
-                              poster="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4"
+                              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EProgramming Video%3C/text%3E%3C/svg%3E"
                               autoPlay
                               muted
                               loop
                               playsInline
                             >
-                              <source src="https://cdn.pixabay.com/video/2019/10/09/27706-365890968_tiny.mp4" type="video/mp4" />
+                              <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
                               Your browser does not support the video tag.
                             </video>
                           </div>
@@ -3048,13 +3048,13 @@ function App() {
                             <video
                               className="w-full h-full object-cover"
                               preload="auto"
-                              poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
+                              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EElectronics Video%3C/text%3E%3C/svg%3E"
                               autoPlay
                               muted
                               loop
                               playsInline
                             >
-                              <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
+                              <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
                               Your browser does not support the video tag.
                             </video>
                           </div>
