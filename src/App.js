@@ -2924,7 +2924,7 @@ function App() {
                             alt="Programming and coding workspace"
                             loading="lazy"
                           />
-                        </div>
+                  </div>
                         <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
                       </div>
                     )}
@@ -3636,6 +3636,56 @@ function App() {
                       <Eye className="w-8 h-8 mx-auto mb-3 text-purple-300 group-hover/card:animate-pulse" />
                       <h5 className="font-bold mb-2">Photometric</h5>
                       <p className="text-sm text-indigo-100">Pyranometers, UV sources, standard lamps</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Compliance Solution Grid */}
+            <div className="text-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+              <div className="max-w-6xl mx-auto">
+                <div className="flex justify-center mb-6 sm:mb-8">
+                  <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="font-bold text-xl sm:text-2xl">Compliance Solutions</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-8 lg:px-12">
+                  {/* Compliance Eye Card */}
+                  <div className="group bg-white/90 backdrop-blur-sm p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1 cursor-pointer border border-[#7FB3D3] col-span-1 md:col-span-2 lg:col-span-3 max-w-4xl mx-auto">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 group-hover:animate-pulse transition-all duration-300">
+                        <Eye className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-[#4A90E2] transition-colors duration-300">
+                        Compliance Eye
+                      </h3>
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                        Offers focused audit report support for many types of demanding compliance requirements coming from EU/USA and other ISO/IEC standard via an innovating internal audit tool that can be linked to evidence capturing tools and software that you may have.
+                      </p>
+                      <div className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
+                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
+                          EU Compliance
+                        </span>
+                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
+                          USA Standards
+                        </span>
+                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
+                          ISO/IEC Standards
+                        </span>
+                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
+                          Audit Tools
+                        </span>
+                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
+                          Evidence Capture
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
