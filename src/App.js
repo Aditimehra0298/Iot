@@ -2386,14 +2386,14 @@ function App() {
               Who Should Apply?
             </h3>
             <div className="grid md:grid-cols-3 gap-6 sm:gap-8 text-center max-w-5xl mx-auto">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
-                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Student Aspiring for 2 month to 6 month Industrial Internship</p>
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:rotate-2 hover:shadow-2xl cursor-pointer group">
+                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2] group-hover:text-[#1E40AF] transition-colors duration-300">Student Aspiring for 2 month to 6 month Industrial Internship</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
-                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Students and Professionals interested to specialize in Robotics and IoT</p>
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:rotate-2 hover:shadow-2xl cursor-pointer group">
+                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2] group-hover:text-[#1E40AF] transition-colors duration-300">Students and Professionals interested to specialize in Robotics and IoT</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-300">
-                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2]">Anyone passionate about building and innovating with technology</p>
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-[#7FB3D3] hover:border-[#4A90E2] transition-all duration-500 hover:scale-110 hover:-translate-y-4 hover:rotate-2 hover:shadow-2xl cursor-pointer group">
+                <p className="text-lg sm:text-xl font-semibold text-[#4A90E2] group-hover:text-[#1E40AF] transition-colors duration-300">Anyone passionate about building and innovating with technology</p>
               </div>
 
             </div>
