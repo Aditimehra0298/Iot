@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Plus, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, ChevronLeft, Plus, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -1031,7 +1031,6 @@ function App() {
               <a href="#projects" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Projects</a>
               <a href="#syllabus" onClick={() => setActiveWeek('all')} className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Syllabus</a>
               <a href="#prerequisites" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Prerequisites</a>
-              <a href="#ITC" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">About ITC</a>
               <a href="#Internships" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Internships</a>
               <button 
                 onClick={openCtaForm}
@@ -1061,7 +1060,6 @@ function App() {
             <a href="#projects" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Projects</a>
             <a href="#syllabus" onClick={() => setActiveWeek('all')} className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Syllabus</a>
             <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
-            <a href="#ITC" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">About ITC</a>
             <a href="#Internships" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Internships</a>
             <button 
               onClick={openCtaForm}
@@ -3504,7 +3502,7 @@ function App() {
       </section>
 
       {/* ITC India Section (moved above CTA) */}
-      <section id="ITC" className="relative z-10 py-4 sm:py-8 md:py-12 lg:py-16 px-0">
+      <section className="relative z-10 py-4 sm:py-8 md:py-12 lg:py-16 px-0">
         <div className="w-full">
           <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden"
                style={{
@@ -3527,6 +3525,10 @@ function App() {
             {/* Header Section */}
             <div className="bg-black/30 text-white backdrop-blur-md p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 border-t border-b border-white/30 shadow-2xl mb-4 sm:mb-6 md:mb-8">
               <div className="text-center mb-6 sm:mb-8 max-w-6xl mx-auto">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 drop-shadow-xl">
+                  About ITC (India) Pvt. Ltd.
+                </h3>
+                
                 <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 gap-3 sm:gap-0">
                   <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-[#4A90E2] animate-pulse" />
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md hover:shadow-lg transition-all duration-300">
