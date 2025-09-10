@@ -2914,85 +2914,61 @@ function App() {
                     </div>
                     <p className="text-gray-800 text-xs sm:text-sm font-medium">{req.description}</p>
                     
-                    {/* Add video for Basic Programming Knowledge */}
+                    {/* Add image for Basic Programming Knowledge */}
                     {req.title === 'Basic Programming Knowledge' && (
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
+                          <img
                             className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EProgramming Video%3C/text%3E%3C/svg%3E"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                          >
-                            <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                  </div>
+                            src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
+                            alt="Programming and coding workspace"
+                            loading="lazy"
+                          />
+                        </div>
                         <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
                       </div>
                     )}
                     
-                    {/* Add video for Basic Electronics Knowledge */}
+                    {/* Add image for Basic Electronics Knowledge */}
                     {req.title === 'Basic Electronics Knowledge' && (
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
+                          <img
                             className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EElectronics Video%3C/text%3E%3C/svg%3E"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                          >
-                            <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
+                            src="https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg"
+                            alt="Circuit board and electronics components"
+                            loading="lazy"
+                          />
                         </div>
                         <p className="text-xs text-gray-600 text-center mt-2">Advanced IoT - Electronics Fundamentals</p>
                       </div>
                     )}
                     
-                    {/* Add video for Basic Computer Literacy */}
+                    {/* Add image for Basic Computer Literacy */}
                     {req.title === 'Basic Computer Literacy' && (
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
+                          <img
                             className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                          >
-                            <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
+                            src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg"
+                            alt="Computer and technology workspace"
+                            loading="lazy"
+                          />
                         </div>
                         <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Computer Skills</p>
                       </div>
                     )}
                     
-                    {/* Add video for Internet & Mobile Apps */}
+                    {/* Add image for Internet & Mobile Apps */}
                     {req.title === 'Internet & Mobile Apps' && (
                       <div className="mt-4">
                         <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                          <video
+                          <img
                             className="w-full h-full object-cover"
-                            preload="auto"
-                            poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                          >
-                            <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
+                            src="https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg"
+                            alt="Network cables and internet connectivity"
+                            loading="lazy"
+                          />
                         </div>
                         <p className="text-xs text-gray-600 text-center mt-2">IoT Applications - Mobile & Web</p>
                       </div>
@@ -3020,85 +2996,61 @@ function App() {
                       </div>
                       <p className="text-gray-800 text-xs sm:text-sm font-medium">{req.description}</p>
                       
-                      {/* Add video for Basic Programming Knowledge */}
+                      {/* Add image for Basic Programming Knowledge */}
                       {req.title === 'Basic Programming Knowledge' && (
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                            <video
+                            <img
                               className="w-full h-full object-cover"
-                              preload="auto"
-                              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EProgramming Video%3C/text%3E%3C/svg%3E"
-                              autoPlay
-                              muted
-                              loop
-                              playsInline
-                            >
-                              <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
+                              src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
+                              alt="Programming and coding workspace"
+                              loading="lazy"
+                            />
                           </div>
                           <p className="text-xs text-gray-600 text-center mt-2">IoT Fundamentals - Basic Programming</p>
                         </div>
                       )}
                       
-                      {/* Add video for Basic Electronics Knowledge */}
+                      {/* Add image for Basic Electronics Knowledge */}
                       {req.title === 'Basic Electronics Knowledge' && (
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                            <video
+                            <img
                               className="w-full h-full object-cover"
-                              preload="auto"
-                              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231f2937'%3E%3Ctext x='200' y='150' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EElectronics Video%3C/text%3E%3C/svg%3E"
-                              autoPlay
-                              muted
-                              loop
-                              playsInline
-                            >
-                              <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
+                              src="https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg"
+                              alt="Circuit board and electronics components"
+                              loading="lazy"
+                            />
                           </div>
                           <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Electronics Basics</p>
                         </div>
                       )}
                       
-                      {/* Add video for Basic Computer Literacy */}
+                      {/* Add image for Basic Computer Literacy */}
                       {req.title === 'Basic Computer Literacy' && (
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                            <video
+                            <img
                               className="w-full h-full object-cover"
-                              preload="auto"
-                              poster="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4"
-                              autoPlay
-                              muted
-                              loop
-                              playsInline
-                            >
-                              <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_large.mp4" type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
+                              src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg"
+                              alt="Computer and technology workspace"
+                              loading="lazy"
+                            />
                           </div>
                           <p className="text-xs text-gray-600 text-center mt-2">IoT Projects - Computer Skills</p>
                         </div>
                       )}
                       
-                      {/* Add video for Internet & Mobile Apps */}
+                      {/* Add image for Internet & Mobile Apps */}
                       {req.title === 'Internet & Mobile Apps' && (
                         <div className="mt-4">
                           <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                            <video
+                            <img
                               className="w-full h-full object-cover"
-                              preload="auto"
-                              poster="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4"
-                              autoPlay
-                              muted
-                              loop
-                              playsInline
-                            >
-                              <source src="https://cdn.pixabay.com/video/2018/03/09/14900-259623335_large.mp4" type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
+                              src="https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg"
+                              alt="Network cables and internet connectivity"
+                              loading="lazy"
+                            />
                           </div>
                           <p className="text-xs text-gray-600 text-center mt-2">IoT Applications - Mobile & Web</p>
                         </div>
