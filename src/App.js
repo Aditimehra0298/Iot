@@ -2029,6 +2029,62 @@ function App() {
       </section>
 
 
+      {/* About the Master Class Video Section */}
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+              About the Master Class
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+              Discover what makes our IoT & Robotics Master Class the perfect choice for your career transformation
+            </p>
+          </div>
+          
+          <div className="relative bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%231f2937'%3E%3Ctext x='400' y='225' text-anchor='middle' fill='white' font-family='Arial' font-size='24'%3EMaster Class Video%3C/text%3E%3C/svg%3E"
+              >
+                <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Video overlay with play button */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 hover:scale-110 transition-transform duration-300">
+                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" />
+                </div>
+              </div>
+              
+              {/* Video info badge */}
+              <div className="absolute top-4 left-4 bg-[#4A90E2]/90 backdrop-blur-sm rounded-lg p-2 border border-[#4A90E2]/50">
+                <div className="text-sm text-white font-semibold">
+                  Master Class Preview
+                </div>
+              </div>
+            </div>
+            
+            {/* Video description */}
+            <div className="mt-6 sm:mt-8 text-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
+                Hands-on Learning Experience
+                </h3>
+              <p className="text-blue-100 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
+                Watch our students in action as they work with real IoT devices, build robotics projects, 
+                and master cutting-edge technologies. Our comprehensive curriculum combines theory with 
+                practical application, ensuring you gain the skills needed for today's tech industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* IoT & Robotics Masterclass Section */}
       <section id="projects" className="relative z-10 mt-4 sm:mt-6 md:mt-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("public/Screenshot 2025-09-02 at 2.44.21 PM.png")'}}>
         <div className="absolute inset-0 bg-black/40"></div>
@@ -2398,62 +2454,6 @@ function App() {
 
             </div>
           </div>
-
-          {/* About the Master Class Video Section */}
-          <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8 sm:mb-12">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-                  About the Master Class
-                </h2>
-                <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-                  Discover what makes our IoT & Robotics Master Class the perfect choice for your career transformation
-                </p>
-              </div>
-              
-              <div className="relative bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden">
-                <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
-                  <video
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%231f2937'%3E%3Ctext x='400' y='225' text-anchor='middle' fill='white' font-family='Arial' font-size='24'%3EMaster Class Video%3C/text%3E%3C/svg%3E"
-                  >
-                    <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  
-                  {/* Video overlay with play button */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 hover:scale-110 transition-transform duration-300">
-                      <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" />
-                    </div>
-                  </div>
-                  
-                  {/* Video info badge */}
-                  <div className="absolute top-4 left-4 bg-[#4A90E2]/90 backdrop-blur-sm rounded-lg p-2 border border-[#4A90E2]/50">
-                    <div className="text-sm text-white font-semibold">
-                      Master Class Preview
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Video description */}
-                <div className="mt-6 sm:mt-8 text-center">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
-                    Hands-on Learning Experience
-                  </h3>
-                  <p className="text-blue-100 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
-                    Watch our students in action as they work with real IoT devices, build robotics projects, 
-                    and master cutting-edge technologies. Our comprehensive curriculum combines theory with 
-                    practical application, ensuring you gain the skills needed for today's tech industry.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* Featured Projects Gallery */}
           <div className="mb-8 sm:mb-12">
