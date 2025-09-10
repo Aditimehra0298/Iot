@@ -948,11 +948,11 @@ function App() {
         }
         
         .animate-scroll-left {
-          animation: irritatingLoop 20s linear infinite;
+          animation: irritatingLoop 30s linear infinite;
         }
         
         @keyframes irritatingLoop {
-          0% { transform: translateX(100%); }
+          0% { transform: translateX(0%); }
           100% { transform: translateX(-100%); }
         }
         .animate-scroll-left:hover {
@@ -3288,97 +3288,39 @@ function App() {
           </div>
           
           <div className="relative overflow-hidden">
-            <div className="flex animate-scroll-left space-x-6 py-4">
-              {/* First set of testimonials */}
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={`first-${index}`}
-                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-1 mb-3">
-                        {[...Array(5)].map((_, starIndex) => (
-                          <Star 
-                            key={starIndex} 
-                            className="h-4 w-4 text-yellow-400 fill-current" 
-                          />
-                        ))}
+            <div className="flex animate-scroll-left space-x-6 py-4" style={{ width: 'max-content' }}>
+              {/* Create infinite loop with multiple sets */}
+              {[...Array(4)].map((_, setIndex) => 
+                testimonials.map((testimonial, index) => (
+                  <div
+                    key={`${setIndex}-${index}`}
+                    className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
                       </div>
-                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
-                        {testimonial.text}
-                      </p>
-                      <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
-                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            ))}
-              {/* Duplicate set for seamless loop */}
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={`second-${index}`}
-                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-1 mb-3">
-                        {[...Array(5)].map((_, starIndex) => (
-                          <Star 
-                            key={starIndex} 
-                            className="h-4 w-4 text-yellow-400 fill-current" 
-                          />
-                        ))}
-                      </div>
-                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
-                        {testimonial.text}
-                      </p>
-                      <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
-                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-1 mb-3">
+                          {[...Array(5)].map((_, starIndex) => (
+                            <Star 
+                              key={starIndex} 
+                              className="h-4 w-4 text-yellow-400 fill-current" 
+                            />
+                          ))}
+                        </div>
+                        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
+                          {testimonial.text}
+                        </p>
+                        <div className="border-t border-gray-100 pt-4">
+                          <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
+                          <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-              {/* Third set for continuous flow */}
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={`third-${index}`}
-                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-1 mb-3">
-                        {[...Array(5)].map((_, starIndex) => (
-                          <Star 
-                            key={starIndex} 
-                            className="h-4 w-4 text-yellow-400 fill-current" 
-                          />
-                        ))}
-                      </div>
-                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
-                        {testimonial.text}
-                      </p>
-                      <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
-                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))
+              )}
             </div>
           </div>
         </div>
