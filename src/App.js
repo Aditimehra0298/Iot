@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, ChevronLeft, Plus, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, Plus, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -3501,7 +3501,43 @@ function App() {
         </div>
       </section>
 
-      {/* ITC India Section (moved above CTA) */}
+
+      {/* CTA Section */}
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-4 sm:mb-6 md:mb-8 text-blue-900">
+            Ready to Start Your IoT Journey?
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-900 mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto font-medium">
+            Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <button 
+              onClick={openCtaForm}
+              className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#4A90E2] text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
+            >
+              Enroll Now
+            </button>
+            <button 
+              onClick={() => {
+                // Download the existing PDF file
+                const link = document.createElement('a');
+                link.href = '/Who We Are.pdf';
+                link.download = 'Who We Are.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105"
+            >
+              Download Brochure
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ITC India Section */}
       <section className="relative z-10 py-4 sm:py-8 md:py-12 lg:py-16 px-0">
         <div className="w-full">
           <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20 relative overflow-hidden"
@@ -3713,41 +3749,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-4 sm:mb-6 md:mb-8 text-blue-900">
-            Ready to Start Your IoT Journey?
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-900 mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto font-medium">
-            Join thousands of students who have transformed their careers with our hands-on IoT and Electronics training programs.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <button 
-              onClick={openCtaForm}
-              className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#4A90E2] text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25"
-            >
-              Enroll Now
-            </button>
-            <button 
-              onClick={() => {
-                // Download the existing PDF file
-                const link = document.createElement('a');
-                link.href = '/Who We Are.pdf';
-                link.download = 'Who We Are.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-              className="border-2 border-[#4A90E2] text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white font-bold py-2 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition-all duration-300 hover:scale-105"
-            >
-              Download Brochure
-            </button>
           </div>
         </div>
       </section>
