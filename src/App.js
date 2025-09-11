@@ -949,14 +949,28 @@ function App() {
         }
         
         .animate-scroll-left {
-          animation: irritatingLoop 30s linear infinite;
+          animation: irritatingLoop 80s linear infinite;
+        }
+        
+        .animate-scroll-right {
+          animation: irritatingLoopRight 35s linear infinite;
         }
         
         @keyframes irritatingLoop {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-100%); }
         }
+        
+        @keyframes irritatingLoopRight {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(0%); }
+        }
+        
         .animate-scroll-left:hover {
+          animation-play-state: paused;
+        }
+        
+        .animate-scroll-right:hover {
           animation-play-state: paused;
         }
         
@@ -2014,37 +2028,27 @@ function App() {
 
 
       {/* About the Master Class Video Section */}
-      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-[#4A90E2] via-[#7FB3D3] to-[#E8F4FD]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
               About the Master Class
             </h2>
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto">
               Discover what makes our IoT & Robotics Master Class the perfect choice for your career transformation
             </p>
           </div>
           
           <div className="relative bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%231f2937'%3E%3Ctext x='400' y='225' text-anchor='middle' fill='white' font-family='Arial' font-size='24'%3EMaster Class Video%3C/text%3E%3C/svg%3E"
-              >
-                <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              {/* Video overlay with play button */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 hover:scale-110 transition-transform duration-300">
-                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" />
-                </div>
-              </div>
+              <iframe
+                src="https://player.vimeo.com/video/1115389578?badge=0&autopause=0&player_id=0&app_id=58479"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Master Class Video"
+              ></iframe>
               
               {/* Video info badge */}
               <div className="absolute top-4 left-4 bg-[#4A90E2]/90 backdrop-blur-sm rounded-lg p-2 border border-[#4A90E2]/50">
@@ -2059,7 +2063,7 @@ function App() {
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                 Hands-on Learning Experience
                 </h3>
-              <p className="text-blue-100 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
+              <p className="text-white/90 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
                 Watch our students in action as they work with real IoT devices, build robotics projects, 
                 and master cutting-edge technologies. Our comprehensive curriculum combines theory with 
                 practical application, ensuring you gain the skills needed for today's tech industry.
@@ -3279,38 +3283,38 @@ function App() {
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll-left space-x-6 py-4" style={{ width: 'max-content' }}>
               {/* Create infinite loop with multiple sets */}
-              {[...Array(4)].map((_, setIndex) => 
+              {[...Array(10)].map((_, setIndex) => 
                 testimonials.map((testimonial, index) => (
                   <div
                     key={`${setIndex}-${index}`}
-                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-1 mb-3">
-                        {[...Array(5)].map((_, starIndex) => (
-                          <Star 
-                            key={starIndex} 
-                            className="h-4 w-4 text-yellow-400 fill-current" 
-                          />
-                        ))}
+                    className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
                       </div>
-                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
-                        {testimonial.text}
-                      </p>
-                      <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
-                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-1 mb-3">
+                          {[...Array(5)].map((_, starIndex) => (
+                            <Star 
+                              key={starIndex} 
+                              className="h-4 w-4 text-yellow-400 fill-current" 
+                            />
+                          ))}
+                        </div>
+                        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
+                          {testimonial.text}
+                        </p>
+                        <div className="border-t border-gray-100 pt-4">
+                          <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
+                          <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-              </div>
                 ))
               )}
-                    </div>
+            </div>
           </div>
         </div>
       </section>
