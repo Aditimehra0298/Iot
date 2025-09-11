@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Bone as Drone, ChevronRight, ChevronLeft, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
+import { ChevronDown, ChevronUp, Cpu, Zap, Calendar, Clock, Users, BookOpen, Wrench, Monitor, Play, CheckCircle, Award, Globe, Code, Shield, Eye, Sun, Battery, Microscope, Star, Quote, Brain, Settings, Rocket, Flame, Wheat, Stethoscope, Plane as Drone, ChevronRight, ChevronLeft, Instagram, Linkedin, Facebook, Youtube, Home, Sprout, Heart, Bot, Car } from 'lucide-react';
 
 function App() {
-  const [selectedProgram, setSelectedProgram] = useState(null);
+  const [selectedProgram, setSelectedProgram] = useState('2-month');
   const [selectedTier, setSelectedTier] = useState('silver');
   const [showContactForm, setShowContactForm] = useState(false);
   const [formData, setFormData] = useState({
@@ -557,7 +557,7 @@ function App() {
           week: 2,
           module: 'Arduino Programming Basics',
           topics: ['Digital & Analog', 'I/O - IF/ELSE', 'FOR/WHILE', 'Functions', 'Serial Monitor'],
-          projects: ['Traffic Light Control', 'Analog Sensor Reading', 'LED Pattern Generator', 'Simple Calculator', 'LED Dice Game']
+          projects: ['Traffic Light Control', 'Analog Sensor Reading', 'LED Pattern Generator', 'Simple Calculator (via Serial Monitor)', 'LED Dice Game (Random + Loop)']
         },
         {
           week: 3,
@@ -569,43 +569,43 @@ function App() {
           week: 4,
           module: 'Sensor Integration with Microcontroller',
           topics: ['DHT11', 'LDR', 'PIR', 'Ultrasonic (HC-SR04)', 'Soil Moisture Sensor', 'IR Sensor'],
-          projects: ['Smart Temperature Alert', 'Ultrasonic Obstacle Detector', 'Smart Irrigation System', 'Home Automation + Alerts']
+          projects: ['Smart Temperature Alert', 'Ultrasonic Obstacle Detector', 'Smart Irrigation System', 'Home Automation + Alerts', 'Weather Monitoring Dashboard']
         },
         {
           week: 5,
           module: 'Actuators and Mini Projects',
           topics: ['Relays', 'DC Motors', 'Servo Motor', 'Stepper Motor'],
-          projects: ['Automatic Fan with Temp Sensor', 'Motion-Based Lighting', 'Plant Watering System', 'Visitor Alert System']
+          projects: ['Automatic Fan with Temp Sensor', 'Motion-Based Lighting (PIR)', 'Plant Watering System', 'Visitor Alert System (PIR-Based)', 'Water Tank Overflow Alarm']
         },
         {
           week: 6,
           module: 'ESP32 Basics + Wi-Fi',
           topics: ['Introduction to ESP32', 'Arduino IDE setup', 'Digital/Analog I/O with ESP32'],
-          projects: ['Web-Controlled LED', 'Temperature Logger on Thing-Speak', 'ESP32 Wi-Fi Weather Station']
+          projects: ['Web-Controlled LED (Web Server)', 'Temperature Logger on Thing-Speak', 'ESP32 Wi-Fi Weather Station', 'IoT Home Automation Panel', 'IoT Plant Monitor System']
         },
         {
           week: 7,
           module: 'Web & Cloud Platforms',
           topics: ['ESP32 Web Server', 'Blynk & ThingSpeak', 'HTTP Requests'],
-          projects: ['Sensor Web Dashboard', 'Mobile-Controlled Automation', 'Cloud Temp & Soil Logger']
+          projects: ['Sensor Web Dashboard', 'Mobile-Controlled Automation', 'Cloud Temp & Soil Logger', 'Weather Monitoring System']
         },
         {
           week: 8,
           module: 'Micro-Python on ESP32',
           topics: ['Micro-Python Intro', 'uPyCraft/Thonny IDE', 'Variables, Loops, Libraries'],
-          projects: ['Blink, Sensor Read (DHT11)', 'Basic Web Server on ESP32', 'Capacitive Touch–Controlled LED']
+          projects: ['Blink, Sensor Read (DHT11)', 'Basic Web Server on ESP32', 'Capacitive Touch–Controlled LED', 'Real-Time Sensor Web Dashboard']
         },
         {
           week: 9,
           module: 'Raspberry Pi + Python Basics',
           topics: ['Raspberry Pi Setup', 'GPIO Control', 'Python Programming', 'Linux Commands'],
-          projects: ['IoT Weather Station', 'Smart Home Automation Panel', 'Smart Plant Monitoring System']
+          projects: ['IoT Weather Station', 'Smart Home Automation Panel', 'Smart Plant Monitoring System', 'Motion-Activated Security Camera', 'Sensor Data Logger + Web Dashboard']
         },
         {
           week: 10,
-          module: 'Advanced IoT Systems',
-          topics: ['System Integration', 'Data Processing', 'Network Protocols'],
-          projects: ['Smart Home Hub', 'Industrial Sensor Network', 'Environmental Monitoring System']
+          module: 'Robotics - Smart Vehicle Systems',
+          topics: ['Chassis Setup', 'Motor Driver Logic', 'Navigation'],
+          projects: ['Autonomous Line Follower', 'Edge Detection Bot', 'Ultrasonic Parking Assistant']
         },
         {
           week: 11,
@@ -641,7 +641,7 @@ function App() {
           week: 16,
           module: 'Final Project + Evaluation',
           topics: ['Design', 'Integration', 'Present'],
-          projects: ['Capstone Project: Home Automation', 'Smart Farm', 'Health Monitor', 'AI-Enabled Surveillance']
+          projects: ['Capstone Project: Home Automation', 'Smart Farm', 'Health Monitor', 'AI-Enabled Surveillance Bot']
         }
       ]
     },
@@ -663,13 +663,13 @@ function App() {
           week: 2,
           module: 'Arduino Programming Basics',
           topics: ['Digital & Analog', 'I/O - IF/ELSE', 'FOR/WHILE', 'Functions', 'Serial Monitor'],
-          projects: ['Traffic Light Control', 'Analog Sensor Reading', 'LED Pattern Generator', 'Simple Calculator']
+          projects: ['Traffic Light Control', 'Analog Sensor Reading', 'LED Pattern Generator', 'Simple Calculator (Serial Monitor)', 'LED Dice Game (Random + Loop)']
         },
         {
           week: 3,
-          module: 'IoT Hardware Fundamentals',
-          topics: ['Circuit Design', 'Component Selection', 'Power Management', 'Assembly'],
-          projects: ['Custom Sensor Board', 'Power Supply Testing']
+          module: 'Robotics Hardware Basics',
+          topics: ['Chassis', 'Wheels', 'Motors', 'Power', 'Assembly'],
+          projects: ['2WD Chassis Build', 'Motor Testing']
         },
         {
           week: 4,
@@ -681,25 +681,25 @@ function App() {
           week: 5,
           module: 'Sensor Integration with Microcontroller',
           topics: ['DHT11', 'LDR', 'PIR', 'Ultrasonic', 'Soil Moisture Sensor', 'IR Sensor'],
-          projects: ['Smart Temperature Alert', 'Ultrasonic Obstacle Detector', 'Smart Irrigation System']
+          projects: ['Smart Temperature Alert', 'Ultrasonic Obstacle Detector', 'Smart Irrigation System', 'Home Automation + Alerts', 'Weather Monitoring Dashboard']
         },
         {
           week: 6,
           module: 'Actuators and Mini Projects',
           topics: ['Relays', 'DC Motors', 'Servo Motor', 'Stepper Motor'],
-          projects: ['Automatic Fan with Temp Sensor', 'Motion-Based Lighting', 'Plant Watering System']
+          projects: ['Automatic Fan with Temp Sensor', 'Motion-Based Lighting (PIR)', 'Plant Watering System', 'Visitor Alert System (PIR-Based)', 'Water Tank Overflow Alarm']
         },
         {
           week: 7,
           module: 'ESP32 Basics + Wi-Fi',
           topics: ['Introduction to ESP32', 'Arduino IDE setup', 'Digital/Analog I/O with ESP32'],
-          projects: ['Web-Controlled LED (Web Server)', 'Temperature Logger on Thing-Speak', 'ESP32 Wi-Fi Weather Station']
+          projects: ['Web-Controlled LED (Web Server)', 'Temperature Logger on Thing-Speak', 'ESP32 Wi-Fi Weather Station', 'IoT Home Automation Panel', 'IoT Plant Monitor System']
         },
         {
           week: 8,
           module: 'Web & Cloud Platforms',
           topics: ['ESP32 Web Server', 'Blynk & ThingSpeak', 'HTTP Requests'],
-          projects: ['Sensor Web Dashboard', 'Mobile-Controlled Automation', 'Cloud Temp & Soil Logger']
+          projects: ['Sensor Web Dashboard', 'Mobile-Controlled Automation', 'Cloud Temp & Soil Logger', 'Weather Monitoring System']
         },
         {
           week: 9,
@@ -717,7 +717,7 @@ function App() {
           week: 11,
           module: 'Micro-Python on ESP32',
           topics: ['Micro-Python Intro', 'uPyCraft/Thonny IDE', 'Variables, Loops, Libraries'],
-          projects: ['Blink, Sensor Read (DHT11)', 'Basic Web Server on ESP32', 'Capacitive Touch–Controlled LED']
+          projects: ['Blink, Sensor Read (DHT11)', 'Basic Web Server on ESP32', 'Capacitive Touch–Controlled LED', 'Real-Time Sensor Web Dashboard']
         },
         {
           week: 12,
@@ -729,7 +729,7 @@ function App() {
           week: 13,
           module: 'Raspberry Pi + Python Basics',
           topics: ['Raspberry Pi Setup', 'GPIO Control', 'Python Programming', 'Linux Commands'],
-          projects: ['IoT Weather Station', 'Smart Home Automation Panel', 'Smart Plant Monitoring System']
+          projects: ['IoT Weather Station', 'Smart Home Automation Panel', 'Smart Plant Monitoring System', 'Motion-Activated Security Camera', 'Sensor Data Logger + Web Dashboard']
         },
         {
           week: 14,
@@ -949,14 +949,28 @@ function App() {
         }
         
         .animate-scroll-left {
-          animation: irritatingLoop 30s linear infinite;
+          animation: irritatingLoop 80s linear infinite;
+        }
+        
+        .animate-scroll-right {
+          animation: irritatingLoopRight 35s linear infinite;
         }
         
         @keyframes irritatingLoop {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-100%); }
         }
+        
+        @keyframes irritatingLoopRight {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(0%); }
+        }
+        
         .animate-scroll-left:hover {
+          animation-play-state: paused;
+        }
+        
+        .animate-scroll-right:hover {
           animation-play-state: paused;
         }
         
@@ -1749,7 +1763,10 @@ function App() {
               <div className="bg-gradient-to-r from-gray-300 via-yellow-300 to-purple-300 rounded-full p-1 shadow-lg">
                 <div className="flex bg-white rounded-full p-1">
               <button
-                onClick={() => setSelectedTier('silver')}
+                onClick={() => {
+                  setSelectedTier('silver');
+                  setSelectedProgram('2-month');
+                }}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
                   selectedTier === 'silver' 
                     ? 'bg-gradient-to-r from-gray-500 to-gray-700 text-white shadow-lg scale-105' 
@@ -1760,7 +1777,10 @@ function App() {
               </button>
 
               <button
-                onClick={() => setSelectedTier('gold')}
+                onClick={() => {
+                  setSelectedTier('gold');
+                  setSelectedProgram('4-month');
+                }}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
                   selectedTier === 'gold' 
                     ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-lg scale-105' 
@@ -1771,7 +1791,10 @@ function App() {
               </button>
 
               <button
-                onClick={() => setSelectedTier('diamond')}
+                onClick={() => {
+                  setSelectedTier('diamond');
+                  setSelectedProgram('6-month');
+                }}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
                   selectedTier === 'diamond' 
                     ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg scale-105' 
@@ -1830,65 +1853,16 @@ function App() {
                 <div className="overflow-x-auto scrollbar-hide" id="syllabus-container">
                   <div className={`${selectedTier} flex gap-1 sm:gap-2 md:gap-3 pb-4 min-w-max`} style={{width: 'max-content'}}>
                   {(() => {
-                    // Define tier-based syllabus content
-                    const tierSyllabus = {
-                      silver: [
-                        { week: 1, module: "IoT Fundamentals", topics: ["Introduction to IoT", "Basic Electronics", "Arduino Basics", "Sensors & Actuators"], projects: ["LED Control", "Temperature Sensor", "Basic Automation"] },
-                        { week: 2, module: "Basic Programming", topics: ["C++ for Arduino", "Basic Python", "Serial Communication", "Data Types"], projects: ["Data Logger", "Simple Dashboard", "Alert System"] },
-                        { week: 3, module: "Simple Projects", topics: ["LED Control", "Temperature Sensor", "Basic Automation", "Project Planning"], projects: ["Smart Light", "Weather Station", "Motion Detector"] },
-                        { week: 4, module: "Foundation Review", topics: ["Concept Review", "Basic Troubleshooting", "Documentation", "Final Project"], projects: ["Portfolio Project", "Documentation", "Presentation"] },
-                        { week: 5, module: "Basic Electronics", topics: ["Circuit Design", "Components", "Soldering", "Testing"], projects: ["Basic Circuit", "Component Testing", "Soldering Practice"] },
-                        { week: 6, module: "Sensor Integration", topics: ["Temperature Sensors", "Motion Sensors", "Light Sensors", "Data Collection"], projects: ["Sensor Network", "Data Logger", "Monitoring System"] },
-                        { week: 7, module: "Basic Robotics", topics: ["Motor Control", "Servo Motors", "Basic Movement", "Simple Automation"], projects: ["Moving Robot", "Servo Control", "Automated System"] },
-                        { week: 8, module: "Final Project", topics: ["Project Planning", "Implementation", "Testing", "Documentation"], projects: ["Complete IoT Project", "Final Presentation", "Portfolio"] }
-                      ],
-                      gold: [
-                        { week: 1, module: "Advanced IoT Concepts", topics: ["IoT Architecture", "Protocols (MQTT, HTTP)", "Cloud Integration", "Data Management"], projects: ["Cloud Dashboard", "API Integration", "Data Analytics"] },
-                        { week: 2, module: "Robotics Fundamentals", topics: ["Robot Mechanics", "Motor Control", "Sensor Integration", "Navigation Systems"], projects: ["Line Follower", "Obstacle Avoidance", "Pick & Place"] },
-                        { week: 3, module: "Advanced Programming", topics: ["Python Advanced", "API Development", "Database Integration", "Real-time Processing"], projects: ["Real-time Monitor", "Database System", "API Server"] },
-                        { week: 4, module: "Industry Projects", topics: ["Smart Home System", "Industrial Automation", "Data Analytics", "Project Management"], projects: ["Smart Home Hub", "Industrial Monitor", "Analytics Dashboard"] },
-                        { week: 5, module: "Expert Mentorship", topics: ["Code Review", "Best Practices", "Industry Standards", "Career Guidance"], projects: ["Code Optimization", "Best Practices", "Portfolio Review"] },
-                        { week: 6, module: "Portfolio Development", topics: ["Project Documentation", "Git Version Control", "Professional Presentation", "Certification Prep"], projects: ["Git Portfolio", "Documentation", "Certification"] },
-                        { week: 7, module: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"], projects: ["AI Robot", "Vision System", "ML Model"] },
-                        { week: 8, module: "IoT Security", topics: ["Security Protocols", "Encryption", "Authentication", "Network Security"], projects: ["Secure Communication", "Encryption System", "Security Audit"] },
-                        { week: 9, module: "Advanced Electronics", topics: ["Circuit Design", "PCB Layout", "Signal Processing", "Power Management"], projects: ["Custom PCB", "Signal Processor", "Power System"] },
-                        { week: 10, module: "Wireless Communication", topics: ["WiFi, Bluetooth", "LoRa, Zigbee", "5G Integration", "Mesh Networks"], projects: ["Wireless Network", "Mesh System", "5G Project"] },
-                        { week: 11, module: "Data Science & Analytics", topics: ["Data Visualization", "Statistical Analysis", "Predictive Modeling", "Big Data"], projects: ["Analytics Dashboard", "Predictive Model", "Big Data System"] },
-                        { week: 12, module: "Cloud Computing", topics: ["AWS, Azure", "Microservices", "Containerization", "Serverless"], projects: ["Cloud Deployment", "Microservice App", "Serverless Function"] },
-                        { week: 13, module: "Mobile App Development", topics: ["React Native", "Flutter", "IoT Mobile Apps", "Cross-platform"], projects: ["IoT Mobile App", "Cross-platform App", "Mobile Dashboard"] },
-                        { week: 14, module: "Advanced AI & ML", topics: ["Deep Learning", "Neural Networks", "Computer Vision", "Natural Language Processing"], projects: ["AI Model", "Vision System", "NLP Project"] },
-                        { week: 15, module: "Industry Internship", topics: ["Real-world Projects", "Industry Mentorship", "Professional Development", "Networking"], projects: ["Industry Project", "Professional Network", "Career Development"] },
-                        { week: 16, module: "Final Capstone", topics: ["Comprehensive Project", "Portfolio Presentation", "Industry Certification", "Career Launch"], projects: ["Capstone Project", "Portfolio", "Certification"] }
-                      ],
-                      diamond: [
-                        { week: 1, module: "Master IoT Architecture", topics: ["Enterprise IoT", "Microservices", "Edge Computing", "Security Protocols"], projects: ["Enterprise System", "Microservice API", "Edge Computing"] },
-                        { week: 2, module: "Advanced Robotics", topics: ["AI Integration", "Computer Vision", "Machine Learning", "Autonomous Systems"], projects: ["AI Robot", "Vision System", "ML Model"] },
-                        { week: 3, module: "Leadership & Innovation", topics: ["Team Management", "Innovation Strategies", "Technology Trends", "Strategic Planning"], projects: ["Team Project", "Innovation Lab", "Strategy Plan"] },
-                        { week: 4, module: "Master Projects", topics: ["Complex System Design", "Multi-platform Integration", "Performance Optimization", "Scalability"], projects: ["Complex System", "Multi-platform", "Optimization"] },
-                        { week: 5, module: "Advanced Electronics", topics: ["Circuit Design", "PCB Layout", "Signal Processing", "Power Management"], projects: ["Custom PCB", "Signal Processor", "Power System"] },
-                        { week: 6, module: "Wireless Communication", topics: ["WiFi, Bluetooth", "LoRa, Zigbee", "5G Integration", "Mesh Networks"], projects: ["Wireless Network", "Mesh System", "5G Project"] },
-                        { week: 7, module: "Data Science & Analytics", topics: ["Data Visualization", "Statistical Analysis", "Predictive Modeling", "Big Data"], projects: ["Analytics Dashboard", "Predictive Model", "Big Data System"] },
-                        { week: 8, module: "Cloud Computing", topics: ["AWS, Azure", "Microservices", "Containerization", "Serverless"], projects: ["Cloud Deployment", "Microservice App", "Serverless Function"] },
-                        { week: 9, module: "Mobile App Development", topics: ["React Native", "Flutter", "IoT Mobile Apps", "Cross-platform"], projects: ["IoT Mobile App", "Cross-platform App", "Mobile Dashboard"] },
-                        { week: 10, module: "Advanced AI & ML", topics: ["Deep Learning", "Neural Networks", "Computer Vision", "Natural Language Processing"], projects: ["AI Model", "Vision System", "NLP Project"] },
-                        { week: 11, module: "Enterprise Solutions", topics: ["Cloud Architecture", "DevOps", "Scalability", "Performance Optimization"], projects: ["Cloud System", "DevOps Pipeline", "Scalable Architecture"] },
-                        { week: 12, module: "IoT Security Mastery", topics: ["Advanced Security", "Penetration Testing", "Compliance", "Risk Management"], projects: ["Security Audit", "Penetration Test", "Compliance Report"] },
-                        { week: 13, module: "Blockchain & IoT", topics: ["Blockchain Integration", "Smart Contracts", "Decentralized Systems", "Cryptocurrency"], projects: ["Blockchain IoT", "Smart Contract", "Decentralized App"] },
-                        { week: 14, module: "Quantum Computing", topics: ["Quantum Algorithms", "Quantum IoT", "Quantum Security", "Future Technologies"], projects: ["Quantum Algorithm", "Quantum Security", "Future Tech"] },
-                        { week: 15, module: "Industry 4.0 & 5.0", topics: ["Smart Manufacturing", "Digital Twins", "Cyber-Physical Systems", "Autonomous Systems"], projects: ["Smart Factory", "Digital Twin", "CPS System"] },
-                        { week: 16, module: "Research & Development", topics: ["R&D Methodologies", "Patent Development", "Innovation Labs", "Technology Transfer"], projects: ["R&D Project", "Patent Application", "Innovation Lab"] },
-                        { week: 17, module: "Advanced Internship", topics: ["Industry Leadership", "Mentoring Others", "Project Management", "Strategic Planning"], projects: ["Leadership Project", "Mentoring Program", "Strategic Plan"] },
-                        { week: 18, module: "Certification & Assessment", topics: ["Professional Certification", "Industry Assessment", "Portfolio Review", "Expert Evaluation"], projects: ["Certification Prep", "Assessment", "Expert Review"] },
-                        { week: 19, module: "Career Advancement", topics: ["Leadership Skills", "Industry Networking", "Consulting Preparation", "Entrepreneurship"], projects: ["Leadership Project", "Networking", "Business Plan"] },
-                        { week: 20, module: "Global Technology Trends", topics: ["Emerging Technologies", "Market Analysis", "Technology Forecasting", "Global Standards"], projects: ["Trend Analysis", "Market Report", "Technology Forecast"] },
-                        { week: 21, module: "Ethics & Sustainability", topics: ["AI Ethics", "Sustainable Technology", "Green IoT", "Social Impact"], projects: ["Ethics Framework", "Green Technology", "Social Impact"] },
-                        { week: 22, module: "Advanced Capstone", topics: ["Comprehensive Project", "Industry Integration", "Real-world Application", "Innovation Showcase"], projects: ["Capstone Project", "Industry Integration", "Innovation Showcase"] },
-                        { week: 23, module: "Master Portfolio", topics: ["Portfolio Development", "Professional Branding", "Industry Presentation", "Career Launch"], projects: ["Master Portfolio", "Professional Brand", "Industry Presentation"] },
-                        { week: 24, module: "Future Leadership", topics: ["Technology Leadership", "Innovation Management", "Strategic Vision", "Industry Transformation"], projects: ["Leadership Project", "Innovation Management", "Strategic Vision"] }
-                      ]
-                    };
+                    // Get syllabus from programs object based on selected program
+                    const programKey = selectedProgram || '2-month';
+                    const allWeeks = programs[programKey]?.weeks || [];
                     
-                    const currentSyllabus = tierSyllabus[selectedTier] || tierSyllabus.silver;
+                    // Limit weeks based on selected program and tier
+                    let weekLimit = 8; // Default for 2-month/silver
+                    if (programKey === '4-month' || selectedTier === 'gold') weekLimit = 16;
+                    if (programKey === '6-month' || selectedTier === 'diamond') weekLimit = 24;
+                    
+                    const currentSyllabus = allWeeks.slice(0, weekLimit);
                     
                     return currentSyllabus.map((week, index) => (
                       <div 
@@ -2014,37 +1988,27 @@ function App() {
 
 
       {/* About the Master Class Video Section */}
-      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+      <section className="relative z-10 py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-[#4A90E2] via-[#7FB3D3] to-[#E8F4FD]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
               About the Master Class
             </h2>
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto">
               Discover what makes our IoT & Robotics Master Class the perfect choice for your career transformation
             </p>
           </div>
           
           <div className="relative bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl overflow-hidden">
             <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%231f2937'%3E%3Ctext x='400' y='225' text-anchor='middle' fill='white' font-family='Arial' font-size='24'%3EMaster Class Video%3C/text%3E%3C/svg%3E"
-              >
-                <source src="https://media.istockphoto.com/id/2204914581/video/a-young-student-carefully-uses-a-multimeter-to-examine-the-circuit-board-of-a-robotic-arm-in.mp4?s=mp4-640x640-is&k=20&c=rumdwQjZ345SrWqGB0Ots5GuBS64gkkDicQjosk2kbU=" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              {/* Video overlay with play button */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 hover:scale-110 transition-transform duration-300">
-                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white ml-1" />
-                </div>
-              </div>
+              <iframe
+                src="https://player.vimeo.com/video/1115389578?badge=0&autopause=0&player_id=0&app_id=58479"
+                className="w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Master Class Video"
+              ></iframe>
               
               {/* Video info badge */}
               <div className="absolute top-4 left-4 bg-[#4A90E2]/90 backdrop-blur-sm rounded-lg p-2 border border-[#4A90E2]/50">
@@ -2059,7 +2023,7 @@ function App() {
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                 Hands-on Learning Experience
                 </h3>
-              <p className="text-blue-100 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
+              <p className="text-white/90 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto">
                 Watch our students in action as they work with real IoT devices, build robotics projects, 
                 and master cutting-edge technologies. Our comprehensive curriculum combines theory with 
                 practical application, ensuring you gain the skills needed for today's tech industry.
@@ -3279,38 +3243,38 @@ function App() {
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll-left space-x-6 py-4" style={{ width: 'max-content' }}>
               {/* Create infinite loop with multiple sets */}
-              {[...Array(4)].map((_, setIndex) => 
+              {[...Array(10)].map((_, setIndex) => 
                 testimonials.map((testimonial, index) => (
                   <div
                     key={`${setIndex}-${index}`}
-                  className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-1 mb-3">
-                        {[...Array(5)].map((_, starIndex) => (
-                          <Star 
-                            key={starIndex} 
-                            className="h-4 w-4 text-yellow-400 fill-current" 
-                          />
-                        ))}
+                    className="flex-shrink-0 w-80 sm:w-96 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-4 hover:rotate-1 transition-all duration-500 cursor-pointer group border border-[#7FB3D3] p-4 sm:p-6"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <Quote className="h-8 w-8 text-blue-500 transform rotate-180" />
                       </div>
-                                              <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
-                        {testimonial.text}
-                      </p>
-                      <div className="border-t border-gray-100 pt-4">
-                        <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
-                        <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-1 mb-3">
+                          {[...Array(5)].map((_, starIndex) => (
+                            <Star 
+                              key={starIndex} 
+                              className="h-4 w-4 text-yellow-400 fill-current" 
+                            />
+                          ))}
+                        </div>
+                        <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300 text-xs sm:text-sm leading-relaxed mb-4">
+                          {testimonial.text}
+                        </p>
+                        <div className="border-t border-gray-100 pt-4">
+                          <p className="font-semibold text-gray-800 group-hover:text-[#4A90E2] transition-colors duration-300 text-sm sm:text-base">{testimonial.author}</p>
+                          <p className="text-blue-600 text-xs sm:text-sm font-semibold">{testimonial.location}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-              </div>
                 ))
               )}
-                    </div>
+            </div>
           </div>
         </div>
       </section>
@@ -3626,55 +3590,6 @@ function App() {
               </div>
             </div>
 
-            {/* Compliance Solution Grid */}
-            <div className="text-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-              <div className="max-w-6xl mx-auto">
-                <div className="flex justify-center mb-6 sm:mb-8">
-                  <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white rounded-full shadow-lg">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                        <Shield className="w-5 h-5 text-white" />
-                      </div>
-                      <span className="font-bold text-xl sm:text-2xl">Compliance Solutions</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-8 lg:px-12">
-                  {/* Compliance Eye Card */}
-                  <div className="group bg-white/90 backdrop-blur-sm p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1 cursor-pointer border border-[#7FB3D3] col-span-1 md:col-span-2 lg:col-span-3 max-w-4xl mx-auto">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#4A90E2] to-[#E8F4FD] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 group-hover:animate-pulse transition-all duration-300">
-                        <Eye className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-4 sm:mb-6 group-hover:text-[#4A90E2] transition-colors duration-300">
-                        Compliance Eye
-                      </h3>
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-                        Offers focused audit report support for many types of demanding compliance requirements coming from EU/USA and other ISO/IEC standard via an innovating internal audit tool that can be linked to evidence capturing tools and software that you may have.
-                      </p>
-                      <div className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-2 sm:gap-3">
-                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
-                          EU Compliance
-                        </span>
-                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
-                          USA Standards
-                        </span>
-                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
-                          ISO/IEC Standards
-                        </span>
-                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
-                          Audit Tools
-                        </span>
-                        <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-semibold rounded-full">
-                          Evidence Capture
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Why Choose Us */}
             <div className="text-center p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
