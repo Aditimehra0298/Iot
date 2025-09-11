@@ -1983,22 +1983,6 @@ function App() {
                         </div>
                           </div>
 
-                      {/* Expandable Content Indicator */}
-                      <div className="mt-4 pt-4 border-t border-gray-200">
-                        <div className="text-center">
-                          <div className="flex items-center justify-center space-x-2">
-                            <span className="text-xs sm:text-sm text-gray-500 font-medium">
-                              {activeWeek === index ? 'Hide Details' : 'Click to View Details'}
-                            </span>
-                            <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${activeWeek === index ? 'rotate-180' : ''} ${
-                              selectedTier === 'silver' ? 'text-blue-500' :
-                              selectedTier === 'gold' ? 'text-amber-500' :
-                              selectedTier === 'diamond' ? 'text-orange-500' :
-                              'text-blue-500'
-                            }`} />
-                          </div>
-                          </div>
-                        </div>
                       </div>
                     ));
                   })()}
