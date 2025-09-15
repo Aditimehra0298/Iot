@@ -2836,7 +2836,7 @@ function App() {
         </div>
       </section>
       {/* Prerequisites Section */}
-      <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white/60">
+      <section id="prerequisites" className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8" style={{backgroundColor: '#6A9ACD'}}>
         <div className="max-w-6xl mx-auto">
         <h4 className="text-4xl sm:text-5xl md:text-6xl heading-primary text-center mb-6 sm:mb-8 text-white">
             Prerequisites & Requirements
