@@ -1049,7 +1049,7 @@ function App() {
               <a href="#prerequisites" className="text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-sm lg:text-base xl:text-lg hover:scale-105 transform duration-200">Prerequisites</a>
               <button 
                 onClick={openCtaForm}
-                className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#4A90E2] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 xl:px-8 rounded-full text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-[#4A90E2] hover:bg-[#3A7BC8] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 xl:px-8 rounded-full text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Enroll Now
               </button>
@@ -1078,7 +1078,7 @@ function App() {
             <a href="#prerequisites" className="block text-gray-900 hover:text-[#4A90E2] transition-colors font-semibold text-base sm:text-lg py-2 hover:bg-gray-50 rounded-lg px-3">Prerequisites</a>
             <button 
               onClick={openCtaForm}
-              className="w-full bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#4A90E2] text-white font-bold py-3 px-6 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg"
+              className="w-full bg-[#4A90E2] hover:bg-[#3A7BC8] text-white font-bold py-3 px-6 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg"
             >
               Enroll Now
             </button>
@@ -1110,7 +1110,7 @@ function App() {
             <div className="text-center lg:text-left px-2 sm:px-0">
               {/* IoT and Robotics Division Badge */}
               <div className="mb-3 sm:mb-4 flex justify-center lg:justify-start">
-                <div className="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white text-xs sm:text-sm font-bold rounded-full shadow-xl border border-white/20 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                <div className="inline-flex items-center px-3 sm:px-4 py-2 sm:py-2.5 bg-[#4A90E2] text-white text-xs sm:text-sm font-bold rounded-full shadow-xl border border-white/20 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300">
                   <Cpu className="w-4 h-4 mr-2 sm:mr-2.5 text-yellow-300" />
                   <span className="hidden xs:inline">Premier IoT & Robotics Testing, Certification, and Training Hub</span>
                   <span className="xs:hidden">Premier IoT & Robotics Testing, Certification, and Training Hub</span>
@@ -1150,7 +1150,7 @@ function App() {
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
                 <button
                   onClick={openCtaForm}
-                  className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#4A90E2] text-white font-bold py-2.5 sm:py-3 md:py-3 px-4 sm:px-6 md:px-6 rounded-full text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25 w-full sm:w-auto"
+                  className="bg-[#4A90E2] hover:bg-[#3A7BC8] text-white font-bold py-2.5 sm:py-3 md:py-3 px-4 sm:px-6 md:px-6 rounded-full text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#4A90E2]/25 w-full sm:w-auto"
                 >
                   Explore Programs
                 </button>
@@ -1341,7 +1341,7 @@ function App() {
                         <div>
                           <div className="flex items-center justify-between mb-4">
                             <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-gray-500" />
-                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-gray-400 to-gray-600 text-white">
+                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-gray-600 text-white">
                               {programs['2-month'].duration}
                             </div>
                           </div>
@@ -1371,7 +1371,7 @@ function App() {
                                 }}
                                 className={`px-3 py-2 rounded-lg font-semibold text-xs transition-all duration-300 flex items-center space-x-1.5 ${
                                   learningModes['2-month'] === 'offline'
-                                    ? 'bg-gradient-to-r from-gray-400 to-gray-600 text-white shadow-md shadow-gray-400/25'
+                                    ? 'bg-gray-600 text-white shadow-md shadow-gray-400/25'
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                 }`}
                               >
@@ -1391,7 +1391,7 @@ function App() {
                                 }}
                                 className={`px-3 py-2 rounded-lg font-semibold text-xs transition-all duration-300 flex items-center space-x-1.5 ${
                                   learningModes['2-month'] === 'online'
-                                    ? 'bg-gradient-to-r from-gray-400 to-gray-600 text-white shadow-md shadow-gray-500/25'
+                                    ? 'bg-gray-600 text-white shadow-md shadow-gray-500/25'
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                 }`}
                               >
@@ -1417,7 +1417,7 @@ function App() {
                             setActiveWeek('all'); // Expand all weeks
                             document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
-                          className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-gray-300 to-gray-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-gray-400 hover:to-gray-600"
+                          className="flex-1 text-center py-3 rounded-2xl bg-gray-500 hover:bg-gray-600 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base"
                         >
                           Syllabus
                         </button>
@@ -1430,7 +1430,7 @@ function App() {
                               openOnlineForm('2-month');
                             }
                           }}
-                          className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-gray-400 to-gray-600 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-gray-500 hover:to-gray-700"
+                          className="flex-1 text-center py-3 rounded-2xl bg-gray-600 hover:bg-gray-700 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base"
                         >
                           {selectedProgram === '2-month' ? 'Selected' : 'Choose Program'}
                         </button>
@@ -1490,7 +1490,7 @@ function App() {
                         <div>
                           <div className="flex items-center justify-between mb-4">
                             <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />
-                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 text-white">
+                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-yellow-600 text-white">
                               {programs['4-month'].duration}
                             </div>
                           </div>
@@ -1520,7 +1520,7 @@ function App() {
                                 }}
                                 className={`px-3 py-2 rounded-lg font-semibold text-xs transition-all duration-300 flex items-center space-x-1.5 ${
                                   learningModes['4-month'] === 'offline'
-                                    ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white shadow-md shadow-yellow-500/25'
+                                    ? 'bg-yellow-600 text-white shadow-md shadow-yellow-500/25'
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                 }`}
                               >
@@ -1540,7 +1540,7 @@ function App() {
                                 }}
                                 className={`px-3 py-2 rounded-lg font-semibold text-xs transition-all duration-300 flex items-center space-x-1.5 ${
                                   learningModes['4-month'] === 'online'
-                                    ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 text-white shadow-md shadow-yellow-500/25'
+                                    ? 'bg-yellow-600 text-white shadow-md shadow-yellow-500/25'
                                     : 'bg-yellow-100 text-yellow-600 hover:bg-yellow-200'
                                 }`}
                               >
@@ -1566,7 +1566,7 @@ function App() {
                             setActiveWeek('all'); // Expand all weeks
                             document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
-                          className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-yellow-300 to-yellow-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-yellow-400 hover:to-yellow-600"
+                          className="flex-1 text-center py-3 rounded-2xl bg-yellow-500 hover:bg-yellow-600 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base"
                         >
                           Syllabus
                         </button>
@@ -1579,7 +1579,7 @@ function App() {
                               openOnlineForm('4-month');
                             }
                           }}
-                          className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-yellow-500 hover:to-yellow-700"
+                          className="flex-1 text-center py-3 rounded-2xl bg-yellow-600 hover:bg-yellow-700 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base"
                         >
                           {selectedProgram === '4-month' ? 'Selected' : 'Choose Program'}
                         </button>
@@ -1641,7 +1641,7 @@ function App() {
                         <div>
                           <div className="flex items-center justify-between mb-4">
                             <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-purple-500" />
-                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-purple-500 to-purple-700 text-white">
+                            <div className="px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white">
                               {programs['6-month'].duration}
                             </div>
                           </div>
@@ -1671,7 +1671,7 @@ function App() {
                                 }}
                                 className={`px-3 py-2 rounded-lg font-semibold text-xs transition-all duration-300 flex items-center space-x-1.5 ${
                                   learningModes['6-month'] === 'offline'
-                                    ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-md shadow-purple-500/25'
+                                    ? 'bg-purple-600 text-white shadow-md shadow-purple-500/25'
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                                 }`}
                               >
@@ -1691,7 +1691,7 @@ function App() {
                                 }}
                                 className={`px-3 py-2 rounded-lg font-semibold text-xs transition-all duration-300 flex items-center space-x-1.5 ${
                                   learningModes['6-month'] === 'online'
-                                    ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-md shadow-purple-500/25'
+                                    ? 'bg-purple-600 text-white shadow-md shadow-purple-500/25'
                                     : 'bg-purple-100 text-purple-600 hover:bg-purple-200'
                                 }`}
                               >
@@ -1717,7 +1717,7 @@ function App() {
                             setActiveWeek('all'); // Expand all weeks
                             document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth' });
                           }}
-                          className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-purple-300 to-purple-500 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-purple-400 hover:to-purple-600"
+                          className="flex-1 text-center py-3 rounded-2xl bg-purple-500 hover:bg-purple-600 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base"
                         >
                           Syllabus
                         </button>
@@ -1730,7 +1730,7 @@ function App() {
                               openOnlineForm('6-month');
                             }
                           }}
-                          className="flex-1 text-center py-3 rounded-2xl bg-gradient-to-r from-purple-500 to-purple-700 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base hover:from-purple-600 hover:to-purple-800"
+                          className="flex-1 text-center py-3 rounded-2xl bg-purple-600 hover:bg-purple-700 text-white font-bold transition-all duration-300 group-hover:shadow-lg text-sm sm:text-base"
                         >
                           {selectedProgram === '6-month' ? 'Selected' : 'Choose Program'}
                         </button>
@@ -1753,7 +1753,7 @@ function App() {
           <div className="max-w-7xl mx-auto">
             {/* Detailed View Badge */}
             <div className="flex justify-center mb-6">
-              <div className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
+              <div className="bg-[#4A90E2] text-white px-6 py-3 rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 transform">
                 📚 View Detailed Syllabus
               </div>
             </div>
@@ -1769,7 +1769,7 @@ function App() {
                 }}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
                   selectedTier === 'silver' 
-                    ? 'bg-gradient-to-r from-gray-500 to-gray-700 text-white shadow-lg scale-105' 
+                    ? 'bg-gray-600 text-white shadow-lg scale-105' 
                         : 'text-gray-700 hover:bg-gray-100 hover:scale-102'
                 }`}
               >
@@ -1783,7 +1783,7 @@ function App() {
                 }}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
                   selectedTier === 'gold' 
-                    ? 'bg-gradient-to-r from-yellow-500 to-yellow-700 text-white shadow-lg scale-105' 
+                    ? 'bg-yellow-600 text-white shadow-lg scale-105' 
                         : 'text-yellow-700 hover:bg-yellow-100 hover:scale-102'
                 }`}
               >
@@ -1797,7 +1797,7 @@ function App() {
                 }}
                     className={`px-6 py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform ${
                   selectedTier === 'diamond' 
-                    ? 'bg-gradient-to-r from-purple-500 to-purple-700 text-white shadow-lg scale-105' 
+                    ? 'bg-purple-600 text-white shadow-lg scale-105' 
                         : 'text-purple-700 hover:bg-purple-100 hover:scale-102'
                 }`}
               >
@@ -1820,10 +1820,10 @@ function App() {
             {/* Content */}
             <div>
             <h3 className={`text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center transition-all duration-300 ${
-              selectedTier === 'silver' ? 'bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent' :
-              selectedTier === 'gold' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent' :
-              selectedTier === 'diamond' ? 'bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent' :
-              'bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent'
+              selectedTier === 'silver' ? 'text-gray-600' :
+              selectedTier === 'gold' ? 'text-yellow-600' :
+              selectedTier === 'diamond' ? 'text-purple-600' :
+              'text-gray-600'
             }`}>
               {selectedTier === 'silver' ? '2-Month IoT Bootcamp - SILVER Membership Syllabus' :
                selectedTier === 'gold' ? '4-Month IoT Mastery - GOLD Membership Syllabus' :
@@ -1884,10 +1884,10 @@ function App() {
                       {/* Week Header */}
                       <div className="text-center mb-4">
                         <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto rounded-full flex items-center justify-center font-bold text-lg sm:text-xl md:text-2xl text-white mb-3 transition-all duration-300 ${
-                          selectedTier === 'silver' ? 'bg-gradient-to-r from-gray-400 to-gray-600' :
-                          selectedTier === 'gold' ? 'bg-gradient-to-r from-yellow-400 to-yellow-600' :
-                          selectedTier === 'diamond' ? 'bg-gradient-to-r from-purple-500 to-purple-700' :
-                          'bg-gradient-to-r from-gray-400 to-gray-600'
+                          selectedTier === 'silver' ? 'bg-gray-600' :
+                          selectedTier === 'gold' ? 'bg-yellow-600' :
+                          selectedTier === 'diamond' ? 'bg-purple-600' :
+                          'bg-gray-600'
                         }`}>
                                 {week.week}
                               </div>
@@ -2040,7 +2040,7 @@ function App() {
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
             <div className="mb-8 sm:mb-6 flex justify-center pt-4 sm:pt-2">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-sm font-semibold rounded-full shadow-lg">
+              <div className="inline-flex items-center px-4 py-2 bg-[#4A90E2] text-white text-sm font-semibold rounded-full shadow-lg">
                 <Zap className="w-3 h-3 mr-1.5" />
                 Industry-Leading Featured Projects
               </div>
@@ -2171,7 +2171,7 @@ function App() {
 
                     {/* Stats */}
                     <div className="flex items-center gap-4 sm:gap-6 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-500">
-                        <div className="flex items-center gap-2 bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div className="flex items-center gap-2 bg-[#4A90E2] text-white px-3 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                           <Award className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300" />
                           <span className="font-bold text-sm sm:text-base">{module.projects} Projects</span>
                       </div>
@@ -2310,7 +2310,7 @@ function App() {
                   });
                   setShowCtaForm(true);
                 }}
-                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] hover:from-[#E8F4FD] hover:to-[#4A90E2] text-white font-semibold rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#4A90E2]/25 text-sm sm:text-base"
+                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#4A90E2] hover:bg-[#3A7BC8] text-white font-semibold rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#4A90E2]/25 text-sm sm:text-base"
               >
                 Enroll in Masterclass
               </button>
@@ -3156,19 +3156,19 @@ function App() {
                     
                     {/* Expertise Tags */}
                     <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         Embedded Systems
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         Robotics
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         ESP32/STM32
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         LoRaWAN/Zigbee
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         Cloud Integration
                       </span>
                     </div>
@@ -3205,19 +3205,19 @@ function App() {
                     
                     {/* Expertise Tags */}
                     <div className="flex flex-wrap gap-2 justify-center">
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         Photometry
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         LED Testing
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         IoT Lighting
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         Calibration
                       </span>
-                      <span className="px-3 py-1 bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white text-xs font-semibold rounded-full">
+                      <span className="px-3 py-1 bg-[#4A90E2] text-white text-xs font-semibold rounded-full">
                         R&D
                       </span>
                     </div>
@@ -3387,7 +3387,7 @@ function App() {
           </div>
 
           <div className="mt-12 text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl p-6 sm:p-8 text-white">
+            <div className="bg-blue-600 rounded-xl p-6 sm:p-8 text-white">
               <h3 className="text-xl sm:text-2xl font-bold mb-3">Still have questions?</h3>
               <p className="text-blue-100 mb-6 text-sm sm:text-base">
                 Our experts are here to help you choose the right training path for your career goals.
@@ -3448,7 +3448,7 @@ function App() {
                 
                 <div className="flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 gap-3 sm:gap-0">
                   <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-[#4A90E2] animate-pulse" />
-                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#4A90E2] to-[#7FB3D3] text-white shadow-md hover:shadow-lg transition-all duration-300">
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-[#4A90E2] text-white shadow-md hover:shadow-lg transition-all duration-300">
                     NABL Accredited • BIS Approved
                   </span>
                 </div>
@@ -3465,12 +3465,12 @@ function App() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-sm sm:max-w-md mx-auto">
-                  <div className="bg-gradient-to-r from-[#4A90E2] to-[#E8F4FD] text-white p-3 sm:p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                  <div className="bg-[#4A90E2] text-white p-3 sm:p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                     <Award className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2 group-hover:animate-bounce" />
                     <div className="text-xs sm:text-sm font-semibold">ISO/IEC 17025</div>
                     <div className="text-xs opacity-90">Certified</div>
                   </div>
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-3 sm:p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                  <div className="bg-green-600 text-white p-3 sm:p-4 rounded-lg text-center hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer group">
                     <Globe className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-2 group-hover:animate-spin" />
                     <div className="text-xs sm:text-sm font-semibold">European</div>
                     <div className="text-xs opacity-90">Recognized</div>
